@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+def runNumber = (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger()
+
+android {
+    namespace 'ru.movaowl.slovopad'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'ru.movaowl.slovopad'
+        minSdk 26
+        targetSdk 34
+        versionCode runNumber
+        versionName "1.${runNumber}"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('slovopad.jks')
+            storePassword 'slovopad123'
+            keyAlias 'slovopad'
+            keyPassword 'slovopad123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

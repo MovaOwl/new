@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Словопад</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Russo+One&display=swap">
+<style>
+/* Layout: one-screen game — status bar on top, ruled "notebook" field where words fall, 2×2 answer pad at the bottom */
+:root{
+  --bg:#e9edf4; --field:#fbfcfe; --rule:#dbe2ee; --ink:#15203a; --muted:#5b6783;
+  --accent:#d99a1e; --accent-ink:#2b1d00; --btn:#1f5fd0; --btn-ink:#ffffff; --btn-hover:#174cab;
+  --ok:#1c9a68; --bad:#d4453f; --card-ink:#ffffff; --shade:rgba(21,32,58,.45);
+  --display:"Russo One", "Arial Black", system-ui, sans-serif;
+  --body:"Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0d1322; --field:#131b2e; --rule:#243049; --ink:#e7ecf6; --muted:#8f9cba;
+  --accent:#f0b63c; --accent-ink:#241800; --btn:#3a78ea; --btn-ink:#ffffff; --btn-hover:#5089f0;
+  --ok:#25b37b; --bad:#e45a55; --card-ink:#ffffff; --shade:rgba(0,0,0,.6); color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0d1322; --field:#131b2e; --rule:#243049; --ink:#e7ecf6; --muted:#8f9cba;
+  --accent:#f0b63c; --accent-ink:#241800; --btn:#3a78ea; --btn-ink:#ffffff; --btn-hover:#5089f0;
+  --ok:#25b37b; --bad:#e45a55; --card-ink:#ffffff; --shade:rgba(0,0,0,.6); color-scheme:dark }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;overflow:hidden;-webkit-tap-highlight-color:transparent;user-select:none}
+#app{height:100%;display:flex;flex-direction:column;gap:10px;max-width:560px;margin:0 auto;
+  padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));padding-block:10px;box-sizing:border-box}
+
+/* status bar */
+.bar{display:flex;align-items:center;gap:10px}
+.lvl{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.badge{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:15px;color:#fff;flex:none;
+  font-variant-numeric:tabular-nums;box-shadow:inset 0 0 0 3px rgba(255,255,255,.35)}
+.lvl-txt{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.lvl-name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meter{height:6px;border-radius:3px;background:var(--rule);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent);width:0;transition:width .4s}
+.today{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ibtn{width:42px;height:42px;border-radius:12px;border:0;background:var(--field);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none;box-shadow:0 0 0 1px var(--rule)}
+.ibtn:focus-visible,.ans:focus-visible,.pill:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ibtn svg{width:20px;height:20px}
+
+/* field */
+#field{position:relative;flex:1;min-height:0;background:var(--field);border-radius:16px;box-shadow:0 0 0 1px var(--rule);overflow:hidden}
+.rule{position:absolute;left:0;right:0;border-top:1px solid var(--rule)}
+.rule span{position:absolute;left:8px;top:2px;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+#drop{position:absolute;left:50%;top:0;display:flex;align-items:center;gap:8px;transform:translate(-50%,0);will-change:transform;white-space:nowrap}
+#drop
+.pts{min-width:34px;height:34px;padding:0 6px;box-sizing:border-box;border-radius:17px;background:var(--ok);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
+.pts.low{background:var(--accent);color:var(--accent-ink)}
+.pts.zero{background:var(--bad)}
+.dw{font-family:var(--display);font-size:24px;letter-spacing:.01em}
+.pips{display:flex;gap:3px;margin-left:2px}
+.pips b{width:6px;height:6px;border-radius:50%;background:var(--rule)}
+.pips b.on{background:var(--ok)}
+.review{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+
+/* overlays */
+.ov{position:absolute;inset:0;display:grid;place-items:center;padding:16px;background:var(--shade)}
+.card{width:100%;max-width:380px;border-radius:18px;padding:22px 20px 18px;box-sizing:border-box;color:var(--card-ink);text-align:center;display:flex;flex-direction:column;gap:10px;
+  box-shadow:0 18px 40px rgba(0,0,0,.25);animation:pop .22s ease-out}
+.card.new{background:var(--btn)} .card.ok{background:var(--ok)} .card.bad{background:var(--bad)}
+.card .k{font-size:12px;text-transform:uppercase;letter-spacing:.12em;opacity:.85;font-weight:600}
+.card .en{font-family:var(--display);font-size:34px;line-height:1.1;word-break:break-word}
+.card .ru{font-size:20px;font-weight:500;line-height:1.3}
+.card .hint{font-size:13px;opacity:.8}
+.card .row{display:flex;gap:10px;margin-top:6px}
+.pill{flex:1;border:0;border-radius:12px;padding:13px 10px;font:600 15px var(--body);cursor:pointer;background:rgba(255,255,255,.18);color:var(--card-ink)}
+.pill.main{background:#fff;color:var(--ink)}
+.speak{align-self:center;border:0;background:rgba(255,255,255,.18);color:var(--card-ink);border-radius:20px;padding:6px 14px;font:500 13px var(--body);cursor:pointer}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+
+/* menu */
+.menu{background:var(--field);color:var(--ink);text-align:left}
+.menu h1{font-family:var(--display);font-weight:400;font-size:30px;margin:0;color:var(--ink);text-wrap:balance}
+.menu p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--bg);border-radius:12px;padding:10px 8px;text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:22px;font-variant-numeric:tabular-nums}
+.stat span{font-size:11px;color:var(--muted)}
+.opt{display:flex;flex-direction:column;gap:6px}
+.opt label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.seg{display:flex;gap:6px}
+.seg button{flex:1;border:0;border-radius:10px;padding:9px 4px;font:500 14px var(--body);background:var(--bg);color:var(--ink);cursor:pointer}
+.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:700}
+.menu .pill.main{background:var(--btn);color:var(--btn-ink);font-size:17px;padding:15px}
+.reset{border:0;background:none;color:var(--muted);font:500 13px var(--body);text-decoration:underline;cursor:pointer;padding:4px;align-self:center}
+.reset.armed{color:var(--bad);font-weight:700}
+
+/* answers */
+#answers{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ans{min-height:58px;border:0;border-radius:12px;background:var(--btn);color:var(--btn-ink);font:600 15px/1.2 var(--body);padding:8px;cursor:pointer;touch-action:manipulation;word-break:break-word}
+.ans:hover{background:var(--btn-hover)}
+.ans:disabled{opacity:.55;cursor:default}
+.ans.right{background:var(--ok);opacity:1}
+.ans.wrong{background:var(--bad);opacity:1}
+.toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;padding:8px 14px;border-radius:20px;white-space:nowrap;animation:pop .2s}
+@media (prefers-reduced-motion: reduce){.card,.toast{animation:none}.meter i{transition:none}}
+</style>
+
+</head>
+<body>
+<div id="app">
+  <header class="bar">
+    <div class="lvl">
+      <div class="badge" id="badge">0</div>
+      <div class="lvl-txt">
+        <div class="lvl-name" id="lvlName">Новичок</div>
+        <div class="meter"><i id="meter"></i></div>
+        <div class="today" id="today">Сегодня: 0 из 10 новых</div>
+      </div>
+    </div>
+    <button class="ibtn" id="soundBtn" aria-label="Звук"></button>
+    <button class="ibtn" id="pauseBtn" aria-label="Пауза"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+  </header>
+
+  <main id="field" aria-live="polite">
+    <div id="drop" hidden><div class="pts" id="pts">100</div><div><div class="dw" id="dw"></div><div class="pips" id="pips"></div></div></div>
+    <div class="ov" id="ov"></div>
+  </main>
+
+  <footer id="answers">
+    <button class="ans" id="a0" disabled></button><button class="ans" id="a1" disabled></button>
+    <button class="ans" id="a2" disabled></button><button class="ans" id="a3" disabled></button>
+  </footer>
+</div>
+
+<script src="words.js"></script>
+<script>
+const RAW = window.WORDS_RAW;
+
+const W = RAW.trim().split('\n').map(l => { const [en, ru] = l.split('|'); return { en: en.trim(), ru: ru.trim() }; });
+const LEVELS = [
+  { at: 0,   name: 'Новичок',  color: '#2f9e6a' },
+  { at: 25,  name: 'Ученик',   color: '#2a7fd4' },
+  { at: 75,  name: 'Знаток',   color: '#d88a14' },
+  { at: 150, name: 'Мастер',   color: '#c2453c' },
+  { at: 300, name: 'Полиглот', color: '#1b1f2a' },
+];
+const NEED = 3, ACTIVE = 4, SPEEDS = [{ n: 'Медленно', d: 12 }, { n: 'Обычно', d: 9 }, { n: 'Быстро', d: 6 }];
+const KEY = 'slovopad-v1';
+const $ = id => document.getElementById(id);
+
+let S = load();
+function fresh() { return { w: {}, learned: 0, score: 0, day: '', todayNew: 0, goal: 10, speed: 1, sound: true, nextNew: 0 }; }
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.w) return Object.assign(fresh(), s); } catch (e) {} return fresh(); }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+function dayKey() { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+function rollDay() { const k = dayKey(); if (S.day !== k) { S.day = k; S.todayNew = 0; S.goalHit = false; } }
+const rec = en => S.w[en] || (S.w[en] = { s: 0, c: 0 });
+
+/* ---------- speech ---------- */
+let voice = null;
+function pickVoice() { try { const v = speechSynthesis.getVoices(); voice = v.find(x => /en[-_]US/i.test(x.lang)) || v.find(x => /^en/i.test(x.lang)) || null; } catch (e) {} }
+try { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; } catch (e) {}
+function say(t) { if (!S.sound) return; if (window.Android) { try { Android.speak(t); } catch (e) {} return; } try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = .9; speechSynthesis.speak(u); } catch (e) {} }
+
+/* ---------- header ---------- */
+const ICON_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor" stroke="none"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>';
+const ICON_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor" stroke="none"/><path d="M17 9l5 6M22 9l-5 6"/></svg>';
+function level() { let i = 0; LEVELS.forEach((l, k) => { if (S.learned >= l.at) i = k; }); return i; }
+function renderBar() {
+  const i = level(), L = LEVELS[i], N = LEVELS[i + 1];
+  $('badge').textContent = S.learned; $('badge').style.background = L.color;
+  $('lvlName').textContent = N ? `${L.name} · до «${N.name}» ${N.at - S.learned}` : `${L.name} · вершина`;
+  $('meter').style.width = (N ? (S.learned - L.at) / (N.at - L.at) * 100 : 100) + '%';
+  $('today').textContent = `Сегодня: ${S.todayNew} из ${S.goal} новых · очки ${S.score}`;
+  $('soundBtn').innerHTML = S.sound ? ICON_ON : ICON_OFF;
+}
+
+/* ---------- field rules ---------- */
+(function rules() {
+  const f = $('field');
+  [100, 80, 60, 40, 20].forEach((v, i) => { const d = document.createElement('div'); d.className = 'rule'; d.style.top = (i * 20 + 4) + '%'; d.innerHTML = `<span>${v}</span>`; f.insertBefore(d, $('drop')); });
+})();
+
+/* ---------- game flow ---------- */
+let cur = null, opts = [], t0 = 0, elapsed = 0, raf = 0, running = false, lastEn = '', paused = true, inCard = false;
+const ansBtns = [0, 1, 2, 3].map(i => $('a' + i));
+const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+function learning() { return W.filter(w => rec(w.en).s === 1); }
+function learnedList() { return W.filter(w => rec(w.en).s === 2); }
+function nextNew() { while (S.nextNew < W.length && rec(W[S.nextNew].en).s !== 0) S.nextNew++; return S.nextNew < W.length ? W[S.nextNew] : null; }
+
+function step() {
+  rollDay(); renderBar(); clearAns();
+  const L = learning(), n = nextNew();
+  if (L.length < ACTIVE && n) return newCard(n);
+  let pool = L.length ? L : learnedList();
+  const D = learnedList();
+  if (L.length && D.length && Math.random() < 0.2) pool = D;
+  if (!pool.length) return finished();
+  let cand = pool.filter(w => w.en !== lastEn); if (!cand.length) cand = pool;
+  drop(cand[Math.random() * cand.length | 0]);
+}
+
+function newCard(w) {
+  inCard = true;
+  overlay(`<div class="card new"><div class="k">Новое слово</div><div class="en">${w.en}</div><div class="ru">${w.ru}</div>
+    <button class="speak" id="sp">▶ Произношение</button>
+    <div class="row"><button class="pill" id="knowBtn">Я уже знаю</button><button class="pill main" id="learnBtn">Учить</button></div></div>`);
+  say(w.en);
+  $('sp').onclick = () => say(w.en);
+  $('knowBtn').onclick = () => { rec(w.en).s = 3; save(); closeOv(); step(); };
+  $('learnBtn').onclick = () => {
+    const r = rec(w.en); r.s = 1; r.c = 0; S.todayNew++; save(); closeOv();
+    if (S.todayNew === S.goal && !S.goalHit) { S.goalHit = true; save(); toast('Дневная норма выполнена! Можно и дальше'); }
+    step();
+  };
+}
+
+function drop(w) {
+  cur = w; lastEn = w.en; inCard = false;
+  const others = shuffle(W.filter(x => x.ru !== w.ru)).slice(0, 3);
+  opts = shuffle([w, ...others]);
+  ansBtns.forEach((b, i) => { b.textContent = opts[i].ru; b.disabled = false; b.className = 'ans'; });
+  const r = rec(w.en);
+  $('dw').textContent = w.en;
+  $('pips').innerHTML = r.s === 2 ? '<span class="review">повтор</span>' : Array.from({ length: NEED }, (_, i) => `<b class="${i < r.c ? 'on' : ''}"></b>`).join('');
+  $('drop').hidden = false;
+  elapsed = 0; t0 = performance.now(); running = true;
+  say(w.en);
+  cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
+}
+
+function tick(now) {
+  if (!running) return;
+  const dur = SPEEDS[S.speed].d * 1000;
+  const p = Math.min(1, (elapsed + now - t0) / dur);
+  const f = $('field'), d = $('drop');
+  const y = 8 + p * (f.clientHeight - d.offsetHeight - 16);
+  d.style.transform = `translate(-50%, ${y}px)`;
+  const pts = Math.round(100 * (1 - p));
+  const el = $('pts'); el.textContent = pts; el.className = 'pts' + (pts === 0 ? ' zero' : pts < 40 ? ' low' : '');
+  if (p >= 1) return judge(-1);
+  raf = requestAnimationFrame(tick);
+}
+
+function curPts() { return +$('pts').textContent; }
+
+function judge(i) {
+  if (!running || !cur) return;
+  const buzz = ms => { try { window.Android ? Android.vibrate(ms) : navigator.vibrate && navigator.vibrate(ms); } catch (e) {} };
+  running = false; cancelAnimationFrame(raf);
+  const w = cur, r = rec(w.en), right = opts.indexOf(w), ok = i === right, pts = ok ? curPts() : 0;
+  ansBtns.forEach((b, k) => { b.disabled = true; if (k === right) b.classList.add('right'); else if (k === i) b.classList.add('wrong'); });
+  $('drop').hidden = true;
+  let note = '';
+  if (ok) {
+    S.score += pts; r.c++;
+    if (r.s === 1 && r.c >= NEED) { r.s = 2; S.learned++; note = 'Выучено! +1 в копилку'; }
+    else if (r.s === 1) note = `Ещё ${NEED - r.c} ${NEED - r.c === 1 ? 'раз' : 'раза'} — и слово твоё`;
+    else note = 'Помнишь, красава';
+  } else {
+    buzz(120); r.c = 0;
+    if (r.s === 2) { r.s = 1; S.learned = Math.max(0, S.learned - 1); note = 'Забыл — слово вернулось в учёбу'; }
+    else note = i === -1 ? 'Не успел — счётчик слова сброшен' : 'Мимо — счётчик слова сброшен';
+  }
+  save(); renderBar(); inCard = true;
+  overlay(`<div class="card ${ok ? 'ok' : 'bad'}"><div class="k">${ok ? 'Правильно +' + pts : 'Правильный ответ'}</div>
+    <div class="en">${w.en}</div><div class="ru">${w.ru}</div><div class="hint">${note}</div>
+    ${ok ? '' : '<div class="row"><button class="pill main" id="nextBtn">Дальше</button></div>'}</div>`);
+  if (ok) { autoT = setTimeout(next, 1300); $('ov').onclick = () => { clearTimeout(autoT); next(); }; }
+  else { $('nextBtn').onclick = next; say(w.en); }
+  function next() { $('ov').onclick = null; if (paused) return; closeOv(); step(); }
+}
+
+function finished() {
+  inCard = true;
+  overlay(`<div class="card ok"><div class="k">Словарь пройден</div><div class="en">${S.learned}</div><div class="ru">слов выучено. Ну ты зверь.</div></div>`);
+}
+
+function clearAns() { ansBtns.forEach(b => { b.textContent = ''; b.disabled = true; b.className = 'ans'; }); $('drop').hidden = true; }
+function overlay(html) { const o = $('ov'); o.innerHTML = html; o.hidden = false; }
+function closeOv() { const o = $('ov'); o.hidden = true; o.innerHTML = ''; }
+function toast(t) { const d = document.createElement('div'); d.className = 'toast'; d.textContent = t; $('field').appendChild(d); setTimeout(() => d.remove(), 2600); }
+
+/* ---------- menu / pause ---------- */
+let wasRunning = false, armed = false;
+let autoT = 0;
+function menu(first) {
+  paused = true; clearTimeout(autoT); $('ov').onclick = null;
+  if (running) { wasRunning = true; running = false; elapsed += performance.now() - t0; cancelAnimationFrame(raf); } else wasRunning = false;
+  const known = W.filter(w => rec(w.en).s === 3).length, inWork = learning().length;
+  overlay(`<div class="card menu">
+    <h1>Словопад</h1>
+    <p>Слов в словаре: ${W.length}. Слово падает — жми правильный перевод, пока не упало. Чем раньше, тем больше очков. Три верных ответа подряд — слово выучено.</p>
+    <div class="stats"><div class="stat"><b>${S.learned}</b><span>выучено</span></div><div class="stat"><b>${inWork}</b><span>в работе</span></div><div class="stat"><b>${known}</b><span>уже знал</span></div></div>
+    <div class="opt"><label>Скорость</label><div class="seg" id="spd">${SPEEDS.map((s, i) => `<button data-i="${i}" class="${i === S.speed ? 'on' : ''}">${s.n}</button>`).join('')}</div></div>
+    <div class="opt"><label>Новых слов в день</label><div class="seg" id="gl">${[5, 10, 15, 20].map(g => `<button data-g="${g}" class="${g === S.goal ? 'on' : ''}">${g}</button>`).join('')}</div></div>
+    <button class="pill main" id="playBtn">${first ? 'Играть' : 'Продолжить'}</button>
+    <button class="reset" id="resetBtn">Сбросить прогресс</button>
+  </div>`);
+  $('spd').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.speed = +b.dataset.i; save(); [...$('spd').children].forEach(x => x.classList.toggle('on', x === b)); };
+  $('gl').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.goal = +b.dataset.g; save(); renderBar(); [...$('gl').children].forEach(x => x.classList.toggle('on', x === b)); };
+  armed = false;
+  $('resetBtn').onclick = () => {
+    if (!armed) { armed = true; $('resetBtn').textContent = 'Точно? Нажми ещё раз — всё обнулится'; $('resetBtn').classList.add('armed'); return; }
+    S = fresh(); save(); cur = null; wasRunning = false; renderBar(); menu(true);
+  };
+  $('playBtn').onclick = resume;
+}
+function resume() {
+  paused = false; closeOv();
+  if (wasRunning && cur) { running = true; t0 = performance.now(); inCard = false; $('drop').hidden = false; ansBtns.forEach(b => b.disabled = false); raf = requestAnimationFrame(tick); }
+  else step();
+}
+
+$('pauseBtn').onclick = () => { if (!paused) menu(false); };
+$('soundBtn').onclick = () => { S.sound = !S.sound; save(); renderBar(); if (!S.sound) try { speechSynthesis.cancel(); } catch (e) {} };
+ansBtns.forEach((b, i) => b.onclick = () => judge(i));
+document.addEventListener('keydown', e => { if (paused) return; const k = '1234'.indexOf(e.key); if (k >= 0 && running) judge(k); if (e.key === 'Escape') menu(false); });
+document.addEventListener('visibilitychange', () => { if (document.hidden && !paused && running) menu(false); });
+
+rollDay(); renderBar(); menu(true);
+window.androidBack = () => { if (paused) return 'exit'; menu(false); return 'menu'; };
+window.androidPause = () => { if (!paused) menu(false); };
+</script>
+
+</body>
+</html>
