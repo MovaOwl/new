@@ -306,18 +306,18 @@ const MAX = 600, ACTIVE = 5, INTERVALS = [1, 3, 7, 14, 30, 60, 120];
 const PRICE_M2 = 85000;
 
 const STAGES = [
-  { at: 1, t: 'Пустой участок', f: 0 },
-  { at: 3, t: 'Фундамент', f: 0 },
-  { at: 6, t: 'Сруб', f: 1 },
-  { at: 10, t: 'Изба под крышей', f: 1 },
-  { at: 15, t: 'Тёплый дом с печью', f: 1 },
-  { at: 21, t: 'Дом с мансардой', f: 1 },
-  { at: 28, t: 'Коттедж с гаражом', f: 2 },
-  { at: 36, t: 'Двухэтажный особняк', f: 2 },
-  { at: 46, t: 'Квартал таунхаусов', f: 2 },
-  { at: 58, t: 'Жилой комплекс', f: 9 },
-  { at: 75, t: 'Небоскрёб', f: 60 },
-  { at: 100, t: 'Свой город', f: '∞' },
+  { at: 0, t: 'Пустой участок', f: 0 },
+  { at: 5, t: 'Фундамент', f: 0 },
+  { at: 15, t: 'Сруб', f: 1 },
+  { at: 30, t: 'Изба под крышей', f: 1 },
+  { at: 60, t: 'Тёплый дом с печью', f: 1 },
+  { at: 100, t: 'Дом с мансардой', f: 1 },
+  { at: 175, t: 'Коттедж с гаражом', f: 2 },
+  { at: 275, t: 'Двухэтажный особняк', f: 2 },
+  { at: 400, t: 'Квартал таунхаусов', f: 2 },
+  { at: 600, t: 'Жилой комплекс', f: 9 },
+  { at: 900, t: 'Небоскрёб', f: 60 },
+  { at: 1500, t: 'Свой город', f: '∞' },
 ];
 
 /* ================= state ================= */
@@ -372,14 +372,14 @@ function rollDay() {
 const today = () => S.days[S.day] || (S.days[S.day] = { c: 0, n: 0, a: 0 });
 
 /* ================= levels, plan, achievements ================= */
-const need = L => 200 + (L - 1) * 40;
+const need = L => 300 + (L - 1) * 60;
 function lv(xp = S.xp) { let L = 1, x = xp; while (x >= need(L)) { x -= need(L); L++; } return { L, x, n: need(L) }; }
-const stageOf = L => { let i = 0; STAGES.forEach((s, k) => { if (L >= s.at) i = k; }); return i; };
+const stageOf = n => { let i = 0; STAGES.forEach((s, k) => { if (n >= s.at) i = k; }); return i; };
 
 const MQ = []; // modal queue
 function addXP(n) {
   const a = lv().L; S.xp += Math.max(0, Math.round(n)); const b = lv().L;
-  if (b > a) { const sa = stageOf(a), sb = stageOf(b); MQ.push({ t: 'lvl', L: b, stage: sb > sa ? sb : -1 }); }
+  if (b > a) MQ.push({ t: 'lvl', L: b });
 }
 
 const QUESTS = [
@@ -426,8 +426,8 @@ const ACH = [
   { id: 'a1000', ic: '1000', n: 'Тысяча ответов', d: 'Дать 1000 ответов', t: () => S.answered >= 1000 },
   { id: 'owl', ic: '00:00', n: 'Сова', d: 'Учить слова после полуночи', t: () => S.owl },
   { id: 'gpt', ic: 'GPT', n: 'Тренер найден', d: 'Отправить слова в ChatGPT', t: () => S.gpt },
-  { id: 'izba', ic: 'Изба', n: 'Своя крыша', d: 'Достроить избу (ур. 10)', t: () => lv().L >= 10 },
-  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (ур. 75)', t: () => lv().L >= 75 },
+  { id: 'izba', ic: 'Изба', n: 'Своя крыша', d: 'Достроить избу (30 слов)', t: () => nLearned() >= 30 },
+  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (900 слов)', t: () => nLearned() >= 900 },
 ];
 function checkAch() {
   ACH.forEach(a => { if (!S.ach[a.id] && a.t()) { S.ach[a.id] = Date.now(); toast(`Достижение: ${a.n}`, 'ach'); sfx('ach'); } });
@@ -524,7 +524,7 @@ let cur = null, opts = [], t0 = 0, elapsed = 0, raf = 0, running = false, lastEn
 })();
 
 function renderHud() {
-  const { L, x, n } = lv(), sg = stageOf(L);
+  const { L, x, n } = lv(), sg = stageOf(nLearned());
   $('hudLv').textContent = L; $('hudName').textContent = S.name; $('hudStage').textContent = STAGES[sg].t;
   $('hudXp').style.width = (x / n * 100) + '%';
   $('hudSub').textContent = `${fmt(x)} / ${fmt(n)} XP · новых сегодня ${S.todayNew}/${S.goal}`;
@@ -632,10 +632,10 @@ function judge(i) {
     if (pts >= 95) S.fastN++;
     if (new Date().getHours() < 5) S.owl = true;
     const mult = 1 + Math.min(combo, 20) * .05;
-    gain = (4 + pts * .26) * mult;
+    gain = (3 + pts * .2) * mult;
     if (r.s === 1) {
       r.m = Math.min(MAX, r.m + pts);
-      if (r.m >= MAX) { r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 40; note = 'Слово выучено! Первый повтор — завтра'; }
+      if (r.m >= MAX) { r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 40; note = 'Слово выучено! +1 кирпич в стройку. Первый повтор — завтра'; const nl = nLearned(); if (stageOf(nl) > stageOf(nl - 1)) MQ.push({ t: 'build', stage: stageOf(nl) }); }
       else { const left = Math.ceil((MAX - r.m) / Math.max(pts, 40)); note = `Прогресс слова +${pts}. Ещё примерно ${left} ${pl(left, 'попадание', 'попадания', 'попаданий')}`; }
       progress = `<div class="cbar"><i style="width:${r.m / MAX * 100}%"></i></div>`;
     } else if (r.s === 2) {
@@ -671,13 +671,18 @@ function toast(t, cls) { const d = document.createElement('div'); d.className = 
 function showModal(cb) {
   const m = MQ.shift(), el = $('modal');
   if (m.t === 'lvl') {
-    const sg = stageOf(m.L), nx = STAGES[sg + 1];
     el.innerHTML = `<div class="mcard"><div class="mh"><small>Новый уровень</small><b class="num">${m.L}</b></div>
-      ${m.stage >= 0 ? `<div class="mpic">${houseSVG(m.stage)}</div>` : ''}
-      <div class="mb"><h4>${m.stage >= 0 ? 'Объект перестроен: ' + esc(STAGES[m.stage].t) : esc(STAGES[sg].t)}</h4>
-      <p>${nx ? `До стадии «${esc(nx.t)}» — ${nx.at - m.L} ${pl(nx.at - m.L, 'уровень', 'уровня', 'уровней')}.` : 'Это вершина. Дальше только расширять империю.'}</p>
+      <div class="mb"><h4>Уровень ${m.L}</h4><p>Опыт копится за каждый верный ответ. А объект растёт только из выученных слов.</p>
       <button class="btn" id="mOk">Дальше</button></div></div>`;
     sfx('lvl'); buzz(60);
+  } else if (m.t === 'build') {
+    const nx = STAGES[m.stage + 1], nl = nLearned();
+    el.innerHTML = `<div class="mcard"><div class="mh"><small>Новая стадия стройки</small><b class="num">${fmt(nl)} м²</b></div>
+      <div class="mpic">${houseSVG(m.stage)}</div>
+      <div class="mb"><h4>Объект перестроен: ${esc(STAGES[m.stage].t)}</h4>
+      <p>${nx ? `До стадии «${esc(nx.t)}» — ещё ${nx.at - nl} ${pl(nx.at - nl, 'слово', 'слова', 'слов')}.` : 'Это вершина. Свой город построен.'}</p>
+      <button class="btn" id="mOk">Дальше</button></div></div>`;
+    sfx('lvl'); buzz(80);
   } else {
     el.innerHTML = `<div class="mcard"><div class="mh"><small>План на день</small><b>+250</b></div><div class="mb"><h4>План закрыт полностью</h4>
       <p>Бонус +250 XP. Серия держится, пока каждый день есть хотя бы 10 верных ответов.</p><button class="btn" id="mOk">Дальше</button></div></div>`;
@@ -725,7 +730,7 @@ const grade = v => v >= .9 ? 'S' : v >= .75 ? 'A' : v >= .6 ? 'B' : v >= .4 ? 'C
 function statRow(name, val, v) { return `<div class="stat"><span>${name}</span><div class="bar"><i style="width:${clamp(v) * 100}%"></i></div><span class="v num">${val}</span><span class="grade g-${grade(v)}">${grade(v)}</span></div>`; }
 
 function tabHome() {
-  const { L, x, n } = lv(), sg = stageOf(L), nx = STAGES[sg + 1], learned = nLearned(), inWork = learningList().length;
+  const { L, x, n } = lv(), learned = nLearned(), sg = stageOf(learned), nx = STAGES[sg + 1], inWork = learningList().length, cs = STAGES[sg];
   const acc = S.answered ? S.correct / S.answered : 0, avg = S.rtN ? S.rtSum / S.rtN / 1000 : 0;
   const days = []; for (let i = 13; i >= 0; i--) { const k = dAdd(-i); days.push({ k, c: (S.days[k] || {}).c || 0, d: +k.slice(8) }); }
   const mx = Math.max(10, ...days.map(d => d.c));
@@ -737,12 +742,14 @@ function tabHome() {
     <div class="pp-body">
       <div><div class="pp-type">${esc(STAGES[sg].t)}</div>
         <div id="ownerBox"><button class="owner" id="ownerBtn">Владелец: <b>${esc(S.name)}</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div></div>
-      <div><div class="bar"><i style="width:${x / n * 100}%"></i></div>
-        <div class="xprow num"><span>${fmt(x)} / ${fmt(n)} XP</span><span>${nx ? `до «${esc(nx.t)}»: ${nx.at - L} ур.` : 'максимальная стадия'}</span></div></div>
+      <div><div class="bar"><i style="width:${nx ? (learned - cs.at) / (nx.at - cs.at) * 100 : 100}%"></i></div>
+        <div class="xprow num"><span>Стройка: ${fmt(learned)} м²</span><span>${nx ? `до «${esc(nx.t)}»: ${nx.at - learned} ${pl(nx.at - learned, 'слово', 'слова', 'слов')}` : 'максимальная стадия'}</span></div></div>
+      <div><div class="bar blue"><i style="width:${x / n * 100}%"></i></div>
+        <div class="xprow num"><span>Уровень ${L}</span><span>${fmt(x)} / ${fmt(n)} XP</span></div></div>
       <dl class="pp-grid">
         <div><dt>Площадь</dt><dd class="num">${fmt(learned)} м²</dd><small>1 выученное слово = 1 м²</small></div>
         <div><dt>Оценка</dt><dd class="num">${fmt(learned * PRICE_M2)} ₽</dd><small>условно по ${fmt(PRICE_M2)} ₽/м²</small></div>
-        <div><dt>Этажность</dt><dd>${STAGES[sg].f || '—'}</dd><small>растёт с уровнем</small></div>
+        <div><dt>Этажность</dt><dd>${STAGES[sg].f || '—'}</dd><small>растёт со стройкой</small></div>
         <div><dt>В работе</dt><dd class="num">${inWork} ${pl(inWork, 'слово', 'слова', 'слов')}</dd><small>к повтору сегодня: ${dueList().length}</small></div>
       </dl>
       <div class="flabel">Характеристики владельца</div>
@@ -794,7 +801,7 @@ function tabPlan() {
       <li><b>Шкала слева — очки за ответ.</b> Слово стартует со 100 и дешевеет, пока падает. Чем раньше нажал, тем больше.</li>
       <li><b>Очки идут в прогресс слова.</b> Чтобы выучить слово, нужно набрать ${MAX}: быстрыми ответами это 6 попаданий, медленными 8–12. Ошибка отнимает 150.</li>
       <li><b>Выученные слова возвращаются на повтор</b> по интервалам, чтобы осели в долгой памяти.</li>
-      <li><b>Комбо</b> — верные ответы подряд, дают до ×2 к опыту. Опыт растит уровень, а уровень — твой объект.</li>
+      <li><b>Объект строится только из выученных слов:</b> каждое слово — кирпич и 1 м². Опыт и уровень идут за каждый верный ответ, а <b>комбо</b> (верные подряд) даёт к опыту до ×2.</li>
       <li><b>Наборы и режимы</b> выбираются внизу меню: тема слов, на слух, работа над ошибками, только повторы.</li>
     </ol>
   </section>`;
