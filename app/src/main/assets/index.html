@@ -63,6 +63,10 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .rule span{position:absolute;left:8px;top:2px;font-size:10px;color:var(--muted)}
 .ftag{position:absolute;right:10px;top:8px;font-size:11px;color:var(--muted);max-width:60%;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #drop{position:absolute;left:50%;top:0;transform:translate(-50%,0);will-change:transform;display:flex;align-items:center;gap:10px;white-space:nowrap}
+#drop.ph{width:90%;justify-content:center;white-space:normal}
+.dw.ph{font-family:var(--body);font-weight:700;font-size:19px;line-height:1.25}
+.card .en.ph{font-family:var(--body);font-weight:700;font-size:23px;line-height:1.25}
+.keys{font-size:12px;opacity:.9}
 .pts{min-width:36px;height:36px;padding:0 6px;border-radius:18px;background:var(--ok);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
 .pts.low{background:var(--gold);color:#241500} .pts.zero{background:var(--bad)}
 .dbox{display:flex;flex-direction:column;gap:4px}
@@ -273,11 +277,16 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 </div>
 
 <script src="words.js"></script>
+<script src="phrases.js"></script>
 <script>
 /* ================= data ================= */
 const RAW = window.WORDS_RAW || 'be|быть\nhave|иметь\ndo|делать\nsay|сказать\ngo|идти';
 const W = RAW.trim().split('\n').map((l, i) => { const k = l.indexOf('|'); return { en: l.slice(0, k).trim(), ru: l.slice(k + 1).trim(), i }; });
 const BY = Object.fromEntries(W.map(w => [w.en, w]));
+const P = (window.PHRASES || []).map(([en, ru, keys], i) => ({ en, ru, keys, i, k: '§' + en, ph: true }));
+const MAXP = 300;
+const K = w => w.k || w.en;
+const mx = w => (w.ph ? MAXP : MAX);
 
 const SETS = [
   { id: 'all', n: 'Все слова по частоте' },
@@ -301,6 +310,7 @@ const MODES = [
   { id: 'listen', n: 'На слух' },
   { id: 'errors', n: 'Работа над ошибками' },
   { id: 'review', n: 'Только повторы' },
+  { id: 'phrases', n: 'Фразы' },
 ];
 const SPEEDS = [{ n: 'Медленно', d: 12 }, { n: 'Обычно', d: 9 }, { n: 'Быстро', d: 6.5 }];
 const MAX = 600, ACTIVE = 5, INTERVALS = [1, 3, 7, 14, 30, 60, 120];
@@ -371,6 +381,9 @@ const rec = en => S.w[en] || (S.w[en] = { s: 0, m: 0, e: 0, iv: 0, n: '' });
 const st = en => (S.w[en] ? S.w[en].s : 0);
 
 const nLearned = () => W.reduce((a, w) => a + (st(w.en) === 2), 0);
+const pOpen = p => p.keys.every(k => st(k) >= 2);
+const pUnlocked = () => P.filter(pOpen);
+const pLearned = () => P.filter(p => st(p.k) === 2);
 const learningList = () => W.filter(w => st(w.en) === 1);
 const learnedList = () => W.filter(w => st(w.en) === 2);
 const dueList = () => W.filter(w => { const r = S.w[w.en]; return r && r.s === 2 && r.n && r.n <= S.day; });
@@ -420,6 +433,9 @@ function markActive() {
 
 const ACH = [
   { id: 'w1', ic: '1', n: 'Первый кирпич', d: 'Выучить первое слово', t: () => nLearned() >= 1 },
+  { id: 'p1', ic: 'Фр', n: 'Первая фраза', d: 'Выучить первую фразу', t: () => P.some(p => st(p.k) === 2) },
+  { id: 'p100', ic: '100ф', n: 'Заговорил', d: 'Выучить 100 фраз', t: () => pLearned().length >= 100 },
+  { id: 'p500', ic: '500ф', n: 'Собеседник', d: 'Открыть 500 фраз', t: () => pUnlocked().length >= 500 },
   { id: 'w10', ic: '10', n: 'Фундамент', d: 'Выучить 10 слов', t: () => nLearned() >= 10 },
   { id: 'w50', ic: '50', n: 'Стены растут', d: 'Выучить 50 слов', t: () => nLearned() >= 50 },
   { id: 'w100', ic: '100', n: 'Сотка', d: 'Выучить 100 слов', t: () => nLearned() >= 100 },
@@ -596,6 +612,14 @@ function step() {
   if (mode === 'errors') {
     pool = hardList().slice(0, 12);
     if (!pool.length) return info('Трудных слов нет', 'Трудными становятся слова, на которых ты ошибся хотя бы два раза. Пока чисто.');
+  } else if (mode === 'phrases') {
+    const U = pUnlocked();
+    if (!U.length) return info('Фраз пока нет', 'Фраза открывается, когда выучены все слова из неё. Выучи первые 30–50 частых слов — и пойдут первые фразы.');
+    const Dp = U.filter(p => { const r = S.w[p.k]; return r && r.s === 2 && r.n && r.n <= S.day; }), Lp = U.filter(p => st(p.k) === 1), Np = U.filter(p => st(p.k) === 0);
+    if (Lp.length < ACTIVE && Np.length && Dp.length < 20) return newCard(Np[0]);
+    pool = Dp.length && (!Lp.length || Math.random() < .4) ? Dp : Lp;
+    if (!pool.length) pool = U.filter(p => st(p.k) === 2);
+    if (!pool.length) return info('Все фразы пройдены', 'Учи новые слова — откроются новые фразы.');
   } else if (mode === 'review') {
     pool = dueList(); if (!pool.length) pool = learnedList();
     if (!pool.length) return info('Повторять пока нечего', 'Сначала выучи хотя бы одно слово в обычном режиме.');
@@ -607,23 +631,23 @@ function step() {
     if (!pool.length) return info('Набор пройден', 'В этом наборе все слова уже в базе. Выбери другой набор.');
   }
   let cand = pool.filter(w => w.en !== lastEn); if (!cand.length) cand = pool;
-  const w = cand[Math.random() * cand.length | 0], r = rec(w.en);
-  let rev = S.dir === 'ru' ? true : S.dir === 'mix' ? (r.s === 2 || r.m >= MAX / 2) && Math.random() < .5 : false;
+  const w = cand[Math.random() * cand.length | 0], r = rec(K(w));
+  let rev = S.dir === 'ru' ? true : S.dir === 'mix' ? (r.s === 2 || r.m >= mx(w) / 2) && Math.random() < .5 : false;
   if (mode === 'listen') rev = false;
   drop(w, rev);
 }
 
 function newCard(w) {
-  overlay(`<div class="card new"><div class="k">Новое слово · №${w.i + 1} по частоте</div><div class="en">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>
+  overlay(`<div class="card new"><div class="k">${w.ph ? 'Новая фраза открыта' : `Новое слово · №${w.i + 1} по частоте`}</div><div class="en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>
     <button class="speak" id="sp">${SPK}Произношение</button>
-    <div class="hint">Набор: ${esc(curSet().n)}</div>
+    <div class="hint">${w.ph ? `Собрана из твоих слов: ${esc(w.keys.join(', '))}` : 'Набор: ' + esc(curSet().n)}</div>
     <div class="row"><button class="pill" id="knowBtn">Уже знаю</button><button class="pill main" id="learnBtn">Учить</button></div></div>`);
   say(w.en); sfx('new');
   $('sp').onclick = () => say(w.en, true);
-  $('knowBtn').onclick = () => { rec(w.en).s = 3; save(); closeOv(); step(); };
+  $('knowBtn').onclick = () => { rec(K(w)).s = 3; save(); closeOv(); step(); };
   $('learnBtn').onclick = () => {
-    const r = rec(w.en); r.s = 1; r.m = 0; S.todayNew++; today().n++; qAdd('newW', 1);
-    if (S.todayNew === S.goal) toast('Дневная норма новых слов взята', 'ok');
+    const r = rec(K(w)); r.s = 1; r.m = 0;
+    if (!w.ph) { S.todayNew++; today().n++; qAdd('newW', 1); if (S.todayNew === S.goal) toast('Дневная норма новых слов взята', 'ok'); }
     save(); closeOv(); step();
   };
 }
@@ -636,6 +660,9 @@ function info(title, text) {
 const SPK = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
 function pickOthers(w, n) {
+  if (w.ph) { const U = pUnlocked(), src = U.length > 12 ? U : P, out = [], seen = new Set([w.ru, w.en]); let g = 0;
+    while (out.length < n && g++ < 300) { const pool = Math.random() < .75 ? src : P, x = pool[Math.random() * pool.length | 0]; if (seen.has(x.ru) || seen.has(x.en)) continue; seen.add(x.ru); seen.add(x.en); out.push(x); }
+    return out; }
   const src = curSet().words.length > 30 ? curSet().words : W, out = [], seen = new Set([w.ru, w.en]);
   let guard = 0;
   while (out.length < n && guard++ < 200) {
@@ -650,10 +677,11 @@ function drop(w, rev) {
   cur = { w, rev, listen }; lastEn = w.en;
   opts = shuffle([w, ...pickOthers(w, 3)]);
   ansBtns.forEach((b, i) => { b.textContent = rev ? opts[i].en : opts[i].ru; b.disabled = false; b.className = 'ans'; });
-  const r = rec(w.en);
-  const tag = r.s === 2 ? `повтор · ${r.iv} дн.` : `слово ${r.m}/${MAX}`;
-  const head = listen ? `<button class="listen" id="relisten">${SPK}Слушай</button>` : `<div class="dw${rev ? ' ru' : ''}">${esc(rev ? w.ru : w.en)}</div>`;
-  $('drop').innerHTML = `<div class="pts num" id="pts">100</div><div class="dbox">${head}<div class="dmeta">${rev ? 'ru → en · ' : ''}${tag}<div class="bar ${r.s === 2 ? 'ok' : ''}"><i style="width:${r.s === 2 ? 100 : r.m / MAX * 100}%"></i></div></div></div>`;
+  const r = rec(K(w));
+  const tag = r.s === 2 ? `повтор · ${r.iv} дн.` : `${w.ph ? 'фраза' : 'слово'} ${r.m}/${mx(w)}`;
+  const head = listen ? `<button class="listen" id="relisten">${SPK}Слушай</button>` : `<div class="dw${rev ? ' ru' : ''}${w.ph ? ' ph' : ''}">${esc(rev ? w.ru : w.en)}</div>`;
+  $('drop').classList.toggle('ph', !!w.ph);
+  $('drop').innerHTML = `<div class="pts num" id="pts">100</div><div class="dbox">${head}<div class="dmeta">${rev ? 'ru → en · ' : ''}${tag}<div class="bar ${r.s === 2 ? 'ok' : ''}"><i style="width:${r.s === 2 ? 100 : r.m / mx(w) * 100}%"></i></div></div></div>`;
   if (listen) $('relisten').onclick = () => say(w.en, true);
   $('drop').hidden = false;
   elapsed = 0; t0 = performance.now(); running = true;
@@ -677,7 +705,7 @@ function judge(i) {
   if (!running || !cur) return;
   running = false; cancelAnimationFrame(raf);
   const now = performance.now(), rt = elapsed + now - t0;
-  const { w, rev } = cur, r = rec(w.en), right = opts.indexOf(w), ok = i === right;
+  const { w, rev } = cur, r = rec(K(w)), M = mx(w), right = opts.indexOf(w), ok = i === right;
   const pts = ok ? Math.max(5, +$('pts').textContent) : 0, was = r.s;
   ansBtns.forEach((b, k) => { b.disabled = true; if (k === right) b.classList.add('right'); else if (k === i) b.classList.add('wrong'); });
   $('drop').hidden = true;
@@ -690,10 +718,16 @@ function judge(i) {
     const mult = 1 + Math.min(combo, 20) * .05;
     gain = (3 + pts * .2) * mult;
     if (r.s === 1) {
-      r.m = Math.min(MAX, r.m + pts);
-      if (r.m >= MAX) { r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 40; note = 'Слово выучено! +1 кирпич в стройку. Первый повтор — завтра'; const nl = nLearned(); if (stageOf(nl) > stageOf(nl - 1)) MQ.push({ t: 'build', stage: stageOf(nl) }); }
-      else { const left = Math.ceil((MAX - r.m) / Math.max(pts, 40)); note = `Прогресс слова +${pts}. Ещё примерно ${left} ${pl(left, 'попадание', 'попадания', 'попаданий')}`; }
-      progress = `<div class="cbar"><i style="width:${r.m / MAX * 100}%"></i></div>`;
+      r.m = Math.min(M, r.m + pts);
+      if (r.m >= M && w.ph) { r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 25; note = 'Фраза выучена! Первый повтор — завтра'; }
+      else if (r.m >= M) {
+        r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 40; note = 'Слово выучено! +1 кирпич в стройку. Первый повтор — завтра';
+        const nl = nLearned(); if (stageOf(nl) > stageOf(nl - 1)) MQ.push({ t: 'build', stage: stageOf(nl) });
+        const opened = P.filter(p => p.keys.includes(w.en) && pOpen(p)).length;
+        if (opened) setTimeout(() => toast(`Открыто новых фраз: ${opened} — режим «Фразы»`, 'ach'), 400);
+      }
+      else { const left = Math.ceil((M - r.m) / Math.max(pts, 40)); note = `Прогресс ${w.ph ? 'фразы' : 'слова'} +${pts}. Ещё примерно ${left} ${pl(left, 'попадание', 'попадания', 'попаданий')}`; }
+      progress = `<div class="cbar"><i style="width:${r.m / M * 100}%"></i></div>`;
     } else if (r.s === 2) {
       if (r.n && r.n <= S.day) { const k = INTERVALS.indexOf(r.iv); r.iv = INTERVALS[Math.min(INTERVALS.length - 1, k + 1)]; r.n = dAdd(r.iv); qAdd('review', 1); note = `Помнишь. Следующий повтор через ${r.iv} ${pl(r.iv, 'день', 'дня', 'дней')}`; }
       else note = 'Помнишь, красава';
@@ -705,14 +739,15 @@ function judge(i) {
     sfx('ok');
   } else {
     combo = 0; r.e = (r.e || 0) + 1; buzz(110); sfx('bad');
-    if (r.s === 2) { r.s = 1; r.m = MAX / 2; r.iv = 0; r.n = ''; note = 'Забыл — слово вернулось в учёбу с половиной прогресса'; }
-    else { r.m = Math.max(0, r.m - 150); note = (i === -1 ? 'Не успел' : 'Мимо') + ' — прогресс слова −150'; }
-    progress = `<div class="cbar"><i style="width:${r.m / MAX * 100}%"></i></div>`;
+    const pen = w.ph ? 75 : 150;
+    if (r.s === 2) { r.s = 1; r.m = M / 2; r.iv = 0; r.n = ''; note = `Забыл — ${w.ph ? 'фраза вернулась' : 'слово вернулось'} в учёбу с половиной прогресса`; }
+    else { r.m = Math.max(0, r.m - pen); note = (i === -1 ? 'Не успел' : 'Мимо') + ` — прогресс ${w.ph ? 'фразы' : 'слова'} −${pen}`; }
+    progress = `<div class="cbar"><i style="width:${r.m / M * 100}%"></i></div>`;
   }
   addXP(gain); checkAch(); save(); renderHud();
   const xpLine = ok ? `<div class="xpline num"><span>+${Math.round(gain)} XP</span>${combo >= 3 ? `<span>комбо ${combo}</span>` : ''}</div>` : '';
   overlay(`<div class="card ${ok ? 'ok' : 'bad'}"><div class="k">${ok ? `Верно · ${pts} очков` : 'Правильный ответ'}</div>
-    <div class="en">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>${progress}<div class="hint">${esc(note)}</div>${xpLine}
+    <div class="en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>${progress}<div class="hint">${esc(note)}</div>${xpLine}
     ${ok ? '' : '<div class="row"><button class="pill main" id="nextBtn">Дальше</button></div>'}</div>`);
   if (ok) { autoT = setTimeout(next, was === 1 && r.s === 2 ? 1900 : 1200); $('ov').onclick = () => { clearTimeout(autoT); next(); }; if (rev) say(w.en); }
   else { $('nextBtn').onclick = next; say(w.en); }
@@ -722,7 +757,7 @@ function judge(i) {
 function clearAns() { ansBtns.forEach(b => { b.textContent = ''; b.disabled = true; b.className = 'ans'; }); $('drop').hidden = true; }
 function overlay(html) { const o = $('ov'); o.innerHTML = html; o.hidden = false; }
 function closeOv() { const o = $('ov'); o.hidden = true; o.innerHTML = ''; o.onclick = null; }
-function toast(t, cls) { const d = document.createElement('div'); d.className = 'toast ' + (cls || ''); d.textContent = t; $('toasts').appendChild(d); setTimeout(() => d.remove(), 2800); }
+function toast(t, cls) { const box = $('toasts'); while (box.children.length >= 3) box.firstChild.remove(); const d = document.createElement('div'); d.className = 'toast ' + (cls || ''); d.textContent = t; $('toasts').appendChild(d); setTimeout(() => d.remove(), 2800); }
 
 function showModal(cb) {
   const m = MQ.shift(), el = $('modal');
@@ -763,7 +798,7 @@ function closeHub() { $('hub').hidden = true; }
 function fillSelects() {
   $('setSel').innerHTML = SETS.map(s => { const done = s.words.filter(w => st(w.en) >= 2).length; return `<option value="${s.id}" ${s.id === S.set ? 'selected' : ''}>${esc(s.n)} · ${done}/${s.words.length}</option>`; }).join('');
   const due = dueList().length, hard = hardList().length;
-  $('modeSel').innerHTML = MODES.map(m => `<option value="${m.id}" ${m.id === S.mode ? 'selected' : ''}>${m.n}${m.id === 'review' ? ` · ${due}` : m.id === 'errors' ? ` · ${hard}` : ''}</option>`).join('');
+  $('modeSel').innerHTML = MODES.map(m => `<option value="${m.id}" ${m.id === S.mode ? 'selected' : ''}>${m.n}${m.id === 'review' ? ` · ${due}` : m.id === 'errors' ? ` · ${hard}` : m.id === 'phrases' ? ` · ${pUnlocked().length}` : ''}</option>`).join('');
 }
 $('setSel').onchange = e => { S.set = e.target.value; save(); dropCur(); };
 $('modeSel').onchange = e => { S.mode = e.target.value; save(); dropCur(); };
@@ -807,6 +842,8 @@ function tabHome() {
         <div><dt>Оценка</dt><dd class="num">${fmt(learned * PRICE_M2)} ₽</dd><small>условно по ${fmt(PRICE_M2)} ₽/м²</small></div>
         <div><dt>Этажность</dt><dd>${STAGES[sg].f || '—'}</dd><small>растёт со стройкой</small></div>
         <div><dt>В работе</dt><dd class="num">${inWork} ${pl(inWork, 'слово', 'слова', 'слов')}</dd><small>к повтору сегодня: ${dueList().length}</small></div>
+        <div><dt>Фразы открыты</dt><dd class="num">${pUnlocked().length} из ${P.length}</dd><small>собираются из выученных слов</small></div>
+        <div><dt>Фразы выучены</dt><dd class="num">${pLearned().length}</dd><small>режим «Фразы»</small></div>
       </dl>
       <div class="flabel">Характеристики владельца</div>
       <div class="stats">
@@ -858,7 +895,8 @@ function tabPlan() {
       <li><b>Очки идут в прогресс слова.</b> Чтобы выучить слово, нужно набрать ${MAX}: быстрыми ответами это 6 попаданий, медленными 8–12. Ошибка отнимает 150.</li>
       <li><b>Выученные слова возвращаются на повтор</b> по интервалам, чтобы осели в долгой памяти.</li>
       <li><b>Объект строится только из выученных слов:</b> каждое слово — кирпич и 1 м². Опыт и уровень идут за каждый верный ответ, а <b>комбо</b> (верные подряд) даёт к опыту до ×2.</li>
-      <li><b>Наборы и режимы</b> выбираются внизу меню: тема слов, на слух, работа над ошибками, только повторы.</li>
+      <li><b>Фразы открываются сами</b>, когда выучены все слова из них. Учить их — в режиме «Фразы»: 3 быстрых попадания, и фраза твоя.</li>
+      <li><b>Наборы и режимы</b> выбираются внизу меню: тема слов, на слух, работа над ошибками, повторы, фразы.</li>
     </ol>
   </section>`;
   if (due) $('goReview').onclick = () => { S.mode = 'review'; save(); fillSelects(); dropCur(); $('playBtn').click(); };
@@ -872,12 +910,13 @@ function wordsOf(f) {
     case 'due': return dueList();
     case 'known': return W.filter(w => st(w.en) === 3);
     case 'new': return W.filter(w => st(w.en) === 0);
+    case 'phr': return pUnlocked();
     default: return W;
   }
 }
 const STATUS = { 0: ['новое', 'var(--muted)'], 1: ['учу', 'var(--blue)'], 2: ['выучено', 'var(--ok)'], 3: ['знал', 'var(--gold)'] };
 function tabWords() {
-  const F = [['learning', 'Учу'], ['learned', 'Выучено'], ['due', 'Повтор сегодня'], ['hard', 'Трудные'], ['known', 'Знал'], ['new', 'Новые'], ['all', 'Все']];
+  const F = [['learning', 'Учу'], ['learned', 'Выучено'], ['due', 'Повтор сегодня'], ['hard', 'Трудные'], ['phr', 'Фразы'], ['known', 'Знал'], ['new', 'Новые'], ['all', 'Все']];
   $('hubBody').innerHTML = `<input class="search" id="wq" type="search" placeholder="Поиск по-английски или по-русски" value="${esc(wQuery)}" autocomplete="off">
     <div class="chips" id="wf">${F.map(([id, n]) => `<button data-f="${id}" class="${id === wFilter ? 'on' : ''}">${n} · ${wordsOf(id).length}</button>`).join('')}</div>
     <div id="wl"></div>`;
@@ -890,10 +929,10 @@ function drawList() {
   let list = wordsOf(wFilter); if (q) list = list.filter(w => w.en.toLowerCase().includes(q) || w.ru.toLowerCase().includes(q));
   if (!list.length) { $('wl').innerHTML = `<div class="block"><p>${q ? 'Ничего не нашлось.' : 'Здесь пока пусто. Слова появятся по ходу игры.'}</p></div>`; return; }
   $('wl').innerHTML = `<div class="wlist">${list.slice(0, wLimit).map(w => {
-    const r = S.w[w.en] || { s: 0, m: 0, e: 0 }, [sn, sc] = STATUS[r.s], pct = r.s >= 2 ? 100 : r.m / MAX * 100;
-    const det = openWord === w.en ? `<div class="wdet"><span class="num">Прогресс ${r.s >= 2 ? MAX : r.m}/${MAX} · ошибок ${r.e || 0}${r.s === 2 && r.n ? ` · повтор ${r.n.split('-').reverse().slice(0, 2).join('.')}` : ''}</span>
-      <div class="btnrow">${r.s === 3 || r.s === 0 ? `<button class="btn ghost" data-act="learn" data-en="${esc(w.en)}">Взять в учёбу</button>` : `<button class="btn ghost" data-act="reset" data-en="${esc(w.en)}">Учить заново</button>`}${r.s !== 3 ? `<button class="btn ghost" data-act="know" data-en="${esc(w.en)}">Уже знаю</button>` : ''}</div></div>` : '';
-    return `<button class="wrow" data-en="${esc(w.en)}"><span class="we">${esc(w.en)}</span><span class="wr">${esc(w.ru)}</span><span><div class="st" style="color:${sc}">${sn}</div><div class="bar ${r.s >= 2 ? 'ok' : 'blue'}"><i style="width:${pct}%"></i></div></span></button>${det}`;
+    const key = K(w), M = mx(w), r = S.w[key] || { s: 0, m: 0, e: 0 }, [sn, sc] = STATUS[r.s], pct = r.s >= 2 ? 100 : r.m / M * 100;
+    const det = openWord === key ? `<div class="wdet"><span class="num">Прогресс ${r.s >= 2 ? M : r.m}/${M} · ошибок ${r.e || 0}${r.s === 2 && r.n ? ` · повтор ${r.n.split('-').reverse().slice(0, 2).join('.')}` : ''}</span>
+      <div class="btnrow">${r.s === 3 || r.s === 0 ? `<button class="btn ghost" data-act="learn" data-en="${esc(key)}">Взять в учёбу</button>` : `<button class="btn ghost" data-act="reset" data-en="${esc(key)}">Учить заново</button>`}${r.s !== 3 ? `<button class="btn ghost" data-act="know" data-en="${esc(key)}">Уже знаю</button>` : ''}</div></div>` : '';
+    return `<button class="wrow" data-en="${esc(key)}"><span class="we">${esc(w.en)}</span><span class="wr">${esc(w.ru)}</span><span><div class="st" style="color:${sc}">${sn}</div><div class="bar ${r.s >= 2 ? 'ok' : 'blue'}"><i style="width:${pct}%"></i></div></span></button>${det}`;
   }).join('')}</div>${list.length > wLimit ? `<button class="more" id="more">Показать ещё (${list.length - wLimit})</button>` : ''}`;
   $('wl').onclick = e => {
     const a = e.target.closest('[data-act]');
@@ -901,7 +940,7 @@ function drawList() {
       if (a.dataset.act === 'know') { r.s = 3; r.m = 0; }
       else { r.s = 1; r.m = 0; r.iv = 0; r.n = ''; }
       save(); toast('Готово'); tabWords(); return; }
-    const row = e.target.closest('.wrow'); if (row) { say(row.dataset.en, true); openWord = openWord === row.dataset.en ? '' : row.dataset.en; drawList(); }
+    const row = e.target.closest('.wrow'); if (row) { say(row.dataset.en.replace(/^§/, ''), true); openWord = openWord === row.dataset.en ? '' : row.dataset.en; drawList(); }
     if (e.target.id === 'more') { wLimit += 300; drawList(); }
   };
 }
