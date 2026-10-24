@@ -281,7 +281,8 @@ const BY = Object.fromEntries(W.map(w => [w.en, w]));
 
 const SETS = [
   { id: 'all', n: 'Все слова по частоте' },
-  { id: 'realty', n: 'Недвижимость и сделки', l: 'real estate,realtor,broker,commission,deposit,down payment,interest rate,lease,landlord,tenant,listing,showing,viewing,appraisal,inspection,deed,title deed,closing,escrow,asking price,bargain,discount,condition,renovation,mortgage,loan,contract,deal,price,buyer,seller,client,owner,rent,sign,signature,agreement,notary,registration,property,property tax,investor,developer,new building,resale,cottage,studio,duplex,apartment,house,home,flat,neighborhood,suburb,downtown,location,view,parking,square meter,plot,utilities,maintenance,estate,housing,household,resident,neighbor,key,area,building,district,yard,cost,value,payment,installment,refund,receipt,invoice,estimate,profit,tax,insurance,lead,referral,reputation,review,rating,advertisement,ad,marketing,brand,competitor,market,sell,buy,own,purchase,square' },
+  { id: 'realty', n: 'Недвижимость и сделки', l: 'real estate,realtor,broker,commission,deposit,down payment,interest rate,lease,landlord,tenant,listing,showing,viewing,appraisal,inspection,deed,title deed,closing,escrow,asking price,bargain,discount,condition,renovation,mortgage,loan,contract,deal,price,buyer,seller,client,owner,rent,sign,signature,agreement,notary,registration,property,property tax,investor,developer,new building,resale,cottage,studio,duplex,apartment,house,home,flat,neighborhood,suburb,downtown,location,view,parking,square meter,plot,utilities,maintenance,estate,housing,household,resident,neighbor,key,area,building,district,yard,cost,value,payment,installment,refund,receipt,invoice,estimate,profit,tax,insurance,lead,referral,reputation,review,rating,advertisement,ad,marketing,brand,competitor,market,sell,buy,own,purchase,square,make a deal,close a deal,make an offer,counteroffer,walk away,win-win,bottom line,fair price,market value,first impression,small talk,follow up,cold call,key point,pros and cons,gut feeling,price drop,hidden defect,move-in ready,fixer-upper,curb appeal,open-plan,south-facing,spacious,bright,well-kept,furnished,unfurnished,gated community,homeowner,house hunting,real estate agent,price tag,deal breaker,handshake deal,earnest money,monthly payment,credit score,paperwork,ownership,kitchenette,storage room,laundry,heated floor,double glazing,leaky roof,mold,pest,termite,draft,humidity,ventilation,radiator,fuse box,meter,water heater,septic tank,sewer,skyline,neighborhood watch,commute,walkable,amenities,public transport,grocery store,construction site,builder,architect,bricklayer,foreman,contractor,floor plan,property manager,open house,move in,move out,blueprint,mansion,layout,premises,residence,rental,landlady,extension,facade,courtyard,lawn,driveway,cellar,barn,shed,well,bathhouse,greenhouse,doghouse,vegetable garden,log house,skyscraper,mall,tower,builder,architect,foreman,contractor' },
+  { id: 'phrases', n: 'Фразовые глаголы и выражения', l: 'back up,blow up,break in,break up,bring up,call off,catch up,cheer up,clean up,come across,come up with,count on,cut down,deal with,drop by,drop off,eat out,end up,fall apart,fall behind,fill out,get along,get away,get back,get by,get over,get rid of,give away,give back,go ahead,go back,go down,go over,go through,go up,grow up,hand in,hang up,hold on,hurry up,keep up,kick off,knock out,leave out,let down,log in,look out,look up,make up,mess up,move on,pass away,pay back,pay off,put away,put off,put out,put up with,run away,run into,see off,sell out,set off,settle down,show off,shut down,sign up,slow down,sort out,speak up,stand out,stay up,take after,take back,take on,take over,take up,talk over,tear down,think over,throw away,try on,turn down,turn up,wake up,warm up,watch out,wear out,work on,write down,by the way,in fact,of course,at least,as soon as,in advance,on time,in time,by chance,for sure,no way,on purpose,so far,after all,as well,at once,by heart,in charge,in common,in person,on sale,out of order,under control,up to date,for instance,in addition,in general,on the other hand,as a result,at first,in the end,make sense,take place,pay attention to,keep in mind' },
   { id: 'talk', n: 'Переговоры и психология', l: 'negotiate,negotiation,compromise,influence,persuasion,manipulation,empathy,rapport,tone,gesture,smile,eye contact,silence,pause,mirror,label,objection,argument,leverage,deadline,urgent,request,proposal,offer,agree,convince,persuade,trust,doubt,promise,demand,deny,admit,insist,suggest,recommend,explain,ask,answer,question,listen,understand,respect,attitude,behavior,strategy,tactic,power,pressure,threat,fear,risk,chance,choice,decision,interest,benefit,advantage,goal,result,success,failure,mistake,opinion,belief,reason,fact,truth,lie,secret,confidence,emotion,calm down,give up,find out,figure out,point,feedback,impression,perception,motivation,intention,expectation,reaction,response,mind,attention,focus' },
   { id: 'home', n: 'Дом, стройка, инструменты', l: 'room,kitchen,floor,wall,window,door,roof,yard,basement,attic,garage,fence,gate,porch,balcony,ceiling,stairs,elevator,hallway,bedroom,bathroom,toilet,living room,dining room,furniture,sofa,carpet,curtain,lamp,shower,sink,stove,oven,fridge,washing machine,heating,plumbing,wiring,insulation,chimney,firewood,brick,concrete,cement,steel,metal,wood,timber,tool,hammer,nail,screw,saw,drill,axe,shovel,ladder,brush,paint,glue,tape,rope,bucket,board,bed,table,chair,shelf,drawer,cabinet,pillow,blanket,towel,lock,light bulb,switch,socket,plug,battery,repair,fix,build,clean,wash,foundation,frame,pipe,tap,wire,roof,garden,vacuum' },
   { id: 'food', n: 'Еда и кухня', l: 'food,water,bread,milk,meat,egg,fish,rice,salt,sugar,coffee,tea,juice,beer,wine,vodka,breakfast,lunch,dinner,supper,snack,meal,beef,pork,sausage,cheese,butter,cream,flour,honey,jam,cake,cookie,candy,chocolate,salad,soup,sauce,onion,garlic,carrot,cabbage,cucumber,tomato,pepper,mushroom,potato,berry,apple,orange,banana,lemon,grape,cherry,nut,fruit,vegetable,fork,spoon,knife,bowl,plate,cup,glass,pan,pot,kettle,menu,waiter,tip,bill,cook,eat,drink,taste,hungry,recipe,restaurant,dish,flavor,portion,grain,wheat' },
@@ -310,14 +311,30 @@ const STAGES = [
   { at: 5, t: 'Фундамент', f: 0 },
   { at: 15, t: 'Сруб', f: 1 },
   { at: 30, t: 'Изба под крышей', f: 1 },
-  { at: 60, t: 'Тёплый дом с печью', f: 1 },
-  { at: 100, t: 'Дом с мансардой', f: 1 },
-  { at: 175, t: 'Коттедж с гаражом', f: 2 },
-  { at: 275, t: 'Двухэтажный особняк', f: 2 },
-  { at: 400, t: 'Квартал таунхаусов', f: 2 },
-  { at: 600, t: 'Жилой комплекс', f: 9 },
-  { at: 900, t: 'Небоскрёб', f: 60 },
-  { at: 1500, t: 'Свой город', f: '∞' },
+  { at: 50, t: 'Окна и дверь', f: 1 },
+  { at: 75, t: 'Печь затоплена', f: 1 },
+  { at: 100, t: 'Забор с калиткой', f: 1 },
+  { at: 150, t: 'Свой колодец', f: 1 },
+  { at: 200, t: 'Баня по-чёрному', f: 1 },
+  { at: 250, t: 'Огород и теплица', f: 1 },
+  { at: 300, t: 'Дом с мансардой', f: '1 + мансарда' },
+  { at: 375, t: 'Будка и верный пёс', f: '1 + мансарда' },
+  { at: 450, t: 'Гараж', f: '1 + мансарда' },
+  { at: 550, t: 'Машина во дворе', f: '1 + мансарда' },
+  { at: 650, t: 'Второй этаж', f: 2 },
+  { at: 800, t: 'Беседка с мангалом', f: 2 },
+  { at: 950, t: 'Солнечные панели', f: 2 },
+  { at: 1100, t: 'Соседи: таунхаусы', f: 2 },
+  { at: 1300, t: 'Школа по соседству', f: 3 },
+  { at: 1500, t: 'ЖК, первая очередь', f: 12 },
+  { at: 1800, t: 'ЖК, вторая очередь', f: 16 },
+  { at: 2100, t: 'Торговый центр', f: 16 },
+  { at: 2500, t: 'Небоскрёб', f: 60 },
+  { at: 3000, t: 'Мост через реку', f: 60 },
+  { at: 3500, t: 'Свой аэропорт', f: 60 },
+  { at: 4000, t: 'Стадион', f: 60 },
+  { at: 4500, t: 'Телебашня', f: 90 },
+  { at: 5000, t: 'Свой город', f: '∞' },
 ];
 
 /* ================= state ================= */
@@ -409,6 +426,9 @@ const ACH = [
   { id: 'w250', ic: '250', n: 'Под крышей', d: 'Выучить 250 слов', t: () => nLearned() >= 250 },
   { id: 'w500', ic: '500', n: 'Читаю со словарём', d: 'Выучить 500 слов', t: () => nLearned() >= 500 },
   { id: 'w1000', ic: '1K', n: 'Тысячник', d: 'Выучить 1000 слов', t: () => nLearned() >= 1000 },
+  { id: 'w2000', ic: '2K', n: 'Смотрю без субтитров', d: 'Выучить 2000 слов', t: () => nLearned() >= 2000 },
+  { id: 'w3000', ic: '3K', n: 'Читаю книги', d: 'Выучить 3000 слов', t: () => nLearned() >= 3000 },
+  { id: 'banya', ic: 'Баня', n: 'С лёгким паром', d: 'Построить баню (200 слов)', t: () => nLearned() >= 200 },
   { id: 'wall', ic: 'ВСЁ', n: 'Ходячий словарь', d: 'Пройти весь словарь', t: () => W.every(w => st(w.en) >= 2) },
   { id: 'realty', ic: '₽', n: 'Профессионал', d: 'Выучить весь набор «Недвижимость»', t: () => SETS[1].words.every(w => st(w.en) >= 2) },
   { id: 'c10', ic: '×10', n: 'Разогрев', d: 'Комбо 10', t: () => S.bestCombo >= 10 },
@@ -427,7 +447,8 @@ const ACH = [
   { id: 'owl', ic: '00:00', n: 'Сова', d: 'Учить слова после полуночи', t: () => S.owl },
   { id: 'gpt', ic: 'GPT', n: 'Тренер найден', d: 'Отправить слова в ChatGPT', t: () => S.gpt },
   { id: 'izba', ic: 'Изба', n: 'Своя крыша', d: 'Достроить избу (30 слов)', t: () => nLearned() >= 30 },
-  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (900 слов)', t: () => nLearned() >= 900 },
+  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (2500 слов)', t: () => nLearned() >= 2500 },
+  { id: 'city', ic: '5000', n: 'Свой город', d: 'Выучить 5000 слов', t: () => nLearned() >= 5000 },
 ];
 function checkAch() {
   ACH.forEach(a => { if (!S.ach[a.id] && a.t()) { S.ach[a.id] = Date.now(); toast(`Достижение: ${a.n}`, 'ach'); sfx('ach'); } });
@@ -471,45 +492,80 @@ const winGrid = (x, y, w, h, cols, rows, lit, dark, night) => {
 function houseSVG(stage) {
   const h = new Date().getHours(), night = h >= 20 || h < 6;
   const lit = night ? '#ffd36b' : '#bfe0ff', dark = night ? '#24304d' : '#8fb3d6';
+  const far = night ? '#2c3a5e' : '#a9bcd6', mid = night ? '#3a4566' : '#c9d3e3';
   const id = 'g' + Math.random().toString(36).slice(2, 7);
-  let s = `<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(STAGES[stage].t)}">
+  const S = n => stage >= n;
+  let s = `<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(STAGES[stage].t)}">
   <defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${night ? '#0b1430' : '#7fbaf5'}"/><stop offset="1" stop-color="${night ? '#22305a' : '#dcefff'}"/></linearGradient></defs>
-  <rect width="320" height="180" fill="url(#${id})"/>`;
-  if (night) { [[30, 20], [80, 40], [140, 18], [210, 30], [270, 15], [300, 50], [50, 60], [250, 70]].forEach(([x, y], i) => { s += `<circle class="tw" style="animation-delay:${i * .3}s" cx="${x}" cy="${y}" r="1.4" fill="#fff"/>`; }); s += `<circle cx="275" cy="32" r="11" fill="#f4f1d8"/><circle cx="281" cy="28" r="10" fill="#22305a" opacity=".55"/>`; }
-  else s += `<circle cx="270" cy="34" r="15" fill="#ffd45e"/>`;
-  s += `<path d="M0 140 Q60 112 130 132 T320 124 V180 H0Z" fill="${night ? '#1a3326' : '#86c27a'}"/>`;
-  // background city for high stages
-  if (stage >= 11) { s += `<rect x="8" y="40" width="34" height="110" fill="${night ? '#2c3a5e' : '#9fb4cf'}"/>${winGrid(8, 44, 34, 100, 3, 9, lit, dark, night)}<rect x="278" y="52" width="34" height="98" fill="${night ? '#2c3a5e' : '#9fb4cf'}"/>${winGrid(278, 56, 34, 90, 3, 8, lit, dark, night)}<path d="M236 26 V150 M236 30 H296 M236 30 L262 50" stroke="${night ? '#f0b440' : '#e0a12a'}" stroke-width="3" fill="none"/><rect x="290" y="30" width="5" height="16" fill="${night ? '#f0b440' : '#e0a12a'}"/>`; }
-  if (stage >= 10) { s += `<rect x="128" y="6" width="64" height="144" fill="${night ? '#33456f' : '#7d9ccc'}"/><rect x="128" y="6" width="10" height="144" fill="#fff" opacity=".12"/>${winGrid(128, 10, 64, 136, 4, 14, lit, dark, night)}<rect x="158" y="-2" width="3" height="10" fill="#bbb"/>`; }
-  if (stage >= 9) { s += `<rect x="40" y="62" width="58" height="88" fill="${night ? '#3a4566' : '#c9d3e3'}"/>${winGrid(40, 66, 58, 80, 4, 7, lit, dark, night)}<rect x="226" y="72" width="56" height="78" fill="${night ? '#3a4566' : '#c9d3e3'}"/>${winGrid(226, 76, 56, 70, 4, 6, lit, dark, night)}`; }
-  if (stage >= 8) { [[18, 0], [272, 1]].forEach(([x]) => { s += `<rect x="${x}" y="112" width="34" height="34" fill="#c98b5a"/><path d="M${x - 4} 112 L${x + 17} 96 L${x + 38} 112Z" fill="#6d3427"/><rect x="${x + 8}" y="120" width="8" height="8" fill="${lit}"/><rect x="${x + 20}" y="128" width="8" height="18" fill="#5a3320"/>`; }); }
-  // the house
+  <rect width="320" height="190" fill="url(#${id})"/>`;
+  if (night) { [[30, 20], [80, 40], [140, 18], [210, 30], [250, 12], [300, 50], [50, 60], [230, 70], [100, 10]].forEach(([x, y], i) => { s += `<circle class="tw" style="animation-delay:${i * .3}s" cx="${x}" cy="${y}" r="1.4" fill="#fff"/>`; }); s += `<circle cx="292" cy="26" r="11" fill="#f4f1d8"/><circle cx="298" cy="22" r="10" fill="#22305a" opacity=".55"/>`; }
+  else s += `<circle cx="290" cy="28" r="15" fill="#ffd45e"/>`;
+
+  /* ---- distant city (behind the hill) ---- */
+  if (S(24)) s += `<path d="M18 34 l26 -6" stroke="#fff" stroke-width="1.5" opacity=".6" stroke-dasharray="3 3"/><path d="M44 27 l10 -3 l3 1 l-4 3 l6 2 l-2 1 l-7 -1 l-6 3 l-2 -1 l3 -3z" fill="${night ? '#e8ecf4' : '#ffffff'}"/>${night ? '<circle cx="45" cy="28" r="1.2" fill="#ff5252" class="tw"/>' : ''}`;
+  if (S(26)) s += `<rect x="113" y="4" width="3" height="128" fill="${night ? '#8c97b4' : '#7b879f'}"/><path d="M107 132 L114.5 40 L122 132" fill="none" stroke="${night ? '#8c97b4' : '#7b879f'}" stroke-width="2"/><circle cx="114.5" cy="44" r="6" fill="${night ? '#c9d2e8' : '#9aa6bd'}"/><circle cx="114.5" cy="4" r="1.6" fill="#ff5252" class="tw"/>`;
+  if (S(22)) s += `<rect x="140" y="8" width="40" height="124" fill="${night ? '#33456f' : '#7d9ccc'}"/><rect x="140" y="8" width="7" height="124" fill="#fff" opacity=".12"/>${winGrid(140, 12, 40, 116, 3, 13, lit, dark, night)}<rect x="159" y="0" width="2" height="9" fill="#bbb"/>`;
+  if (S(19)) s += `<rect x="16" y="54" width="38" height="78" fill="${far}"/>${winGrid(16, 58, 38, 70, 3, 8, lit, dark, night)}`;
+  if (S(20)) s += `<rect x="270" y="60" width="38" height="72" fill="${far}"/>${winGrid(270, 64, 38, 64, 3, 7, lit, dark, night)}`;
+  s += '<g transform="translate(0,-16)">';
+  if (S(23)) s += `<path d="M190 116 H268" stroke="${night ? '#9aa6c2' : '#6f7d96'}" stroke-width="3"/><path d="M192 116 Q211 92 229 116 Q248 92 266 116" fill="none" stroke="${night ? '#9aa6c2' : '#6f7d96'}" stroke-width="2"/>${[200, 211, 222, 236, 247, 258].map(x => `<path d="M${x} 116 V${x < 229 ? 101 + Math.abs(x - 211) * .6 : 101 + Math.abs(x - 247) * .6}" stroke="${night ? '#9aa6c2' : '#6f7d96'}" stroke-width="1"/>`).join('')}${night ? '<circle cx="211" cy="104" r="1.2" fill="#ffd36b"/><circle cx="247" cy="104" r="1.2" fill="#ffd36b"/>' : ''}`;
+  if (S(21)) s += `<rect x="58" y="102" width="54" height="30" fill="${mid}"/><rect x="58" y="102" width="54" height="7" fill="#cf5a26"/><text x="85" y="108" font-size="6" text-anchor="middle" font-family="Golos Text, sans-serif" font-weight="700" fill="#fff">ТЦ «СЛОВО»</text>${winGrid(58, 111, 54, 18, 6, 1, lit, dark, night)}`;
+  if (S(25)) s += `<ellipse cx="34" cy="128" rx="30" ry="9" fill="${night ? '#4a5677' : '#b8c4d6'}"/><ellipse cx="34" cy="126" rx="22" ry="5" fill="${night ? '#2c6a3e' : '#5fae5a'}"/>${[8, 60].map(x => `<rect x="${x}" y="104" width="2" height="20" fill="#888"/><rect x="${x - 3}" y="102" width="8" height="4" fill="${night ? '#fff6c2' : '#ddd'}"/>`).join('')}`;
+  if (S(18)) s += `<rect x="232" y="104" width="54" height="26" fill="#b4573a"/><rect x="250" y="96" width="18" height="10" fill="#b4573a"/><path d="M248 96 L259 88 L270 96Z" fill="#6d3427"/>${winGrid(232, 108, 54, 18, 6, 2, lit, dark, night)}<rect x="281" y="82" width="1.5" height="22" fill="#ddd"/><rect x="282.5" y="82" width="9" height="6" fill="#2459d6"/>`;
+  if (S(17)) [[8, 0], [30, 1], [52, 2], [74, 3]].forEach(([x, i]) => { s += `<rect x="${x}" y="114" width="20" height="16" fill="${['#c98b5a', '#b88e62', '#c98b5a', '#a97a52'][i]}"/><path d="M${x - 2} 114 L${x + 10} 104 L${x + 22} 114Z" fill="#6d3427"/><rect x="${x + 5}" y="118" width="5" height="5" fill="${lit}"/>`; });
+  s += '</g>';
+  if (S(27)) [[70, 30, '#ff6b6b'], [232, 24, '#ffd45e'], [196, 50, '#7cf2a0']].forEach(([x, y, c], i) => { s += `<g class="tw" style="animation-delay:${i * .5}s">${Array.from({ length: 10 }, (_, k) => { const a = k / 10 * Math.PI * 2; return `<path d="M${x + Math.cos(a) * 4} ${y + Math.sin(a) * 4} L${x + Math.cos(a) * 13} ${y + Math.sin(a) * 13}" stroke="${c}" stroke-width="1.6" stroke-linecap="round"/>`; }).join('')}</g>`; });
+  if (S(27)) s += `<path d="M300 132 V50 M300 54 H250 M300 54 L276 70" stroke="${night ? '#f0b440' : '#e0a12a'}" stroke-width="3" fill="none"/><rect x="252" y="54" width="2" height="22" fill="#666"/><rect x="246" y="76" width="14" height="6" fill="#cf5a26"/>`;
+
+  /* ---- hill and ground ---- */
+  s += `<path d="M0 140 Q60 116 130 134 T320 128 V190 H0Z" fill="${night ? '#1a3326' : '#86c27a'}"/><rect x="0" y="146" width="320" height="44" fill="${night ? '#1d3a28' : '#79b86c'}"/>`;
+
   const ground = 146, X = 110, Wd = 100;
+  /* ---- yard behind the fence ---- */
+  if (S(8)) { s += `<rect x="12" y="${ground - 26}" width="38" height="26" fill="#8a5a33"/>` + [0, 1, 2, 3].map(i => `<rect x="12" y="${ground - 21 + i * 6}" width="38" height="1" fill="#6b4426"/>`).join('') + `<path d="M8 ${ground - 26} L31 ${ground - 40} L54 ${ground - 26}Z" fill="#5d4037"/><rect x="38" y="${ground - 44}" width="6" height="10" fill="#555"/><circle class="smoke" cx="41" cy="${ground - 46}" r="3" fill="#cfd3da"/><circle class="smoke s2" cx="41" cy="${ground - 46}" r="3" fill="#cfd3da"/><rect x="18" y="${ground - 16}" width="8" height="16" fill="#4e2f1c"/><rect x="34" y="${ground - 18}" width="8" height="6" fill="${lit}"/>`; }
+  if (S(7)) s += `<rect x="62" y="${ground - 12}" width="18" height="12" fill="#8d9199"/><rect x="62" y="${ground - 12}" width="18" height="2" fill="#a9adb5"/><rect x="63" y="${ground - 30}" width="2" height="18" fill="#6b4a2b"/><rect x="77" y="${ground - 30}" width="2" height="18" fill="#6b4a2b"/><path d="M59 ${ground - 29} L71 ${ground - 38} L83 ${ground - 29}Z" fill="#7a2f22"/><rect x="69" y="${ground - 24}" width="5" height="5" fill="#5a6b80"/>`;
+  if (S(11)) s += `<rect x="88" y="${ground - 11}" width="15" height="11" fill="#a9652f"/><path d="M86 ${ground - 11} L95.5 ${ground - 18} L105 ${ground - 11}Z" fill="#6d3427"/><path d="M92 ${ground} a3.5 3.5 0 0 1 7 0z" fill="#2a1a10"/><circle cx="104" cy="${ground - 4}" r="3.2" fill="#c9965d"/><circle cx="106" cy="${ground - 5}" r=".9" fill="#222"/><path d="M101.5 ${ground - 7} l-1 -3 l2 1.5z" fill="#a9763e"/>`;
+  if (S(12)) { s += `<rect x="${X + Wd + 4}" y="${ground - 34}" width="52" height="34" fill="#b9a48c"/><path d="M${X + Wd} ${ground - 34} H${X + Wd + 60} L${X + Wd + 52} ${ground - 44} H${X + Wd + 8}Z" fill="#5d4037"/><rect x="${X + Wd + 12}" y="${ground - 27}" width="36" height="27" fill="#7d8794"/>` + [0, 1, 2, 3, 4].map(i => `<rect x="${X + Wd + 12}" y="${ground - 25 + i * 5}" width="36" height="1" fill="#5f6873"/>`).join(''); }
+  if (S(13)) s += `<rect x="${X + Wd + 10}" y="${ground - 12}" width="40" height="9" rx="3" fill="#2459d6"/><path d="M${X + Wd + 18} ${ground - 12} L${X + Wd + 22} ${ground - 19} H${X + Wd + 38} L${X + Wd + 43} ${ground - 12}Z" fill="#2459d6"/><path d="M${X + Wd + 23} ${ground - 13} L${X + Wd + 25} ${ground - 17} H${X + Wd + 30} V${ground - 13}Z M${X + Wd + 32} ${ground - 13} V${ground - 17} H${X + Wd + 37} L${X + Wd + 40} ${ground - 13}Z" fill="#bfe0ff"/><circle cx="${X + Wd + 18}" cy="${ground - 3}" r="3.5" fill="#222"/><circle cx="${X + Wd + 42}" cy="${ground - 3}" r="3.5" fill="#222"/><rect x="${X + Wd + 47}" y="${ground - 10}" width="3" height="2" fill="${night ? '#fff6c2' : '#ffd45e'}"/>`;
+  if (S(15)) s += `<rect x="272" y="${ground - 22}" width="2" height="22" fill="#6b4a2b"/><rect x="306" y="${ground - 22}" width="2" height="22" fill="#6b4a2b"/><path d="M267 ${ground - 22} L290 ${ground - 34} L313 ${ground - 22}Z" fill="#7a2f22"/><rect x="278" y="${ground - 9}" width="24" height="3" fill="#8a5a33"/><rect x="284" y="${ground - 6}" width="2" height="6" fill="#444"/><rect x="292" y="${ground - 6}" width="2" height="6" fill="#444"/><rect x="282" y="${ground - 12}" width="16" height="3" fill="#333"/><circle class="smoke" cx="290" cy="${ground - 14}" r="2.5" fill="#cfd3da"/>`;
+
+  /* ---- the house ---- */
   if (stage === 0) {
     s += `<rect x="${X}" y="${ground - 2}" width="${Wd}" height="3" fill="#7a5a3a" opacity=".5"/>`;
     [X, X + Wd].forEach(x => { s += `<rect x="${x - 1.5}" y="${ground - 14}" width="3" height="16" fill="#8a5a2b"/>`; });
     s += `<path d="M${X} ${ground - 11} H${X + Wd}" stroke="#e34" stroke-width="1.5" stroke-dasharray="4 3"/><rect x="${X + 36}" y="${ground - 38}" width="3" height="38" fill="#6b4a2b"/><rect x="${X + 20}" y="${ground - 40}" width="36" height="20" rx="2" fill="#fff"/><text x="${X + 38}" y="${ground - 27}" font-size="8" text-anchor="middle" font-family="Golos Text, sans-serif" font-weight="700" fill="#cf5a26">УЧАСТОК</text>`;
   }
-  if (stage >= 1) s += `<rect x="${X - 6}" y="${ground - 6}" width="${Wd + 12}" height="10" fill="#9aa1ab"/><rect x="${X - 6}" y="${ground - 6}" width="${Wd + 12}" height="2" fill="#c5cbd3"/>`;
-  if (stage >= 6) { s += `<rect x="${X + Wd + 4}" y="${ground - 34}" width="52" height="28" fill="#b9a48c"/><path d="M${X + Wd} ${ground - 34} H${X + Wd + 60} L${X + Wd + 52} ${ground - 44} H${X + Wd + 8}Z" fill="#5d4037"/><rect x="${X + Wd + 12}" y="${ground - 27}" width="36" height="21" fill="#7d8794"/>` + [0, 1, 2, 3].map(i => `<rect x="${X + Wd + 12}" y="${ground - 25 + i * 5}" width="36" height="1" fill="#5f6873"/>`).join(''); }
-  if (stage >= 2) {
-    const wh = stage >= 7 ? 72 : stage >= 5 ? 50 : 40, top = ground - 6 - wh;
-    s += `<rect x="${X}" y="${top}" width="${Wd}" height="${wh}" fill="${stage >= 7 ? '#d8b48a' : '#b8743c'}"/>`;
-    if (stage < 7) for (let y = top + 6; y < ground - 6; y += 6) s += `<rect x="${X}" y="${y}" width="${Wd}" height="1.2" fill="#8a5226"/>`;
+  if (S(1)) s += `<rect x="${X - 6}" y="${ground - 6}" width="${Wd + 12}" height="10" fill="#9aa1ab"/><rect x="${X - 6}" y="${ground - 6}" width="${Wd + 12}" height="2" fill="#c5cbd3"/>`;
+  if (S(2)) {
+    const two = S(14), wh = two ? 72 : S(10) ? 50 : 40, top = ground - 6 - wh;
+    s += `<rect x="${X}" y="${top}" width="${Wd}" height="${wh}" fill="${two ? '#d8b48a' : '#b8743c'}"/>`;
+    if (!two) for (let y = top + 6; y < ground - 6; y += 6) s += `<rect x="${X}" y="${y}" width="${Wd}" height="1.2" fill="#8a5226"/>`;
     else s += `<rect x="${X}" y="${top + wh / 2 - 1}" width="${Wd}" height="3" fill="#b88e62"/>`;
-    if (stage >= 3) {
-      s += `<path d="M${X - 10} ${top} L${X + Wd / 2} ${top - 36} L${X + Wd + 10} ${top}Z" fill="${stage >= 7 ? '#3c4a5e' : '#7a2f22'}"/>`;
-      if (stage >= 4) s += `<rect x="${X + 70}" y="${top - 30}" width="11" height="22" fill="#8c4b38"/><circle class="smoke" cx="${X + 75}" cy="${top - 34}" r="4" fill="#e7e9ee"/><circle class="smoke s2" cx="${X + 75}" cy="${top - 34}" r="4" fill="#e7e9ee"/><circle class="smoke s3" cx="${X + 75}" cy="${top - 34}" r="4" fill="#e7e9ee"/>`;
-      if (stage >= 5) s += `<circle cx="${X + Wd / 2}" cy="${top - 14}" r="7" fill="${lit}" stroke="#5a2a1d" stroke-width="2"/>`;
+    if (S(3)) {
+      s += `<path d="M${X - 10} ${top} L${X + Wd / 2} ${top - 36} L${X + Wd + 10} ${top}Z" fill="${two ? '#3c4a5e' : '#7a2f22'}"/>`;
+      if (S(16)) for (let i = 0; i < 3; i++) { const x0 = X + Wd / 2 + 8 + i * 14, y0 = top - 36 + (8 + i * 14) * .72; s += `<path d="M${x0} ${y0 + 2} L${x0 + 12} ${y0 + 10.6} L${x0 + 12} ${y0 + 16} L${x0} ${y0 + 7.4}Z" fill="#1d3f8f" stroke="#9cc2ff" stroke-width=".6"/>`; }
+      if (S(5)) s += `<rect x="${X + 22}" y="${top - 30}" width="11" height="22" fill="#8c4b38"/><circle class="smoke" cx="${X + 27}" cy="${top - 34}" r="4" fill="#e7e9ee"/><circle class="smoke s2" cx="${X + 27}" cy="${top - 34}" r="4" fill="#e7e9ee"/><circle class="smoke s3" cx="${X + 27}" cy="${top - 34}" r="4" fill="#e7e9ee"/>`;
+      if (S(10)) s += `<circle cx="${X + Wd / 2}" cy="${top - 14}" r="7" fill="${lit}" stroke="#5a2a1d" stroke-width="2"/>`;
     }
-    if (stage >= 4) {
+    if (S(4)) {
       const wy = ground - 6 - 30;
       s += `<rect x="${X + 12}" y="${wy}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/><rect x="${X + 68}" y="${wy}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/><rect x="${X + 41}" y="${ground - 32}" width="18" height="26" fill="#5a3320"/><circle cx="${X + 55}" cy="${ground - 19}" r="1.5" fill="#f0c060"/>`;
-      if (stage >= 7) s += `<rect x="${X + 12}" y="${top + 8}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/><rect x="${X + 40}" y="${top + 8}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/><rect x="${X + 68}" y="${top + 8}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/>`;
+      if (two) s += [12, 40, 68].map(dx => `<rect x="${X + dx}" y="${top + 8}" width="20" height="16" fill="${lit}" stroke="#fff" stroke-width="2"/>`).join('');
     }
   }
+
+  /* ---- front: fence, garden, greenhouse ---- */
+  if (S(9)) {
+    for (let r = 0; r < 2; r++) s += `<rect x="18" y="${168 + r * 10}" width="96" height="6" rx="3" fill="#6b4426"/>` + Array.from({ length: 9 }, (_, k) => `<circle cx="${24 + k * 11}" cy="${168 + r * 10}" r="2.4" fill="${r ? '#e0a12a' : '#3d9a4a'}"/>`).join('');
+    s += `<path d="M236 188 V172 a32 16 0 0 1 64 0 V188Z" fill="#d6f0ff" opacity=".75" stroke="#fff" stroke-width="1.2"/><path d="M252 188 V160 M268 188 V157 M284 188 V160" stroke="#fff" stroke-width="1"/><circle cx="246" cy="182" r="3" fill="#3d9a4a"/><circle cx="262" cy="182" r="3" fill="#d94a3a"/><circle cx="278" cy="182" r="3" fill="#3d9a4a"/><circle cx="292" cy="182" r="3" fill="#d94a3a"/>`;
+  }
+  if (S(6)) {
+    let f = '';
+    for (let x = 4; x < 318; x += 7) { if (x > 150 && x < 172) continue; f += `<path d="M${x} 163 V153 l2.5 -3 l2.5 3 V163Z" fill="${night ? '#8a6a48' : '#c99a62'}"/>`; }
+    s += f + `<rect x="0" y="155" width="150" height="2" fill="${night ? '#6e5236' : '#a87c4a'}"/><rect x="172" y="155" width="148" height="2" fill="${night ? '#6e5236' : '#a87c4a'}"/><rect x="0" y="160" width="150" height="2" fill="${night ? '#6e5236' : '#a87c4a'}"/><rect x="172" y="160" width="148" height="2" fill="${night ? '#6e5236' : '#a87c4a'}"/><path d="M152 163 V152 H170 V163" fill="none" stroke="${night ? '#8a6a48' : '#a87c4a'}" stroke-width="2"/>`;
+  }
   // brick pile = words in progress
-  s += `<g>${[0, 1, 2].map(i => `<rect x="${X - 40 + i * 9}" y="${ground - 4}" width="8" height="4" fill="#c4532a"/>`).join('')}${[0, 1].map(i => `<rect x="${X - 36 + i * 9}" y="${ground - 8}" width="8" height="4" fill="#d9663a"/>`).join('')}</g>`;
+  if (stage < 27) s += `<g>${[0, 1, 2].map(i => `<rect x="${X - 2 + i * 9 - 30}" y="${ground + 6}" width="8" height="4" fill="#c4532a"/>`).join('')}${[0, 1].map(i => `<rect x="${X + 2 + i * 9 - 30}" y="${ground + 2}" width="8" height="4" fill="#d9663a"/>`).join('')}</g>`;
   return s + '</svg>';
 }
 
