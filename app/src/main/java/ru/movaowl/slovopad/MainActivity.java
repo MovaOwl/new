@@ -1,6 +1,9 @@
 package ru.movaowl.slovopad;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Intent;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -72,6 +75,22 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void speak(String text) {
             if (ttsReady) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "w");
+        }
+
+        @JavascriptInterface
+        public void copy(String text) {
+            ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            if (cm != null) cm.setPrimaryClip(ClipData.newPlainText("Словопад", text));
+        }
+
+        @JavascriptInterface
+        public void share(String text) {
+            runOnUiThread(() -> {
+                Intent send = new Intent(Intent.ACTION_SEND);
+                send.setType("text/plain");
+                send.putExtra(Intent.EXTRA_TEXT, text);
+                startActivity(Intent.createChooser(send, "Отправить слова"));
+            });
         }
 
         @JavascriptInterface
