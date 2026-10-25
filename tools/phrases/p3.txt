@@ -1,0 +1,249 @@
+add some salt|Добавь немного соли
+allow me to explain|Позвольте мне объяснить
+apply for a loan|Подать заявку на кредит
+apply for a job|Устроиться на работу (подать заявку)
+don't argue with me|Не спорь со мной
+we arrived late|Мы приехали поздно
+when did you arrive?|Когда ты приехал?
+avoid mistakes|Избегать ошибок
+avoid the traffic|Объехать пробку
+beat the price|Перебить цену
+it belongs to me|Это принадлежит мне
+borrow some money|Занять немного денег
+lend me money|Одолжи мне денег
+burn the papers|Сжечь бумаги
+I don't care|Мне всё равно
+take care of the kids|Заботиться о детях
+check the price|Проверить цену
+check the water|Проверить воду
+clean the house|Убирать дом
+a clean kitchen|Чистая кухня
+climb the stairs|Подниматься по лестнице
+collect the money|Собрать деньги
+compare the prices|Сравнить цены
+compare two houses|Сравнить два дома
+complain about the noise|Жаловаться на шум
+complete the deal|Завершить сделку
+connect the internet|Подключить интернет
+the house has two floors|В доме два этажа
+control your emotions|Контролируй эмоции
+cook a meal|Приготовить еду
+count the money|Пересчитать деньги
+cross the street|Перейти улицу
+don't cry|Не плачь
+deliver the furniture|Доставить мебель
+it depends on the price|Это зависит от цены
+it depends|Смотря как
+describe the house|Описать дом
+discover a new place|Открыть новое место
+discuss the details|Обсудить детали
+divide the money|Разделить деньги
+I doubt it|Сомневаюсь
+drop the price|Снизить цену
+earn more money|Зарабатывать больше
+enjoy your meal|Приятного аппетита
+enjoy the weekend|Хороших выходных
+enter the house|Войти в дом
+escape from the city|Сбежать из города
+fail the exam|Провалить экзамен
+fight for the client|Бороться за клиента
+fill the form|Заполнить анкету
+finish the work|Закончить работу
+the shoes fit well|Обувь хорошо сидит
+fix the door|Починить дверь
+fly to Moscow|Лететь в Москву
+forgive me|Прости меня
+gain experience|Получить опыт
+guess the price|Угадать цену
+hang the picture|Повесить картину
+I hate waiting|Ненавижу ждать
+hide the money|Спрятать деньги
+hire a lawyer|Нанять юриста
+hurry up|Поторопись
+don't hurt him|Не обижай его
+imagine a big house|Представь большой дом
+improve your English|Улучшить английский
+increase the price|Повысить цену
+invite friends|Пригласить друзей
+join us|Присоединяйся к нам
+jump into the river|Прыгнуть в реку
+knock on the door|Постучать в дверь
+laugh at the joke|Смеяться над шуткой
+don't lie to me|Не ври мне
+lift the box|Поднять коробку
+lock the door|Запереть дверь
+manage the team|Руководить командой
+I can manage|Я справлюсь
+get married|Пожениться
+it doesn't matter to me|Мне это не важно
+measure the room|Измерить комнату
+mention the price|Упомянуть цену
+I miss my family|Я скучаю по семье
+notice the details|Замечать детали
+order a pizza|Заказать пиццу
+in order|В порядке
+pack your things|Собирай вещи
+paint the walls|Покрасить стены
+pick a house|Выбрать дом
+pick up the kids|Забрать детей
+plant flowers|Посадить цветы
+pour some tea|Налей чаю
+practice every day|Практиковаться каждый день
+prefer a house|Предпочитать дом
+prepare for the meeting|Подготовиться к встрече
+press the button|Нажать кнопку
+pretend to be busy|Делать вид, что занят
+prevent problems|Предотвращать проблемы
+I promise|Обещаю
+keep your promise|Сдержи обещание
+protect your family|Защищать семью
+prove it|Докажи
+provide information|Предоставить информацию
+push the door|Толкни дверь
+reduce the price|Снизить цену
+refuse to pay|Отказаться платить
+relax a little|Немного расслабься
+rely on me|Положись на меня
+remove the old floor|Убрать старый пол
+repair the roof|Отремонтировать крышу
+repeat after me|Повторяй за мной
+replace the windows|Заменить окна
+reply to the message|Ответить на сообщение
+take a rest|Отдохнуть
+ride a bike|Кататься на велосипеде
+ring the bell|Позвонить в звонок
+the prices rise|Цены растут
+save time|Сэкономить время
+search the internet|Искать в интернете
+shake hands|Пожать руки
+share the information|Поделиться информацией
+shout at me|Кричать на меня
+shut the door|Захлопни дверь
+sing a song|Спеть песню
+smell the coffee|Почувствовать запах кофе
+smile more|Улыбайся чаще
+solve the task|Решить задачу
+sort the papers|Разобрать бумаги
+split the bill|Разделить счёт
+store the things|Хранить вещи
+struggle with English|Мучиться с английским
+succeed in business|Преуспеть в бизнесе
+suffer from the cold|Страдать от холода
+I suppose so|Полагаю, да
+what a surprise|Какой сюрприз
+survive the winter|Пережить зиму
+swim in the lake|Плавать в озере
+switch off the phone|Выключить телефон
+teach my son|Учить сына
+tear the paper|Порвать бумагу
+test the water|Проверить воду
+thank you very much|Большое спасибо
+throw it away|Выбрось это
+touch the wall|Потрогать стену
+train every day|Тренироваться каждый день
+travel by train|Путешествовать поездом
+treat me well|Хорошо ко мне относиться
+a business trip|Командировка
+in trouble|В беде
+type the text|Напечатать текст
+visit the house|Посетить дом
+vote for him|Голосовать за него
+wake me up|Разбуди меня
+warn the client|Предупредить клиента
+wash the car|Помыть машину
+waste time|Терять время
+don't waste money|Не трать деньги впустую
+wear a coat|Носить пальто
+I wish you luck|Желаю удачи
+I wonder why|Интересно, почему
+stop worrying|Перестань волноваться
+accept the terms|Принять условия
+achieve the goal|Достичь цели
+act fast|Действовать быстро
+admit the mistake|Признать ошибку
+affect the price|Влиять на цену
+I can't afford it|Я не могу себе это позволить
+announce the news|Объявить новость
+I appreciate it|Я ценю это
+approach the client|Найти подход к клиенту
+arrange a meeting|Устроить встречу
+attend the meeting|Посетить встречу
+attract buyers|Привлекать покупателей
+behave well|Вести себя хорошо
+don't blame me|Не вини меня
+breathe deeply|Дыши глубже
+calculate the cost|Рассчитать стоимость
+celebrate the deal|Отметить сделку
+a real challenge|Настоящий вызов
+charge the battery|Зарядить батарею
+compete with other agents|Конкурировать с другими агентами
+concentrate on work|Сосредоточиться на работе
+confirm the meeting|Подтвердить встречу
+don't confuse me|Не путай меня
+convince the buyer|Убедить покупателя
+correct the mistake|Исправить ошибку
+damage the wall|Повредить стену
+demand a discount|Требовать скидку
+deny everything|Отрицать всё
+you deserve it|Ты это заслужил
+design a house|Спроектировать дом
+determine the price|Определить цену
+the money disappeared|Деньги исчезли
+encourage the client|Поддержать клиента
+estimate the price|Оценить стоимость
+examine the house|Осмотреть дом
+exchange money|Обменять деньги
+do exercise|Делать зарядку
+expand the business|Расширить бизнес
+a lot of experience|Большой опыт
+express your opinion|Выразить своё мнение
+extend the contract|Продлить договор
+handle the situation|Справиться с ситуацией
+identify the problem|Определить проблему
+ignore the noise|Не обращать внимания на шум
+inform the owner|Сообщить владельцу
+insist on the price|Настаивать на цене
+install the program|Установить программу
+introduce yourself|Представься
+invest in real estate|Инвестировать в недвижимость
+it involves risk|Это связано с риском
+judge by the price|Судить по цене
+the meeting lasted an hour|Встреча длилась час
+load the car|Загрузить машину
+maintain the house|Содержать дом в порядке
+mark the date|Отметить дату
+observe the client|Наблюдать за клиентом
+I owe you|Я тебе должен
+perform the task|Выполнить задачу
+persuade the owner|Убедить владельца
+predict the price|Предсказать цену
+promote the house|Продвигать дом
+propose a deal|Предложить сделку
+purchase a home|Приобрести жильё
+react calmly|Реагировать спокойно
+recognize the voice|Узнать голос
+recommend a lawyer|Порекомендовать юриста
+record the call|Записать звонок
+register the property|Зарегистрировать собственность
+regret nothing|Ни о чём не жалеть
+reject the offer|Отклонить предложение
+remind me tomorrow|Напомни мне завтра
+represent the seller|Представлять продавца
+reserve a table|Забронировать столик
+respond quickly|Отвечать быстро
+reveal the secret|Раскрыть секрет
+review the contract|Проверить договор
+satisfy the client|Удовлетворить клиента
+seek a better deal|Искать сделку получше
+select a house|Выбрать дом
+settle the problem|Уладить проблему
+specify the date|Уточнить дату
+state your price|Назовите свою цену
+suspect a trick|Подозревать подвох
+threaten to leave|Угрожать уйти
+translate the text|Перевести текст
+trust your feelings|Доверяй своим чувствам
+I trust you|Я тебе доверяю
+weigh the options|Взвесить варианты
+whisper something|Прошептать что-то
+wrap the gift|Завернуть подарок

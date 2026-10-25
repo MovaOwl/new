@@ -1,0 +1,264 @@
+I have time|У меня есть время
+I need time|Мне нужно время
+I know|Я знаю
+I don't know|Я не знаю
+I think so|Я так думаю
+I want to go|Я хочу пойти
+let's go|Пойдём
+go home|Идти домой
+come back|Вернись
+come here|Иди сюда
+look at this|Посмотри на это
+take it|Возьми это
+give me|Дай мне
+tell me|Скажи мне
+call me|Позвони мне
+call me back|Перезвони мне
+help me|Помоги мне
+I can help|Я могу помочь
+can you help me?|Можешь мне помочь?
+I need help|Мне нужна помощь
+see you|Увидимся
+see you tomorrow|Увидимся завтра
+see you soon|Скоро увидимся
+good morning|Доброе утро
+good evening|Добрый вечер
+good night|Спокойной ночи
+have a good day|Хорошего дня
+a good idea|Хорошая идея
+that's a good idea|Это хорошая идея
+a bad idea|Плохая идея
+a big house|Большой дом
+a small room|Маленькая комната
+a new car|Новая машина
+an old friend|Старый друг
+a long time|Долгое время
+a long day|Долгий день
+a long way|Долгий путь
+the same thing|То же самое
+the first time|В первый раз
+the last time|В последний раз
+next week|На следующей неделе
+next year|В следующем году
+last year|В прошлом году
+last week|На прошлой неделе
+every day|Каждый день
+every week|Каждую неделю
+every morning|Каждое утро
+all day|Весь день
+all the time|Всё время
+one day|Однажды
+one more time|Ещё раз
+right now|Прямо сейчас
+not now|Не сейчас
+just now|Только что
+at home|Дома
+at work|На работе
+at night|Ночью
+in the morning|Утром
+in the evening|Вечером
+work hard|Усердно работать
+I work every day|Я работаю каждый день
+I live here|Я живу здесь
+where do you live?|Где ты живёшь?
+I live in a house|Я живу в доме
+my family|Моя семья
+my friend|Мой друг
+my wife|Моя жена
+my son|Мой сын
+my father|Мой отец
+my mother|Моя мать
+my brother|Мой брат
+my job|Моя работа
+my phone|Мой телефон
+my car|Моя машина
+my name is Igor|Меня зовут Игорь
+what is your name?|Как тебя зовут?
+how are you?|Как дела?
+I am good|У меня всё хорошо
+I am tired|Я устал
+I am busy|Я занят
+I am ready|Я готов
+are you ready?|Ты готов?
+I am sure|Я уверен
+are you sure?|Ты уверен?
+I am happy|Я счастлив
+I am sorry|Мне жаль, извини
+I am afraid|Я боюсь
+I am hungry|Я голоден
+I feel good|Я хорошо себя чувствую
+I feel bad|Мне плохо
+make a decision|Принять решение
+make a mistake|Совершить ошибку
+make money|Зарабатывать деньги
+make a plan|Составить план
+make a call|Позвонить
+make a choice|Сделать выбор
+make an offer|Сделать предложение
+make sure|Убедиться
+take a look|Взглянуть
+take a photo|Сделать фото
+take a break|Сделать перерыв
+take a seat|Присесть
+take time|Занимать время
+take care|Береги себя
+get up|Вставать
+get home|Добраться домой
+get money|Получить деньги
+get a job|Устроиться на работу
+get better|Становиться лучше
+get ready|Готовиться
+do the work|Делать работу
+do your best|Сделай всё возможное
+do it again|Сделай это снова
+do it now|Сделай это сейчас
+don't do it|Не делай этого
+don't worry|Не волнуйся
+don't stop|Не останавливайся
+don't forget|Не забудь
+I forgot|Я забыл
+I remember|Я помню
+I understand|Я понимаю
+I don't understand|Я не понимаю
+do you understand?|Ты понимаешь?
+I agree|Я согласен
+I don't agree|Я не согласен
+I believe you|Я тебе верю
+I like it|Мне нравится
+I love you|Я тебя люблю
+I need money|Мне нужны деньги
+how much is it?|Сколько это стоит?
+how much money?|Сколько денег?
+how many people?|Сколько людей?
+how long?|Как долго?
+how old are you?|Сколько тебе лет?
+what time is it?|Который час?
+what do you want?|Чего ты хочешь?
+what do you think?|Что ты думаешь?
+what happened?|Что случилось?
+where are you?|Где ты?
+where is it?|Где это?
+why not?|Почему бы и нет?
+who is it?|Кто это?
+which one?|Который?
+when can we meet?|Когда мы можем встретиться?
+let me know|Дай мне знать
+let me think|Дай подумать
+let me see|Дай посмотреть
+I will call you|Я тебе позвоню
+I will be there|Я буду там
+I will wait|Я подожду
+wait a minute|Подожди минуту
+wait for me|Подожди меня
+I am waiting|Я жду
+open the door|Открой дверь
+close the door|Закрой дверь
+open the window|Открой окно
+turn left|Поверни налево
+turn right|Поверни направо
+go straight|Иди прямо
+stop here|Остановись здесь
+the right answer|Правильный ответ
+the wrong way|Неправильный путь
+a hard question|Сложный вопрос
+an easy question|Лёгкий вопрос
+ask a question|Задать вопрос
+answer the question|Ответить на вопрос
+I have a question|У меня есть вопрос
+any questions?|Есть вопросы?
+read a book|Читать книгу
+write a letter|Написать письмо
+send a message|Отправить сообщение
+read the news|Читать новости
+watch a movie|Смотреть фильм
+play a game|Играть в игру
+listen to music|Слушать музыку
+eat breakfast|Завтракать
+have dinner|Ужинать
+drink water|Пить воду
+drink coffee|Пить кофе
+a cup of tea|Чашка чая
+a glass of water|Стакан воды
+a piece of bread|Кусок хлеба
+fresh bread|Свежий хлеб
+hot water|Горячая вода
+cold water|Холодная вода
+cold weather|Холодная погода
+nice weather|Хорошая погода
+the weather is bad|Погода плохая
+it is cold today|Сегодня холодно
+it is hot|Жарко
+it is raining|Идёт дождь
+it is snowing|Идёт снег
+a sunny day|Солнечный день
+a dark night|Тёмная ночь
+in winter|Зимой
+in summer|Летом
+on Monday|В понедельник
+on the weekend|На выходных
+a day off|Выходной день
+a free day|Свободный день
+free time|Свободное время
+I have no time|У меня нет времени
+it takes time|Это требует времени
+time is money|Время — деньги
+save money|Экономить деньги
+spend money|Тратить деньги
+pay the bill|Оплатить счёт
+pay in cash|Заплатить наличными
+too expensive|Слишком дорого
+very cheap|Очень дёшево
+a good price|Хорошая цена
+the price is high|Цена высокая
+the price is too high|Цена слишком высокая
+a low price|Низкая цена
+buy a car|Купить машину
+buy a house|Купить дом
+sell a house|Продать дом
+sell the car|Продать машину
+rent an apartment|Снять квартиру
+rent a room|Снять комнату
+a new apartment|Новая квартира
+a big kitchen|Большая кухня
+a small kitchen|Маленькая кухня
+a large room|Большая комната
+two rooms|Две комнаты
+three rooms|Три комнаты
+the first floor|Первый этаж
+the second floor|Второй этаж
+on the fifth floor|На пятом этаже
+a quiet street|Тихая улица
+a busy street|Оживлённая улица
+in the city|В городе
+in the center|В центре
+near the school|Рядом со школой
+near the river|Рядом с рекой
+the house is old|Дом старый
+the house is new|Дом новый
+a warm house|Тёплый дом
+a cold room|Холодная комната
+a clean room|Чистая комната
+a dirty floor|Грязный пол
+a beautiful view|Красивый вид
+a nice place|Хорошее место
+a safe place|Безопасное место
+a good area|Хороший район
+the owner of the house|Владелец дома
+talk to the owner|Поговорить с владельцем
+the owner wants to sell|Владелец хочет продать
+the buyer wants a discount|Покупатель хочет скидку
+I have a client|У меня есть клиент
+a new client|Новый клиент
+call the client|Позвонить клиенту
+meet the client|Встретиться с клиентом
+show the house|Показать дом
+show the apartment|Показать квартиру
+sign the contract|Подписать договор
+read the contract|Прочитать договор
+the deal is done|Сделка закрыта
+a good deal|Выгодная сделка
+a bad deal|Плохая сделка
+close the deal|Закрыть сделку
+the keys to the house|Ключи от дома
+give me the keys|Дай мне ключи
+I lost my keys|Я потерял ключи

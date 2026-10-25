@@ -1,0 +1,255 @@
+I want to buy a house|Я хочу купить дом
+we want to sell the apartment|Мы хотим продать квартиру
+the house is for sale|Дом продаётся
+the apartment is for rent|Квартира сдаётся
+how much is the rent?|Сколько стоит аренда?
+the rent is high|Аренда высокая
+pay the rent|Платить аренду
+the price includes everything|Цена включает всё
+can you lower the price?|Можете снизить цену?
+the price is fair|Цена справедливая
+a fair price|Справедливая цена
+we can discuss the price|Мы можем обсудить цену
+let's discuss it|Давайте это обсудим
+I will think about it|Я подумаю об этом
+think about the offer|Подумать над предложением
+accept the offer|Принять предложение
+refuse the offer|Отказаться от предложения
+a better offer|Предложение получше
+the last offer|Последнее предложение
+the best offer|Лучшее предложение
+I have another offer|У меня есть другое предложение
+the seller agreed|Продавец согласился
+the buyer refused|Покупатель отказался
+the client is happy|Клиент доволен
+the client is angry|Клиент злится
+a difficult client|Сложный клиент
+a serious buyer|Серьёзный покупатель
+a real buyer|Настоящий покупатель
+the mortgage is approved|Ипотека одобрена
+get a mortgage|Взять ипотеку
+the bank said no|Банк отказал
+a bank loan|Банковский кредит
+pay the loan|Платить кредит
+a monthly payment|Ежемесячный платёж
+the first payment|Первый платёж
+a small deposit|Небольшой задаток
+the documents are ready|Документы готовы
+prepare the documents|Подготовить документы
+check the documents|Проверить документы
+sign here|Подпишите здесь
+the house needs repair|Дому нужен ремонт
+a big repair|Капитальный ремонт
+fix the roof|Починить крышу
+the roof is old|Крыша старая
+the walls are thick|Стены толстые
+the windows are new|Окна новые
+the door is broken|Дверь сломана
+the heating works|Отопление работает
+the water is hot|Вода горячая
+a warm floor|Тёплый пол
+a big yard|Большой двор
+a small garden|Маленький сад
+a garage for two cars|Гараж на две машины
+a place to park|Место для парковки
+close to the center|Близко к центру
+far from the city|Далеко от города
+ten minutes to work|Десять минут до работы
+the school is near|Школа рядом
+a shop near the house|Магазин рядом с домом
+the neighbors are nice|Соседи хорошие
+a quiet area|Тихий район
+a safe area|Безопасный район
+a good location|Хорошее расположение
+the location is perfect|Расположение идеальное
+I like the view|Мне нравится вид
+the house looks good|Дом выглядит хорошо
+the room is bright|Комната светлая
+the room is too small|Комната слишком маленькая
+the kitchen is big enough|Кухня достаточно большая
+we need more space|Нам нужно больше места
+enough space for a family|Достаточно места для семьи
+a family with children|Семья с детьми
+a young family|Молодая семья
+they have two kids|У них двое детей
+we are looking for a house|Мы ищем дом
+what are you looking for?|Что вы ищете?
+I found a good option|Я нашёл хороший вариант
+another option|Другой вариант
+the best option|Лучший вариант
+we have many options|У нас много вариантов
+let me show you|Давайте я вам покажу
+come and see|Приходите посмотреть
+when can you come?|Когда вы можете прийти?
+I can come tomorrow|Я могу прийти завтра
+tomorrow morning|Завтра утром
+tomorrow evening|Завтра вечером
+at ten o'clock|В десять часов
+in an hour|Через час
+in five minutes|Через пять минут
+I am late|Я опаздываю
+sorry I am late|Извините, я опоздал
+on time|Вовремя
+the meeting is today|Встреча сегодня
+the meeting starts at noon|Встреча начинается в полдень
+a short meeting|Короткая встреча
+cancel the meeting|Отменить встречу
+move the meeting|Перенести встречу
+I have a meeting|У меня встреча
+call me after the meeting|Позвони мне после встречи
+I am at the office|Я в офисе
+come to the office|Приходите в офис
+our office is in the center|Наш офис в центре
+my boss is busy|Мой начальник занят
+talk to my boss|Поговорить с моим начальником
+the company is big|Компания большая
+a small business|Малый бизнес
+start a business|Начать бизнес
+a good job|Хорошая работа
+a hard job|Тяжёлая работа
+I love my job|Я люблю свою работу
+I work as a realtor|Я работаю риелтором
+work from home|Работать из дома
+a night shift|Ночная смена
+after work|После работы
+before work|Перед работой
+go to work|Идти на работу
+come from work|Приходить с работы
+I finished work|Я закончил работу
+the work is done|Работа сделана
+a lot of work|Много работы
+too much work|Слишком много работы
+I need a break|Мне нужен перерыв
+I need to sleep|Мне нужно поспать
+go to bed|Ложиться спать
+wake up early|Просыпаться рано
+get up late|Вставать поздно
+I slept well|Я хорошо спал
+a long night|Долгая ночь
+a hard day|Трудный день
+a good day|Хороший день
+today is a good day|Сегодня хороший день
+what a day|Ну и день
+the day after tomorrow|Послезавтра
+the day before yesterday|Позавчера
+two days ago|Два дня назад
+a week ago|Неделю назад
+a year ago|Год назад
+for a long time|Долгое время
+for a while|Некоторое время
+from time to time|Время от времени
+at the same time|В то же время
+at the moment|В данный момент
+at first|Сначала
+at last|Наконец
+in the end|В конце концов
+of course|Конечно
+no problem|Нет проблем
+not a problem|Не проблема
+that's the problem|В этом проблема
+a big problem|Большая проблема
+solve the problem|Решить проблему
+we have a problem|У нас проблема
+what's the problem?|В чём проблема?
+it doesn't matter|Это не важно
+it is important|Это важно
+very important|Очень важно
+the most important thing|Самое главное
+I need your help|Мне нужна твоя помощь
+thank you for your help|Спасибо за помощь
+thanks a lot|Большое спасибо
+you are welcome|Пожалуйста
+nice to meet you|Приятно познакомиться
+how is your family?|Как твоя семья?
+say hello to your wife|Передай привет жене
+my son goes to school|Мой сын ходит в школу
+my wife works|Моя жена работает
+we live together|Мы живём вместе
+a big family|Большая семья
+my parents live nearby|Мои родители живут рядом
+visit my parents|Навестить родителей
+a friend of mine|Мой друг
+my best friend|Мой лучший друг
+a new friend|Новый друг
+meet a friend|Встретиться с другом
+let's meet tonight|Давай встретимся вечером
+I miss you|Я скучаю по тебе
+call your mother|Позвони маме
+the kids are sleeping|Дети спят
+play with the kids|Играть с детьми
+cook dinner|Готовить ужин
+the food is good|Еда вкусная
+I am thirsty|Хочу пить
+something to eat|Что-нибудь поесть
+something to drink|Что-нибудь выпить
+a cup of coffee|Чашка кофе
+coffee with milk|Кофе с молоком
+tea with sugar|Чай с сахаром
+no sugar|Без сахара
+the bill please|Счёт, пожалуйста
+I will pay|Я заплачу
+can I pay by card?|Можно оплатить картой?
+the shop is closed|Магазин закрыт
+the shop is open|Магазин открыт
+go shopping|Ходить по магазинам
+buy food|Купить еду
+I need to buy milk|Мне нужно купить молоко
+drive a car|Водить машину
+drive to work|Ехать на работу на машине
+by car|На машине
+by bus|На автобусе
+by train|На поезде
+take a taxi|Взять такси
+a long trip|Долгая поездка
+a short trip|Короткая поездка
+on the road|В дороге
+the road is bad|Дорога плохая
+a traffic jam|Пробка
+I am stuck in traffic|Я застрял в пробке
+the car is broken|Машина сломалась
+fill the tank|Заправить бак
+park the car|Припарковать машину
+a parking place|Парковочное место
+where is the station?|Где вокзал?
+a ticket to Moscow|Билет до Москвы
+the train is late|Поезд опаздывает
+the plane leaves at six|Самолёт вылетает в шесть
+travel abroad|Путешествовать за границу
+I have never been there|Я никогда там не был
+have you ever been there?|Ты когда-нибудь там был?
+I want to see the world|Я хочу увидеть мир
+a beautiful city|Красивый город
+a small town|Маленький город
+a big village|Большое село
+the river is cold|Река холодная
+a walk in the forest|Прогулка по лесу
+go fishing|Поехать на рыбалку
+go hunting|Пойти на охоту
+a dog in the yard|Собака во дворе
+feed the dog|Покормить собаку
+the cat is sleeping|Кошка спит
+my dog is old|Моя собака старая
+cut the grass|Подстричь траву
+plant a tree|Посадить дерево
+chop wood|Колоть дрова
+heat the stove|Топить печь
+the stove is hot|Печь горячая
+it's warm inside|Внутри тепло
+it's cold outside|Снаружи холодно
+close the window, please|Закрой окно, пожалуйста
+turn on the light|Включи свет
+turn off the light|Выключи свет
+turn off the TV|Выключи телевизор
+charge the phone|Зарядить телефон
+my phone is dead|У меня сел телефон
+send me a photo|Пришли мне фото
+send me the address|Пришли мне адрес
+what is the address?|Какой адрес?
+write it down|Запиши это
+check your email|Проверь почту
+I sent you an email|Я отправил тебе письмо
+read my message|Прочитай моё сообщение
+answer the phone|Ответить на телефон
+the phone is ringing|Звонит телефон
+I will call you later|Я позвоню тебе позже
+call me when you are ready|Позвони, когда будешь готов

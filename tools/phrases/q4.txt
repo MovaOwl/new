@@ -1,0 +1,71 @@
+include me|Включи меня
+it includes everything|Это включает всё
+I serve people|Я обслуживаю людей
+serve it|Подавай
+I suggest we meet|Предлагаю встретиться
+what do you suggest?|Что ты предлагаешь?
+raise it|Подними это
+they raise the rent|Они поднимают аренду
+let me pass|Дай пройти
+pass it to me|Передай мне
+I want to sell it|Я хочу это продать
+I sell houses|Я продаю дома
+it requires work|Это требует работы
+what does it require?|Что для этого нужно?
+I will report it|Я об этом сообщу
+pull it|Потяни
+I will return|Я вернусь
+return it to me|Верни мне это
+explain it to me|Объясни мне это
+I hope|Надеюсь
+I can carry it home|Я могу донести это до дома
+don't break it|Не сломай
+I agree with you|Я с тобой согласен
+let's eat|Давай поедим
+I will catch you|Я тебя поймаю
+choose one|Выбери один
+I want to sleep|Я хочу спать
+I can drive|Я умею водить
+I want to rent it|Я хочу это арендовать
+it's a deal|Договорились
+what is the price?|Какая цена?
+I want a house|Я хочу дом
+I want to go home|Я хочу домой
+I want an apartment|Я хочу квартиру
+my room|Моя комната
+the kitchen is big|Кухня большая
+it is on the floor|Это на полу
+look at the wall|Посмотри на стену
+I will die|Я умру
+I will send it|Я это отправлю
+send it to me|Отправь это мне
+I expect it|Я этого жду
+I want to build|Я хочу строить
+stay here|Оставайся здесь
+don't fall|Не упади
+cut it|Отрежь
+I can't reach it|Я не могу дотянуться
+it will kill you|Это тебя убьёт
+it remains|Это остаётся
+I learn every day|Я учусь каждый день
+I serve you|Я к вашим услугам
+I want to change it|Я хочу это изменить
+I want to read|Я хочу почитать
+I want to grow|Я хочу расти
+I want to win|Я хочу победить
+I offer you a deal|Предлагаю тебе сделку
+I love to walk|Я люблю гулять
+I remember you|Я тебя помню
+consider it done|Считай, что сделано
+it will appear|Оно появится
+I want to buy it|Я хочу это купить
+wait for it|Подожди
+I spend a lot|Я много трачу
+open it|Открой это
+follow it|Следуй за этим
+stop it|Прекрати
+create it|Создай это
+speak to me|Поговори со мной
+I understand you|Я тебя понимаю
+lead me|Веди меня
+I watch it every day|Я смотрю это каждый день

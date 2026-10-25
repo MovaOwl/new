@@ -1,0 +1,378 @@
+try again|Попробуй ещё раз
+I will try|Я попробую
+become a realtor|Стать риелтором
+it became cold|Стало холодно
+put it here|Положи это сюда
+put on a coat|Надень пальто
+what does it mean?|Что это значит?
+I mean it|Я серьёзно
+begin the work|Начать работу
+it seems good|Кажется, неплохо
+you seem tired|Ты выглядишь уставшим
+I can't hear you|Я тебя не слышу
+I heard the news|Я слышал новость
+run to the car|Бежать к машине
+I run every morning|Я бегаю каждое утро
+hold the door|Подержи дверь
+hold my hand|Держи меня за руку
+bring the documents|Принеси документы
+bring your wife|Приходи с женой
+sit down, please|Присаживайтесь, пожалуйста
+sit at the table|Сидеть за столом
+stand here|Стой здесь
+I can't stand it|Терпеть этого не могу
+continue the work|Продолжить работу
+let's continue|Давайте продолжим
+set the table|Накрыть на стол
+set the price|Установить цену
+change the plan|Изменить план
+change the price|Изменить цену
+lead the team|Вести команду
+follow me|Следуй за мной
+follow the rules|Соблюдать правила
+create a plan|Создать план
+speak slowly|Говори медленно
+do you speak English?|Ты говоришь по-английски?
+grow vegetables|Выращивать овощи
+the city grows fast|Город быстро растёт
+win the game|Выиграть игру
+consider the offer|Рассмотреть предложение
+appear on time|Появиться вовремя
+serve the client|Обслуживать клиента
+serve dinner|Подавать ужин
+the plant died|Растение погибло
+I expect a call|Я жду звонка
+I didn't expect that|Я этого не ожидал
+build a house|Построить дом
+build a garage|Построить гараж
+stay at home|Остаться дома
+stay with me|Останься со мной
+fall asleep|Заснуть
+the price fell|Цена упала
+reach the city|Добраться до города
+I can't reach him|Не могу до него дозвониться
+the frost will kill the flowers|Мороз убьёт цветы
+remain calm|Сохранять спокойствие
+suggest a price|Предложить цену
+I suggest a meeting|Предлагаю встретиться
+raise the price|Поднять цену
+raise your hand|Подними руку
+pass the exam|Сдать экзамен
+pass me the salt|Передай соль
+the time passed fast|Время пролетело быстро
+the bank requires documents|Банк требует документы
+it requires time|Это требует времени
+report to the boss|Доложить начальнику
+a short report|Короткий отчёт
+decide now|Реши сейчас
+I decided to buy it|Я решил это купить
+pull the door|Потяни дверь
+return the keys|Вернуть ключи
+return home|Вернуться домой
+I hope so|Надеюсь, что да
+I hope you are well|Надеюсь, у тебя всё хорошо
+develop the business|Развивать бизнес
+carry the box|Нести коробку
+carry the bags|Нести сумки
+receive money|Получить деньги
+I received your message|Я получил твоё сообщение
+support my family|Поддерживать семью
+thank you for your support|Спасибо за поддержку
+hit the wall|Удариться о стену
+produce milk|Производить молоко
+cover the floor|Закрыть пол
+catch the bus|Успеть на автобус
+catch a fish|Поймать рыбу
+choose the color|Выбрать цвет
+choose a house|Выбрать дом
+cause a problem|Создать проблему
+the main cause|Главная причина
+I realized my mistake|Я понял свою ошибку
+own a house|Владеть домом
+my own house|Мой собственный дом
+a young woman|Молодая женщина
+life is good|Жизнь прекрасна
+a student from Moscow|Студент из Москвы
+a group of people|Группа людей
+in the country|За городом
+a part of the house|Часть дома
+the heating system|Система отопления
+the government said|Правительство заявило
+a phone number|Номер телефона
+the house number|Номер дома
+what's the point?|В чём смысл?
+every month|Каждый месяц
+study English|Изучать английский
+close your eyes|Закрой глаза
+in a word|Одним словом
+give me your word|Дай слово
+it's not an issue|Это не проблема
+on the other side|С другой стороны
+what kind of house?|Какой дом?
+you are very kind|Ты очень добрый
+my head hurts|У меня болит голова
+good service|Хороший сервис
+the power is off|Электричество отключили
+stand in line|Стоять в очереди
+at the end|В конце
+a family member|Член семьи
+by law|По закону
+my body is tired|Тело устало
+the level of English|Уровень английского
+good health|Крепкое здоровье
+a nice person|Приятный человек
+war and peace|Война и мир
+the history of the house|История дома
+a good result|Хороший результат
+for this reason|По этой причине
+a little girl|Маленькая девочка
+a nice guy|Хороший парень
+fresh air|Свежий воздух
+my English teacher|Мой учитель английского
+a good education|Хорошее образование
+on foot|Пешком
+a little boy|Маленький мальчик
+at my age|В моём возрасте
+it makes sense|Это имеет смысл
+from the heart|От всего сердца
+tell the truth|Говорить правду
+I changed my mind|Я передумал
+a great idea|Отличная идея
+great job|Отличная работа
+a few days|Несколько дней
+a few minutes|Несколько минут
+I am able to pay|Я в состоянии заплатить
+better late than never|Лучше поздно, чем никогда
+it's true|Это правда
+the whole day|Весь день
+the whole family|Вся семья
+the best house in town|Лучший дом в городе
+as soon as possible|Как можно скорее
+is it possible?|Это возможно?
+is it clear?|Это понятно?
+a clear answer|Чёткий ответ
+a recent photo|Свежее фото
+I am not certain|Я не уверен
+a personal question|Личный вопрос
+a slow internet|Медленный интернет
+the house is full of light|Дом полон света
+an empty room|Пустая комната
+a rich man|Богатый человек
+a poor family|Бедная семья
+I often work at night|Я часто работаю ночью
+sometimes I forget|Иногда я забываю
+I usually get up early|Обычно я встаю рано
+I still remember|Я всё ещё помню
+I also want|Я тоже хочу
+and then what?|А потом что?
+because of the price|Из-за цены
+but why?|Но почему?
+if you want|Если хочешь
+each room|Каждая комната
+less money|Меньше денег
+both houses|Оба дома
+take advantage|Воспользоваться
+a big advantage|Большое преимущество
+the key to success|Ключ к успеху
+fear of mistakes|Страх ошибок
+what size?|Какой размер?
+a good profit|Хорошая прибыль
+pay the tax|Заплатить налог
+my dream house|Дом моей мечты
+a dream come true|Мечта сбылась
+a square kitchen|Квадратная кухня
+light the fire|Разжечь огонь
+sit on the chair|Сесть на стул
+go to the hospital|Поехать в больницу
+a big field|Большое поле
+in spring|Весной
+in autumn|Осенью
+my husband works|Мой муж работает
+my daughter is five|Моей дочери пять лет
+my sister lives here|Моя сестра живёт здесь
+negotiate the price|Договариваться о цене
+find a compromise|Найти компромисс
+a bad influence|Плохое влияние
+a distant village|Далёкая деревня
+to my delight|К моей радости
+to some extent|В какой-то степени
+read the passage|Прочитай отрывок
+a new variation|Новый вариант
+a heart attack|Сердечный приступ
+the base of the wall|Основание стены
+I can't bear it|Не могу это выносить
+the dog bit him|Собака его укусила
+blow out the candle|Задуть свечу
+claim the money|Требовать деньги
+the box contains papers|В коробке бумаги
+make a copy|Сделать копию
+let's dance|Давай потанцуем
+destroy the old house|Снести старый дом
+gather the family|Собрать семью
+don't hurry|Не торопись
+kick the ball|Пнуть мяч
+kiss my wife|Поцеловать жену
+lay the bricks|Класть кирпичи
+there is a limit|Есть предел
+send me the link|Скинь мне ссылку
+marry me|Выходи за меня
+mix the paint|Смешать краску
+obtain a permit|Получить разрешение
+it occurred last week|Это случилось на прошлой неделе
+organize a meeting|Организовать встречу
+the weather permits|Погода позволяет
+pray for us|Молись за нас
+a present for my son|Подарок сыну
+publish the ad|Опубликовать объявление
+punish the child|Наказать ребёнка
+release the keys|Передать ключи
+roll the carpet|Скатать ковёр
+don't rush|Не спеши
+shoot a video|Снять видео
+wash the dishes in the sink|Мыть посуду в раковине
+spell your name|Произнеси имя по буквам
+spread the news|Разнести новость
+someone stole my phone|Кто-то украл мой телефон
+stick to the plan|Придерживаться плана
+supply the water|Подавать воду
+chase the cat|Гоняться за кошкой
+don't cheat|Не жульничай
+combine work and family|Совмещать работу и семью
+commit a crime|Совершить преступление
+communicate with clients|Общаться с клиентами
+don't criticize|Не критикуй
+define the problem|Определить проблему
+a problem emerged|Возникла проблема
+establish trust|Установить доверие
+fold the clothes|Сложить одежду
+don't force me|Не заставляй меня
+I found a buyer|Я нашёл покупателя
+the river freezes in winter|Зимой река замерзает
+indicate the price|Указать цену
+I intend to buy|Я собираюсь купить
+kneel down|Встать на колени
+lean on the wall|Опереться о стену
+operate the machine|Управлять машиной
+participate in the meeting|Участвовать во встрече
+possess a house|Владеть домом
+preserve the old house|Сохранить старый дом
+pursue a dream|Идти за мечтой
+qualify for a loan|Получить право на кредит
+recover after illness|Поправиться после болезни
+reflect on the day|Подумать о прошедшем дне
+it relates to money|Это касается денег
+send a request|Отправить запрос
+rescue the dog|Спасти собаку
+resist the pressure|Противостоять давлению
+don't scream|Не кричи
+separate rooms|Отдельные комнаты
+the sun shines|Солнце светит
+sneak out|Улизнуть
+spin the wheel|Крутить колесо
+stretch your legs|Размять ноги
+submit the documents|Подать документы
+a substitute teacher|Учитель на замену
+swallow the pill|Проглотить таблетку
+I swear|Клянусь
+prices tend to rise|Цены склонны расти
+tie the rope|Завязать верёвку
+unite the team|Сплотить команду
+don't be upset|Не расстраивайся
+an urge to buy|Желание купить
+prices vary|Цены разные
+wipe the table|Вытереть стол
+don't yell at me|Не ори на меня
+an adult son|Взрослый сын
+it's my affair|Это моё дело
+the main aim|Главная цель
+a quick analysis|Быстрый анализ
+a wild animal|Дикое животное
+anger is bad advice|Гнев — плохой советчик
+an apple a day|Яблоко в день
+a broken arm|Сломанная рука
+join the army|Пойти в армию
+the time of arrival|Время прибытия
+read the article|Прочитать статью
+a famous artist|Известный художник
+attention to detail|Внимание к деталям
+a big audience|Большая аудитория
+the author of the book|Автор книги
+local authority|Местная власть
+win an award|Получить награду
+a calm background|Спокойный фон
+play ball|Играть в мяч
+a rock band|Рок-группа
+a chocolate bar|Плитка шоколада
+on a daily basis|Ежедневно
+take a bath|Принять ванну
+a hard battle|Тяжёлая битва
+the beauty of nature|Красота природы
+good behavior|Хорошее поведение
+a strong belief|Твёрдая вера
+a small bird|Маленькая птица
+date of birth|Дата рождения
+a blood test|Анализ крови
+a wooden board|Деревянная доска
+a small boat|Маленькая лодка
+a dog with a bone|Собака с костью
+cross the border|Пересечь границу
+a bank branch|Отделение банка
+cross the bridge|Перейти мост
+a good camera|Хорошая камера
+a summer camp|Летний лагерь
+fight cancer|Бороться с раком
+the best candidate|Лучший кандидат
+the capital of Russia|Столица России
+a price category|Ценовая категория
+my cell phone|Мой мобильный телефон
+in the last century|В прошлом веке
+a gold chain|Золотая цепочка
+the chairman of the board|Председатель правления
+a world champion|Чемпион мира
+give to charity|Жертвовать на благотворительность
+roast chicken|Жареная курица
+the chief engineer|Главный инженер
+an old church|Старая церковь
+sit in a circle|Сесть в круг
+an English class|Урок английского
+a cold climate|Холодный климат
+the clock is slow|Часы отстают
+a sports club|Спортивный клуб
+a football coach|Футбольный тренер
+the coast of the sea|Морское побережье
+the door code|Код от двери
+a big collection|Большая коллекция
+go to college|Поступить в колледж
+win the competition|Победить в соревновании
+a new concept|Новая концепция
+it's not my concern|Это не моя забота
+a big conference|Большая конференция
+face the consequences|Отвечать за последствия
+the construction of the house|Строительство дома
+the content of the letter|Содержание письма
+in this context|В этом контексте
+the city council|Городской совет
+a short course|Короткий курс
+go to court|Обратиться в суд
+my cousin lives in Moscow|Мой двоюродный брат живёт в Москве
+a serious crime|Серьёзное преступление
+an economic crisis|Экономический кризис
+local culture|Местная культура
+the life cycle|Жизненный цикл
+the data is wrong|Данные неверны
+life and death|Жизнь и смерть
+a long debate|Долгий спор
+pay the debt|Вернуть долг
+a decade ago|Десять лет назад
+a university degree|Высшее образование
+ten degrees|Десять градусов
+the sales department|Отдел продаж
+an office desk|Офисный стол
+a new device|Новое устройство
+what's the difference?|В чём разница?
+the director of the company|Директор компании
+dirt on the floor|Грязь на полу
+a short discussion|Короткое обсуждение
+a serious disease|Серьёзная болезнь
+one hundred dollars|Сто долларов
+a nice drawing|Красивый рисунок

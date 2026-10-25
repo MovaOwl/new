@@ -1,0 +1,254 @@
+open a bank account|Открыть банковский счёт
+take action|Принять меры
+a good activity for kids|Хорошее занятие для детей
+my home address|Мой домашний адрес
+give me some advice|Дай мне совет
+good advice|Хороший совет
+this afternoon|Сегодня днём
+a real estate agency|Агентство недвижимости
+we have an agreement|У нас есть договорённость
+a large amount of money|Большая сумма денег
+a strong argument|Сильный аргумент
+pay attention|Обратить внимание
+a positive attitude|Позитивный настрой
+the baby is sleeping|Малыш спит
+a heavy bag|Тяжёлая сумка
+the bathroom is small|Ванная маленькая
+on the beach|На пляже
+from the beginning|С самого начала
+the main benefit|Главное преимущество
+pay the bills|Оплатить счета
+happy birthday|С днём рождения
+a little bit|Немного
+wait a bit|Подожди немного
+a bottle of water|Бутылка воды
+at the bottom|Внизу
+a box of chocolates|Коробка конфет
+use your brain|Шевели мозгами
+the family budget|Семейный бюджет
+take the bus|Сесть на автобус
+press the red button|Нажми красную кнопку
+a good career|Хорошая карьера
+cash only|Только наличными
+in the center of town|В центре города
+a new chapter|Новая глава
+my favorite character|Мой любимый персонаж
+the boss is in charge|Начальник главный
+a good citizen|Хороший гражданин
+my clothes are dirty|Моя одежда грязная
+dark clouds|Тёмные тучи
+a warm coat|Тёплое пальто
+the color of the walls|Цвет стен
+a nice comment|Приятный комментарий
+our community|Наше сообщество
+a fast computer|Быстрый компьютер
+in good condition|В хорошем состоянии
+in bad condition|В плохом состоянии
+I have confidence|Я уверен в себе
+a family conflict|Семейный конфликт
+a good connection|Хорошая связь
+a long conversation|Долгий разговор
+in the corner|В углу
+a married couple|Супружеская пара
+of course not|Конечно нет
+a crowd of people|Толпа людей
+a regular customer|Постоянный клиент
+the damage is small|Ущерб небольшой
+in danger|В опасности
+the date of the deal|Дата сделки
+a hard decision|Трудное решение
+the main detail|Главная деталь
+in which direction?|В каком направлении?
+a short distance|Небольшое расстояние
+see a doctor|Сходить к врачу
+a nice dress|Красивое платье
+the driver is waiting|Водитель ждёт
+my duty|Мой долг
+a lot of effort|Много усилий
+in case of emergency|В экстренном случае
+the energy bill|Счёт за электричество
+the main entrance|Главный вход
+for example|Например
+a good example|Хороший пример
+an expert opinion|Мнение эксперта
+a simple explanation|Простое объяснение
+in fact|На самом деле
+work at a factory|Работать на заводе
+it's not my fault|Это не моя вина
+a strong feeling|Сильное чувство
+a famous film|Известный фильм
+break a finger|Сломать палец
+fresh fish|Свежая рыба
+a long flight|Долгий перелёт
+flowers for my wife|Цветы для жены
+focus on the goal|Сосредоточиться на цели
+fill out the form|Заполнить бланк
+fresh fruit|Свежие фрукты
+for fun|Для удовольствия
+the near future|Ближайшее будущее
+a gas station|Заправка
+a birthday gift|Подарок на день рождения
+a glass of wine|Бокал вина
+a bad habit|Плохая привычка
+a good habit|Хорошая привычка
+cut my hair|Подстричься
+half an hour|Полчаса
+half the price|Половина цены
+in the hall|В зале
+a public holiday|Государственный праздник
+a cheap hotel|Дешёвая гостиница
+a monthly income|Ежемесячный доход
+car insurance|Страховка на машину
+a low interest rate|Низкая процентная ставка
+a job interview|Собеседование
+a good investment|Хорошая инвестиция
+a funny joke|Смешная шутка
+a long journey|Долгое путешествие
+general knowledge|Общие знания
+a piece of land|Участок земли
+learn a language|Выучить язык
+a free lesson|Бесплатный урок
+the city library|Городская библиотека
+a shopping list|Список покупок
+good luck|Удачи
+bad luck|Невезение
+lunch time|Время обеда
+a coffee machine|Кофемашина
+a monthly magazine|Ежемесячный журнал
+the manager is here|Менеджер здесь
+draw a map|Нарисовать карту
+the real estate market|Рынок недвижимости
+the main meal|Основной приём пищи
+a bad memory|Плохая память
+a good method|Хороший метод
+in the middle|Посередине
+a mirror in the hall|Зеркало в прихожей
+in a good mood|В хорошем настроении
+climb a mountain|Подняться на гору
+the noise from the street|Шум с улицы
+take notes|Делать заметки
+a good opportunity|Хорошая возможность
+in my opinion|По-моему
+a different option|Другой вариант
+the back pain|Боль в спине
+a pair of shoes|Пара обуви
+a business partner|Деловой партнёр
+a strange pattern|Странный узор
+a short period|Короткий период
+ask for permission|Попросить разрешения
+a photo of the house|Фото дома
+a piece of cake|Кусок торта; проще простого
+a nice place to live|Хорошее место для жизни
+with pleasure|С удовольствием
+call the police|Вызвать полицию
+the population of the city|Население города
+a high position|Высокая должность
+under pressure|Под давлением
+the process takes time|Процесс требует времени
+a new product|Новый продукт
+a big project|Большой проект
+private property|Частная собственность
+for what purpose?|С какой целью?
+high quality|Высокое качество
+a quick reaction|Быстрая реакция
+face reality|Смотреть правде в глаза
+a good relationship|Хорошие отношения
+show respect|Проявлять уважение
+take responsibility|Взять ответственность
+a cheap restaurant|Недорогой ресторан
+a big reward|Большая награда
+the safety rules|Правила безопасности
+a good salary|Хорошая зарплата
+a busy schedule|Плотный график
+keep a secret|Хранить секрет
+a good skill|Хороший навык
+the sound of rain|Звук дождя
+a source of income|Источник дохода
+a lot of space|Много места
+give a speech|Произнести речь
+the speed limit|Ограничение скорости
+the first step|Первый шаг
+step by step|Шаг за шагом
+a lot of stress|Много стресса
+a simple task|Простая задача
+a good taste|Хороший вкус
+a cup of hot tea|Чашка горячего чая
+a new technology|Новая технология
+a train ticket|Билет на поезд
+the right tool|Правильный инструмент
+the top floor|Верхний этаж
+a good tradition|Хорошая традиция
+heavy traffic|Плотное движение
+a training program|Программа тренировок
+a two-week vacation|Двухнедельный отпуск
+the value of the house|Стоимость дома
+fresh vegetables|Свежие овощи
+a sea view|Вид на море
+a wedding party|Свадебная вечеринка
+the weight of the box|Вес коробки
+a strong wind|Сильный ветер
+a bottle of wine|Бутылка вина
+an old wooden house|Старый деревянный дом
+a hard worker|Трудолюбивый работник
+it's worth it|Оно того стоит
+it's not worth the money|Это не стоит таких денег
+an honest answer|Честный ответ
+a calm voice|Спокойный голос
+a careful driver|Осторожный водитель
+a comfortable sofa|Удобный диван
+a common mistake|Частая ошибка
+a dangerous road|Опасная дорога
+a deep river|Глубокая река
+a fair deal|Честная сделка
+a friendly neighbor|Дружелюбный сосед
+a funny story|Смешная история
+a heavy rain|Сильный дождь
+a lazy cat|Ленивый кот
+a local shop|Местный магазин
+a loud noise|Громкий шум
+a lucky day|Удачный день
+a modern kitchen|Современная кухня
+a narrow street|Узкая улица
+a perfect plan|Идеальный план
+a polite answer|Вежливый ответ
+a private house|Частный дом
+a rare chance|Редкий шанс
+a serious problem|Серьёзная проблема
+a simple question|Простой вопрос
+a strange man|Странный человек
+a strict boss|Строгий начальник
+a sweet cake|Сладкий торт
+a tall building|Высокое здание
+a thick wall|Толстая стена
+a typical day|Обычный день
+a useful tip|Полезный совет
+a wide road|Широкая дорога
+a wise decision|Мудрое решение
+almost done|Почти готово
+already done|Уже сделано
+always on time|Всегда вовремя
+never again|Больше никогда
+not yet|Ещё нет
+see you again|Ещё увидимся
+better than nothing|Лучше, чем ничего
+enough for today|На сегодня хватит
+just a minute|Минутку
+maybe later|Может быть, позже
+quite good|Довольно хорошо
+really good|Действительно хорошо
+together with you|Вместе с тобой
+without problems|Без проблем
+between us|Между нами
+after lunch|После обеда
+before dinner|Перед ужином
+during the meeting|Во время встречи
+against the rules|Против правил
+around the house|Вокруг дома
+through the window|Через окно
+under the table|Под столом
+over the river|Над рекой
+everything is fine|Всё хорошо
+nothing special|Ничего особенного
+something is wrong|Что-то не так
+someone is at the door|Кто-то у двери
+everyone is here|Все здесь
