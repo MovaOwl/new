@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
+import android.net.Uri;
+import android.webkit.WebResourceRequest;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -47,7 +49,17 @@ public class MainActivity extends Activity {
         s.setAllowFileAccess(true);
         s.setMediaPlaybackRequiresUserGesture(false);
         s.setTextZoom(100);
-        web.setWebViewClient(new WebViewClient());
+        s.setAllowFileAccessFromFileURLs(true);
+        s.setAllowUniversalAccessFromFileURLs(true);
+        web.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
+                Uri u = req.getUrl();
+                String sc = u.getScheme();
+                if ("http".equals(sc) || "https".equals(sc)) { openExternal(u.toString()); return true; }
+                return false;
+            }
+        });
         web.addJavascriptInterface(new Bridge(), "Android");
         web.setBackgroundColor(isDark() ? Color.parseColor("#0d1322") : Color.parseColor("#e9edf4"));
         setContentView(web);
@@ -71,7 +83,16 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void openExternal(String url) {
+        try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); } catch (Exception ignored) { }
+    }
+
     class Bridge {
+        @JavascriptInterface
+        public void openUrl(String url) {
+            runOnUiThread(() -> openExternal(url));
+        }
+
         @JavascriptInterface
         public void speak(String text) {
             if (ttsReady) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "w");

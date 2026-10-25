@@ -227,6 +227,38 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 @keyframes rise{0%{transform:translate(0,0) scale(.6);opacity:0}15%{opacity:.8}100%{transform:translate(10px,-34px) scale(1.6);opacity:0}}
 .tw{animation:tw 2.4s ease-in-out infinite}
 @keyframes tw{50%{opacity:.25}}
+
+/* word sheet */
+#sheet{position:absolute;inset:0;z-index:25;background:var(--bg);display:flex;flex-direction:column}
+.sh-top{display:flex;align-items:center;gap:8px;padding:10px 12px;box-shadow:0 1px 0 var(--line)}
+.sh-top .back{border:0;background:var(--panel);box-shadow:0 0 0 1px var(--line);border-radius:12px;padding:10px 14px;font:600 14px var(--body);cursor:pointer}
+.sh-top .sp2{margin-left:auto}
+.sh-body{flex:1;min-height:0;overflow-y:auto;padding:14px 12px 24px;display:flex;flex-direction:column;gap:12px}
+.sh-body>*{flex:none}
+.sh-head{display:flex;flex-direction:column;gap:4px}
+.sh-en{font-family:var(--display);font-size:34px;line-height:1.1;overflow-wrap:anywhere}
+.sh-en.ph{font-family:var(--body);font-weight:700;font-size:26px}
+.sh-phon{color:var(--muted);font-size:15px;min-height:1em}
+.sh-ru{font-size:20px;font-weight:600}
+.sh-meta{font-size:12px;color:var(--muted)}
+.ex{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line)}
+.ex:first-of-type{border-top:0}
+.ex .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font-size:14px;line-height:1.4}
+.ex .t b{font-weight:600}
+.ex .t span{color:var(--muted)}
+.ex .t i{color:var(--muted);font-style:italic}
+.ex.locked{opacity:.5}
+.mini{flex:none;border:0;width:34px;height:34px;border-radius:10px;background:var(--panel2);box-shadow:0 0 0 1px var(--line);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.mini svg{width:16px;height:16px}
+.pos{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brick);margin-top:6px}
+.tr{border:0;background:none;color:var(--blue);font:600 12px var(--body);padding:2px 0;cursor:pointer;align-self:flex-start}
+.trout{color:var(--ink);font-size:13px;background:var(--panel2);border-radius:8px;padding:6px 8px}
+.syn{display:flex;flex-wrap:wrap;gap:6px}
+.syn span{background:var(--panel2);box-shadow:0 0 0 1px var(--line);border-radius:14px;padding:4px 10px;font-size:13px}
+.kw{display:flex;flex-wrap:wrap;gap:6px}
+.kw button{border:0;background:var(--panel2);box-shadow:0 0 0 1px var(--line);border-radius:14px;padding:7px 12px;font:600 13px var(--body);cursor:pointer}
+.more-btn{align-self:center;border:0;background:rgba(255,255,255,.2);color:#fff;border-radius:20px;padding:6px 14px;font:600 13px var(--body);cursor:pointer}
+.dwbtn{cursor:pointer}
 @media (prefers-reduced-motion: reduce){.card,.mcard,.toast{animation:none}.smoke,.tw{animation:none}.bar i{transition:none}}
 </style>
 </head>
@@ -272,6 +304,7 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
     </div>
   </section>
 
+  <div id="sheet" hidden></div>
   <div id="modal" hidden></div>
   <div id="toasts"></div>
 </div>
@@ -381,7 +414,9 @@ const rec = en => S.w[en] || (S.w[en] = { s: 0, m: 0, e: 0, iv: 0, n: '' });
 const st = en => (S.w[en] ? S.w[en].s : 0);
 
 const nLearned = () => W.reduce((a, w) => a + (st(w.en) === 2), 0);
-const pOpen = p => p.keys.every(k => st(k) >= 2);
+const nBricks = () => W.reduce((a, w) => a + (st(w.en) >= 2), 0);
+const pOpen = p => p.keys.every(k => st(k) >= 2) && p.keys.some(k => st(k) === 2);
+const pFresh = p => Math.max(0, ...p.keys.map(k => (S.w[k] && S.w[k].s === 2 && S.w[k].t) || 0));
 const pUnlocked = () => P.filter(pOpen);
 const pLearned = () => P.filter(p => st(p.k) === 2);
 const learningList = () => W.filter(w => st(w.en) === 1);
@@ -431,6 +466,12 @@ function markActive() {
   toast(`Серия: ${S.streak} ${pl(S.streak, 'день', 'дня', 'дней')} подряд`, 'ok');
 }
 
+let lastBricks = -1;
+function checkBuild() {
+  const nb = nBricks();
+  if (lastBricks >= 0 && stageOf(nb) > stageOf(lastBricks)) MQ.push({ t: 'build', stage: stageOf(nb) });
+  lastBricks = nb;
+}
 const ACH = [
   { id: 'w1', ic: '1', n: 'Первый кирпич', d: 'Выучить первое слово', t: () => nLearned() >= 1 },
   { id: 'p1', ic: 'Фр', n: 'Первая фраза', d: 'Выучить первую фразу', t: () => P.some(p => st(p.k) === 2) },
@@ -444,7 +485,7 @@ const ACH = [
   { id: 'w1000', ic: '1K', n: 'Тысячник', d: 'Выучить 1000 слов', t: () => nLearned() >= 1000 },
   { id: 'w2000', ic: '2K', n: 'Смотрю без субтитров', d: 'Выучить 2000 слов', t: () => nLearned() >= 2000 },
   { id: 'w3000', ic: '3K', n: 'Читаю книги', d: 'Выучить 3000 слов', t: () => nLearned() >= 3000 },
-  { id: 'banya', ic: 'Баня', n: 'С лёгким паром', d: 'Построить баню (200 слов)', t: () => nLearned() >= 200 },
+  { id: 'banya', ic: 'Баня', n: 'С лёгким паром', d: 'Построить баню (200 слов)', t: () => nBricks() >= 200 },
   { id: 'wall', ic: 'ВСЁ', n: 'Ходячий словарь', d: 'Пройти весь словарь', t: () => W.every(w => st(w.en) >= 2) },
   { id: 'realty', ic: '₽', n: 'Профессионал', d: 'Выучить весь набор «Недвижимость»', t: () => SETS[1].words.every(w => st(w.en) >= 2) },
   { id: 'c10', ic: '×10', n: 'Разогрев', d: 'Комбо 10', t: () => S.bestCombo >= 10 },
@@ -462,9 +503,9 @@ const ACH = [
   { id: 'a1000', ic: '1000', n: 'Тысяча ответов', d: 'Дать 1000 ответов', t: () => S.answered >= 1000 },
   { id: 'owl', ic: '00:00', n: 'Сова', d: 'Учить слова после полуночи', t: () => S.owl },
   { id: 'gpt', ic: 'GPT', n: 'Тренер найден', d: 'Отправить слова в ChatGPT', t: () => S.gpt },
-  { id: 'izba', ic: 'Изба', n: 'Своя крыша', d: 'Достроить избу (30 слов)', t: () => nLearned() >= 30 },
-  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (2500 слов)', t: () => nLearned() >= 2500 },
-  { id: 'city', ic: '5000', n: 'Свой город', d: 'Выучить 5000 слов', t: () => nLearned() >= 5000 },
+  { id: 'izba', ic: 'Изба', n: 'Своя крыша', d: 'Достроить избу (30 слов)', t: () => nBricks() >= 30 },
+  { id: 'sky', ic: 'Сити', n: 'Девелопер', d: 'Построить небоскрёб (2500 слов)', t: () => nBricks() >= 2500 },
+  { id: 'city', ic: '5000', n: 'Свой город', d: 'Выучить 5000 слов', t: () => nBricks() >= 5000 },
 ];
 function checkAch() {
   ACH.forEach(a => { if (!S.ach[a.id] && a.t()) { S.ach[a.id] = Date.now(); toast(`Достижение: ${a.n}`, 'ach'); sfx('ach'); } });
@@ -596,7 +637,7 @@ let cur = null, opts = [], t0 = 0, elapsed = 0, raf = 0, running = false, lastEn
 })();
 
 function renderHud() {
-  const { L, x, n } = lv(), sg = stageOf(nLearned());
+  const { L, x, n } = lv(), sg = stageOf(nBricks());
   $('hudLv').textContent = L; $('hudName').textContent = S.name; $('hudStage').textContent = STAGES[sg].t;
   $('hudXp').style.width = (x / n * 100) + '%';
   $('hudSub').textContent = `${fmt(x)} / ${fmt(n)} XP · новых сегодня ${S.todayNew}/${S.goal}`;
@@ -614,8 +655,8 @@ function step() {
     if (!pool.length) return info('Трудных слов нет', 'Трудными становятся слова, на которых ты ошибся хотя бы два раза. Пока чисто.');
   } else if (mode === 'phrases') {
     const U = pUnlocked();
-    if (!U.length) return info('Фраз пока нет', 'Фраза открывается, когда выучены все слова из неё. Выучи первые 30–50 частых слов — и пойдут первые фразы.');
-    const Dp = U.filter(p => { const r = S.w[p.k]; return r && r.s === 2 && r.n && r.n <= S.day; }), Lp = U.filter(p => st(p.k) === 1), Np = U.filter(p => st(p.k) === 0);
+    if (!U.length) return info('Фраз пока нет', 'Фраза открывается, когда все её слова тебе известны и хотя бы одно из них ты выучил в игре. Выучи несколько слов — и пойдут фразы с ними.');
+    const Dp = U.filter(p => { const r = S.w[p.k]; return r && r.s === 2 && r.n && r.n <= S.day; }), Lp = U.filter(p => st(p.k) === 1), Np = U.filter(p => st(p.k) === 0).sort((a, b) => pFresh(b) - pFresh(a));
     if (Lp.length < ACTIVE && Np.length && Dp.length < 20) return newCard(Np[0]);
     pool = Dp.length && (!Lp.length || Math.random() < .4) ? Dp : Lp;
     if (!pool.length) pool = U.filter(p => st(p.k) === 2);
@@ -639,12 +680,13 @@ function step() {
 
 function newCard(w) {
   overlay(`<div class="card new"><div class="k">${w.ph ? 'Новая фраза открыта' : `Новое слово · №${w.i + 1} по частоте`}</div><div class="en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>
-    <button class="speak" id="sp">${SPK}Произношение</button>
+    <div class="row" style="justify-content:center;gap:8px"><button class="speak" id="sp">${SPK}Произношение</button><button class="more-btn" id="moreInfo">Подробнее</button></div>
     <div class="hint">${w.ph ? `Собрана из твоих слов: ${esc(w.keys.join(', '))}` : 'Набор: ' + esc(curSet().n)}</div>
     <div class="row"><button class="pill" id="knowBtn">Уже знаю</button><button class="pill main" id="learnBtn">Учить</button></div></div>`);
   say(w.en); sfx('new');
   $('sp').onclick = () => say(w.en, true);
-  $('knowBtn').onclick = () => { rec(K(w)).s = 3; save(); closeOv(); step(); };
+  $('moreInfo').onclick = () => openInfo(w);
+  $('knowBtn').onclick = () => { const r = rec(K(w)); r.s = 3; r.t = Date.now(); if (!w.ph) { toast('+1 кирпич в стройку', 'ok'); checkBuild(); checkAch(); } save(); closeOv(); step(); };
   $('learnBtn').onclick = () => {
     const r = rec(K(w)); r.s = 1; r.m = 0;
     if (!w.ph) { S.todayNew++; today().n++; qAdd('newW', 1); if (S.todayNew === S.goal) toast('Дневная норма новых слов взята', 'ok'); }
@@ -683,6 +725,7 @@ function drop(w, rev) {
   $('drop').classList.toggle('ph', !!w.ph);
   $('drop').innerHTML = `<div class="pts num" id="pts">100</div><div class="dbox">${head}<div class="dmeta">${rev ? 'ru → en · ' : ''}${tag}<div class="bar ${r.s === 2 ? 'ok' : ''}"><i style="width:${r.s === 2 ? 100 : r.m / mx(w) * 100}%"></i></div></div></div>`;
   if (listen) $('relisten').onclick = () => say(w.en, true);
+  else { const dw = $('drop').querySelector('.dw'); dw.classList.add('dwbtn'); dw.onclick = () => openInfo(w); }
   $('drop').hidden = false;
   elapsed = 0; t0 = performance.now(); running = true;
   if (!rev) say(w.en, listen);
@@ -722,7 +765,7 @@ function judge(i) {
       if (r.m >= M && w.ph) { r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 25; note = 'Фраза выучена! Первый повтор — завтра'; }
       else if (r.m >= M) {
         r.s = 2; r.iv = 1; r.n = dAdd(1); gain += 40; note = 'Слово выучено! +1 кирпич в стройку. Первый повтор — завтра';
-        const nl = nLearned(); if (stageOf(nl) > stageOf(nl - 1)) MQ.push({ t: 'build', stage: stageOf(nl) });
+        r.t = Date.now(); checkBuild();
         const opened = P.filter(p => p.keys.includes(w.en) && pOpen(p)).length;
         if (opened) setTimeout(() => toast(`Открыто новых фраз: ${opened} — режим «Фразы»`, 'ach'), 400);
       }
@@ -748,7 +791,9 @@ function judge(i) {
   const xpLine = ok ? `<div class="xpline num"><span>+${Math.round(gain)} XP</span>${combo >= 3 ? `<span>комбо ${combo}</span>` : ''}</div>` : '';
   overlay(`<div class="card ${ok ? 'ok' : 'bad'}"><div class="k">${ok ? `Верно · ${pts} очков` : 'Правильный ответ'}</div>
     <div class="en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="ru">${esc(w.ru)}</div>${progress}<div class="hint">${esc(note)}</div>${xpLine}
+    <button class="more-btn" id="moreInfo">Подробнее ${w.ph ? 'о фразе' : 'о слове'}</button>
     ${ok ? '' : '<div class="row"><button class="pill main" id="nextBtn">Дальше</button></div>'}</div>`);
+  $('moreInfo').onclick = e => { e.stopPropagation(); clearTimeout(autoT); openInfo(w); };
   if (ok) { autoT = setTimeout(next, was === 1 && r.s === 2 ? 1900 : 1200); $('ov').onclick = () => { clearTimeout(autoT); next(); }; if (rev) say(w.en); }
   else { $('nextBtn').onclick = next; say(w.en); }
   function next() { $('ov').onclick = null; if (paused) return; closeOv(); step(); }
@@ -767,7 +812,7 @@ function showModal(cb) {
       <button class="btn" id="mOk">Дальше</button></div></div>`;
     sfx('lvl'); buzz(60);
   } else if (m.t === 'build') {
-    const nx = STAGES[m.stage + 1], nl = nLearned();
+    const nx = STAGES[m.stage + 1], nl = nBricks();
     el.innerHTML = `<div class="mcard"><div class="mh"><small>Новая стадия стройки</small><b class="num">${fmt(nl)} м²</b></div>
       <div class="mpic">${houseSVG(m.stage)}</div>
       <div class="mb"><h4>Объект перестроен: ${esc(STAGES[m.stage].t)}</h4>
@@ -781,6 +826,102 @@ function showModal(cb) {
   }
   el.hidden = false;
   $('mOk').onclick = () => { el.hidden = true; el.innerHTML = ''; checkAch(); save(); if (MQ.length) showModal(cb); else cb && cb(); };
+}
+
+
+/* ================= word sheet ================= */
+const POS = { noun: 'существительное', verb: 'глагол', adjective: 'прилагательное', adverb: 'наречие', pronoun: 'местоимение', preposition: 'предлог', conjunction: 'союз', interjection: 'междометие', determiner: 'определитель' };
+const DKEY = 'slovopad-dict-v1';
+let dictCache = {}; try { dictCache = JSON.parse(localStorage.getItem(DKEY)) || {}; } catch (e) {}
+function dictSave() { try { const k = Object.keys(dictCache); if (k.length > 600) k.slice(0, 100).forEach(x => delete dictCache[x]); localStorage.setItem(DKEY, JSON.stringify(dictCache)); } catch (e) {} }
+function openUrl(u) { if (window.Android && Android.openUrl) { try { Android.openUrl(u); return; } catch (e) {} } window.open(u, '_blank'); }
+async function getJSON(url, ms = 9000) {
+  const c = new AbortController(), t = setTimeout(() => c.abort(), ms);
+  try { const r = await fetch(url, { signal: c.signal }); if (!r.ok) return { status: r.status }; return { data: await r.json() }; }
+  finally { clearTimeout(t); }
+}
+async function translate(text) {
+  const { data } = await getJSON('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=' + encodeURIComponent(text));
+  if (!data || !data[0]) throw new Error('no');
+  return data[0].map(x => x[0]).join('');
+}
+let infoResume = false, infoStack = [];
+function openInfo(w, push) {
+  if (running) { running = false; elapsed += performance.now() - t0; cancelAnimationFrame(raf); infoResume = true; }
+  clearTimeout(autoT);
+  if (push) infoStack.push(push);
+  const r = S.w[K(w)] || { s: 0, m: 0, e: 0 }, M = mx(w);
+  const status = ['новое', 'учу', 'выучено', 'знал'][r.s];
+  const phr = w.ph ? [] : P.filter(p => p.keys.includes(w.en)).sort((a, b) => pOpen(b) - pOpen(a)).slice(0, 8);
+  const ex = p => `<div class="ex ${pOpen(p) ? '' : 'locked'}"><div class="t"><b>${esc(p.en)}</b><span>${esc(p.ru)}</span>${pOpen(p) ? '' : '<i>откроется, когда выучишь остальные слова</i>'}</div><button class="mini" data-say="${esc(p.en)}" aria-label="Озвучить">${SPK}</button></div>`;
+  const el = $('sheet');
+  el.innerHTML = `<div class="sh-top"><button class="back" id="shBack">← Назад</button><button class="mini sp2" data-say="${esc(w.en)}" aria-label="Озвучить">${SPK}</button></div>
+  <div class="sh-body">
+    <div class="sh-head"><div class="sh-en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="sh-phon" id="shPhon"></div><div class="sh-ru">${esc(w.ru)}</div>
+      <div class="sh-meta num">${w.ph ? 'Фраза' : `Слово №${w.i + 1} по частоте`} · ${status}${r.s === 1 ? ` · прогресс ${r.m}/${M}` : ''}${r.e ? ` · ошибок ${r.e}` : ''}</div></div>
+    ${w.ph ? `<section class="block"><h3>Из каких слов</h3><div class="kw">${w.keys.map(k => BY[k] ? `<button data-word="${esc(k)}">${esc(k)} — ${esc(BY[k].ru)}</button>` : '').join('')}</div></section>`
+      : `<section class="block"><h3>Фразы с этим словом <span>${phr.length ? '' : 'пока нет'}</span></h3>${phr.map(ex).join('') || '<p>Для этого слова фраз в банке пока нет.</p>'}</section>
+    <section class="block" id="shDict"><h3>Значения и примеры <span>англ. словарь</span></h3><p>Загружаю…</p></section>`}
+    <section class="block"><h3>Разобраться глубже</h3>
+      <p>ChatGPT распишет ${w.ph ? 'фразу' : 'слово'} подробно: значения, примеры с переводом, похожие слова, как запомнить.</p>
+      <div class="btnrow"><button class="btn" id="shGpt">Подробно в ChatGPT</button><button class="btn ghost" id="shRev">Примеры в Reverso</button>${w.ph ? '' : '<button class="btn ghost" id="shCam">Словарь Cambridge</button>'}</div>
+    </section>
+  </div>`;
+  el.hidden = false; el.querySelector('.sh-body').scrollTop = 0;
+  el.onclick = e => {
+    const s = e.target.closest('[data-say]'); if (s) return say(s.dataset.say, true);
+    const wd = e.target.closest('[data-word]'); if (wd && BY[wd.dataset.word]) return openInfo(BY[wd.dataset.word], w);
+    const t = e.target.closest('[data-tr]'); if (t) {
+      t.textContent = 'Перевожу…';
+      translate(t.dataset.tr).then(x => { t.outerHTML = `<div class="trout">${esc(x)}</div>`; }).catch(() => { t.textContent = 'Нет интернета — попробуй позже'; });
+    }
+  };
+  $('shBack').onclick = closeInfo;
+  const gptText = w.ph
+    ? `Я учу английский, уровень начальный. Разбери фразу «${w.en}» (${w.ru}): дословный перевод по словам, как и когда так говорят, 5 похожих примеров на простом английском с переводом на русский. Коротко и понятно.`
+    : `Я учу английский, уровень начальный. Объясни слово «${w.en}» (${w.ru}) по-русски: 1) основные значения с переводом; 2) 5 примеров употребления на простом английском с переводом; 3) частые словосочетания; 4) похожие слова и чем отличаются; 5) как легко запомнить. Без лишней воды.`;
+  $('shGpt').onclick = () => share(gptText);
+  $('shRev').onclick = () => openUrl('https://context.reverso.net/перевод/английский-русский/' + encodeURIComponent(w.en));
+  if (!w.ph) { $('shCam').onclick = () => openUrl('https://dictionary.cambridge.org/dictionary/english-russian/' + encodeURIComponent(w.en.toLowerCase().replace(/ /g, '-'))); loadDict(w); }
+  say(w.en, true);
+}
+function closeInfo() {
+  const back = infoStack.pop();
+  if (back) return openInfo(back);
+  $('sheet').hidden = true; $('sheet').innerHTML = '';
+  if (infoResume && !paused) { infoResume = false; running = true; t0 = performance.now(); raf = requestAnimationFrame(tick); }
+  infoResume = false;
+}
+async function loadDict(w) {
+  const box = () => $('shDict');
+  let d = dictCache[w.en];
+  if (!d) {
+    try {
+      const res = await getJSON('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(w.en.toLowerCase()));
+      if (res.status === 404) d = { none: true };
+      else if (res.data) d = res.data;
+      if (d) { dictCache[w.en] = d; dictSave(); }
+    } catch (e) {}
+  }
+  if (!box() || $('sheet').hidden) return;
+  if (!d) { box().innerHTML = '<h3>Значения и примеры</h3><p>Нет интернета, словарь не загрузился. Фразы выше и кнопки ниже работают.</p>'; return; }
+  if (d.none || !d[0]) { box().innerHTML = '<h3>Значения и примеры</h3><p>В английском словаре этого слова нет — обычно так бывает со словосочетаниями. Загляни в Reverso или спроси ChatGPT.</p>'; return; }
+  const e0 = d[0], phon = e0.phonetic || (e0.phonetics || []).map(x => x.text).find(Boolean) || '';
+  const audio = (e0.phonetics || []).map(x => x.audio).find(a => a && /us/.test(a)) || (e0.phonetics || []).map(x => x.audio).find(Boolean);
+  if ($('shPhon')) $('shPhon').innerHTML = esc(phon) + (audio ? ` <button class="tr" id="shAud">▶ голос носителя</button>` : '');
+  if (audio && $('shAud')) $('shAud').onclick = () => { try { new Audio(audio).play(); } catch (e) {} };
+  const syn = new Set(); let html = '<h3>Значения и примеры <span>англ. словарь</span></h3>';
+  d.flatMap(x => x.meanings || []).slice(0, 4).forEach(m => {
+    html += `<div class="pos">${esc(POS[m.partOfSpeech] || m.partOfSpeech)}</div>`;
+    (m.definitions || []).slice(0, 2).forEach(df => {
+      const both = df.definition + (df.example ? ' — ' + df.example : '');
+      html += `<div class="ex"><div class="t"><span>${esc(df.definition)}</span>${df.example ? `<b>${esc(df.example)}</b>` : ''}<button class="tr" data-tr="${esc(both)}">Перевести на русский</button></div>${df.example ? `<button class="mini" data-say="${esc(df.example)}" aria-label="Озвучить пример">${SPK}</button>` : ''}</div>`;
+      (df.synonyms || []).forEach(s => syn.add(s));
+    });
+    (m.synonyms || []).forEach(s => syn.add(s));
+  });
+  if (syn.size) html += `<div class="pos">похожие слова</div><div class="syn">${[...syn].slice(0, 8).map(s => `<span>${esc(s)}</span>`).join('')}</div>`;
+  box().innerHTML = html;
 }
 
 /* ================= hub ================= */
@@ -821,7 +962,7 @@ const grade = v => v >= .9 ? 'S' : v >= .75 ? 'A' : v >= .6 ? 'B' : v >= .4 ? 'C
 function statRow(name, val, v) { return `<div class="stat"><span>${name}</span><div class="bar"><i style="width:${clamp(v) * 100}%"></i></div><span class="v num">${val}</span><span class="grade g-${grade(v)}">${grade(v)}</span></div>`; }
 
 function tabHome() {
-  const { L, x, n } = lv(), learned = nLearned(), sg = stageOf(learned), nx = STAGES[sg + 1], inWork = learningList().length, cs = STAGES[sg];
+  const { L, x, n } = lv(), learned = nBricks(), sg = stageOf(learned), nx = STAGES[sg + 1], inWork = learningList().length, cs = STAGES[sg];
   const acc = S.answered ? S.correct / S.answered : 0, avg = S.rtN ? S.rtSum / S.rtN / 1000 : 0;
   const days = []; for (let i = 13; i >= 0; i--) { const k = dAdd(-i); days.push({ k, c: (S.days[k] || {}).c || 0, d: +k.slice(8) }); }
   const mx = Math.max(10, ...days.map(d => d.c));
@@ -838,7 +979,7 @@ function tabHome() {
       <div><div class="bar blue"><i style="width:${x / n * 100}%"></i></div>
         <div class="xprow num"><span>Уровень ${L}</span><span>${fmt(x)} / ${fmt(n)} XP</span></div></div>
       <dl class="pp-grid">
-        <div><dt>Площадь</dt><dd class="num">${fmt(learned)} м²</dd><small>1 выученное слово = 1 м²</small></div>
+        <div><dt>Площадь</dt><dd class="num">${fmt(learned)} м²</dd><small>1 слово (выучено или «знал») = 1 м²</small></div>
         <div><dt>Оценка</dt><dd class="num">${fmt(learned * PRICE_M2)} ₽</dd><small>условно по ${fmt(PRICE_M2)} ₽/м²</small></div>
         <div><dt>Этажность</dt><dd>${STAGES[sg].f || '—'}</dd><small>растёт со стройкой</small></div>
         <div><dt>В работе</dt><dd class="num">${inWork} ${pl(inWork, 'слово', 'слова', 'слов')}</dd><small>к повтору сегодня: ${dueList().length}</small></div>
@@ -895,7 +1036,7 @@ function tabPlan() {
       <li><b>Очки идут в прогресс слова.</b> Чтобы выучить слово, нужно набрать ${MAX}: быстрыми ответами это 6 попаданий, медленными 8–12. Ошибка отнимает 150.</li>
       <li><b>Выученные слова возвращаются на повтор</b> по интервалам, чтобы осели в долгой памяти.</li>
       <li><b>Объект строится только из выученных слов:</b> каждое слово — кирпич и 1 м². Опыт и уровень идут за каждый верный ответ, а <b>комбо</b> (верные подряд) даёт к опыту до ×2.</li>
-      <li><b>Фразы открываются сами</b>, когда выучены все слова из них. Учить их — в режиме «Фразы»: 3 быстрых попадания, и фраза твоя.</li>
+      <li><b>Фразы открываются сами</b> из твоих слов: все слова фразы тебе известны, и хотя бы одно ты выучил в игре. Свежевыученные слова идут первыми. Учить их — в режиме «Фразы»: 3 быстрых попадания, и фраза твоя.</li>
       <li><b>Наборы и режимы</b> выбираются внизу меню: тема слов, на слух, работа над ошибками, повторы, фразы.</li>
     </ol>
   </section>`;
@@ -931,15 +1072,16 @@ function drawList() {
   $('wl').innerHTML = `<div class="wlist">${list.slice(0, wLimit).map(w => {
     const key = K(w), M = mx(w), r = S.w[key] || { s: 0, m: 0, e: 0 }, [sn, sc] = STATUS[r.s], pct = r.s >= 2 ? 100 : r.m / M * 100;
     const det = openWord === key ? `<div class="wdet"><span class="num">Прогресс ${r.s >= 2 ? M : r.m}/${M} · ошибок ${r.e || 0}${r.s === 2 && r.n ? ` · повтор ${r.n.split('-').reverse().slice(0, 2).join('.')}` : ''}</span>
-      <div class="btnrow">${r.s === 3 || r.s === 0 ? `<button class="btn ghost" data-act="learn" data-en="${esc(key)}">Взять в учёбу</button>` : `<button class="btn ghost" data-act="reset" data-en="${esc(key)}">Учить заново</button>`}${r.s !== 3 ? `<button class="btn ghost" data-act="know" data-en="${esc(key)}">Уже знаю</button>` : ''}</div></div>` : '';
+      <div class="btnrow"><button class="btn" data-info="${esc(key)}">Подробнее</button>${r.s === 3 || r.s === 0 ? `<button class="btn ghost" data-act="learn" data-en="${esc(key)}">Взять в учёбу</button>` : `<button class="btn ghost" data-act="reset" data-en="${esc(key)}">Учить заново</button>`}${r.s !== 3 ? `<button class="btn ghost" data-act="know" data-en="${esc(key)}">Уже знаю</button>` : ''}</div></div>` : '';
     return `<button class="wrow" data-en="${esc(key)}"><span class="we">${esc(w.en)}</span><span class="wr">${esc(w.ru)}</span><span><div class="st" style="color:${sc}">${sn}</div><div class="bar ${r.s >= 2 ? 'ok' : 'blue'}"><i style="width:${pct}%"></i></div></span></button>${det}`;
   }).join('')}</div>${list.length > wLimit ? `<button class="more" id="more">Показать ещё (${list.length - wLimit})</button>` : ''}`;
   $('wl').onclick = e => {
+    const inf = e.target.closest('[data-info]'); if (inf) { const k = inf.dataset.info; const o = k[0] === '§' ? P.find(x => x.k === k) : BY[k]; if (o) openInfo(o); return; }
     const a = e.target.closest('[data-act]');
     if (a) { const r = rec(a.dataset.en);
-      if (a.dataset.act === 'know') { r.s = 3; r.m = 0; }
+      if (a.dataset.act === 'know') { r.s = 3; r.m = 0; r.t = Date.now(); }
       else { r.s = 1; r.m = 0; r.iv = 0; r.n = ''; }
-      save(); toast('Готово'); tabWords(); return; }
+      checkBuild(); checkAch(); save(); toast('Готово'); if (MQ.length) showModal(() => {}); tabWords(); return; }
     const row = e.target.closest('.wrow'); if (row) { say(row.dataset.en.replace(/^§/, ''), true); openWord = openWord === row.dataset.en ? '' : row.dataset.en; drawList(); }
     if (e.target.id === 'more') { wLimit += 300; drawList(); }
   };
@@ -1042,19 +1184,20 @@ $('pauseBtn').onclick = () => openHub();
 $('hudBadge').onclick = () => openHub('home');
 ansBtns.forEach((b, i) => b.onclick = () => judge(i));
 document.addEventListener('keydown', e => {
-  if (!$('hub').hidden || !$('modal').hidden) return;
+  if (!$('hub').hidden || !$('modal').hidden || !$('sheet').hidden) return;
   const k = '1234'.indexOf(e.key); if (k >= 0 && running) judge(k);
   if (e.key === 'Escape') openHub();
 });
 document.addEventListener('visibilitychange', () => { if (document.hidden && !paused) openHub(); });
 window.androidBack = () => {
   if (!$('modal').hidden) return 'stay';
+  if (!$('sheet').hidden) { closeInfo(); return 'stay'; }
   if (!$('hub').hidden) { if (tab !== 'home') { tab = 'home'; renderHub(); return 'stay'; } return 'exit'; }
   openHub(); return 'menu';
 };
 window.androidPause = () => { if (!paused) openHub(); };
 
-rollDay(); save(); renderHud(); openHub('home');
+rollDay(); lastBricks = nBricks(); save(); renderHud(); openHub('home');
 </script>
 </body>
 </html>
