@@ -1,0 +1,250 @@
+story|«История, рассказ» — то, что рассказывают. История как наука — history.|Tell me a story.|Расскажи мне историю.|It's a long story.|Это долгая история.
+road|«Дорога».|The road is bad here.|Дорога здесь плохая.|We were on the road all day.|Мы были в дороге весь день.
+picture|«Картинка, фото, картина». take a picture — сфотографировать.|Take a picture of the house.|Сфотографируй дом.|Nice picture!|Красивое фото!
+heart|«Сердце». by heart — наизусть.|My heart is beating fast.|У меня быстро бьётся сердце.|Learn it by heart.|Выучи это наизусть.
+voice|«Голос».|You have a nice voice.|У тебя приятный голос.|Speak in a low voice.|Говори тихо.
+weather|«Погода». Не путать с whether — «ли».|The weather is nice today.|Сегодня хорошая погода.|What's the weather like?|Какая погода?
+truth|«Правда, истина».|Tell me the truth.|Скажи мне правду.|That's the truth.|Это правда.
+mind|«Ум, разум» и глагол «возражать». Do you mind? — Вы не против?|I changed my mind.|Я передумал.|Do you mind if I sit here?|Не возражаете, если я сяду здесь?
+good|«Хороший». Сравнение: better, best.|Good morning!|Доброе утро!|This is a good price.|Это хорошая цена.
+new|«Новый».|We have a new car.|У нас новая машина.|What's new?|Что нового?
+first|«Первый, сначала». at first — сначала.|My first car.|Моя первая машина.|First, call the owner.|Сначала позвони владельцу.
+last|«Последний, прошлый» и «длиться».|Last week I was busy.|На прошлой неделе я был занят.|The meeting lasted an hour.|Встреча длилась час.
+long|«Длинный, долгий».|A long road.|Длинная дорога.|How long does it take?|Сколько это занимает времени?
+great|«Отличный, великий, огромный».|Great idea!|Отличная идея!|You did a great job.|Ты отлично поработал.
+little|«Маленький» и «немного» (a little).|A little dog.|Маленькая собака.|I speak a little English.|Я немного говорю по-английски.
+other|«Другой». the other one — другой (из двух).|On the other side.|На другой стороне.|Where are the other keys?|Где остальные ключи?
+old|«Старый».|An old house.|Старый дом.|How old are you?|Сколько тебе лет?
+big|«Большой».|A big kitchen.|Большая кухня.|It's a big problem.|Это большая проблема.
+high|«Высокий» (о предметах, ценах). О росте человека — tall.|The price is high.|Цена высокая.|High ceilings.|Высокие потолки.
+different|«Разный, другой, отличающийся».|We are very different.|Мы очень разные.|That's a different story.|Это другое дело.
+mine|«Мой» без существительного: It's mine — это моё.|This phone is mine.|Этот телефон мой.|A friend of mine.|Один мой друг.
+large|«Крупный, большой» — чуть официальнее, чем big.|A large family.|Большая семья.|Large or small?|Большой или маленький?
+next|«Следующий».|See you next week.|Увидимся на следующей неделе.|Who's next?|Кто следующий?
+early|«Ранний, рано».|I get up early.|Я встаю рано.|You're early!|Ты рано!
+young|«Молодой».|A young family.|Молодая семья.|She looks young.|Она молодо выглядит.
+important|«Важный».|It's very important.|Это очень важно.|An important meeting.|Важная встреча.
+few|«Мало» (few) и «несколько» (a few).|A few days ago.|Несколько дней назад.|Few people know it.|Мало кто это знает.
+public|«Общественный, публичный».|Public transport.|Общественный транспорт.|A public park.|Городской парк.
+bad|«Плохой». Сравнение: worse, worst.|Bad weather.|Плохая погода.|Not bad!|Неплохо!
+same|«Тот же самый».|We have the same car.|У нас одинаковые машины.|Same to you!|И тебе того же!
+able|«Способный». be able to — мочь, быть в состоянии.|I'm able to pay now.|Я сейчас могу заплатить.|Will you be able to come?|Сможешь прийти?
+free|«Свободный» и «бесплатный».|Are you free tonight?|Ты свободен вечером?|Parking is free.|Парковка бесплатная.
+sure|«Уверенный». Sure! — «Конечно!»|Are you sure?|Ты уверен?|Sure, no problem.|Конечно, без проблем.
+better|«Лучше» — сравнение от good.|I feel better.|Мне лучше.|This flat is better.|Эта квартира лучше.
+true|«Правдивый, верный».|It's true.|Это правда.|A dream come true.|Сбывшаяся мечта.
+whole|«Целый, весь».|The whole family came.|Пришла вся семья.|I ate the whole cake.|Я съел весь торт.
+real|«Настоящий, реальный».|Is it real?|Это по-настоящему?|A real friend.|Настоящий друг.
+best|«Лучший» — превосходная степень от good.|You're the best!|Ты лучший!|The best house in town.|Лучший дом в городе.
+easy|«Лёгкий, простой». Take it easy — расслабься.|It's easy.|Это легко.|Take it easy.|Не напрягайся.
+hard|«Трудный» и «твёрдый»; «усердно» (work hard).|It's hard to say.|Сложно сказать.|He works hard.|Он усердно работает.
+strong|«Сильный, крепкий».|Strong coffee.|Крепкий кофе.|You are strong.|Ты сильный.
+red|«Красный».|A red car.|Красная машина.|Red wine.|Красное вино.
+possible|«Возможный». as soon as possible — как можно скорее.|Is it possible?|Это возможно?|Call me as soon as possible.|Позвони как можно скорее.
+special|«Особый, особенный».|A special offer.|Специальное предложение.|You are special.|Ты особенный.
+clear|«Ясный, понятный, чистый».|Is it clear?|Понятно?|The sky is clear.|Небо ясное.
+recent|«Недавний, последний».|Recent news.|Последние новости.|A recent photo.|Свежее фото.
+certain|«Определённый, уверенный».|I'm not certain.|Я не уверен.|At a certain time.|В определённое время.
+personal|«Личный».|A personal question.|Личный вопрос.|Don't take it personal.|Не принимай на свой счёт.
+difficult|«Трудный, сложный».|A difficult client.|Сложный клиент.|It's difficult to explain.|Это трудно объяснить.
+dark|«Тёмный».|It's dark outside.|На улице темно.|A dark room.|Тёмная комната.
+cheap|«Дешёвый».|A cheap hotel.|Дешёвая гостиница.|It's not cheap.|Это недёшево.
+expensive|«Дорогой» (по цене).|Too expensive.|Слишком дорого.|An expensive car.|Дорогая машина.
+quick|«Быстрый».|A quick question.|Быстрый вопрос.|Be quick!|Поторопись!
+slow|«Медленный». slow down — сбавь скорость.|The internet is slow.|Интернет медленный.|Slow down!|Помедленнее!
+happy|«Счастливый, довольный».|I'm happy for you.|Я рад за тебя.|Happy birthday!|С днём рождения!
+warm|«Тёплый».|A warm house.|Тёплый дом.|It's warm today.|Сегодня тепло.
+cold|«Холодный» и «простуда».|It's cold outside.|На улице холодно.|I have a cold.|Я простыл.
+hot|«Горячий, жаркий».|Hot tea.|Горячий чай.|It's hot today.|Сегодня жарко.
+nice|«Приятный, милый, хороший».|Nice to meet you.|Приятно познакомиться.|What a nice view!|Какой красивый вид!
+beautiful|«Красивый».|A beautiful city.|Красивый город.|You look beautiful.|Ты прекрасно выглядишь.
+ready|«Готовый».|Are you ready?|Ты готов?|Dinner is ready.|Ужин готов.
+simple|«Простой».|It's simple.|Это просто.|A simple plan.|Простой план.
+English|«Английский (язык)», «англичанин». Всегда с большой буквы.|I'm learning English.|Я учу английский.|Do you speak English?|Вы говорите по-английски?
+full|«Полный».|The tank is full.|Бак полный.|I'm full.|Я наелся.
+empty|«Пустой».|An empty room.|Пустая комната.|The fridge is empty.|Холодильник пустой.
+quiet|«Тихий». Be quiet! — Тише!|A quiet street.|Тихая улица.|Be quiet, please.|Тише, пожалуйста.
+safe|«Безопасный» и «сейф».|This area is safe.|Этот район безопасный.|Have a safe trip!|Счастливого пути!
+rich|«Богатый».|A rich man.|Богатый человек.|I want to be rich.|Я хочу быть богатым.
+poor|«Бедный».|A poor family.|Бедная семья.|Poor thing!|Бедняжка!
+busy|«Занятой, оживлённый».|I'm busy now.|Я сейчас занят.|A busy street.|Оживлённая улица.
+tired|«Уставший». tired of — надоело.|I'm tired.|Я устал.|I'm tired of waiting.|Мне надоело ждать.
+angry|«Злой, сердитый».|Don't be angry.|Не злись.|She is angry with me.|Она на меня злится.
+afraid|«Боящийся». I'm afraid… — ещё и вежливое «боюсь, что…».|I'm afraid of dogs.|Я боюсь собак.|I'm afraid I can't come.|Боюсь, я не смогу прийти.
+always|«Всегда».|I always drink coffee.|Я всегда пью кофе.|You're always late.|Ты всегда опаздываешь.
+never|«Никогда».|I never smoke.|Я никогда не курю.|Never give up!|Никогда не сдавайся!
+often|«Часто».|I often work late.|Я часто работаю допоздна.|How often?|Как часто?
+sometimes|«Иногда».|Sometimes I forget.|Иногда я забываю.|I sometimes cook.|Я иногда готовлю.
+usually|«Обычно».|I usually get up at seven.|Обычно я встаю в семь.|It usually takes a week.|Обычно это занимает неделю.
+already|«Уже».|I already know.|Я уже знаю.|Are you home already?|Ты уже дома?
+still|«Всё ещё» и «тем не менее».|I'm still at work.|Я всё ещё на работе.|Do you still live there?|Ты всё ещё там живёшь?
+again|«Снова, опять».|Try again.|Попробуй ещё раз.|See you again!|Ещё увидимся!
+also|«Также, тоже».|I also want a dog.|Я тоже хочу собаку.|She is also a realtor.|Она тоже риелтор.
+very|«Очень».|Very good!|Очень хорошо!|Thank you very much.|Большое спасибо.
+situation|«Ситуация, положение».|A difficult situation.|Трудная ситуация.|What's the situation?|Какая обстановка?
+really|«Действительно, правда». Really? — «Правда?»|I really like it.|Мне правда нравится.|Really?|Серьёзно?
+just|«Просто, только что, всего лишь».|I just arrived.|Я только что приехал.|Just a minute.|Минутку.
+only|«Только, единственный».|Only one room.|Только одна комната.|You are my only friend.|Ты мой единственный друг.
+now|«Сейчас».|I'm busy now.|Я сейчас занят.|Do it now.|Сделай это сейчас.
+then|«Тогда, потом».|First call, then come.|Сначала позвони, потом приходи.|See you then.|Тогда увидимся.
+here|«Здесь, сюда».|Come here.|Иди сюда.|I live here.|Я живу здесь.
+there|«Там, туда». there is/are — есть, имеется.|Go there.|Иди туда.|There is a shop near.|Рядом есть магазин.
+today|«Сегодня».|Today is Monday.|Сегодня понедельник.|I'm free today.|Я сегодня свободен.
+tomorrow|«Завтра».|See you tomorrow.|До завтра.|Tomorrow morning.|Завтра утром.
+yesterday|«Вчера».|I saw him yesterday.|Я видел его вчера.|Yesterday was cold.|Вчера было холодно.
+soon|«Скоро». See you soon — до скорого.|I'll be back soon.|Я скоро вернусь.|See you soon!|До скорого!
+together|«Вместе».|Let's work together.|Давай работать вместе.|We live together.|Мы живём вместе.
+maybe|«Может быть».|Maybe tomorrow.|Может, завтра.|Maybe you're right.|Может, ты прав.
+almost|«Почти».|I'm almost ready.|Я почти готов.|Almost done.|Почти готово.
+enough|«Достаточно, хватит».|That's enough!|Хватит!|We have enough money.|У нас достаточно денег.
+because|«Потому что». because of — из-за.|I'm late because of traffic.|Я опоздал из-за пробки.|I stayed because I was tired.|Я остался, потому что устал.
+but|«Но».|It's nice but expensive.|Он хороший, но дорогой.|I want to, but I can't.|Хочу, но не могу.
+if|«Если» и «ли».|If you want, call me.|Если хочешь, позвони.|I don't know if he's home.|Не знаю, дома ли он.
+when|«Когда».|When can we meet?|Когда мы можем встретиться?|Call me when you're free.|Позвони, когда освободишься.
+where|«Где, куда».|Where are you?|Где ты?|Where do you live?|Где ты живёшь?
+favorite|«Любимый».|My favorite food.|Моя любимая еда.|Who is your favorite actor?|Кто твой любимый актёр?
+why|«Почему, зачем». Why not? — Почему бы и нет?|Why are you late?|Почему ты опоздал?|Why not?|Почему бы и нет?
+how|«Как». How much? — Сколько?|How are you?|Как дела?|How much is it?|Сколько это стоит?
+what|«Что, какой».|What is it?|Что это?|What time is it?|Который час?
+who|«Кто».|Who is it?|Кто там?|Who knows?|Кто знает?
+which|«Который, какой» (из нескольких).|Which one?|Который?|Which house is yours?|Какой дом твой?
+with|«С».|Come with me.|Пойдём со мной.|Coffee with milk.|Кофе с молоком.
+without|«Без».|Coffee without sugar.|Кофе без сахара.|I can't live without you.|Я не могу без тебя жить.
+about|«О, про» и «около, примерно».|Tell me about it.|Расскажи мне об этом.|About ten people.|Около десяти человек.
+after|«После».|After work.|После работы.|Call me after lunch.|Позвони после обеда.
+before|«До, перед, раньше».|Before dinner.|Перед ужином.|I've seen it before.|Я видел это раньше.
+between|«Между».|Between the house and the river.|Между домом и рекой.|Just between us.|Только между нами.
+under|«Под».|Under the table.|Под столом.|Kids under five.|Дети до пяти лет.
+over|«Над, через, более» и «закончился».|Over the river.|Над рекой.|The game is over.|Игра окончена.
+through|«Через, сквозь».|Through the window.|Через окно.|We went through a lot.|Мы через многое прошли.
+during|«Во время».|During the meeting.|Во время встречи.|I slept during the movie.|Я спал во время фильма.
+against|«Против».|I'm against it.|Я против.|Against the wall.|У стены.
+around|«Вокруг, примерно».|Around the house.|Вокруг дома.|Around five o'clock.|Около пяти часов.
+everything|«Всё».|Everything is fine.|Всё хорошо.|Thanks for everything.|Спасибо за всё.
+nothing|«Ничего».|Nothing happened.|Ничего не случилось.|It's nothing.|Пустяки.
+something|«Что-то».|I want something to eat.|Я хочу что-нибудь поесть.|Something is wrong.|Что-то не так.
+chop|«Рубить, нарезать».|Chop the wood.|Наколи дров.|Chop the onion.|Нарежь лук.
+someone|«Кто-то».|Someone called you.|Тебе кто-то звонил.|I need someone to help.|Мне нужен кто-нибудь в помощь.
+everyone|«Все, каждый». Глагол в единственном числе: everyone is.|Everyone is here.|Все здесь.|Hi, everyone!|Всем привет!
+each|«Каждый» — каждый по отдельности.|Each room has a bed.|В каждой комнате есть кровать.|They cost ten each.|Они стоят по десять каждый.
+many|«Много» — то, что можно посчитать: many cars.|Many people.|Много людей.|How many rooms?|Сколько комнат?
+much|«Много» — то, что не считают: much money. How much? — Сколько?|Thank you very much.|Большое спасибо.|How much is it?|Сколько стоит?
+more|«Больше, ещё».|I need more time.|Мне нужно больше времени.|One more, please.|Ещё один, пожалуйста.
+less|«Меньше».|Less money.|Меньше денег.|Eat less sugar.|Ешь меньше сахара.
+both|«Оба».|Both houses are good.|Оба дома хорошие.|I like both.|Мне нравятся оба.
+some|«Немного, несколько, какие-то».|I need some water.|Мне нужно немного воды.|Some people like it.|Некоторым это нравится.
+any|«Любой, какой-нибудь». В вопросах и отрицаниях: Do you have any…?|Do you have any questions?|У вас есть вопросы?|Any time.|В любое время.
+answer|«Ответ» и «отвечать».|I know the answer.|Я знаю ответ.|Answer the phone.|Ответь на звонок.
+advantage|«Преимущество». take advantage — воспользоваться.|The main advantage is the price.|Главное преимущество — цена.|Take advantage of the offer.|Воспользуйся предложением.
+chance|«Шанс, возможность». by chance — случайно.|Give me a chance.|Дай мне шанс.|We met by chance.|Мы встретились случайно.
+choice|«Выбор».|You have a choice.|У тебя есть выбор.|Good choice!|Хороший выбор!
+mistake|«Ошибка». make a mistake — ошибиться.|I made a mistake.|Я ошибся.|Sorry, my mistake.|Простите, моя ошибка.
+success|«Успех».|The key to success.|Ключ к успеху.|Good luck and success!|Удачи и успехов!
+goal|«Цель» и «гол».|My goal is 5000 words.|Моя цель — 5000 слов.|What a goal!|Какой гол!
+rule|«Правило».|Follow the rules.|Соблюдай правила.|As a rule, I sleep late.|Как правило, я ложусь поздно.
+trust|«Доверие» и «доверять».|I trust you.|Я тебе доверяю.|Trust is important.|Доверие важно.
+fear|«Страх» и «бояться».|Fear of mistakes.|Страх ошибок.|No fear!|Без страха!
+stuck|«Застрявший». I'm stuck — я застрял.|I'm stuck in traffic.|Я застрял в пробке.|The door is stuck.|Дверь заклинило.
+risk|«Риск» и «рисковать».|It's a big risk.|Это большой риск.|Don't risk it.|Не рискуй.
+size|«Размер».|What size?|Какой размер?|The size of the room.|Размер комнаты.
+cost|«Стоимость» и «стоить».|How much does it cost?|Сколько это стоит?|The cost of living.|Стоимость жизни.
+profit|«Прибыль».|We made a good profit.|Мы получили хорошую прибыль.|Profit and loss.|Прибыль и убыток.
+tax|«Налог».|Pay the tax.|Заплати налог.|Property tax.|Налог на имущество.
+document|«Документ».|Bring your documents.|Принеси документы.|Sign this document.|Подпиши этот документ.
+meeting|«Встреча, собрание».|I have a meeting at ten.|У меня встреча в десять.|The meeting is over.|Собрание закончилось.
+message|«Сообщение».|Send me a message.|Напиши мне сообщение.|I got your message.|Я получил твоё сообщение.
+letter|«Письмо» и «буква».|I wrote a letter.|Я написал письмо.|The letter A.|Буква А.
+news|«Новости». Единственное число: The news is good.|Good news!|Хорошие новости!|Did you see the news?|Ты видел новости?
+dream|«Мечта, сон» и «мечтать».|My dream house.|Дом моей мечты.|I had a strange dream.|Мне приснился странный сон.
+square|«Квадрат, площадь (городская)» и «квадратный».|Square meters.|Квадратные метры.|The main square.|Главная площадь.
+wood|«Дерево (материал), древесина»; woods — лес.|A wood floor.|Деревянный пол.|Chop some wood.|Наколи дров.
+fire|«Огонь, пожар» и «увольнять».|Light the fire.|Разожги огонь.|Fire!|Пожар!
+tree|«Дерево» (растение).|An old tree.|Старое дерево.|Plant a tree.|Посади дерево.
+dog|«Собака».|I have a dog.|У меня есть собака.|The dog is barking.|Собака лает.
+cat|«Кошка, кот».|The cat is sleeping.|Кошка спит.|Feed the cat.|Покорми кошку.
+bed|«Кровать». go to bed — ложиться спать.|Go to bed.|Иди спать.|A big bed.|Большая кровать.
+table|«Стол» и «таблица».|Sit at the table.|Садись за стол.|Set the table.|Накрой на стол.
+chair|«Стул».|Take a chair.|Возьми стул.|Sit on the chair.|Сядь на стул.
+light|«Свет» и «лёгкий, светлый».|Turn on the light.|Включи свет.|A light room.|Светлая комната.
+paper|«Бумага, газета, документ».|A piece of paper.|Листок бумаги.|Sign the papers.|Подпиши бумаги.
+shop|«Магазин» и «делать покупки».|The shop is closed.|Магазин закрыт.|I like to shop.|Люблю ходить по магазинам.
+hospital|«Больница».|He is in hospital.|Он в больнице.|Go to the hospital.|Поезжай в больницу.
+river|«Река».|The river is cold.|Река холодная.|A house by the river.|Дом у реки.
+village|«Деревня, село».|My parents live in a village.|Мои родители живут в деревне.|A small village.|Маленькая деревня.
+garden|«Сад, огород».|We have a garden.|У нас есть огород.|Flowers in the garden.|Цветы в саду.
+field|«Поле, сфера».|A big field.|Большое поле.|He is an expert in this field.|Он эксперт в этой области.
+winter|«Зима».|Winter is long here.|Зима здесь длинная.|In winter.|Зимой.
+summer|«Лето».|Summer is short.|Лето короткое.|In summer we go to the lake.|Летом мы ездим на озеро.
+spring|«Весна» и «пружина, источник».|In spring.|Весной.|Spring is coming.|Весна идёт.
+autumn|«Осень» (британское; в США — fall).|In autumn.|Осенью.|Autumn leaves.|Осенние листья.
+husband|«Муж».|My husband works at night.|Мой муж работает ночью.|Her husband is a builder.|Её муж — строитель.
+wife|«Жена».|My wife is at home.|Жена дома.|Say hello to your wife.|Передай привет жене.
+son|«Сын».|My son is ten.|Моему сыну десять.|He is my only son.|Он мой единственный сын.
+daughter|«Дочь».|Their daughter goes to school.|Их дочь ходит в школу.|My daughter is happy.|Моя дочь счастлива.
+brother|«Брат».|My brother lives in Moscow.|Мой брат живёт в Москве.|Older brother.|Старший брат.
+sister|«Сестра».|My sister is a teacher.|Моя сестра учительница.|Younger sister.|Младшая сестра.
+boss|«Начальник, босс».|My boss is strict.|Мой начальник строгий.|Ask the boss.|Спроси начальника.
+neighbor|«Сосед».|My neighbor is nice.|Мой сосед хороший.|Noisy neighbors.|Шумные соседи.
+agent|«Агент».|A real estate agent.|Агент по недвижимости.|Call your agent.|Позвони своему агенту.
+negotiate|«Вести переговоры, договариваться».|Let's negotiate the price.|Давайте обсудим цену.|He knows how to negotiate.|Он умеет вести переговоры.
+compromise|«Компромисс» и «идти на компромисс».|Let's find a compromise.|Давай найдём компромисс.|We had to compromise.|Пришлось пойти на компромисс.
+influence|«Влияние» и «влиять».|He has a lot of influence.|У него большое влияние.|Weather influences prices.|Погода влияет на цены.
+distant|«Далёкий, отдалённый».|A distant village.|Далёкая деревня.|A distant relative.|Дальний родственник.
+delight|«Восторг, радость».|To my delight, it worked.|К моей радости, получилось.|The kids were in delight.|Дети были в восторге.
+extent|«Степень, мера». to some extent — в какой-то степени.|To some extent, you're right.|В какой-то степени ты прав.|The extent of the damage.|Масштаб ущерба.
+passage|«Проход, коридор» и «отрывок текста».|A narrow passage.|Узкий проход.|Read this passage.|Прочитай этот отрывок.
+variation|«Вариант, разновидность, изменение».|A new variation.|Новый вариант.|Price variations.|Колебания цен.
+add|«Добавлять».|Add some salt.|Добавь соли.|Add me to the chat.|Добавь меня в чат.
+allow|«Разрешать, позволять».|Pets are not allowed.|С животными нельзя.|Allow me to help.|Позвольте помочь.
+apply|«Подавать заявку, применять».|Apply for a job.|Подать резюме на работу.|Apply the rule.|Примени правило.
+argue|«Спорить».|Don't argue with me.|Не спорь со мной.|They argue all the time.|Они постоянно спорят.
+arrive|«Прибывать, приезжать». arrive at/in.|We arrived late.|Мы приехали поздно.|When does the train arrive?|Когда прибывает поезд?
+attack|«Нападать» и «атака».|The dog attacked him.|Собака напала на него.|A heart attack.|Сердечный приступ.
+avoid|«Избегать».|Avoid the traffic.|Объезжай пробки.|He avoids me.|Он меня избегает.
+base|«Основа, база» и «основывать».|The base of the house.|Основание дома.|Based on facts.|Основано на фактах.
+bear|«Медведь» и «выносить, терпеть».|A bear in the forest.|Медведь в лесу.|I can't bear the noise.|Не выношу этот шум.
+beat|«Бить, побеждать» и «ритм».|We beat them 3–0.|Мы обыграли их 3:0.|Beat the eggs.|Взбей яйца.
+belong|«Принадлежать». belong to — принадлежать кому-то.|This belongs to me.|Это принадлежит мне.|You belong here.|Твоё место здесь.
+bite|«Кусать» и «укус». Прошедшее — bit.|The dog bites.|Собака кусается.|Let's grab a bite.|Давай перекусим.
+blow|«Дуть» и «удар».|The wind blows.|Дует ветер.|Blow out the candles.|Задуй свечи.
+borrow|«Брать взаймы». Дать взаймы — lend.|Can I borrow your pen?|Можно одолжить твою ручку?|I borrowed money from a friend.|Я занял денег у друга.
+burn|«Гореть, жечь, обжечь».|The house burned down.|Дом сгорел.|I burned my hand.|Я обжёг руку.
+care|«Забота» и «заботиться». I don't care — мне всё равно.|Take care!|Береги себя!|I don't care.|Мне всё равно.
+check|«Проверять» и «чек, счёт».|Check the water.|Проверь воду.|Check, please.|Счёт, пожалуйста.
+claim|«Утверждать, требовать» и «претензия».|He claims it's his.|Он утверждает, что это его.|Make an insurance claim.|Подать заявление на страховку.
+clean|«Чистый» и «чистить, убирать».|A clean room.|Чистая комната.|Clean the kitchen.|Убери на кухне.
+climb|«Подниматься, лезть».|Climb the stairs.|Поднимись по лестнице.|Kids climb trees.|Дети лазают по деревьям.
+collect|«Собирать, забирать».|I collect coins.|Я собираю монеты.|Collect the kids from school.|Забери детей из школы.
+compare|«Сравнивать».|Compare the prices.|Сравни цены.|Don't compare yourself to others.|Не сравнивай себя с другими.
+complain|«Жаловаться».|Don't complain.|Не жалуйся.|Neighbors complain about the noise.|Соседи жалуются на шум.
+complete|«Завершать» и «полный, законченный».|Complete the form.|Заполни анкету.|The work is complete.|Работа завершена.
+connect|«Соединять, подключать».|Connect to Wi-Fi.|Подключись к вайфаю.|The bridge connects two towns.|Мост соединяет два города.
+contain|«Содержать».|The box contains books.|В коробке книги.|It contains sugar.|Это содержит сахар.
+control|«Контроль» и «контролировать».|Control your emotions.|Контролируй эмоции.|Everything is under control.|Всё под контролем.
+cook|«Готовить еду» и «повар».|I like to cook.|Я люблю готовить.|He is a good cook.|Он хороший повар.
+copy|«Копия» и «копировать».|Make a copy.|Сделай копию.|Copy the text.|Скопируй текст.
+count|«Считать». count on — рассчитывать на.|Count the money.|Пересчитай деньги.|You can count on me.|Можешь на меня рассчитывать.
+cross|«Пересекать, переходить» и «крест».|Cross the street.|Перейди улицу.|Keep your fingers crossed.|Держи кулачки.
+cry|«Плакать» и «кричать».|Don't cry.|Не плачь.|The baby is crying.|Малыш плачет.
+dance|«Танцевать» и «танец».|Let's dance.|Давай потанцуем.|I can't dance.|Я не умею танцевать.
+deliver|«Доставлять».|We deliver for free.|Доставка бесплатная.|They delivered the sofa.|Они привезли диван.
+depend|«Зависеть». It depends — смотря как.|It depends on the price.|Это зависит от цены.|It depends.|Смотря как.
+describe|«Описывать».|Describe the house.|Опиши дом.|I can't describe it.|Не могу это описать.
+destroy|«Разрушать, уничтожать».|The storm destroyed the roof.|Буря разрушила крышу.|Don't destroy it.|Не сломай это.
+discover|«Обнаруживать, открывать для себя».|I discovered a nice cafe.|Я открыл для себя хорошее кафе.|We discovered a problem.|Мы обнаружили проблему.
+discuss|«Обсуждать». Без about: discuss the price.|Let's discuss the details.|Давайте обсудим детали.|We need to discuss it.|Нам надо это обсудить.
+divide|«Делить».|Divide the money.|Раздели деньги.|Divide into two groups.|Разделитесь на две группы.
+doubt|«Сомневаться» и «сомнение». no doubt — без сомнения.|I doubt it.|Сомневаюсь.|No doubt about it.|Вне всяких сомнений.
+drink|«Пить» и «напиток». Прошедшее — drank.|Drink some water.|Попей воды.|Let's have a drink.|Давай выпьем.
+drop|«Ронять, бросать» и «капля». drop by — заглянуть.|Don't drop it.|Не урони.|Drop by tomorrow.|Заскочи завтра.
+earn|«Зарабатывать».|He earns good money.|Он хорошо зарабатывает.|Earn your respect.|Заслужи уважение.
+enjoy|«Наслаждаться, получать удовольствие».|Enjoy your meal!|Приятного аппетита!|I enjoy my job.|Мне нравится моя работа.
+enter|«Входить, вводить».|Enter the room.|Войди в комнату.|Enter your password.|Введи пароль.
+escape|«Сбегать, спасаться» и «побег».|The dog escaped.|Собака сбежала.|There's no escape.|Выхода нет.
+exist|«Существовать».|Does it exist?|Это существует?|This company no longer exists.|Этой компании больше нет.
+fail|«Проваливаться, не суметь».|I failed the test.|Я провалил тест.|Don't fail me.|Не подведи меня.
+fight|«Драться, бороться» и «драка».|Don't fight.|Не деритесь.|Fight for your dream.|Борись за мечту.
+fill|«Наполнять, заполнять».|Fill the glass.|Наполни стакан.|Fill in the form.|Заполни анкету.
+finish|«Заканчивать».|Finish your work.|Закончи работу.|I finished at six.|Я закончил в шесть.
+fit|«Подходить по размеру» и «в хорошей форме».|The jeans fit well.|Джинсы хорошо сидят.|I want to be fit.|Хочу быть в форме.
+fix|«Чинить, исправлять».|Fix the door.|Почини дверь.|I'll fix it.|Я это исправлю.

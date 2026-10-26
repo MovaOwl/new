@@ -1,0 +1,250 @@
+tie|«Завязывать» и «галстук».|Tie your shoes.|Завяжи шнурки.|A blue tie.|Синий галстук.
+translate|«Переводить» (с языка на язык).|Translate this text.|Переведи этот текст.|Can you translate it?|Можешь это перевести?
+unite|«Объединять(ся)».|Unite the team.|Сплотить команду.|We are united.|Мы едины.
+upset|«Расстроенный» и «расстраивать».|Don't be upset.|Не расстраивайся.|The news upset me.|Новость меня расстроила.
+urge|«Побуждать, настаивать» и «сильное желание».|I urge you to call.|Настоятельно прошу позвонить.|An urge to eat.|Желание поесть.
+vary|«Различаться, меняться».|Prices vary.|Цены разные.|It varies from day to day.|Это меняется изо дня в день.
+weigh|«Весить, взвешивать».|How much do you weigh?|Сколько ты весишь?|Weigh the options.|Взвесь варианты.
+whisper|«Шептать» и «шёпот».|Don't whisper.|Не шепчись.|She whispered my name.|Она прошептала моё имя.
+wipe|«Вытирать».|Wipe the table.|Вытри стол.|Wipe your feet.|Вытри ноги.
+wrap|«Заворачивать, упаковывать».|Wrap the gift.|Заверни подарок.|Wrap up warm.|Оденься потеплее.
+yell|«Орать, кричать».|Don't yell at me.|Не ори на меня.|He yelled for help.|Он закричал, зовя на помощь.
+account|«Счёт (в банке), аккаунт».|Open a bank account.|Открыть банковский счёт.|Log into your account.|Войди в свой аккаунт.
+action|«Действие». take action — принять меры.|Time for action.|Пора действовать.|An action movie.|Боевик.
+activity|«Деятельность, занятие».|Outdoor activities.|Занятия на свежем воздухе.|A fun activity.|Весёлое занятие.
+address|«Адрес» и «обращаться к».|What's your address?|Какой у тебя адрес?|Send it to this address.|Отправь на этот адрес.
+adult|«Взрослый».|Adults only.|Только для взрослых.|My son is an adult now.|Мой сын уже взрослый.
+advice|«Совет». Неисчисляемое: a piece of advice.|Give me some advice.|Дай мне совет.|Good advice.|Хороший совет.
+affair|«Дело» и «роман, интрижка».|It's my affair.|Это моё дело.|He had an affair.|У него был роман.
+afternoon|«Время после полудня, день».|Good afternoon!|Добрый день!|See you this afternoon.|Увидимся днём.
+agency|«Агентство».|A real estate agency.|Агентство недвижимости.|I work at an agency.|Я работаю в агентстве.
+agreement|«Соглашение, договор».|We have an agreement.|У нас есть договорённость.|Sign the agreement.|Подпиши соглашение.
+aim|«Цель» и «целиться, стремиться».|My aim is to learn English.|Моя цель — выучить английский.|Aim high.|Цель повыше.
+amount|«Количество, сумма».|A large amount of money.|Крупная сумма денег.|The total amount.|Общая сумма.
+analysis|«Анализ».|A market analysis.|Анализ рынка.|Do a quick analysis.|Сделай быстрый анализ.
+animal|«Животное».|A wild animal.|Дикое животное.|Do you like animals?|Ты любишь животных?
+anger|«Гнев, злость».|Control your anger.|Сдерживай гнев.|Shaking with anger.|Дрожа от злости.
+apple|«Яблоко».|An apple a day.|Яблоко в день.|Apple juice.|Яблочный сок.
+argument|«Спор, ссора» и «довод».|We had an argument.|Мы поругались.|A strong argument.|Сильный аргумент.
+arm|«Рука (от плеча)». Кисть — hand.|My arm hurts.|Болит рука.|Arm in arm.|Под руку.
+army|«Армия».|He is in the army.|Он в армии.|Join the army.|Пойти в армию.
+arrival|«Прибытие».|The time of arrival.|Время прибытия.|After my arrival.|После моего приезда.
+article|«Статья» и «артикль».|I read an article.|Я прочитал статью.|Write an article.|Напиши статью.
+artist|«Художник, артист».|A famous artist.|Известный художник.|She is an artist.|Она художница.
+attention|«Внимание».|Pay attention!|Будь внимателен!|Thanks for your attention.|Спасибо за внимание.
+attitude|«Отношение, настрой».|A positive attitude.|Позитивный настрой.|I don't like his attitude.|Мне не нравится его отношение.
+audience|«Аудитория, зрители».|A big audience.|Большая аудитория.|The audience clapped.|Зрители аплодировали.
+author|«Автор».|The author of the book.|Автор книги.|My favorite author.|Мой любимый автор.
+authority|«Власть, авторитет; власти».|Local authorities.|Местные власти.|He has authority.|У него есть авторитет.
+award|«Награда» и «награждать».|Win an award.|Получить награду.|He was awarded a prize.|Ему вручили приз.
+baby|«Младенец, малыш».|The baby is sleeping.|Малыш спит.|We're having a baby.|У нас будет ребёнок.
+background|«Фон, происхождение, опыт».|A white background.|Белый фон.|What's your background?|Какое у тебя образование и опыт?
+bag|«Сумка, пакет».|A heavy bag.|Тяжёлая сумка.|Do you need a bag?|Пакет нужен?
+ball|«Мяч» и «бал».|Throw the ball.|Брось мяч.|Play ball.|Играть в мяч.
+band|«Группа (музыкальная), лента».|A rock band.|Рок-группа.|A rubber band.|Резинка.
+bar|«Бар, полоса, плитка».|Let's go to a bar.|Пошли в бар.|A chocolate bar.|Плитка шоколада.
+basis|«Основа, база». on a daily basis — ежедневно.|On a daily basis.|Ежедневно.|The basis of the plan.|Основа плана.
+bath|«Ванна» и «купание».|Take a bath.|Принять ванну.|The baby's bath.|Купание малыша.
+battle|«Битва».|A hard battle.|Тяжёлая битва.|Win the battle.|Выиграть битву.
+beach|«Пляж».|Let's go to the beach.|Пошли на пляж.|A sandy beach.|Песчаный пляж.
+beauty|«Красота».|The beauty of nature.|Красота природы.|A beauty salon.|Салон красоты.
+beginning|«Начало».|From the beginning.|С самого начала.|At the beginning of the year.|В начале года.
+behavior|«Поведение».|Good behavior.|Хорошее поведение.|Strange behavior.|Странное поведение.
+belief|«Убеждение, вера».|A strong belief.|Твёрдое убеждение.|Religious beliefs.|Религиозные убеждения.
+benefit|«Польза, выгода» и «извлекать пользу».|The main benefit.|Главная польза.|It benefits everyone.|Это выгодно всем.
+bill|«Счёт к оплате, купюра».|Pay the bills.|Оплатить счета.|A 100-dollar bill.|Купюра в 100 долларов.
+bird|«Птица».|A small bird.|Маленькая птица.|Birds sing in the morning.|Утром поют птицы.
+birth|«Рождение».|Date of birth.|Дата рождения.|Give birth.|Родить.
+birthday|«День рождения».|Happy birthday!|С днём рождения!|My birthday is in May.|У меня день рождения в мае.
+bit|«Кусочек, немного». a bit — немного.|Wait a bit.|Подожди немного.|A bit tired.|Немного устал.
+blood|«Кровь».|A blood test.|Анализ крови.|Blood is thicker than water.|Кровь не вода.
+board|«Доска, правление», «садиться (на транспорт)».|A wooden board.|Деревянная доска.|Board the plane.|Сесть в самолёт.
+boat|«Лодка, катер».|A small boat.|Маленькая лодка.|Let's take a boat.|Давай возьмём лодку.
+bone|«Кость».|A dog with a bone.|Собака с костью.|I broke a bone.|Я сломал кость.
+border|«Граница».|Cross the border.|Пересечь границу.|Near the border.|Возле границы.
+bottle|«Бутылка».|A bottle of water.|Бутылка воды.|Open the bottle.|Открой бутылку.
+bottom|«Дно, низ».|At the bottom.|Внизу.|From the bottom of my heart.|От всего сердца.
+box|«Коробка, ящик».|A box of chocolates.|Коробка конфет.|Put it in the box.|Положи в коробку.
+brain|«Мозг».|Use your brain.|Шевели мозгами.|He has a good brain.|У него хорошие мозги.
+branch|«Ветка, филиал».|A tree branch.|Ветка дерева.|A bank branch.|Отделение банка.
+bread|«Хлеб».|Fresh bread.|Свежий хлеб.|Buy some bread.|Купи хлеба.
+breakfast|«Завтрак».|Have breakfast.|Позавтракать.|Breakfast is ready.|Завтрак готов.
+bridge|«Мост».|Cross the bridge.|Перейти мост.|An old bridge.|Старый мост.
+budget|«Бюджет».|What's your budget?|Какой у вас бюджет?|We are on a budget.|У нас ограниченный бюджет.
+bus|«Автобус».|Take the bus.|Сесть на автобус.|The bus is late.|Автобус опаздывает.
+button|«Кнопка, пуговица».|Press the button.|Нажми кнопку.|A button fell off.|Пуговица оторвалась.
+camera|«Камера, фотоаппарат».|A good camera.|Хорошая камера.|Smile for the camera!|Улыбнись в камеру!
+camp|«Лагерь».|A summer camp.|Летний лагерь.|Set up camp.|Разбить лагерь.
+cancer|«Рак (болезнь)».|Fight cancer.|Бороться с раком.|Smoking causes cancer.|Курение вызывает рак.
+candidate|«Кандидат».|The best candidate.|Лучший кандидат.|Vote for a candidate.|Голосовать за кандидата.
+capital|«Столица, капитал» и «заглавная буква».|Moscow is the capital.|Москва — столица.|Start-up capital.|Стартовый капитал.
+card|«Карта, открытка».|Pay by card.|Заплатить картой.|A birthday card.|Открытка на день рождения.
+career|«Карьера».|A good career.|Хорошая карьера.|Change your career.|Сменить профессию.
+cash|«Наличные».|Pay in cash.|Заплатить наличными.|I have no cash.|У меня нет наличных.
+category|«Категория».|A price category.|Ценовая категория.|Choose a category.|Выбери категорию.
+cell|«Клетка, ячейка» и «мобильный» (cell phone).|My cell phone.|Мой мобильный.|A prison cell.|Тюремная камера.
+center|«Центр».|In the city center.|В центре города.|A shopping center.|Торговый центр.
+century|«Век, столетие».|The 21st century.|21 век.|A century ago.|Сто лет назад.
+chain|«Цепь, сеть (магазинов)».|A gold chain.|Золотая цепочка.|A chain of shops.|Сеть магазинов.
+chairman|«Председатель».|The chairman of the board.|Председатель правления.|Ask the chairman.|Спроси председателя.
+champion|«Чемпион».|A world champion.|Чемпион мира.|You're a champion!|Ты чемпион!
+character|«Характер, персонаж».|A strong character.|Сильный характер.|My favorite character.|Мой любимый персонаж.
+charity|«Благотворительность».|Give to charity.|Жертвовать на благотворительность.|A charity event.|Благотворительное мероприятие.
+chicken|«Курица (птица и мясо)».|Roast chicken.|Жареная курица.|We keep chickens.|Мы держим кур.
+chief|«Глава, начальник» и «главный».|The chief engineer.|Главный инженер.|The police chief.|Начальник полиции.
+church|«Церковь».|An old church.|Старая церковь.|Go to church.|Ходить в церковь.
+circle|«Круг».|Sit in a circle.|Сесть в круг.|A circle of friends.|Круг друзей.
+citizen|«Гражданин».|A Russian citizen.|Гражданин России.|A good citizen.|Хороший гражданин.
+class|«Класс, урок, занятие».|An English class.|Урок английского.|First class.|Первый класс.
+climate|«Климат».|A cold climate.|Холодный климат.|Climate change.|Изменение климата.
+clock|«Часы (настенные, настольные)».|The clock is slow.|Часы отстают.|Look at the clock.|Посмотри на часы.
+clothes|«Одежда». Всегда множественное.|Warm clothes.|Тёплая одежда.|Change your clothes.|Переоденься.
+cloud|«Облако».|Dark clouds.|Тёмные тучи.|In the cloud.|В облаке.
+club|«Клуб».|A sports club.|Спортивный клуб.|Join the club!|Добро пожаловать в клуб!
+coach|«Тренер» и «автобус дальнего следования».|A football coach.|Футбольный тренер.|Travel by coach.|Ехать автобусом.
+coast|«Побережье».|On the coast.|На побережье.|The coast of the sea.|Морское побережье.
+coat|«Пальто, куртка».|A warm coat.|Тёплое пальто.|Put on your coat.|Надень пальто.
+code|«Код».|The door code.|Код от двери.|Enter the code.|Введи код.
+coffee|«Кофе».|A cup of coffee.|Чашка кофе.|Coffee with milk.|Кофе с молоком.
+collection|«Коллекция, сбор».|A big collection.|Большая коллекция.|Rubbish collection.|Вывоз мусора.
+college|«Колледж, вуз».|Go to college.|Поступить в колледж.|College students.|Студенты колледжа.
+color|«Цвет».|What color?|Какого цвета?|My favorite color is blue.|Мой любимый цвет — синий.
+comment|«Комментарий» и «комментировать».|Leave a comment.|Оставь комментарий.|No comment.|Без комментариев.
+committee|«Комитет».|The committee decided.|Комитет решил.|A house committee.|Домовой комитет.
+community|«Сообщество, община».|Our community.|Наше сообщество.|A gated community.|Закрытый посёлок.
+competition|«Соревнование, конкуренция».|Win the competition.|Победить в соревновании.|There is a lot of competition.|Большая конкуренция.
+computer|«Компьютер».|Turn on the computer.|Включи компьютер.|A new computer.|Новый компьютер.
+concept|«Понятие, концепция».|A new concept.|Новая концепция.|I like the concept.|Мне нравится идея.
+concern|«Беспокойство, забота» и «касаться».|It's not my concern.|Это не моя забота.|My main concern is price.|Меня больше всего беспокоит цена.
+condition|«Условие, состояние».|In good condition.|В хорошем состоянии.|On one condition.|При одном условии.
+conference|«Конференция».|A big conference.|Большая конференция.|A video conference.|Видеоконференция.
+confidence|«Уверенность, доверие».|I have confidence.|Я уверен в себе.|Lack of confidence.|Неуверенность.
+conflict|«Конфликт».|A family conflict.|Семейный конфликт.|Avoid conflict.|Избегай конфликтов.
+connection|«Связь, соединение».|A good connection.|Хорошая связь.|No internet connection.|Нет подключения к интернету.
+consequence|«Последствие».|Face the consequences.|Отвечать за последствия.|As a consequence.|Как следствие.
+construction|«Строительство, конструкция».|Under construction.|Строится.|The construction of the house.|Строительство дома.
+content|«Содержание, контент» и «довольный».|The content of the letter.|Содержание письма.|I'm content.|Я доволен.
+context|«Контекст».|In this context.|В этом контексте.|Out of context.|Вырвано из контекста.
+conversation|«Разговор».|A long conversation.|Долгий разговор.|Have a conversation.|Побеседовать.
+corner|«Угол».|In the corner.|В углу.|Around the corner.|За углом.
+council|«Совет (орган)».|The city council.|Городской совет.|A council meeting.|Заседание совета.
+couple|«Пара, супруги». a couple of — пара, несколько.|A married couple.|Супружеская пара.|A couple of days.|Пару дней.
+course|«Курс, блюдо». of course — конечно.|Of course!|Конечно!|An English course.|Курс английского.
+court|«Суд, корт».|Go to court.|Обратиться в суд.|A tennis court.|Теннисный корт.
+cousin|«Двоюродный брат или сестра».|My cousin lives in Moscow.|Мой двоюродный брат живёт в Москве.|We are cousins.|Мы двоюродные.
+crime|«Преступление».|A serious crime.|Серьёзное преступление.|Crime is low here.|Здесь мало преступности.
+crisis|«Кризис».|An economic crisis.|Экономический кризис.|In a crisis.|В кризисе.
+crowd|«Толпа».|A crowd of people.|Толпа людей.|I don't like crowds.|Я не люблю толпы.
+culture|«Культура».|Local culture.|Местная культура.|Russian culture.|Русская культура.
+cup|«Чашка, кубок».|A cup of tea.|Чашка чая.|The World Cup.|Чемпионат мира.
+customer|«Покупатель, клиент (магазина)».|A regular customer.|Постоянный покупатель.|The customer is always right.|Клиент всегда прав.
+cycle|«Цикл» и «ездить на велосипеде».|The life cycle.|Жизненный цикл.|I cycle to work.|Я езжу на работу на велосипеде.
+danger|«Опасность».|In danger.|В опасности.|Danger! Keep out.|Опасно! Не входить.
+data|«Данные».|The data is wrong.|Данные неверны.|Save the data.|Сохрани данные.
+date|«Дата, свидание».|What's the date today?|Какое сегодня число?|A first date.|Первое свидание.
+death|«Смерть».|Life and death.|Жизнь и смерть.|Bored to death.|Скука смертная.
+debate|«Дебаты, спор» и «обсуждать».|A long debate.|Долгий спор.|Debate the issue.|Обсуждать вопрос.
+debt|«Долг».|Pay the debt.|Вернуть долг.|I'm in debt.|Я в долгах.
+decade|«Десятилетие».|A decade ago.|Десять лет назад.|For decades.|Десятилетиями.
+decision|«Решение».|A hard decision.|Трудное решение.|Make a decision.|Принять решение.
+degree|«Степень, градус, диплом».|Ten degrees.|Десять градусов.|A university degree.|Высшее образование.
+department|«Отдел, отделение».|The sales department.|Отдел продаж.|A department store.|Универмаг.
+desk|«Письменный стол, стойка».|An office desk.|Офисный стол.|The front desk.|Стойка регистрации.
+detail|«Деталь, подробность».|In detail.|Подробно.|Discuss the details.|Обсудить детали.
+device|«Устройство».|A new device.|Новое устройство.|Charge your devices.|Заряди свои устройства.
+difference|«Разница».|What's the difference?|В чём разница?|It makes a difference.|Это имеет значение.
+dinner|«Ужин» (главный приём пищи).|Have dinner.|Ужинать.|Dinner is ready.|Ужин готов.
+direction|«Направление».|In which direction?|В каком направлении?|Ask for directions.|Спросить дорогу.
+director|«Директор, режиссёр».|The director of the company.|Директор компании.|A film director.|Кинорежиссёр.
+dirt|«Грязь».|Dirt on the floor.|Грязь на полу.|Dirt cheap.|Дёшево до смешного.
+discussion|«Обсуждение».|A short discussion.|Короткое обсуждение.|Under discussion.|Обсуждается.
+disease|«Болезнь».|A serious disease.|Серьёзная болезнь.|Heart disease.|Болезнь сердца.
+distance|«Расстояние».|A short distance.|Небольшое расстояние.|In the distance.|Вдалеке.
+doctor|«Врач, доктор».|See a doctor.|Сходить к врачу.|Call the doctor.|Вызови врача.
+dollar|«Доллар».|One hundred dollars.|Сто долларов.|The dollar rate.|Курс доллара.
+drawing|«Рисунок, чертёж».|A nice drawing.|Красивый рисунок.|A technical drawing.|Технический чертёж.
+dress|«Платье» и «одеваться».|A nice dress.|Красивое платье.|Get dressed.|Одевайся.
+driver|«Водитель».|A careful driver.|Осторожный водитель.|A taxi driver.|Таксист.
+drug|«Лекарство, наркотик».|A new drug.|Новое лекарство.|Say no to drugs.|Скажи наркотикам нет.
+duty|«Обязанность, долг, пошлина».|My duty.|Мой долг.|On duty.|На дежурстве.
+earth|«Земля (планета, почва)».|Life on Earth.|Жизнь на Земле.|What on earth?|Что за чёрт?
+economy|«Экономика, экономия».|The local economy.|Местная экономика.|Economy class.|Эконом-класс.
+edge|«Край».|On the edge.|На краю.|The edge of the table.|Край стола.
+effect|«Эффект, воздействие».|A side effect.|Побочный эффект.|No effect.|Никакого эффекта.
+effort|«Усилие».|A lot of effort.|Много усилий.|Make an effort.|Постарайся.
+egg|«Яйцо».|A boiled egg.|Варёное яйцо.|Eggs for breakfast.|Яйца на завтрак.
+election|«Выборы».|Win the election.|Победить на выборах.|The next election.|Следующие выборы.
+element|«Элемент».|An important element.|Важный элемент.|In my element.|В своей стихии.
+emergency|«Чрезвычайная ситуация».|In case of emergency.|В экстренном случае.|An emergency exit.|Запасной выход.
+emotion|«Эмоция».|Control your emotions.|Контролируй эмоции.|Full of emotion.|Полный эмоций.
+employee|«Сотрудник, работник».|A new employee.|Новый сотрудник.|We have ten employees.|У нас десять сотрудников.
+energy|«Энергия».|I have no energy.|У меня нет сил.|Save energy.|Экономь энергию.
+engine|«Двигатель».|Start the engine.|Заведи двигатель.|The engine is broken.|Двигатель сломан.
+engineer|«Инженер».|A good engineer.|Хороший инженер.|He works as an engineer.|Он работает инженером.
+entrance|«Вход».|The main entrance.|Главный вход.|Wait at the entrance.|Жди у входа.
+environment|«Окружающая среда, обстановка».|A clean environment.|Чистая среда.|A friendly environment.|Дружелюбная обстановка.
+equipment|«Оборудование».|New equipment.|Новое оборудование.|Kitchen equipment.|Кухонная техника.
+error|«Ошибка».|An error in the contract.|Ошибка в договоре.|System error.|Системная ошибка.
+event|«Событие, мероприятие».|A big event.|Большое событие.|In any event.|В любом случае.
+evidence|«Доказательство, улики».|There is no evidence.|Нет доказательств.|Show me evidence.|Покажи доказательства.
+exam|«Экзамен».|Pass the exam.|Сдать экзамен.|A driving exam.|Экзамен по вождению.
+example|«Пример». for example — например.|For example.|Например.|A good example.|Хороший пример.
+exit|«Выход» и «выходить».|The emergency exit.|Запасной выход.|Exit the program.|Выйти из программы.
+expert|«Эксперт».|An expert opinion.|Мнение эксперта.|Ask an expert.|Спроси специалиста.
+explanation|«Объяснение».|A simple explanation.|Простое объяснение.|No explanation.|Без объяснений.
+fact|«Факт». in fact — на самом деле.|It's a fact.|Это факт.|In fact, I agree.|На самом деле я согласен.
+factor|«Фактор».|An important factor.|Важный фактор.|Price is the key factor.|Цена — главный фактор.
+factory|«Завод, фабрика».|Work at a factory.|Работать на заводе.|A brick factory.|Кирпичный завод.
+failure|«Неудача, провал, поломка».|The plan was a failure.|План провалился.|Engine failure.|Отказ двигателя.
+faith|«Вера».|Faith in people.|Вера в людей.|Have faith.|Верь.
+fan|«Болельщик, фанат» и «вентилятор».|A football fan.|Футбольный болельщик.|Turn on the fan.|Включи вентилятор.
+farm|«Ферма».|A small farm.|Маленькая ферма.|Farm eggs.|Фермерские яйца.
+fashion|«Мода».|The latest fashion.|Последняя мода.|Out of fashion.|Не в моде.
+fat|«Жир» и «толстый».|Too much fat.|Слишком много жира.|A fat cat.|Толстый кот.
+fault|«Вина, неисправность».|It's not my fault.|Это не моя вина.|A fault in the wiring.|Неисправность в проводке.
+feature|«Особенность, функция».|The main feature.|Главная особенность.|A new feature.|Новая функция.
+fee|«Плата, взнос, гонорар».|The agency fee.|Комиссия агентства.|An entrance fee.|Плата за вход.
+feeling|«Чувство, ощущение».|A strong feeling.|Сильное чувство.|I have a feeling…|У меня такое чувство…
+figure|«Фигура, цифра». figure out — разобраться.|A big figure.|Крупная сумма.|Figure it out.|Разберись.
+film|«Фильм, плёнка».|A famous film.|Известный фильм.|Watch a film.|Посмотреть фильм.
+finger|«Палец (руки)».|I cut my finger.|Я порезал палец.|Fingers crossed!|Держу кулачки!
+fish|«Рыба» и «ловить рыбу».|Fresh fish.|Свежая рыба.|Let's go fish.|Пошли рыбачить.
+flight|«Полёт, рейс».|A long flight.|Долгий перелёт.|My flight is at six.|Мой рейс в шесть.
+flower|«Цветок».|Flowers for my wife.|Цветы для жены.|Water the flowers.|Полей цветы.
+focus|«Фокус» и «сосредоточиться».|Focus on the goal.|Сосредоточься на цели.|Stay focused.|Не отвлекайся.
+forest|«Лес».|A walk in the forest.|Прогулка по лесу.|A pine forest.|Сосновый лес.
+form|«Форма, бланк» и «формировать».|Fill out the form.|Заполни бланк.|In good form.|В хорошей форме.
+fortune|«Состояние (богатство), удача».|Cost a fortune.|Стоить целое состояние.|Good fortune!|Удачи!
+freedom|«Свобода».|Freedom of choice.|Свобода выбора.|I love freedom.|Люблю свободу.
+fruit|«Фрукт, плод».|Fresh fruit.|Свежие фрукты.|Eat more fruit.|Ешь больше фруктов.
+fuel|«Топливо».|Run out of fuel.|Закончилось топливо.|Fuel prices.|Цены на топливо.
+fun|«Веселье, забава». have fun — веселиться.|Have fun!|Веселись!|For fun.|Ради удовольствия.
+function|«Функция» и «работать, функционировать».|The main function.|Главная функция.|It doesn't function.|Это не работает.
+fund|«Фонд» и «финансировать».|An investment fund.|Инвестиционный фонд.|We need funds.|Нам нужны средства.
+future|«Будущее».|In the future.|В будущем.|The near future.|Ближайшее будущее.
+gas|«Газ, бензин» (амер.).|The gas bill.|Счёт за газ.|Fill up with gas.|Заправиться.
+gate|«Ворота, калитка».|Open the gate.|Открой ворота.|Meet me at the gate.|Встречай у ворот.
+generation|«Поколение».|The young generation.|Молодое поколение.|From generation to generation.|Из поколения в поколение.
+gift|«Подарок, дар».|A birthday gift.|Подарок на день рождения.|She has a gift for music.|У неё талант к музыке.
+glass|«Стекло, стакан». glasses — очки.|A glass of water.|Стакан воды.|Broken glass.|Разбитое стекло.
+god|«Бог». Oh my God! — Боже мой!|Thank God!|Слава богу!|Oh my God!|Боже мой!
+gold|«Золото» и «золотой».|A gold ring.|Золотое кольцо.|Silence is gold.|Молчание — золото.
+grade|«Оценка, класс (в школе), сорт».|A good grade.|Хорошая оценка.|He is in fifth grade.|Он в пятом классе.
+grass|«Трава».|Cut the grass.|Подстриги траву.|Green grass.|Зелёная трава.
+ground|«Земля, почва». ground floor — первый этаж.|On the ground floor.|На первом этаже.|Sit on the ground.|Сесть на землю.
+growth|«Рост».|Fast growth.|Быстрый рост.|Price growth.|Рост цен.
+guard|«Охранник, охрана» и «охранять».|A security guard.|Охранник.|Guard the house.|Охранять дом.
+guest|«Гость».|A welcome guest.|Желанный гость.|We have guests.|У нас гости.
+gun|«Ружьё, пистолет».|A toy gun.|Игрушечный пистолет.|He has a gun.|У него оружие.
+habit|«Привычка».|A good habit.|Хорошая привычка.|Break a bad habit.|Избавиться от вредной привычки.
+hair|«Волосы».|Cut my hair.|Подстричься.|Long hair.|Длинные волосы.
+half|«Половина».|Half an hour.|Полчаса.|Half the price.|Полцены.
+hall|«Зал, прихожая, холл».|In the hall.|В прихожей.|A concert hall.|Концертный зал.
+hat|«Шапка, шляпа».|A warm hat.|Тёплая шапка.|Take off your hat.|Сними шапку.
+heat|«Жара, тепло» и «нагревать».|The summer heat.|Летняя жара.|Heat the water.|Нагрей воду.
+height|«Высота, рост».|The height of the ceiling.|Высота потолка.|What's your height?|Какой у тебя рост?
+hell|«Ад». Разговорно — для усиления.|Go to hell!|Иди к чёрту!|What the hell?|Какого чёрта?
+hero|«Герой».|A real hero.|Настоящий герой.|My hero!|Мой герой!
+hill|«Холм».|A house on the hill.|Дом на холме.|Climb the hill.|Подняться на холм.
+hole|«Дыра, яма».|A hole in the roof.|Дыра в крыше.|Dig a hole.|Выкопай яму.
+holiday|«Праздник, отпуск».|A public holiday.|Государственный праздник.|On holiday.|В отпуске.
