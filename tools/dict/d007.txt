@@ -1,0 +1,250 @@
+sick|«Больной», «тошнит» (feel sick). sick of — надоело.|I'm sick.|Я заболел.|I'm sick of it.|Меня это достало.
+significant|«Значительный, важный».|A significant change.|Значительное изменение.|A significant other.|Вторая половинка.
+silent|«Молчаливый, беззвучный».|Be silent.|Молчи.|Silent mode.|Беззвучный режим.
+silly|«Глупый, дурацкий».|Don't be silly.|Не глупи.|A silly question.|Глупый вопрос.
+similar|«Похожий».|Similar houses.|Похожие дома.|Similar to mine.|Похож на мой.
+single|«Единственный, одиночный, холостой».|A single room.|Одноместный номер.|Are you single?|Ты не женат?
+slight|«Небольшой, лёгкий».|A slight problem.|Небольшая проблема.|Not the slightest idea.|Ни малейшего понятия.
+smart|«Умный, элегантный».|A smart kid.|Умный ребёнок.|A smart phone.|Смартфон.
+smooth|«Гладкий, плавный».|A smooth road.|Ровная дорога.|Smooth skin.|Гладкая кожа.
+soft|«Мягкий».|A soft bed.|Мягкая кровать.|Soft music.|Тихая музыка.
+solid|«Твёрдый, прочный, надёжный».|A solid wall.|Прочная стена.|A solid plan.|Надёжный план.
+sorry|«Извини, жаль». I'm sorry — простите.|Sorry, I'm late.|Извини, я опоздал.|I'm sorry to hear that.|Мне жаль это слышать.
+sour|«Кислый».|Sour milk.|Скисшее молоко.|Sweet and sour.|Кисло-сладкий.
+southern|«Южный».|The southern side.|Южная сторона.|Southern Russia.|Юг России.
+specific|«Конкретный, определённый».|A specific date.|Конкретная дата.|Be more specific.|Скажи конкретнее.
+stable|«Стабильный» и «конюшня».|A stable job.|Стабильная работа.|Prices are stable.|Цены стабильны.
+standard|«Стандартный» и «стандарт».|A standard room.|Стандартная комната.|High standards.|Высокие требования.
+steep|«Крутой (о склоне), резкий».|A steep hill.|Крутой холм.|A steep price.|Кусачая цена.
+stiff|«Жёсткий, негнущийся».|A stiff neck.|Затёкшая шея.|Stiff competition.|Жёсткая конкуренция.
+strange|«Странный, незнакомый».|A strange man.|Странный человек.|That's strange.|Это странно.
+strict|«Строгий».|A strict boss.|Строгий начальник.|Strict rules.|Строгие правила.
+stupid|«Глупый, тупой».|A stupid idea.|Дурацкая идея.|Don't be stupid.|Не будь дураком.
+successful|«Успешный».|A successful deal.|Успешная сделка.|A successful man.|Успешный человек.
+sudden|«Внезапный». all of a sudden — вдруг.|A sudden change.|Внезапное изменение.|All of a sudden.|Вдруг.
+sufficient|«Достаточный».|Sufficient money.|Достаточно денег.|Not sufficient.|Недостаточно.
+suitable|«Подходящий».|A suitable house.|Подходящий дом.|Suitable for kids.|Подходит для детей.
+sweet|«Сладкий, милый».|A sweet cake.|Сладкий торт.|How sweet!|Как мило!
+tall|«Высокий» (о людях и зданиях).|He is tall.|Он высокий.|A tall building.|Высокое здание.
+terrible|«Ужасный».|Terrible weather.|Ужасная погода.|I feel terrible.|Мне ужасно.
+thick|«Толстый, густой».|A thick wall.|Толстая стена.|Thick fog.|Густой туман.
+thin|«Тонкий, худой».|Thin walls.|Тонкие стены.|He is thin.|Он худой.
+thirsty|«Испытывающий жажду».|I'm thirsty.|Хочу пить.|Thirsty work.|Работа, от которой хочется пить.
+tight|«Тесный, тугой, сжатый».|Tight jeans.|Узкие джинсы.|A tight schedule.|Плотный график.
+tiny|«Крошечный».|A tiny room.|Крошечная комната.|A tiny bit.|Чуть-чуть.
+total|«Общий, полный» и «итог».|The total price.|Общая цена.|In total.|Итого.
+tough|«Жёсткий, трудный, крепкий».|A tough day.|Тяжёлый день.|Tough guy.|Крутой парень.
+traditional|«Традиционный».|Traditional food.|Традиционная еда.|A traditional house.|Традиционный дом.
+typical|«Типичный».|A typical day.|Обычный день.|That's typical!|Как всегда!
+ugly|«Уродливый, некрасивый».|An ugly building.|Уродливое здание.|The ugly truth.|Горькая правда.
+unable|«Неспособный». be unable to — не мочь.|I'm unable to come.|Я не смогу прийти.|Unable to pay.|Не в состоянии платить.
+unique|«Уникальный».|A unique house.|Уникальный дом.|A unique chance.|Уникальный шанс.
+unknown|«Неизвестный».|An unknown number.|Неизвестный номер.|For unknown reasons.|По неизвестным причинам.
+unusual|«Необычный».|An unusual house.|Необычный дом.|That's unusual.|Это необычно.
+upper|«Верхний».|The upper floor.|Верхний этаж.|Upper class.|Высший класс.
+urban|«Городской».|Urban life.|Городская жизнь.|An urban area.|Городской район.
+useful|«Полезный».|A useful tip.|Полезный совет.|Very useful.|Очень полезно.
+useless|«Бесполезный».|It's useless.|Это бесполезно.|A useless tool.|Бесполезный инструмент.
+usual|«Обычный». as usual — как обычно.|As usual.|Как обычно.|The usual price.|Обычная цена.
+valuable|«Ценный».|A valuable lesson.|Ценный урок.|Valuable things.|Ценные вещи.
+various|«Различный».|Various options.|Различные варианты.|For various reasons.|По разным причинам.
+visible|«Видимый».|Visible from the road.|Видно с дороги.|Barely visible.|Едва заметен.
+vital|«Жизненно важный».|Water is vital.|Вода жизненно важна.|A vital question.|Ключевой вопрос.
+weak|«Слабый».|Weak tea.|Слабый чай.|I feel weak.|Я чувствую слабость.
+wealthy|«Богатый, состоятельный».|A wealthy family.|Состоятельная семья.|A wealthy area.|Богатый район.
+weird|«Странный, чудной».|That's weird.|Это странно.|A weird guy.|Странный парень.
+western|«Западный» и «вестерн».|Western Europe.|Западная Европа.|Watch a western.|Смотреть вестерн.
+wet|«Мокрый, влажный».|Wet hair.|Мокрые волосы.|Wet paint.|Окрашено.
+white|«Белый».|A white fox.|Белый лис.|White walls.|Белые стены.
+wide|«Широкий».|A wide road.|Широкая дорога.|Wide open.|Широко открыт.
+wild|«Дикий».|A wild animal.|Дикое животное.|Wild flowers.|Полевые цветы.
+wise|«Мудрый».|A wise decision.|Мудрое решение.|A wise man.|Мудрый человек.
+wonderful|«Замечательный».|A wonderful day.|Замечательный день.|You're wonderful!|Ты чудесный!
+wooden|«Деревянный».|An old wooden house.|Старый деревянный дом.|A wooden floor.|Деревянный пол.
+worried|«Обеспокоенный».|I'm worried.|Я волнуюсь.|Worried about money.|Переживаю из-за денег.
+worth|«Стоящий». It's worth it — оно того стоит.|It's worth it.|Оно того стоит.|Not worth the money.|Не стоит таких денег.
+wrong|«Неправильный, не тот».|The wrong way.|Не та дорога.|What's wrong?|Что не так?
+yellow|«Жёлтый».|Yellow leaves.|Жёлтые листья.|A yellow car.|Жёлтая машина.
+black|«Чёрный».|Black coffee.|Чёрный кофе.|A black cat.|Чёрная кошка.
+above|«Над, выше».|Above the door.|Над дверью.|Above average.|Выше среднего.
+abroad|«За границей, за границу».|Travel abroad.|Ездить за границу.|Live abroad.|Жить за границей.
+absolutely|«Абсолютно, совершенно». Absolutely! — Безусловно!|Absolutely right.|Совершенно верно.|Absolutely!|Безусловно!
+according|«Согласно». according to — по словам, согласно.|According to the contract.|Согласно договору.|According to him.|По его словам.
+actually|«На самом деле, вообще-то».|Actually, I'm busy.|Вообще-то я занят.|Did he actually say that?|Он правда так сказал?
+afterwards|«Потом, впоследствии».|Call me afterwards.|Позвони мне потом.|Soon afterwards.|Вскоре после этого.
+ago|«Назад» (о времени), ставится после срока.|Two days ago.|Два дня назад.|Long ago.|Давным-давно.
+ahead|«Впереди, вперёд». Go ahead — давай, валяй.|Go ahead.|Давай, вперёд.|Plan ahead.|Планируй заранее.
+alike|«Одинаково, похожи».|They look alike.|Они похожи.|Treat everyone alike.|Относись ко всем одинаково.
+along|«Вдоль, вперёд, с собой».|Walk along the river.|Прогуляться вдоль реки.|Come along!|Пошли с нами!
+aloud|«Вслух».|Read it aloud.|Прочитай вслух.|Think aloud.|Думать вслух.
+although|«Хотя».|Although it's cold, I'll go.|Хотя холодно, я пойду.|I like it, although it's old.|Мне нравится, хотя он старый.
+among|«Среди, между (многими)».|Among friends.|Среди друзей.|Among other things.|Помимо прочего.
+anyway|«В любом случае, так или иначе».|Thanks anyway.|Всё равно спасибо.|Anyway, let's go.|Ладно, пошли.
+anywhere|«Где угодно, куда угодно, нигде (в отрицании)».|Sit anywhere.|Садись куда угодно.|I can't find it anywhere.|Нигде не могу найти.
+apart|«Отдельно, врозь, на части».|Live apart.|Жить порознь.|Apart from that.|Кроме этого.
+away|«Прочь, вдали».|Go away!|Уходи!|Ten minutes away.|В десяти минутах отсюда.
+badly|«Плохо, сильно».|It went badly.|Всё прошло плохо.|I need it badly.|Мне это очень нужно.
+barely|«Едва».|I can barely hear you.|Я тебя еле слышу.|Barely enough.|Едва хватает.
+behind|«Позади, за».|Behind the house.|За домом.|Fall behind.|Отстать.
+below|«Ниже, под».|Below zero.|Ниже нуля.|See below.|Смотри ниже.
+beside|«Рядом с».|Sit beside me.|Сядь рядом со мной.|A house beside the lake.|Дом у озера.
+besides|«Кроме того, к тому же».|Besides, it's cheap.|К тому же это дёшево.|Nobody besides you.|Никто, кроме тебя.
+beyond|«За пределами, вне».|Beyond the river.|За рекой.|Beyond my control.|Вне моего контроля.
+briefly|«Кратко, ненадолго».|Tell me briefly.|Расскажи вкратце.|We met briefly.|Мы виделись мельком.
+carefully|«Осторожно, внимательно».|Read carefully.|Читай внимательно.|Drive carefully.|Езжай осторожно.
+certainly|«Конечно, безусловно».|Certainly!|Конечно!|It's certainly true.|Это, безусловно, правда.
+clearly|«Ясно, явно».|Speak clearly.|Говори чётко.|Clearly, he is wrong.|Он явно не прав.
+completely|«Полностью».|I completely agree.|Полностью согласен.|Completely new.|Совершенно новый.
+constantly|«Постоянно».|He constantly calls.|Он постоянно звонит.|Prices constantly change.|Цены постоянно меняются.
+currently|«В настоящее время».|I'm currently busy.|Сейчас я занят.|Currently for sale.|Сейчас продаётся.
+definitely|«Определённо, точно».|Definitely!|Точно!|I'll definitely come.|Я точно приду.
+deeply|«Глубоко».|Breathe deeply.|Дыши глубоко.|Deeply sorry.|Очень сожалею.
+directly|«Прямо, напрямую».|Call him directly.|Позвони ему напрямую.|Directly opposite.|Прямо напротив.
+down|«Вниз».|Sit down.|Садись.|Calm down.|Успокойся.
+easily|«Легко».|You can easily do it.|Ты легко это сделаешь.|Easily the best.|Безусловно лучший.
+either|«Любой из двух», «тоже (не)». either … or — либо … либо.|Either one is fine.|Любой подойдёт.|I don't know either.|Я тоже не знаю.
+elsewhere|«В другом месте».|Look elsewhere.|Поищи в другом месте.|Go elsewhere.|Иди куда-нибудь ещё.
+entirely|«Полностью, целиком».|Entirely new.|Совершенно новый.|It's entirely up to you.|Решать только тебе.
+especially|«Особенно».|Especially for you.|Специально для тебя.|Especially in winter.|Особенно зимой.
+even|«Даже» и «ровный, чётный».|Even a child knows.|Даже ребёнок знает.|Even numbers.|Чётные числа.
+eventually|«В конце концов, со временем».|Eventually he agreed.|В конце концов он согласился.|It will happen eventually.|Рано или поздно это случится.
+ever|«Когда-либо». Have you ever…? — Ты когда-нибудь…?|Have you ever been there?|Ты когда-нибудь там был?|Best day ever!|Лучший день в жизни!
+exactly|«Точно, именно».|Exactly!|Именно!|At exactly six.|Ровно в шесть.
+extremely|«Чрезвычайно, крайне».|Extremely cold.|Ужасно холодно.|Extremely important.|Крайне важно.
+fairly|«Довольно» и «честно».|Fairly good.|Довольно хорошо.|Treat people fairly.|Относись к людям честно.
+finally|«Наконец, в конце».|Finally!|Наконец-то!|Finally, we agreed.|В итоге мы договорились.
+firstly|«Во-первых».|Firstly, check the roof.|Во-первых, проверь крышу.|Firstly, thank you.|Прежде всего, спасибо.
+forever|«Навсегда».|Forever young.|Вечно молодой.|It takes forever.|Это длится вечность.
+forward|«Вперёд». look forward to — ждать с нетерпением.|Move forward.|Двигайся вперёд.|I look forward to it.|Жду с нетерпением.
+frankly|«Откровенно».|Frankly speaking.|Откровенно говоря.|Frankly, I don't care.|Честно, мне всё равно.
+frequently|«Часто».|I frequently travel.|Я часто езжу.|Frequently asked questions.|Часто задаваемые вопросы.
+fully|«Полностью».|Fully furnished.|Полностью меблирован.|Fully agree.|Полностью согласен.
+generally|«В целом, обычно».|Generally speaking.|Вообще говоря.|I generally get up early.|Обычно я встаю рано.
+gently|«Мягко, осторожно».|Speak gently.|Говори мягко.|Close the door gently.|Тихо закрой дверь.
+gradually|«Постепенно».|Gradually improve.|Постепенно улучшаться.|It gradually got dark.|Постепенно стемнело.
+hardly|«Едва, почти не».|I can hardly hear you.|Я тебя почти не слышу.|Hardly anyone.|Почти никто.
+however|«Однако, как бы ни».|However, it's expensive.|Однако это дорого.|However hard I try.|Как бы я ни старался.
+immediately|«Немедленно, сразу».|Call me immediately.|Позвони немедленно.|Immediately after.|Сразу после.
+indeed|«Действительно».|Indeed!|Действительно!|It is indeed true.|Это действительно так.
+inside|«Внутри, внутрь».|Come inside.|Заходи внутрь.|It's warm inside.|Внутри тепло.
+instead|«Вместо, взамен».|Tea instead of coffee.|Чай вместо кофе.|Do it instead.|Сделай это вместо этого.
+later|«Позже». See you later — до встречи.|See you later.|Увидимся.|Call me later.|Позвони позже.
+lately|«В последнее время».|I'm busy lately.|Я занят в последнее время.|Have you seen him lately?|Ты видел его недавно?
+least|«Наименьший». at least — по крайней мере.|At least try.|Хотя бы попробуй.|The least expensive.|Самый дешёвый.
+likewise|«Точно так же, взаимно».|Nice to meet you. — Likewise.|Приятно познакомиться. — Взаимно.|Do likewise.|Поступай так же.
+mainly|«В основном».|Mainly at night.|В основном ночью.|Mainly realtors.|В основном риелторы.
+meanwhile|«Тем временем».|Meanwhile, I'll cook.|А я пока приготовлю.|In the meanwhile.|Тем временем.
+merely|«Просто, всего лишь».|Merely a joke.|Всего лишь шутка.|I merely asked.|Я просто спросил.
+mostly|«В основном, большей частью».|Mostly sunny.|Преимущественно солнечно.|Mostly I work.|В основном я работаю.
+namely|«А именно».|Two things, namely price and location.|Две вещи, а именно цена и место.|One person, namely you.|Один человек, а именно ты.
+nearly|«Почти».|Nearly ready.|Почти готово.|Nearly every day.|Почти каждый день.
+neither|«Ни тот ни другой», «тоже нет».|Neither of them.|Ни один из них.|Me neither.|Я тоже нет.
+nevertheless|«Тем не менее».|Nevertheless, we won.|Тем не менее, мы выиграли.|Hard but nevertheless fun.|Трудно, но всё же весело.
+newly|«Недавно, заново».|Newly built.|Недавно построенный.|Newly married.|Молодожёны.
+nor|«Ни, также не». neither … nor — ни … ни.|Neither cold nor hot.|Ни холодно, ни жарко.|Nor do I.|Я тоже нет.
+normally|«Обычно, нормально».|Normally I walk.|Обычно я хожу пешком.|Breathe normally.|Дыши нормально.
+nowhere|«Нигде, никуда».|Nowhere to go.|Некуда идти.|In the middle of nowhere.|У чёрта на куличках.
+obviously|«Очевидно».|Obviously not.|Очевидно, нет.|He is obviously tired.|Он явно устал.
+once|«Однажды, один раз, как только».|Once a week.|Раз в неделю.|Once upon a time.|Жили-были.
+otherwise|«Иначе, в противном случае».|Hurry, otherwise we'll be late.|Поторопись, иначе опоздаем.|Otherwise, it's fine.|В остальном всё хорошо.
+outside|«Снаружи, на улице».|It's cold outside.|На улице холодно.|Wait outside.|Подожди снаружи.
+particularly|«Особенно».|Particularly in winter.|Особенно зимой.|Not particularly.|Не особо.
+perhaps|«Возможно, может быть».|Perhaps tomorrow.|Возможно, завтра.|Perhaps you're right.|Пожалуй, ты прав.
+possibly|«Возможно».|Possibly, yes.|Возможно, да.|As soon as possibly can.|Как можно скорее.
+probably|«Вероятно».|Probably not.|Вероятно, нет.|He'll probably call.|Он, наверное, позвонит.
+quickly|«Быстро».|Come quickly.|Иди быстрее.|Quickly sold.|Быстро продан.
+quite|«Довольно, вполне».|Quite good.|Довольно хорошо.|Not quite.|Не совсем.
+rarely|«Редко».|I rarely drink.|Я редко пью.|Rarely seen.|Редко встречается.
+rather|«Скорее, довольно». I'd rather — я бы предпочёл.|I'd rather stay.|Я бы лучше остался.|Rather cold.|Довольно холодно.
+recently|«Недавно».|I recently moved.|Я недавно переехал.|Recently renovated.|Недавно отремонтирован.
+regularly|«Регулярно».|Exercise regularly.|Тренируйся регулярно.|I regularly call.|Я регулярно звоню.
+seldom|«Редко».|I seldom go out.|Я редко выхожу.|Seldom seen.|Редко видимый.
+seriously|«Серьёзно».|Seriously?|Серьёзно?|Take it seriously.|Отнесись серьёзно.
+shortly|«Вскоре».|I'll be back shortly.|Скоро вернусь.|Shortly after.|Вскоре после.
+simply|«Просто».|Simply call me.|Просто позвони.|Simply the best.|Просто лучший.
+slightly|«Слегка».|Slightly better.|Чуть лучше.|Slightly cold.|Прохладно.
+slowly|«Медленно».|Speak slowly.|Говори медленно.|Slowly but surely.|Медленно, но верно.
+somehow|«Как-то, каким-то образом».|Somehow we did it.|Как-то мы это сделали.|Somehow I feel sad.|Почему-то мне грустно.
+somewhere|«Где-то, куда-то».|Somewhere near.|Где-то рядом.|Let's go somewhere.|Пойдём куда-нибудь.
+straight|«Прямо» и «прямой».|Go straight.|Иди прямо.|Straight hair.|Прямые волосы.
+suddenly|«Внезапно, вдруг».|Suddenly it rained.|Вдруг пошёл дождь.|He suddenly left.|Он внезапно ушёл.
+surely|«Конечно, наверняка».|Surely you know.|Ты же наверняка знаешь.|Slowly but surely.|Медленно, но верно.
+therefore|«Поэтому, следовательно».|I think, therefore I am.|Мыслю, следовательно, существую.|It's late, therefore we stop.|Поздно, поэтому заканчиваем.
+though|«Хотя, однако» (часто в конце фразы).|It's cold, though.|Хотя холодно.|Though I tried.|Хотя я пытался.
+thus|«Таким образом».|Thus we agreed.|Так мы и договорились.|Thus far.|До сих пор.
+totally|«Полностью, совершенно».|Totally agree.|Полностью согласен.|Totally new.|Совершенно новый.
+truly|«Искренне, по-настоящему».|Truly happy.|По-настоящему счастлив.|Yours truly.|Искренне ваш.
+twice|«Дважды».|Twice a day.|Два раза в день.|Think twice.|Подумай дважды.
+unfortunately|«К сожалению».|Unfortunately, it's sold.|К сожалению, продано.|Unfortunately not.|К сожалению, нет.
+unless|«Если не».|Unless you call.|Если только ты не позвонишь.|Unless it rains.|Если не будет дождя.
+until|«До, пока не».|Wait until six.|Жди до шести.|Until tomorrow.|До завтра.
+upstairs|«Наверху, наверх».|Go upstairs.|Поднимись наверх.|Upstairs neighbors.|Соседи сверху.
+whereas|«Тогда как».|I like tea, whereas she likes coffee.|Я люблю чай, а она кофе.|Whereas before…|Тогда как раньше…
+whether|«Ли». whether or not — так или иначе.|I don't know whether he will come.|Не знаю, придёт ли он.|Whether you like it or not.|Нравится тебе или нет.
+while|«Пока, в то время как» и «некоторое время».|Wait a while.|Подожди немного.|While I was sleeping.|Пока я спал.
+within|«В пределах, в течение».|Within a week.|В течение недели.|Within walking distance.|В пешей доступности.
+yet|«Ещё (в отрицании), уже (в вопросе), однако».|Not yet.|Ещё нет.|Are you ready yet?|Ты уже готов?
+across|«Через, поперёк, напротив».|Across the street.|Через дорогу.|Swim across the river.|Переплыть реку.
+toward|«По направлению к».|Walk toward the river.|Иди к реке.|Toward evening.|К вечеру.
+upon|«На, по» — книжное. once upon a time — жили-были.|Once upon a time.|Жили-были.|Upon arrival.|По прибытии.
+via|«Через, посредством».|Via email.|По электронной почте.|Fly via Moscow.|Лететь через Москву.
+despite|«Несмотря на».|Despite the rain.|Несмотря на дождь.|Despite the price.|Несмотря на цену.
+except|«Кроме».|Everyone except me.|Все, кроме меня.|Every day except Sunday.|Каждый день, кроме воскресенья.
+since|«С (какого-то времени), с тех пор, так как».|Since Monday.|С понедельника.|Since you're here, help me.|Раз уж ты здесь, помоги.
+unlike|«В отличие от».|Unlike you.|В отличие от тебя.|Unlike other houses.|В отличие от других домов.
+throughout|«На протяжении, повсюду».|Throughout the year.|Весь год.|Throughout the house.|По всему дому.
+beneath|«Под, ниже».|Beneath the floor.|Под полом.|Beneath the surface.|Под поверхностью.
+anybody|«Кто-нибудь, кто угодно».|Is anybody home?|Есть кто дома?|Anybody can do it.|Любой сможет.
+anything|«Что-нибудь, что угодно».|Anything else?|Что-нибудь ещё?|I'll do anything.|Я сделаю что угодно.
+nobody|«Никто».|Nobody knows.|Никто не знает.|Nobody is perfect.|Никто не идеален.
+somebody|«Кто-то».|Somebody called.|Кто-то звонил.|Somebody help me!|Кто-нибудь, помогите!
+whatever|«Что угодно, всё равно».|Whatever you want.|Что хочешь.|Whatever!|Да пофиг!
+whoever|«Кто бы ни».|Whoever calls, I'm busy.|Кто бы ни звонил, я занят.|Whoever wins.|Кто бы ни победил.
+whenever|«Когда бы ни, всякий раз когда».|Call me whenever.|Звони когда угодно.|Whenever I see you.|Всякий раз, когда я тебя вижу.
+wherever|«Где бы ни, куда бы ни».|Wherever you go.|Куда бы ты ни пошёл.|Sit wherever you like.|Садись где хочешь.
+myself|«Себя, сам» (о себе).|I did it myself.|Я сделал это сам.|I hurt myself.|Я ушибся.
+yourself|«Себя, сам» (о тебе).|Help yourself.|Угощайся.|Take care of yourself.|Береги себя.
+himself|«Себя, сам» (о нём).|He did it himself.|Он сделал это сам.|He hurt himself.|Он поранился.
+herself|«Себя, сама» (о ней).|She did it herself.|Она сделала это сама.|She looked at herself.|Она посмотрела на себя.
+ourselves|«Себя, сами» (о нас).|We built it ourselves.|Мы построили это сами.|Let's enjoy ourselves.|Давай повеселимся.
+themselves|«Себя, сами» (о них).|They did it themselves.|Они сделали это сами.|Kids can dress themselves.|Дети могут одеться сами.
+itself|«Себя, само» (о предмете).|The door closed itself.|Дверь закрылась сама.|The house itself is good.|Сам дом хороший.
+one|«Один». Ещё заменяет существительное: this one — вот этот.|One coffee, please.|Один кофе, пожалуйста.|I want this one.|Хочу вот этот.
+two|«Два».|Two rooms.|Две комнаты.|Two days ago.|Два дня назад.
+three|«Три».|Three kids.|Трое детей.|At three o'clock.|В три часа.
+four|«Четыре».|Four walls.|Четыре стены.|Four seasons.|Четыре времени года.
+five|«Пять».|Five minutes.|Пять минут.|Give me five!|Дай пять!
+six|«Шесть».|Six o'clock.|Шесть часов.|Six months.|Полгода.
+seven|«Семь».|Seven days a week.|Семь дней в неделю.|Seven years old.|Семь лет.
+eight|«Восемь».|Eight hours.|Восемь часов.|At eight.|В восемь.
+nine|«Девять».|Nine floors.|Девять этажей.|Nine to five.|С девяти до пяти.
+ten|«Десять».|Ten words a day.|Десять слов в день.|Ten minutes.|Десять минут.
+eleven|«Одиннадцать».|Eleven o'clock.|Одиннадцать часов.|Eleven players.|Одиннадцать игроков.
+twelve|«Двенадцать».|Twelve months.|Двенадцать месяцев.|At twelve.|В двенадцать.
+twenty|«Двадцать».|Twenty dollars.|Двадцать долларов.|Twenty years.|Двадцать лет.
+thirty|«Тридцать».|Thirty minutes.|Тридцать минут.|He is thirty.|Ему тридцать.
+forty|«Сорок».|Forty square meters.|Сорок квадратных метров.|Forty degrees.|Сорок градусов.
+fifty|«Пятьдесят».|Fifty-fifty.|Пополам.|Fifty meters.|Пятьдесят метров.
+hundred|«Сто».|A hundred people.|Сто человек.|A hundred percent.|Сто процентов.
+thousand|«Тысяча».|A thousand words.|Тысяча слов.|Thousands of people.|Тысячи людей.
+billion|«Миллиард».|A billion dollars.|Миллиард долларов.|Billions of people.|Миллиарды людей.
+second|«Второй» и «секунда».|The second floor.|Второй этаж.|Wait a second.|Подожди секунду.
+third|«Третий, треть».|The third time.|Третий раз.|A third of the price.|Треть цены.
+fourth|«Четвёртый».|The fourth floor.|Четвёртый этаж.|Fourth place.|Четвёртое место.
+fifth|«Пятый».|The fifth day.|Пятый день.|On the fifth floor.|На пятом этаже.
+Monday|«Понедельник».|On Monday.|В понедельник.|See you Monday.|Увидимся в понедельник.
+Tuesday|«Вторник».|On Tuesday.|Во вторник.|Every Tuesday.|Каждый вторник.
+Wednesday|«Среда». Первая d не читается.|On Wednesday.|В среду.|Next Wednesday.|В следующую среду.
+Thursday|«Четверг».|On Thursday.|В четверг.|Thursday morning.|В четверг утром.
+Friday|«Пятница».|On Friday.|В пятницу.|Friday night.|Вечер пятницы.
+Saturday|«Суббота».|On Saturday.|В субботу.|Saturday is my day off.|Суббота — мой выходной.
+Sunday|«Воскресенье».|On Sunday.|В воскресенье.|Sunday lunch.|Воскресный обед.
+January|«Январь».|In January.|В январе.|Cold January.|Холодный январь.
+February|«Февраль».|In February.|В феврале.|February is short.|Февраль короткий.
+March|«Март».|In March.|В марте.|Early March.|Начало марта.
+April|«Апрель».|In April.|В апреле.|April Fools' Day.|День дурака.
+May|«Май» и модальное may — «можно, может».|In May.|В мае.|May I come in?|Можно войти?
+June|«Июнь».|In June.|В июне.|Warm June.|Тёплый июнь.
+July|«Июль».|In July.|В июле.|Hot July.|Жаркий июль.
+August|«Август».|In August.|В августе.|Late August.|Конец августа.
+September|«Сентябрь».|In September.|В сентябре.|School starts in September.|Школа начинается в сентябре.

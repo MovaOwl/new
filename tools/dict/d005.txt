@@ -1,0 +1,250 @@
+horse|«Лошадь».|Ride a horse.|Ездить на лошади.|A white horse.|Белая лошадь.
+hotel|«Гостиница, отель».|A cheap hotel.|Дешёвая гостиница.|We stayed at a hotel.|Мы остановились в отеле.
+human|«Человек» и «человеческий».|A human being.|Человек.|Human rights.|Права человека.
+hunger|«Голод».|Die of hunger.|Умереть от голода.|I feel hunger.|Я чувствую голод.
+ice|«Лёд».|Ice on the road.|Лёд на дороге.|Ice cream.|Мороженое.
+image|«Образ, изображение, имидж».|A clear image.|Чёткое изображение.|The company's image.|Имидж компании.
+impact|«Влияние, воздействие, удар».|A big impact.|Большое влияние.|The impact on prices.|Влияние на цены.
+income|«Доход».|A monthly income.|Ежемесячный доход.|Low income.|Низкий доход.
+industry|«Промышленность, отрасль».|The building industry.|Строительная отрасль.|Heavy industry.|Тяжёлая промышленность.
+injury|«Травма».|A bad injury.|Тяжёлая травма.|A sports injury.|Спортивная травма.
+insurance|«Страховка».|Car insurance.|Автостраховка.|Health insurance.|Медицинская страховка.
+interest|«Интерес» и «процент (по кредиту)».|Interest in English.|Интерес к английскому.|A low interest rate.|Низкая процентная ставка.
+interview|«Собеседование, интервью».|A job interview.|Собеседование на работу.|Give an interview.|Дать интервью.
+investment|«Инвестиция, вложение».|A good investment.|Хорошее вложение.|Real estate investment.|Инвестиции в недвижимость.
+iron|«Железо» и «утюг, гладить».|An iron door.|Железная дверь.|Iron the shirt.|Погладь рубашку.
+island|«Остров». Буква s не читается.|A small island.|Маленький остров.|Live on an island.|Жить на острове.
+item|«Предмет, пункт, товар».|The next item.|Следующий пункт.|Ten items.|Десять товаров.
+jacket|«Куртка, пиджак».|A leather jacket.|Кожаная куртка.|Take a jacket.|Возьми куртку.
+joke|«Шутка» и «шутить».|A funny joke.|Смешная шутка.|I'm joking.|Я шучу.
+journey|«Путешествие, поездка».|A long journey.|Долгое путешествие.|Have a good journey!|Хорошей дороги!
+joy|«Радость».|Tears of joy.|Слёзы радости.|What a joy!|Какая радость!
+juice|«Сок».|Apple juice.|Яблочный сок.|A glass of juice.|Стакан сока.
+knee|«Колено». k не читается.|My knee hurts.|Болит колено.|On my knees.|На коленях.
+knife|«Нож». Множественное — knives.|A sharp knife.|Острый нож.|Pass me the knife.|Передай нож.
+knowledge|«Знание, знания».|General knowledge.|Общие знания.|Knowledge is power.|Знание — сила.
+lady|«Дама, леди».|An old lady.|Пожилая дама.|Ladies and gentlemen!|Дамы и господа!
+lake|«Озеро».|Swim in the lake.|Плавать в озере.|A house by the lake.|Дом у озера.
+land|«Земля, участок, суша» и «приземляться».|A piece of land.|Участок земли.|The plane landed.|Самолёт приземлился.
+language|«Язык (речь)».|Learn a language.|Выучить язык.|Body language.|Язык тела.
+laughter|«Смех».|Full of laughter.|Полный смеха.|Laughter is the best medicine.|Смех — лучшее лекарство.
+lawyer|«Юрист, адвокат».|Hire a lawyer.|Нанять юриста.|Talk to your lawyer.|Поговори со своим юристом.
+leader|«Лидер, руководитель».|A strong leader.|Сильный лидер.|The team leader.|Руководитель команды.
+leg|«Нога».|I broke my leg.|Я сломал ногу.|Break a leg!|Ни пуха ни пера!
+lesson|«Урок».|An English lesson.|Урок английского.|Learn a lesson.|Извлечь урок.
+library|«Библиотека».|The city library.|Городская библиотека.|Go to the library.|Сходить в библиотеку.
+lip|«Губа».|Read my lips.|Читай по губам.|Dry lips.|Сухие губы.
+list|«Список».|A shopping list.|Список покупок.|Make a list.|Составь список.
+loss|«Потеря, убыток».|A big loss.|Большая потеря.|Profit and loss.|Прибыль и убыток.
+luck|«Удача». Good luck! — Удачи!|Good luck!|Удачи!|Bad luck.|Невезение.
+lunch|«Обед».|Lunch time.|Время обеда.|Let's have lunch.|Давай пообедаем.
+machine|«Машина, аппарат, станок».|A coffee machine.|Кофемашина.|A washing machine.|Стиральная машина.
+magazine|«Журнал».|A monthly magazine.|Ежемесячный журнал.|Read a magazine.|Читать журнал.
+mail|«Почта» и «отправлять почтой».|Check the mail.|Проверь почту.|Mail the letter.|Отправь письмо.
+majority|«Большинство».|The majority of people.|Большинство людей.|In the majority.|В большинстве.
+manager|«Менеджер, руководитель».|Call the manager.|Позовите менеджера.|A sales manager.|Менеджер по продажам.
+manner|«Манера, способ»; manners — манеры.|Good manners.|Хорошие манеры.|In this manner.|Таким образом.
+map|«Карта».|Look at the map.|Посмотри на карту.|Draw a map.|Нарисуй карту.
+match|«Матч, спичка» и «подходить, совпадать».|A football match.|Футбольный матч.|The colors match.|Цвета подходят.
+material|«Материал».|Building material.|Строительный материал.|Good material.|Хороший материал.
+meal|«Еда, приём пищи».|Three meals a day.|Трёхразовое питание.|Enjoy your meal!|Приятного аппетита!
+meat|«Мясо».|I don't eat meat.|Я не ем мясо.|Fresh meat.|Свежее мясо.
+media|«СМИ, медиа».|Social media.|Соцсети.|The media said…|СМИ сообщили…
+medicine|«Лекарство, медицина».|Take your medicine.|Прими лекарство.|Study medicine.|Учиться на врача.
+memory|«Память, воспоминание».|A bad memory.|Плохая память.|Good memories.|Хорошие воспоминания.
+method|«Метод, способ».|A good method.|Хороший метод.|Try a new method.|Попробуй новый метод.
+middle|«Середина» и «средний».|In the middle.|Посередине.|The middle of the night.|Середина ночи.
+milk|«Молоко».|A glass of milk.|Стакан молока.|Buy milk.|Купи молоко.
+million|«Миллион».|A million dollars.|Миллион долларов.|Thanks a million!|Огромное спасибо!
+mirror|«Зеркало».|Look in the mirror.|Посмотри в зеркало.|A mirror in the hall.|Зеркало в прихожей.
+mission|«Миссия, задача».|A difficult mission.|Трудная задача.|Mission complete!|Миссия выполнена!
+model|«Модель, образец».|A new model.|Новая модель.|A role model.|Пример для подражания.
+mood|«Настроение».|In a good mood.|В хорошем настроении.|I'm not in the mood.|Я не в настроении.
+moon|«Луна».|A full moon.|Полнолуние.|Look at the moon.|Посмотри на луну.
+mountain|«Гора».|Climb a mountain.|Подняться на гору.|The mountains are beautiful.|Горы красивые.
+mouse|«Мышь». Множественное — mice.|A computer mouse.|Компьютерная мышь.|The cat caught a mouse.|Кошка поймала мышь.
+mouth|«Рот».|Open your mouth.|Открой рот.|Shut your mouth.|Закрой рот.
+movie|«Фильм» (амер.).|Watch a movie.|Посмотреть фильм.|Go to the movies.|Сходить в кино.
+murder|«Убийство» и «убивать».|A murder case.|Дело об убийстве.|Murder mystery.|Детектив об убийстве.
+museum|«Музей».|Visit a museum.|Сходить в музей.|A history museum.|Исторический музей.
+nation|«Нация, народ, страна».|The whole nation.|Вся нация.|A small nation.|Маленькая страна.
+nature|«Природа, натура».|Love of nature.|Любовь к природе.|It's human nature.|Такова человеческая натура.
+neck|«Шея».|My neck hurts.|Болит шея.|A pain in the neck.|Головная боль (о человеке).
+network|«Сеть».|A social network.|Социальная сеть.|The network is down.|Сеть не работает.
+newspaper|«Газета».|Read the newspaper.|Читать газету.|A local newspaper.|Местная газета.
+noise|«Шум».|The noise from the street.|Шум с улицы.|Don't make noise.|Не шуми.
+nose|«Нос».|A runny nose.|Насморк.|Follow your nose.|Иди куда глаза глядят.
+note|«Заметка, записка, нота» и «замечать».|Take notes.|Делать заметки.|Leave a note.|Оставь записку.
+object|«Предмет, объект» и «возражать».|A strange object.|Странный предмет.|I object!|Я возражаю!
+ocean|«Океан».|Swim in the ocean.|Плавать в океане.|The Pacific Ocean.|Тихий океан.
+officer|«Офицер, служащий».|A police officer.|Полицейский.|An army officer.|Армейский офицер.
+oil|«Масло (растительное), нефть».|Sunflower oil.|Подсолнечное масло.|Oil prices.|Цены на нефть.
+opinion|«Мнение».|In my opinion.|По-моему.|What's your opinion?|Какое у тебя мнение?
+opportunity|«Возможность».|A good opportunity.|Хорошая возможность.|Don't miss the opportunity.|Не упусти возможность.
+option|«Вариант, выбор».|Another option.|Другой вариант.|We have no option.|У нас нет выбора.
+organization|«Организация».|A big organization.|Крупная организация.|Good organization.|Хорошая организация.
+pain|«Боль».|Back pain.|Боль в спине.|No pain, no gain.|Без труда нет результата.
+pair|«Пара».|A pair of shoes.|Пара обуви.|Work in pairs.|Работайте парами.
+palace|«Дворец».|A royal palace.|Королевский дворец.|It's like a palace.|Прямо дворец.
+partner|«Партнёр, напарник».|A business partner.|Деловой партнёр.|My partner in crime.|Мой сообщник.
+patient|«Пациент» и «терпеливый».|Be patient.|Будь терпелив.|The doctor saw ten patients.|Врач принял десять пациентов.
+pattern|«Узор, шаблон, закономерность».|A strange pattern.|Странный узор.|A sleep pattern.|Режим сна.
+peace|«Мир, покой».|Peace and quiet.|Тишина и покой.|Leave me in peace.|Оставь меня в покое.
+pen|«Ручка».|A blue pen.|Синяя ручка.|Do you have a pen?|У тебя есть ручка?
+pencil|«Карандаш».|A sharp pencil.|Острый карандаш.|Write in pencil.|Пиши карандашом.
+period|«Период, срок».|A short period.|Короткий период.|The trial period.|Испытательный срок.
+permission|«Разрешение».|Ask for permission.|Попросить разрешения.|Without permission.|Без разрешения.
+pet|«Домашнее животное, питомец».|Do you have a pet?|У тебя есть питомец?|No pets allowed.|С животными нельзя.
+photo|«Фото».|Send me a photo.|Пришли фото.|Take a photo.|Сфотографируй.
+physics|«Физика».|I hate physics.|Ненавижу физику.|A physics teacher.|Учитель физики.
+piece|«Кусок, часть».|A piece of cake.|Кусок торта; проще простого.|A piece of paper.|Листок бумаги.
+pilot|«Пилот».|The pilot said hello.|Пилот поздоровался.|He is a pilot.|Он пилот.
+pity|«Жалость». What a pity! — Как жаль!|What a pity!|Как жаль!|I feel pity for him.|Мне его жаль.
+planet|«Планета».|A small planet.|Маленькая планета.|Save the planet.|Спаси планету.
+plate|«Тарелка», «номерной знак».|A plate of soup.|Тарелка супа.|A license plate.|Номерной знак.
+player|«Игрок».|A good player.|Хороший игрок.|A team player.|Командный игрок.
+pleasure|«Удовольствие». My pleasure — не за что, с удовольствием.|With pleasure.|С удовольствием.|My pleasure!|Не за что!
+pocket|«Карман».|Money in my pocket.|Деньги в кармане.|Pocket money.|Карманные деньги.
+poem|«Стихотворение».|A short poem.|Короткое стихотворение.|Write a poem.|Напиши стих.
+police|«Полиция». Глагол во множественном: the police are.|Call the police.|Вызови полицию.|The police are here.|Полиция здесь.
+population|«Население».|The population of the city.|Население города.|A small population.|Малочисленное население.
+position|«Положение, позиция, должность».|A high position.|Высокая должность.|In this position.|В таком положении.
+potato|«Картофель». Множественное — potatoes.|Mashed potatoes.|Картофельное пюре.|Plant potatoes.|Сажать картошку.
+pressure|«Давление».|Under pressure.|Под давлением.|Blood pressure.|Кровяное давление.
+prison|«Тюрьма».|Go to prison.|Сесть в тюрьму.|He is in prison.|Он в тюрьме.
+prize|«Приз».|Win a prize.|Выиграть приз.|First prize.|Первый приз.
+process|«Процесс» и «обрабатывать».|The process takes time.|Процесс требует времени.|In the process.|В процессе.
+product|«Продукт, товар».|A new product.|Новый продукт.|Dairy products.|Молочные продукты.
+profession|«Профессия».|A good profession.|Хорошая профессия.|What's your profession?|Какая у тебя профессия?
+program|«Программа».|A training program.|Программа тренировок.|Install the program.|Установи программу.
+project|«Проект».|A big project.|Большой проект.|Work on a project.|Работать над проектом.
+property|«Собственность, недвижимость».|Private property.|Частная собственность.|Buy property.|Купить недвижимость.
+purpose|«Цель, назначение». on purpose — нарочно.|For what purpose?|С какой целью?|He did it on purpose.|Он сделал это нарочно.
+quality|«Качество».|High quality.|Высокое качество.|Quality over quantity.|Качество важнее количества.
+quantity|«Количество».|A large quantity.|Большое количество.|Quality, not quantity.|Качество, а не количество.
+queen|«Королева».|The queen of England.|Королева Англии.|Drama queen.|Королева драмы.
+race|«Гонка» и «раса».|A horse race.|Скачки.|Win the race.|Выиграть гонку.
+radio|«Радио».|Listen to the radio.|Слушать радио.|Turn on the radio.|Включи радио.
+rain|«Дождь» и «идти (о дожде)».|It's raining.|Идёт дождь.|Heavy rain.|Сильный дождь.
+range|«Диапазон, ассортимент».|A wide range.|Широкий выбор.|The price range.|Ценовой диапазон.
+rate|«Ставка, курс, темп» и «оценивать».|The interest rate.|Процентная ставка.|Rate this app.|Оцени приложение.
+reaction|«Реакция».|A quick reaction.|Быстрая реакция.|What was his reaction?|Как он отреагировал?
+reality|«Реальность».|Face reality.|Смотреть правде в глаза.|In reality.|На самом деле.
+region|«Регион, область».|Our region.|Наш регион.|A cold region.|Холодный регион.
+relationship|«Отношения».|A good relationship.|Хорошие отношения.|We are in a relationship.|Мы встречаемся.
+religion|«Религия».|Freedom of religion.|Свобода вероисповедания.|What's your religion?|Какая у тебя религия?
+respect|«Уважение» и «уважать».|Show respect.|Прояви уважение.|I respect you.|Я тебя уважаю.
+response|«Ответ, реакция».|A quick response.|Быстрый ответ.|No response.|Нет ответа.
+responsibility|«Ответственность».|Take responsibility.|Взять ответственность.|It's my responsibility.|Это моя обязанность.
+restaurant|«Ресторан».|A cheap restaurant.|Недорогой ресторан.|Book a restaurant.|Забронировать ресторан.
+revenue|«Выручка, доход».|The company revenue.|Выручка компании.|Tax revenue.|Налоговые поступления.
+reward|«Награда» и «награждать».|A big reward.|Большая награда.|Reward yourself.|Побалуй себя.
+rice|«Рис».|Rice with chicken.|Рис с курицей.|Cook rice.|Свари рис.
+rock|«Скала, камень, рок» и «качать».|A big rock.|Большой камень.|Rock music.|Рок-музыка.
+role|«Роль».|Play a role.|Играть роль.|The main role.|Главная роль.
+rope|«Верёвка».|A long rope.|Длинная верёвка.|Tie the rope.|Завяжи верёвку.
+route|«Маршрут».|The best route.|Лучший маршрут.|A bus route.|Автобусный маршрут.
+safety|«Безопасность».|Safety rules.|Правила безопасности.|Safety first!|Безопасность прежде всего!
+salary|«Зарплата».|A good salary.|Хорошая зарплата.|Salary day.|День зарплаты.
+salt|«Соль».|Add salt.|Добавь соли.|Pass the salt.|Передай соль.
+sand|«Песок».|Sand on the beach.|Песок на пляже.|A bag of sand.|Мешок песка.
+scale|«Масштаб, шкала, весы».|On a large scale.|В большом масштабе.|Step on the scale.|Встань на весы.
+scene|«Сцена, место действия».|The scene of the crime.|Место преступления.|Don't make a scene.|Не устраивай сцен.
+schedule|«Расписание, график».|A busy schedule.|Плотный график.|On schedule.|По графику.
+science|«Наука».|Science and technology.|Наука и техника.|Computer science.|Информатика.
+screen|«Экран».|A big screen.|Большой экран.|Screen time.|Время перед экраном.
+sea|«Море».|A sea view.|Вид на море.|Go to the sea.|Поехать на море.
+season|«Сезон, время года».|The rainy season.|Сезон дождей.|My favorite season.|Моё любимое время года.
+seat|«Сиденье, место».|Take a seat.|Присаживайтесь.|Is this seat free?|Это место свободно?
+secret|«Секрет» и «тайный».|Keep a secret.|Хранить секрет.|It's a secret.|Это секрет.
+security|«Безопасность, охрана».|The security system.|Система безопасности.|Call security.|Вызови охрану.
+series|«Серия, сериал». Одинаково в обоих числах.|A TV series.|Сериал.|A series of events.|Цепь событий.
+sex|«Пол» (в анкетах) и «секс».|Sex: male.|Пол: мужской.|Age and sex.|Возраст и пол.
+shape|«Форма, состояние».|The shape of the room.|Форма комнаты.|In good shape.|В хорошей форме.
+sheep|«Овца». Одинаково в обоих числах.|A flock of sheep.|Стадо овец.|Count sheep.|Считать овец.
+shelf|«Полка». Множественное — shelves.|A book shelf.|Книжная полка.|On the top shelf.|На верхней полке.
+ship|«Корабль» и «отгружать».|A big ship.|Большой корабль.|We ship worldwide.|Доставляем по всему миру.
+shirt|«Рубашка».|A white shirt.|Белая рубашка.|Iron your shirt.|Погладь рубашку.
+shoe|«Ботинок, туфля».|A pair of shoes.|Пара обуви.|Take off your shoes.|Сними обувь.
+shoulder|«Плечо».|On my shoulder.|На моём плече.|Shoulder to shoulder.|Плечом к плечу.
+silence|«Тишина, молчание».|Silence please.|Тишина, пожалуйста.|In silence.|В тишине.
+silver|«Серебро» и «серебряный».|A silver ring.|Серебряное кольцо.|Silver hair.|Седые волосы.
+skill|«Навык, умение».|A useful skill.|Полезный навык.|Improve your skills.|Прокачай навыки.
+skin|«Кожа, шкура».|Dry skin.|Сухая кожа.|Soft skin.|Мягкая кожа.
+sky|«Небо».|A blue sky.|Голубое небо.|The sky is the limit.|Нет предела возможностям.
+smoke|«Дым» и «курить».|Smoke from the chimney.|Дым из трубы.|Do you smoke?|Ты куришь?
+snow|«Снег» и «идти (о снеге)».|It's snowing.|Идёт снег.|Clean the snow.|Почисти снег.
+society|«Общество».|Modern society.|Современное общество.|In our society.|В нашем обществе.
+soil|«Почва».|Good soil.|Хорошая почва.|Dry soil.|Сухая почва.
+soldier|«Солдат».|A brave soldier.|Смелый солдат.|My grandfather was a soldier.|Мой дед был солдатом.
+solution|«Решение, раствор».|A simple solution.|Простое решение.|Find a solution.|Найти решение.
+song|«Песня».|Sing a song.|Спеть песню.|My favorite song.|Моя любимая песня.
+soul|«Душа».|A kind soul.|Добрая душа.|With all my soul.|Всей душой.
+sound|«Звук» и «звучать».|The sound of rain.|Звук дождя.|Sounds good!|Звучит неплохо!
+soup|«Суп».|Hot soup.|Горячий суп.|Chicken soup.|Куриный суп.
+source|«Источник».|A source of income.|Источник дохода.|A reliable source.|Надёжный источник.
+space|«Место, пространство, космос».|A lot of space.|Много места.|Outer space.|Открытый космос.
+speech|«Речь».|Give a speech.|Произнести речь.|Freedom of speech.|Свобода слова.
+speed|«Скорость».|At high speed.|На большой скорости.|Speed limit.|Ограничение скорости.
+sport|«Спорт».|Play sports.|Заниматься спортом.|My favorite sport.|Мой любимый спорт.
+staff|«Персонал, сотрудники».|The office staff.|Сотрудники офиса.|Staff only.|Только для персонала.
+stage|«Этап, сцена».|At this stage.|На этом этапе.|On stage.|На сцене.
+star|«Звезда».|A bright star.|Яркая звезда.|A movie star.|Кинозвезда.
+station|«Станция, вокзал».|A train station.|Вокзал.|A gas station.|Заправка.
+step|«Шаг, ступенька».|The first step.|Первый шаг.|Step by step.|Шаг за шагом.
+stomach|«Желудок, живот».|My stomach hurts.|Болит живот.|On an empty stomach.|На голодный желудок.
+stone|«Камень».|A stone house.|Каменный дом.|Kill two birds with one stone.|Убить двух зайцев одним выстрелом.
+storm|«Буря, шторм».|A big storm.|Сильный шторм.|A snow storm.|Метель.
+strength|«Сила».|Physical strength.|Физическая сила.|Strengths and weaknesses.|Сильные и слабые стороны.
+stress|«Стресс, ударение».|A lot of stress.|Много стресса.|Stress is bad for health.|Стресс вреден для здоровья.
+structure|«Структура, конструкция».|The structure of the house.|Конструкция дома.|A simple structure.|Простая структура.
+style|«Стиль».|A modern style.|Современный стиль.|In style.|Стильно.
+subject|«Тема, предмет (в школе)».|Change the subject.|Сменить тему.|My favorite subject.|Мой любимый предмет.
+sugar|«Сахар».|No sugar.|Без сахара.|Tea with sugar.|Чай с сахаром.
+suit|«Костюм» и «подходить, идти».|A business suit.|Деловой костюм.|It suits you.|Тебе идёт.
+sun|«Солнце».|The sun is shining.|Светит солнце.|Sit in the sun.|Посиди на солнце.
+surface|«Поверхность».|The surface of the table.|Поверхность стола.|On the surface.|На поверхности.
+survey|«Опрос, обследование».|A short survey.|Короткий опрос.|A land survey.|Межевание участка.
+sword|«Меч». w не читается.|A sharp sword.|Острый меч.|A knight with a sword.|Рыцарь с мечом.
+symbol|«Символ».|A symbol of luck.|Символ удачи.|The symbol of the city.|Символ города.
+talent|«Талант».|A natural talent.|Природный талант.|She has a talent for music.|У неё талант к музыке.
+target|«Цель, мишень».|The target audience.|Целевая аудитория.|Hit the target.|Попасть в цель.
+task|«Задача, задание».|A simple task.|Простая задача.|Complete the task.|Выполни задание.
+taste|«Вкус» и «пробовать».|A good taste.|Хороший вкус.|Taste the soup.|Попробуй суп.
+tea|«Чай».|A cup of tea.|Чашка чая.|Green tea.|Зелёный чай.
+technology|«Технология, техника».|A new technology.|Новая технология.|Modern technology.|Современная техника.
+television|«Телевидение, телевизор».|Watch television.|Смотреть телевизор.|On television.|По телевизору.
+temperature|«Температура».|Room temperature.|Комнатная температура.|I have a temperature.|У меня температура.
+term|«Срок, термин»; terms — условия.|A long term.|Долгий срок.|The terms of the deal.|Условия сделки.
+text|«Текст» и «писать сообщение».|Read the text.|Прочитай текст.|Text me later.|Напиши мне позже.
+theory|«Теория».|In theory.|В теории.|A new theory.|Новая теория.
+ticket|«Билет».|A train ticket.|Билет на поезд.|Buy tickets.|Купить билеты.
+title|«Название, заголовок, титул».|The title of the book.|Название книги.|A title deed.|Свидетельство о собственности.
+tool|«Инструмент».|The right tool.|Правильный инструмент.|A box of tools.|Ящик с инструментами.
+tooth|«Зуб». Множественное — teeth.|Brush your teeth.|Почисти зубы.|A bad tooth.|Больной зуб.
+top|«Верх, вершина» и «верхний, лучший».|The top floor.|Верхний этаж.|At the top.|Наверху.
+topic|«Тема».|An interesting topic.|Интересная тема.|Change the topic.|Смени тему.
+tour|«Экскурсия, тур».|A city tour.|Экскурсия по городу.|Go on tour.|Поехать в тур.
+tourist|«Турист».|A group of tourists.|Группа туристов.|A tourist place.|Туристическое место.
+tower|«Башня».|A tall tower.|Высокая башня.|A TV tower.|Телебашня.
+toy|«Игрушка».|A new toy.|Новая игрушка.|Kids' toys.|Детские игрушки.
+track|«След, трек, путь» и «отслеживать».|Keep track of time.|Следить за временем.|Track the parcel.|Отследить посылку.
+trade|«Торговля» и «торговать, обменивать».|Foreign trade.|Внешняя торговля.|Trade cars.|Торговать машинами.
+tradition|«Традиция».|A good tradition.|Хорошая традиция.|Family tradition.|Семейная традиция.
+traffic|«Движение, трафик, пробки».|Heavy traffic.|Плотное движение.|Stuck in traffic.|Застрял в пробке.
+training|«Тренировка, обучение».|A training program.|Программа тренировок.|Job training.|Профобучение.
+treatment|«Лечение, обращение».|A new treatment.|Новое лечение.|Special treatment.|Особое отношение.
+trial|«Суд, испытание, пробный период».|A free trial.|Бесплатный пробный период.|On trial.|Под судом.
+trick|«Трюк, уловка».|A magic trick.|Фокус.|Don't trick me.|Не обманывай меня.
+truck|«Грузовик».|A big truck.|Большой грузовик.|Drive a truck.|Водить грузовик.
+uncle|«Дядя».|My uncle lives in a village.|Мой дядя живёт в деревне.|Uncle Sam.|Дядя Сэм.
+union|«Союз, профсоюз».|A trade union.|Профсоюз.|The Soviet Union.|Советский Союз.
+unit|«Единица, блок, модуль».|A unit of measure.|Единица измерения.|A storage unit.|Складской бокс.
+university|«Университет».|Study at university.|Учиться в университете.|A university degree.|Высшее образование.
+user|«Пользователь».|A new user.|Новый пользователь.|User name.|Имя пользователя.
+vacation|«Отпуск, каникулы» (амер.).|On vacation.|В отпуске.|A two-week vacation.|Двухнедельный отпуск.
+valley|«Долина».|A green valley.|Зелёная долина.|In the valley.|В долине.
+value|«Ценность, стоимость» и «ценить».|The value of the house.|Стоимость дома.|Family values.|Семейные ценности.
+vegetable|«Овощ».|Fresh vegetables.|Свежие овощи.|Grow vegetables.|Выращивать овощи.
+version|«Версия».|The new version.|Новая версия.|The English version.|Английская версия.
+victim|«Жертва, пострадавший».|A victim of fraud.|Жертва мошенничества.|Help the victims.|Помочь пострадавшим.

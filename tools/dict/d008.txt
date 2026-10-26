@@ -1,0 +1,250 @@
+October|«Октябрь».|In October.|В октябре.|Cold October.|Холодный октябрь.
+November|«Ноябрь».|In November.|В ноябре.|Snow in November.|Снег в ноябре.
+December|«Декабрь».|In December.|В декабре.|The end of December.|Конец декабря.
+real estate|«Недвижимость» как сфера и рынок.|I work in real estate.|Я работаю в недвижимости.|A real estate agency.|Агентство недвижимости.
+realtor|«Риелтор» (амер.). У британцев — estate agent.|I am a realtor.|Я риелтор.|Call your realtor.|Позвони своему риелтору.
+broker|«Брокер, посредник».|A mortgage broker.|Ипотечный брокер.|Work through a broker.|Работать через брокера.
+commission|«Комиссия (агента)».|The realtor's commission.|Комиссия риелтора.|A three percent commission.|Комиссия три процента.
+deposit|«Задаток, залог, вклад».|Pay a deposit.|Внести задаток.|The deposit is returned.|Залог возвращается.
+down payment|«Первоначальный взнос» по ипотеке.|A 20 percent down payment.|Первый взнос 20 процентов.|Save for a down payment.|Копить на первый взнос.
+interest rate|«Процентная ставка».|A low interest rate.|Низкая ставка.|The interest rate went up.|Ставка выросла.
+lease|«Договор аренды» и «сдавать/брать в аренду».|Sign a lease.|Подписать договор аренды.|A one-year lease.|Аренда на год.
+landlord|«Арендодатель, хозяин жилья».|Call the landlord.|Позвони хозяину.|The landlord raised the rent.|Хозяин поднял аренду.
+tenant|«Арендатор, жилец».|A good tenant.|Хороший жилец.|The tenants moved out.|Жильцы съехали.
+listing|«Объявление о продаже (объекта)».|A new listing.|Новое объявление.|Update the listing.|Обнови объявление.
+showing|«Показ (объекта покупателю)».|A showing at five.|Показ в пять.|Book a showing.|Записаться на показ.
+viewing|«Просмотр (жилья)».|Arrange a viewing.|Организовать просмотр.|After the viewing.|После просмотра.
+appraisal|«Оценка стоимости».|The appraisal came in low.|Оценка вышла низкой.|Order an appraisal.|Заказать оценку.
+inspection|«Осмотр, проверка (дома)».|A home inspection.|Осмотр дома.|The inspection found mold.|Проверка обнаружила плесень.
+deed|«Акт, документ о праве собственности».|Sign the deed.|Подписать акт.|The deed is ready.|Документы готовы.
+title deed|«Свидетельство о собственности».|Check the title deed.|Проверь свидетельство.|Where is the title deed?|Где свидетельство о собственности?
+closing|«Закрытие сделки» и «закрывающий».|The closing is on Friday.|Сделка закрывается в пятницу.|Closing costs.|Расходы на оформление.
+escrow|«Депонирование средств» — деньги у третьей стороны до сделки.|Money in escrow.|Деньги на депозите.|An escrow account.|Счёт эскроу.
+asking price|«Запрашиваемая цена».|The asking price is too high.|Запрашиваемая цена завышена.|Below asking price.|Ниже запрашиваемой цены.
+bargain|«Выгодная покупка» и «торговаться».|A real bargain.|Настоящая находка.|Bargain on the price.|Поторговаться.
+discount|«Скидка».|Give me a discount.|Дайте скидку.|A ten percent discount.|Скидка десять процентов.
+renovation|«Ремонт, реконструкция».|After renovation.|После ремонта.|A full renovation.|Капитальный ремонт.
+heating|«Отопление».|Gas heating.|Газовое отопление.|The heating is off.|Отопление выключено.
+plumbing|«Сантехника, водопровод».|Old plumbing.|Старая сантехника.|Fix the plumbing.|Починить трубы.
+wiring|«Электропроводка».|New wiring.|Новая проводка.|Check the wiring.|Проверь проводку.
+insulation|«Утепление, изоляция».|Good insulation.|Хорошее утепление.|Roof insulation.|Утепление крыши.
+basement|«Подвал, цокольный этаж».|A dry basement.|Сухой подвал.|In the basement.|В подвале.
+attic|«Чердак, мансарда».|Store it in the attic.|Убери на чердак.|An attic room.|Мансардная комната.
+garage|«Гараж».|A garage for two cars.|Гараж на две машины.|Park in the garage.|Ставь в гараж.
+fence|«Забор».|A wooden fence.|Деревянный забор.|Paint the fence.|Покрась забор.
+porch|«Крыльцо, веранда».|Sit on the porch.|Сидеть на крыльце.|A covered porch.|Крытое крыльцо.
+balcony|«Балкон».|A big balcony.|Большой балкон.|Coffee on the balcony.|Кофе на балконе.
+ceiling|«Потолок».|High ceilings.|Высокие потолки.|Paint the ceiling.|Покрась потолок.
+stairs|«Лестница (ступени)».|Go up the stairs.|Поднимись по лестнице.|Steep stairs.|Крутая лестница.
+elevator|«Лифт» (амер.).|Take the elevator.|Поезжай на лифте.|The elevator is broken.|Лифт сломан.
+hallway|«Коридор, прихожая».|A long hallway.|Длинный коридор.|Wait in the hallway.|Подожди в коридоре.
+bedroom|«Спальня».|A two-bedroom flat.|Квартира с двумя спальнями.|The bedroom faces east.|Спальня выходит на восток.
+bathroom|«Ванная (комната)».|The bathroom is small.|Ванная маленькая.|Where is the bathroom?|Где туалет?
+toilet|«Туалет, унитаз».|A separate toilet.|Раздельный санузел.|The toilet is broken.|Унитаз сломан.
+living room|«Гостиная».|A big living room.|Большая гостиная.|Watch TV in the living room.|Смотреть телевизор в гостиной.
+dining room|«Столовая (комната)».|Eat in the dining room.|Есть в столовой.|A bright dining room.|Светлая столовая.
+furniture|«Мебель». Неисчисляемое.|New furniture.|Новая мебель.|Sold with furniture.|Продаётся с мебелью.
+sofa|«Диван».|A comfortable sofa.|Удобный диван.|Sleep on the sofa.|Спать на диване.
+carpet|«Ковёр, ковролин».|An old carpet.|Старый ковёр.|Clean the carpet.|Почисти ковёр.
+curtain|«Штора, занавеска».|Close the curtains.|Задёрни шторы.|New curtains.|Новые шторы.
+lamp|«Лампа».|Turn on the lamp.|Включи лампу.|A desk lamp.|Настольная лампа.
+shower|«Душ» и «ливень».|Take a shower.|Принять душ.|A rain shower.|Ливень.
+stove|«Плита, печь».|A gas stove.|Газовая плита.|Heat the stove.|Затопить печь.
+oven|«Духовка».|Bake in the oven.|Испечь в духовке.|The oven is hot.|Духовка горячая.
+fridge|«Холодильник».|Put it in the fridge.|Положи в холодильник.|An empty fridge.|Пустой холодильник.
+washing machine|«Стиральная машина».|A new washing machine.|Новая стиральная машина.|The washing machine is broken.|Стиралка сломалась.
+neighborhood|«Район, окрестности, соседи».|A quiet neighborhood.|Тихий район.|In the neighborhood.|По соседству.
+suburb|«Пригород».|Live in the suburbs.|Жить в пригороде.|A quiet suburb.|Тихий пригород.
+downtown|«Центр города».|An apartment downtown.|Квартира в центре.|Go downtown.|Поехать в центр.
+location|«Расположение, место».|A good location.|Хорошее расположение.|Location, location, location!|Место решает всё!
+parking|«Парковка».|Free parking.|Бесплатная парковка.|No parking.|Стоянка запрещена.
+square meter|«Квадратный метр».|Price per square meter.|Цена за квадратный метр.|Fifty square meters.|Пятьдесят квадратных метров.
+plot|«Участок» и «сюжет».|A plot of land.|Земельный участок.|The plot of the film.|Сюжет фильма.
+lot|«Участок» (амер.) и a lot — «много».|An empty lot.|Пустой участок.|A lot of work.|Много работы.
+utilities|«Коммунальные услуги».|Utilities are included.|Коммуналка включена.|Pay the utilities.|Оплатить коммуналку.
+maintenance|«Обслуживание, содержание».|Low maintenance.|Не требует ухода.|Maintenance fee.|Плата за обслуживание.
+investor|«Инвестор».|A real estate investor.|Инвестор в недвижимость.|Find an investor.|Найти инвестора.
+developer|«Застройщик, разработчик».|A big developer.|Крупный застройщик.|Buy from the developer.|Купить у застройщика.
+new building|«Новостройка».|A flat in a new building.|Квартира в новостройке.|New buildings are expensive.|Новостройки дорогие.
+resale|«Вторичное жильё, перепродажа».|A resale apartment.|Квартира на вторичке.|Resale value.|Цена перепродажи.
+cottage|«Дача, коттедж».|A cottage by the lake.|Дача у озера.|Weekend at the cottage.|Выходные на даче.
+studio|«Студия» (квартира или мастерская).|A small studio.|Маленькая студия.|Rent a studio.|Снять студию.
+duplex|«Двухуровневая квартира; дом на две семьи».|Buy a duplex.|Купить дуплекс.|A spacious duplex.|Просторный дуплекс.
+property tax|«Налог на имущество».|Pay property tax.|Заплатить налог на имущество.|Property tax is low here.|Налог на имущество здесь низкий.
+notary|«Нотариус».|Go to the notary.|Сходить к нотариусу.|The notary signed it.|Нотариус заверил.
+registration|«Регистрация».|State registration.|Государственная регистрация.|Registration takes a week.|Регистрация занимает неделю.
+signature|«Подпись».|Your signature here.|Ваша подпись здесь.|An electronic signature.|Электронная подпись.
+negotiation|«Переговоры».|Price negotiation.|Торг по цене.|Negotiations went well.|Переговоры прошли хорошо.
+objection|«Возражение».|Any objections?|Есть возражения?|Handle objections.|Работать с возражениями.
+leverage|«Рычаг давления, преимущество в переговорах».|We have leverage.|У нас есть козырь.|Use your leverage.|Используй своё преимущество.
+deadline|«Крайний срок».|The deadline is Friday.|Срок — пятница.|Miss the deadline.|Пропустить срок.
+urgent|«Срочный».|An urgent sale.|Срочная продажа.|It's urgent!|Это срочно!
+proposal|«Предложение (официальное)».|A business proposal.|Деловое предложение.|Send a proposal.|Отправь предложение.
+invoice|«Счёт-фактура».|Send an invoice.|Выставить счёт.|Pay the invoice.|Оплатить счёт.
+receipt|«Квитанция, чек». p не читается.|Keep the receipt.|Сохрани чек.|A payment receipt.|Квитанция об оплате.
+refund|«Возврат денег» и «возвращать деньги».|Ask for a refund.|Потребовать возврат.|Full refund.|Полный возврат.
+payment|«Платёж, оплата».|A monthly payment.|Ежемесячный платёж.|Payment by card.|Оплата картой.
+installment|«Взнос, рассрочка».|Pay in installments.|Платить в рассрочку.|The first installment.|Первый взнос.
+savings|«Сбережения».|All my savings.|Все мои сбережения.|A savings account.|Сберегательный счёт.
+expense|«Расход, трата».|Monthly expenses.|Ежемесячные расходы.|At my expense.|За мой счёт.
+wealth|«Богатство».|Health is wealth.|Здоровье — главное богатство.|Build wealth.|Наращивать капитал.
+bonus|«Премия, бонус».|A year-end bonus.|Годовая премия.|As a bonus.|В качестве бонуса.
+referral|«Рекомендация, направление (клиента)».|Clients by referral.|Клиенты по рекомендации.|Thanks for the referral.|Спасибо за рекомендацию.
+reputation|«Репутация».|A good reputation.|Хорошая репутация.|Protect your reputation.|Береги репутацию.
+rating|«Рейтинг, оценка».|A high rating.|Высокий рейтинг.|Five-star rating.|Пять звёзд.
+advertisement|«Реклама, рекламное объявление».|Put an advertisement.|Разместить рекламу.|A newspaper advertisement.|Объявление в газете.
+ad|«Объявление, реклама» (кратко от advertisement).|Post an ad.|Разместить объявление.|I saw your ad.|Я видел ваше объявление.
+marketing|«Маркетинг».|Marketing costs.|Расходы на маркетинг.|Good marketing.|Хороший маркетинг.
+brand|«Бренд, марка».|A famous brand.|Известный бренд.|Build your brand.|Развивай свой бренд.
+competitor|«Конкурент».|Our main competitor.|Наш главный конкурент.|Beat the competitors.|Обойти конкурентов.
+strategy|«Стратегия».|A sales strategy.|Стратегия продаж.|Change the strategy.|Сменить стратегию.
+tactic|«Тактика, приём».|A good tactic.|Хороший приём.|Negotiation tactics.|Тактика переговоров.
+persuasion|«Убеждение (как процесс)».|The art of persuasion.|Искусство убеждения.|Gentle persuasion.|Мягкое убеждение.
+manipulation|«Манипуляция».|Don't fall for manipulation.|Не ведись на манипуляции.|Clever manipulation.|Хитрая манипуляция.
+empathy|«Эмпатия, сопереживание».|Show empathy.|Прояви сочувствие.|Empathy builds trust.|Эмпатия строит доверие.
+rapport|«Раппорт, взаимопонимание». t не читается.|Build rapport.|Наладить контакт.|Good rapport with clients.|Хороший контакт с клиентами.
+tone|«Тон».|A friendly tone.|Дружелюбный тон.|Watch your tone.|Следи за тоном.
+gesture|«Жест».|A kind gesture.|Добрый жест.|Use gestures.|Используй жесты.
+eye contact|«Зрительный контакт».|Keep eye contact.|Держи зрительный контакт.|Avoid eye contact.|Избегать взгляда.
+pause|«Пауза» и «делать паузу».|Pause the game.|Поставь игру на паузу.|A long pause.|Долгая пауза.
+label|«Ярлык, этикетка» и «наклеивать ярлык».|Read the label.|Прочитай этикетку.|Don't label people.|Не вешай ярлыки на людей.
+calm down|«Успокоиться».|Calm down, please.|Успокойся, пожалуйста.|He calmed down.|Он успокоился.
+pay attention|«Обращать внимание».|Pay attention to details.|Обращай внимание на детали.|You're not paying attention.|Ты не слушаешь.
+take care|«Береги себя», «позаботиться».|Take care!|Береги себя!|Take care of the kids.|Присмотри за детьми.
+give up|«Сдаться, бросить».|Never give up.|Никогда не сдавайся.|I gave up smoking.|Я бросил курить.
+find out|«Выяснить, узнать».|Find out the price.|Узнай цену.|I found out the truth.|Я узнал правду.
+look for|«Искать».|I'm looking for a flat.|Я ищу квартиру.|What are you looking for?|Что вы ищете?
+look after|«Присматривать, заботиться».|Look after the dog.|Присмотри за собакой.|She looks after her mom.|Она ухаживает за мамой.
+look forward|«Ждать с нетерпением» (look forward to).|I look forward to meeting you.|Жду встречи с вами.|Look forward to the weekend.|Ждать выходных.
+get up|«Вставать».|Get up early.|Вставай рано.|I got up at six.|Я встал в шесть.
+get on|«Садиться (в автобус, поезд)», «ладить».|Get on the bus.|Сядь в автобус.|We get on well.|Мы хорошо ладим.
+get off|«Выходить (из транспорта)», «слезть».|Get off at the next stop.|Выходи на следующей.|Get off my back!|Отстань от меня!
+go on|«Продолжать», «происходить».|Go on, please.|Продолжай, пожалуйста.|What's going on?|Что происходит?
+go out|«Выходить, гулять, гаснуть».|Let's go out tonight.|Давай куда-нибудь сходим вечером.|The light went out.|Свет погас.
+come back|«Вернуться».|Come back soon.|Возвращайся скорее.|He came back home.|Он вернулся домой.
+come in|«Войти». Come in! — Входите!|Come in, please.|Входите, пожалуйста.|May I come in?|Можно войти?
+sit down|«Сесть».|Sit down, please.|Садитесь, пожалуйста.|Let's sit down and talk.|Давай сядем и поговорим.
+stand up|«Встать».|Stand up, please.|Встаньте, пожалуйста.|Stand up for yourself.|Постой за себя.
+turn on|«Включить».|Turn on the light.|Включи свет.|Turn on the heating.|Включи отопление.
+turn off|«Выключить».|Turn off the TV.|Выключи телевизор.|Turn off the water.|Перекрой воду.
+put on|«Надеть».|Put on your coat.|Надень пальто.|Put on some music.|Включи музыку.
+take off|«Снять (одежду)», «взлететь».|Take off your shoes.|Сними обувь.|The plane took off.|Самолёт взлетел.
+pick up|«Поднять, забрать, подобрать».|Pick up the phone.|Возьми трубку.|I'll pick you up.|Я за тобой заеду.
+set up|«Настроить, основать, устроить».|Set up the phone.|Настрой телефон.|Set up a meeting.|Организуй встречу.
+carry on|«Продолжать».|Carry on working.|Продолжай работать.|Keep calm and carry on.|Сохраняй спокойствие и продолжай.
+figure out|«Разобраться, понять».|I'll figure it out.|Я разберусь.|Figure out the price.|Прикинь цену.
+run out|«Закончиться, иссякнуть».|We ran out of milk.|У нас кончилось молоко.|Time is running out.|Время на исходе.
+break down|«Сломаться (о технике)».|The car broke down.|Машина сломалась.|Don't break down.|Не раскисай.
+show up|«Появиться, прийти».|He didn't show up.|Он не пришёл.|Show up on time.|Приходи вовремя.
+work out|«Тренироваться», «получиться».|I work out every day.|Я тренируюсь каждый день.|It worked out!|Получилось!
+fill in|«Заполнить (анкету)», «заменить».|Fill in the form.|Заполни анкету.|Fill in for me.|Подмени меня.
+hang out|«Тусоваться, проводить время».|Let's hang out.|Давай потусуемся.|Where do you hang out?|Где ты зависаешь?
+check in|«Зарегистрироваться (в отеле, аэропорту)».|Check in at the hotel.|Заселиться в отель.|Check in online.|Зарегистрироваться онлайн.
+call back|«Перезвонить».|I'll call you back.|Я перезвоню.|Call me back later.|Перезвони позже.
+forehead|«Лоб».|A high forehead.|Высокий лоб.|Touch your forehead.|Потрогай лоб.
+cheek|«Щека» и «наглость».|A kiss on the cheek.|Поцелуй в щёку.|What a cheek!|Какая наглость!
+chin|«Подбородок». Chin up! — Не вешай нос!|Chin up!|Выше нос!|A strong chin.|Волевой подбородок.
+ear|«Ухо».|My ear hurts.|Болит ухо.|I'm all ears.|Я весь внимание.
+tongue|«Язык (орган)», «родной язык» (mother tongue).|Hold your tongue.|Придержи язык.|Mother tongue.|Родной язык.
+throat|«Горло».|A sore throat.|Больное горло.|Clear your throat.|Прокашляйся.
+chest|«Грудь» и «сундук».|Chest pain.|Боль в груди.|An old chest.|Старый сундук.
+waist|«Талия».|A thin waist.|Тонкая талия.|Waist size.|Обхват талии.
+hip|«Бедро».|My hip hurts.|Болит бедро.|Hands on hips.|Руки в боки.
+ankle|«Лодыжка».|I twisted my ankle.|Я подвернул ногу.|Ankle boots.|Ботильоны.
+toe|«Палец ноги».|I hurt my toe.|Я ушиб палец на ноге.|From head to toe.|С головы до пят.
+thumb|«Большой палец». b не читается.|Thumbs up!|Класс!|A rule of thumb.|Эмпирическое правило.
+nail|«Гвоздь» и «ноготь».|Hammer a nail.|Забить гвоздь.|Cut your nails.|Подстриги ногти.
+elbow|«Локоть».|My elbow hurts.|Болит локоть.|Elbows off the table!|Локти со стола!
+wrist|«Запястье».|A broken wrist.|Сломанное запястье.|A watch on the wrist.|Часы на запястье.
+lung|«Лёгкое».|Healthy lungs.|Здоровые лёгкие.|Lung disease.|Болезнь лёгких.
+liver|«Печень».|Liver problems.|Проблемы с печенью.|Chicken liver.|Куриная печень.
+blood pressure|«Кровяное давление».|High blood pressure.|Высокое давление.|Check your blood pressure.|Измерь давление.
+fever|«Жар, температура».|I have a fever.|У меня жар.|A high fever.|Высокая температура.
+cough|«Кашель» и «кашлять».|A bad cough.|Сильный кашель.|He coughs a lot.|Он сильно кашляет.
+headache|«Головная боль».|I have a headache.|У меня болит голова.|What a headache!|Вот морока!
+pill|«Таблетка».|Take a pill.|Выпей таблетку.|Sleeping pills.|Снотворное.
+pharmacy|«Аптека».|Go to the pharmacy.|Сходи в аптеку.|A 24-hour pharmacy.|Круглосуточная аптека.
+nurse|«Медсестра, медбрат».|Ask the nurse.|Спроси медсестру.|A kind nurse.|Добрая медсестра.
+dentist|«Стоматолог».|Go to the dentist.|Сходи к стоматологу.|I hate the dentist.|Ненавижу ходить к зубному.
+ambulance|«Скорая помощь».|Call an ambulance!|Вызовите скорую!|The ambulance arrived.|Приехала скорая.
+supper|«Ужин» (лёгкий, домашний).|Have supper.|Поужинать.|Supper is ready.|Ужин готов.
+snack|«Перекус».|A quick snack.|Быстрый перекус.|Healthy snacks.|Полезные перекусы.
+beef|«Говядина».|Beef soup.|Суп с говядиной.|Roast beef.|Ростбиф.
+pork|«Свинина».|Pork chops.|Свиные отбивные.|I don't eat pork.|Я не ем свинину.
+sausage|«Колбаса, сосиска».|Sausage and eggs.|Сосиски с яйцами.|A piece of sausage.|Кусок колбасы.
+cheese|«Сыр». Say cheese! — Скажи «сыр»!|Bread and cheese.|Хлеб с сыром.|Say cheese!|Улыбочку!
+butter|«Сливочное масло».|Bread and butter.|Хлеб с маслом.|Fry in butter.|Жарить на масле.
+cream|«Сливки, крем».|Coffee with cream.|Кофе со сливками.|Hand cream.|Крем для рук.
+flour|«Мука».|A bag of flour.|Мешок муки.|Mix flour and eggs.|Смешай муку и яйца.
+honey|«Мёд» и «милый, дорогая» (обращение).|Tea with honey.|Чай с мёдом.|Hi, honey!|Привет, дорогая!
+jam|«Варенье», «пробка» (traffic jam).|Strawberry jam.|Клубничное варенье.|Stuck in a jam.|Застрял в пробке.
+cake|«Торт, пирожное».|A birthday cake.|Торт на день рождения.|A piece of cake.|Проще простого.
+cookie|«Печенье».|Chocolate cookies.|Шоколадное печенье.|Accept cookies.|Принять куки.
+candy|«Конфета, сладости» (амер.).|A box of candy.|Коробка конфет.|Kids love candy.|Дети любят сладкое.
+chocolate|«Шоколад».|Hot chocolate.|Горячий шоколад.|A bar of chocolate.|Плитка шоколада.
+salad|«Салат».|A fresh salad.|Свежий салат.|Make a salad.|Сделай салат.
+onion|«Лук».|Chop the onion.|Нарежь лук.|Onion soup.|Луковый суп.
+garlic|«Чеснок».|Garlic bread.|Чесночный хлеб.|Add some garlic.|Добавь чеснока.
+carrot|«Морковь».|Grow carrots.|Выращивать морковь.|Carrot cake.|Морковный торт.
+cabbage|«Капуста».|Cabbage soup.|Щи.|Pickled cabbage.|Квашеная капуста.
+cucumber|«Огурец». cool as a cucumber — невозмутимый.|Fresh cucumbers.|Свежие огурцы.|Cool as a cucumber.|Спокоен как удав.
+tomato|«Помидор».|Tomato juice.|Томатный сок.|Grow tomatoes.|Выращивать помидоры.
+pepper|«Перец».|Salt and pepper.|Соль и перец.|Bell pepper.|Болгарский перец.
+mushroom|«Гриб».|Pick mushrooms.|Собирать грибы.|Mushroom soup.|Грибной суп.
+berry|«Ягода».|Wild berries.|Лесные ягоды.|Pick berries.|Собирать ягоды.
+orange|«Апельсин» и «оранжевый».|Orange juice.|Апельсиновый сок.|An orange car.|Оранжевая машина.
+banana|«Банан».|A ripe banana.|Спелый банан.|Go bananas.|Сойти с ума.
+lemon|«Лимон».|Tea with lemon.|Чай с лимоном.|Lemon juice.|Лимонный сок.
+grape|«Виноград» (одна ягода).|A bunch of grapes.|Гроздь винограда.|Grape juice.|Виноградный сок.
+cherry|«Вишня, черешня».|Cherry pie.|Вишнёвый пирог.|A cherry tree.|Вишнёвое дерево.
+nut|«Орех» и «чудак» (разг.).|Pine nuts.|Кедровые орехи.|He's a nut.|Он чудик.
+beer|«Пиво».|A cold beer.|Холодное пиво.|Craft beer.|Крафтовое пиво.
+vodka|«Водка».|A glass of vodka.|Рюмка водки.|No vodka, thanks.|Водку не надо, спасибо.
+fork|«Вилка», «развилка».|A knife and fork.|Нож и вилка.|A fork in the road.|Развилка дороги.
+spoon|«Ложка».|A spoon of sugar.|Ложка сахара.|Eat with a spoon.|Ешь ложкой.
+bowl|«Миска, чаша».|A bowl of soup.|Миска супа.|A dog bowl.|Собачья миска.
+pan|«Сковорода».|A frying pan.|Сковородка.|Heat the pan.|Разогрей сковороду.
+pot|«Кастрюля, горшок».|A pot of soup.|Кастрюля супа.|A flower pot.|Цветочный горшок.
+kettle|«Чайник».|Boil the kettle.|Вскипяти чайник.|An electric kettle.|Электрочайник.
+menu|«Меню».|Can I see the menu?|Можно меню?|The main menu.|Главное меню.
+waiter|«Официант».|Call the waiter.|Позови официанта.|A polite waiter.|Вежливый официант.
+tip|«Чаевые» и «совет».|Leave a tip.|Оставь чаевые.|A useful tip.|Полезный совет.
+airport|«Аэропорт».|Go to the airport.|Поехать в аэропорт.|Meet me at the airport.|Встреть меня в аэропорту.
+plane|«Самолёт».|Take a plane.|Лететь самолётом.|The plane is late.|Самолёт задерживается.
+train station|«Вокзал».|Go to the train station.|Поехать на вокзал.|Meet at the train station.|Встретимся на вокзале.
+passenger|«Пассажир».|A passenger seat.|Пассажирское сиденье.|Passengers, please board.|Пассажиры, пройдите на посадку.
+luggage|«Багаж». Неисчисляемое.|Heavy luggage.|Тяжёлый багаж.|Lost luggage.|Потерянный багаж.
+suitcase|«Чемодан».|Pack the suitcase.|Собери чемодан.|A big suitcase.|Большой чемодан.
+passport|«Паспорт».|Show your passport.|Покажи паспорт.|A foreign passport.|Загранпаспорт.
+visa|«Виза».|Apply for a visa.|Подать на визу.|No visa needed.|Виза не нужна.
+customs|«Таможня».|Go through customs.|Пройти таможню.|Customs control.|Таможенный контроль.
+guide|«Гид, путеводитель» и «вести».|A tour guide.|Экскурсовод.|Guide me.|Веди меня.
+sightseeing|«Осмотр достопримечательностей».|Go sightseeing.|Пойти осматривать город.|A sightseeing tour.|Обзорная экскурсия.
+destination|«Пункт назначения».|Our destination.|Наш пункт назначения.|A popular destination.|Популярное направление.
+departure|«Отправление, вылет».|Departure time.|Время отправления.|Before departure.|Перед отъездом.
+delay|«Задержка» и «задерживать».|A two-hour delay.|Задержка на два часа.|Don't delay.|Не откладывай.
+platform|«Платформа, перрон».|Platform two.|Вторая платформа.|Wait on the platform.|Жди на перроне.
+taxi|«Такси».|Take a taxi.|Возьми такси.|Call a taxi.|Вызови такси.
+traffic jam|«Пробка».|A huge traffic jam.|Огромная пробка.|Stuck in a traffic jam.|Застрял в пробке.
+crossroads|«Перекрёсток» (и перен. «распутье»).|Turn at the crossroads.|Поверни на перекрёстке.|I'm at a crossroads.|Я на распутье.
+sidewalk|«Тротуар» (амер.).|Walk on the sidewalk.|Иди по тротуару.|A wide sidewalk.|Широкий тротуар.
+highway|«Шоссе, трасса».|Drive on the highway.|Ехать по трассе.|A busy highway.|Оживлённая трасса.
+gas station|«Заправка» (амер.).|Stop at a gas station.|Остановиться на заправке.|The nearest gas station.|Ближайшая заправка.
+tire|«Шина» и «уставать».|A flat tire.|Спущенное колесо.|Winter tires.|Зимняя резина.
+brake|«Тормоз» и «тормозить».|Hit the brakes.|Ударить по тормозам.|The brakes don't work.|Тормоза не работают.
+seat belt|«Ремень безопасности».|Fasten your seat belt.|Пристегнись.|Wear a seat belt.|Носи ремень.
+license|«Права, лицензия».|A driver's license.|Водительские права.|A business license.|Лицензия на бизнес.
+speed limit|«Ограничение скорости».|Keep to the speed limit.|Соблюдай скорость.|Over the speed limit.|Превышение скорости.
+accident|«Авария, несчастный случай». by accident — случайно.|A car accident.|Автоавария.|By accident.|Случайно.
+happiness|«Счастье».|Money can't buy happiness.|Счастье не купишь.|Pure happiness.|Чистое счастье.
+sadness|«Грусть, печаль».|A feeling of sadness.|Чувство грусти.|Sadness in his eyes.|Грусть в его глазах.
+shame|«Стыд». What a shame! — Как жаль!|What a shame!|Как жаль!|Shame on you!|Как тебе не стыдно!
+guilt|«Чувство вины».|A sense of guilt.|Чувство вины.|Free of guilt.|Без вины.
+pride|«Гордость».|With pride.|С гордостью.|Pride and joy.|Гордость и радость.
+envy|«Зависть» и «завидовать».|I envy you.|Я тебе завидую.|Green with envy.|Позеленел от зависти.
+jealousy|«Ревность».|Jealousy hurts.|Ревность ранит.|Out of jealousy.|Из ревности.
+loneliness|«Одиночество».|Fight loneliness.|Бороться с одиночеством.|Loneliness at night.|Одиночество ночью.
+despair|«Отчаяние».|In despair.|В отчаянии.|Don't despair.|Не отчаивайся.
+anxiety|«Тревога, беспокойство».|Feel anxiety.|Испытывать тревогу.|Anxiety before the meeting.|Тревога перед встречей.
+calmness|«Спокойствие».|Keep your calmness.|Сохраняй спокойствие.|Calmness helps in talks.|Спокойствие помогает в переговорах.
+patience|«Терпение».|Have patience.|Наберись терпения.|I'm losing patience.|Моё терпение кончается.
