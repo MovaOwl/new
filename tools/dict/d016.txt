@@ -1,0 +1,250 @@
+majesty|«Величество, величие».|Your Majesty.|Ваше Величество.|The majesty of the mountains.|Величие гор.
+makeup|«Макияж».|Put on makeup.|Накраситься.|No makeup.|Без макияжа.
+mammal|«Млекопитающее».|Whales are mammals.|Киты — млекопитающие.|A small mammal.|Мелкое млекопитающее.
+mansion|«Особняк».|A big mansion.|Большой особняк.|A luxury mansion.|Роскошный особняк.
+manual|«Инструкция» и «ручной».|Read the manual.|Прочитай инструкцию.|Manual transmission.|Механическая коробка.
+manufacturer|«Производитель».|A car manufacturer.|Автопроизводитель.|Contact the manufacturer.|Свяжись с производителем.
+marathon|«Марафон».|Run a marathon.|Пробежать марафон.|A TV marathon.|Сериальный марафон.
+margin|«Поле, наценка, запас».|Profit margin.|Маржа.|In the margin.|На полях.
+marine|«Морской пехотинец» и «морской».|A US Marine.|Американский морпех.|Marine life.|Морская жизнь.
+marker|«Маркер».|A black marker.|Чёрный маркер.|A marker on the map.|Метка на карте.
+mask|«Маска».|Wear a mask.|Носить маску.|A face mask.|Маска для лица.
+masterpiece|«Шедевр».|A true masterpiece.|Настоящий шедевр.|A masterpiece of design.|Шедевр дизайна.
+mate|«Приятель» и «напарник».|Hi, mate!|Привет, дружище!|A roommate.|Сосед по комнате.
+mathematics|«Математика».|Study mathematics.|Изучать математику.|Basic mathematics.|Основы математики.
+mattress|«Матрас».|A new mattress.|Новый матрас.|A firm mattress.|Жёсткий матрас.
+mayor|«Мэр».|The mayor of Abakan.|Мэр Абакана.|Elect a mayor.|Выбрать мэра.
+mechanic|«Механик».|A car mechanic.|Автомеханик.|Call a mechanic.|Вызови механика.
+melody|«Мелодия».|A sweet melody.|Нежная мелодия.|Hum a melody.|Напевать мелодию.
+memorial|«Мемориал» и «памятный».|A war memorial.|Военный мемориал.|A memorial service.|Панихида.
+mentor|«Наставник».|My mentor.|Мой наставник.|Find a mentor.|Найти наставника.
+merchant|«Купец, торговец».|A rich merchant.|Богатый купец.|Merchant ship.|Торговое судно.
+mercy|«Милосердие, пощада».|Have mercy.|Помилуй.|At the mercy of…|Во власти…
+merit|«Заслуга, достоинство».|On merit.|По заслугам.|Merits and flaws.|Достоинства и недостатки.
+microwave|«Микроволновка».|Heat it in the microwave.|Разогрей в микроволновке.|A microwave meal.|Еда для микроволновки.
+midday|«Полдень».|At midday.|В полдень.|The midday sun.|Полуденное солнце.
+migration|«Миграция».|Bird migration.|Перелёт птиц.|Labor migration.|Трудовая миграция.
+mileage|«Пробег».|Low mileage.|Небольшой пробег.|Good gas mileage.|Экономичный расход.
+milestone|«Веха, важный этап».|An important milestone.|Важная веха.|Reach a milestone.|Достичь рубежа.
+mill|«Мельница, фабрика».|A water mill.|Водяная мельница.|A paper mill.|Бумажная фабрика.
+mineral|«Минерал».|Mineral water.|Минеральная вода.|Rich in minerals.|Богат минералами.
+misery|«Страдание, нищета».|Live in misery.|Жить в нищете.|Put him out of his misery.|Избавь его от мучений.
+missile|«Ракета (боевая)».|A missile launch.|Пуск ракеты.|Missile defense.|ПРО.
+mist|«Дымка, туман».|Morning mist.|Утренний туман.|Lost in the mist.|Затерялся в тумане.
+misunderstanding|«Недоразумение».|A small misunderstanding.|Небольшое недоразумение.|Sorry for the misunderstanding.|Простите за недоразумение.
+mob|«Толпа, мафия».|An angry mob.|Разъярённая толпа.|The mob boss.|Главарь мафии.
+mode|«Режим».|Silent mode.|Беззвучный режим.|Airplane mode.|Режим полёта.
+module|«Модуль».|A training module.|Учебный модуль.|A software module.|Программный модуль.
+moisture|«Влага».|Moisture in the walls.|Сырость в стенах.|Absorb moisture.|Впитывать влагу.
+momentum|«Импульс, инерция».|Gain momentum.|Набирать обороты.|Lose momentum.|Терять темп.
+monarch|«Монарх».|An absolute monarch.|Абсолютный монарх.|The British monarch.|Британский монарх.
+monk|«Монах».|A Buddhist monk.|Буддийский монах.|Live like a monk.|Жить как монах.
+monopoly|«Монополия».|A state monopoly.|Государственная монополия.|Play Monopoly.|Играть в «Монополию».
+morale|«Боевой дух».|Low morale.|Упадок духа.|Boost morale.|Поднять боевой дух.
+mortality|«Смертность».|Infant mortality.|Младенческая смертность.|The mortality rate.|Уровень смертности.
+mosque|«Мечеть».|An old mosque.|Старая мечеть.|Go to the mosque.|Пойти в мечеть.
+motel|«Мотель».|A roadside motel.|Придорожный мотель.|Stay at a motel.|Остановиться в мотеле.
+motorway|«Автострада (брит.)».|Take the motorway.|Ехать по трассе.|A busy motorway.|Загруженная трасса.
+mountain range|«Горный хребет».|The Sayan mountain range.|Саянский хребет.|A long mountain range.|Длинный горный хребет.
+mug|«Кружка» и «ограбить».|A mug of tea.|Кружка чая.|Get mugged.|Быть ограбленным.
+muscle|«Мышца».|Build muscle.|Наращивать мышцы.|Muscle pain.|Мышечная боль.
+musician|«Музыкант».|A street musician.|Уличный музыкант.|A talented musician.|Талантливый музыкант.
+mustache|«Усы».|A thick mustache.|Густые усы.|Grow a mustache.|Отрастить усы.
+narrative|«Повествование, нарратив».|A personal narrative.|Личная история.|Control the narrative.|Контролировать повестку.
+navy|«Военно-морской флот» и «тёмно-синий».|Join the navy.|Пойти на флот.|Navy blue.|Тёмно-синий.
+necklace|«Ожерелье».|A pearl necklace.|Жемчужное ожерелье.|A silver necklace.|Серебряное колье.
+needle|«Игла».|A needle and thread.|Иголка с ниткой.|A needle in a haystack.|Иголка в стоге сена.
+negotiator|«Переговорщик».|A tough negotiator.|Жёсткий переговорщик.|A skilled negotiator.|Опытный переговорщик.
+neighbourhood|«Район, окрестности» (брит. написание).|A quiet neighbourhood.|Тихий район.|In the neighbourhood.|По соседству.
+newcomer|«Новичок, новоприбывший».|Welcome, newcomers!|Добро пожаловать, новенькие!|A newcomer to the city.|Приезжий.
+nightmare|«Кошмар».|A bad nightmare.|Жуткий кошмар.|A total nightmare.|Полный кошмар.
+nonsense|«Чепуха».|Stop this nonsense.|Хватит ерунды.|Utter nonsense.|Полная чушь.
+norm|«Норма».|The social norm.|Общественная норма.|Above the norm.|Выше нормы.
+notebook|«Тетрадь, блокнот, ноутбук».|Write it in your notebook.|Запиши в тетрадь.|A new notebook.|Новый блокнот.
+notion|«Понятие, представление».|I have no notion.|Понятия не имею.|A strange notion.|Странная мысль.
+nuisance|«Неприятность, зануда».|What a nuisance!|Вот досада!|Noise nuisance.|Шумовое беспокойство.
+nutrition|«Питание».|Good nutrition.|Правильное питание.|Nutrition facts.|Пищевая ценность.
+oath|«Клятва, присяга».|Take an oath.|Дать клятву.|Under oath.|Под присягой.
+obesity|«Ожирение».|Child obesity.|Детское ожирение.|Fight obesity.|Бороться с ожирением.
+objective|«Цель» и «объективный».|The main objective.|Главная цель.|An objective opinion.|Объективное мнение.
+observation|«Наблюдение».|Under observation.|Под наблюдением.|A sharp observation.|Меткое замечание.
+observer|«Наблюдатель».|An outside observer.|Сторонний наблюдатель.|A keen observer.|Внимательный наблюдатель.
+obstacle|«Препятствие».|Overcome an obstacle.|Преодолеть препятствие.|A major obstacle.|Серьёзная преграда.
+offender|«Правонарушитель».|A first-time offender.|Впервые оступившийся.|A repeat offender.|Рецидивист.
+offspring|«Потомство».|Their offspring.|Их потомство.|Many offspring.|Многочисленное потомство.
+opera|«Опера».|Go to the opera.|Пойти в оперу.|A soap opera.|Мыльная опера.
+operator|«Оператор».|A tour operator.|Туроператор.|Call the operator.|Позвони оператору.
+opposition|«Оппозиция, сопротивление».|Strong opposition.|Сильное сопротивление.|The opposition party.|Оппозиционная партия.
+orbit|«Орбита».|In orbit.|На орбите.|Orbit the Earth.|Вращаться вокруг Земли.
+orchestra|«Оркестр».|A symphony orchestra.|Симфонический оркестр.|Play in an orchestra.|Играть в оркестре.
+ordeal|«Тяжёлое испытание».|A terrible ordeal.|Ужасное испытание.|Survive the ordeal.|Пережить испытание.
+origin|«Происхождение».|Country of origin.|Страна происхождения.|The origin of the word.|Происхождение слова.
+outbreak|«Вспышка (болезни, войны)».|A flu outbreak.|Вспышка гриппа.|The outbreak of war.|Начало войны.
+outfit|«Наряд, экипировка».|A nice outfit.|Классный наряд.|A winter outfit.|Зимний комплект.
+outlet|«Розетка, точка продаж, выход».|A power outlet.|Розетка.|An outlet store.|Аутлет.
+outlook|«Перспектива, взгляд».|A positive outlook.|Позитивный взгляд.|Market outlook.|Прогноз рынка.
+overview|«Обзор».|A short overview.|Краткий обзор.|Give an overview.|Дать общее представление.
+owl|«Сова».|A night owl.|Сова (о человеке).|Wise as an owl.|Мудрый как сова.
+oxygen|«Кислород».|Fresh oxygen.|Свежий кислород.|Lack of oxygen.|Нехватка кислорода.
+pad|«Подушечка, блокнот, площадка».|A note pad.|Блокнот.|A launch pad.|Стартовая площадка.
+painter|«Художник, маляр».|A famous painter.|Известный художник.|Hire a painter.|Нанять маляра.
+palm|«Ладонь, пальма».|Read your palm.|Гадать по руке.|A palm tree.|Пальма.
+parade|«Парад».|A military parade.|Военный парад.|Victory Day parade.|Парад Победы.
+paradise|«Рай».|A tropical paradise.|Тропический рай.|A paradise for kids.|Рай для детей.
+paragraph|«Абзац».|The first paragraph.|Первый абзац.|Write a paragraph.|Написать абзац.
+parish|«Приход (церковный)».|A small parish.|Небольшой приход.|The parish church.|Приходская церковь.
+participation|«Участие».|Active participation.|Активное участие.|Thanks for your participation.|Спасибо за участие.
+particle|«Частица».|Dust particles.|Частицы пыли.|A tiny particle.|Крошечная частица.
+partnership|«Партнёрство».|A business partnership.|Деловое партнёрство.|In partnership with…|В партнёрстве с…
+pasta|«Макароны, паста».|Cook pasta.|Сварить макароны.|Pasta with cheese.|Макароны с сыром.
+pastry|«Выпечка, тесто».|Fresh pastry.|Свежая выпечка.|Puff pastry.|Слоёное тесто.
+patch|«Заплатка, участок».|A patch on the jeans.|Заплатка на джинсах.|A vegetable patch.|Огородная грядка.
+patent|«Патент».|Apply for a patent.|Подать заявку на патент.|Patent pending.|Патент на рассмотрении.
+patrol|«Патруль».|Police patrol.|Полицейский патруль.|On patrol.|В патруле.
+pavement|«Тротуар».|Walk on the pavement.|Иди по тротуару.|Wet pavement.|Мокрый тротуар.
+paw|«Лапа».|A cat's paw.|Кошачья лапа.|Give me your paw.|Дай лапу.
+peach|«Персик».|A ripe peach.|Спелый персик.|Peach juice.|Персиковый сок.
+peanut|«Арахис».|Peanut butter.|Арахисовая паста.|Work for peanuts.|Работать за копейки.
+pear|«Груша».|A juicy pear.|Сочная груша.|Pear-shaped.|Пошло наперекосяк.
+pearl|«Жемчуг».|Pearl earrings.|Жемчужные серьги.|Pearls of wisdom.|Перлы мудрости.
+peasant|«Крестьянин».|A poor peasant.|Бедный крестьянин.|Peasant life.|Крестьянская жизнь.
+pedestrian|«Пешеход».|A pedestrian crossing.|Пешеходный переход.|Pedestrian zone.|Пешеходная зона.
+peer|«Ровесник, равный».|Peer pressure.|Давление сверстников.|His peers.|Его сверстники.
+penny|«Пенни, копейка».|Every penny counts.|Каждая копейка на счету.|Not a penny.|Ни копейки.
+percentage|«Процент, доля».|A small percentage.|Небольшой процент.|The percentage of buyers.|Доля покупателей.
+perfume|«Духи».|Expensive perfume.|Дорогие духи.|Smell of perfume.|Запах духов.
+persistence|«Упорство».|Persistence pays off.|Упорство окупается.|With persistence.|Настойчиво.
+petition|«Петиция, прошение».|Sign a petition.|Подписать петицию.|File a petition.|Подать прошение.
+petrol|«Бензин (брит.)».|Fill up with petrol.|Заправиться.|A petrol station.|АЗС.
+phase|«Фаза, этап».|The first phase.|Первый этап.|Just a phase.|Это пройдёт.
+photographer|«Фотограф».|A wedding photographer.|Свадебный фотограф.|Hire a photographer.|Нанять фотографа.
+pianist|«Пианист».|A famous pianist.|Известный пианист.|A jazz pianist.|Джазовый пианист.
+piano|«Пианино».|Play the piano.|Играть на пианино.|Piano lessons.|Уроки фортепиано.
+pie|«Пирог».|Apple pie.|Яблочный пирог.|Easy as pie.|Проще простого.
+pigeon|«Голубь».|Feed the pigeons.|Кормить голубей.|A carrier pigeon.|Почтовый голубь.
+pilgrim|«Паломник».|A pilgrim to Jerusalem.|Паломник в Иерусалим.|Pilgrims arrived.|Паломники прибыли.
+pillar|«Столб, опора».|A stone pillar.|Каменная колонна.|A pillar of society.|Опора общества.
+pipeline|«Трубопровод, конвейер».|A gas pipeline.|Газопровод.|In the pipeline.|В разработке.
+pirate|«Пират».|A pirate ship.|Пиратский корабль.|A pirate copy.|Пиратская копия.
+pistol|«Пистолет».|A water pistol.|Водяной пистолет.|Load the pistol.|Зарядить пистолет.
+pit|«Яма, косточка».|A deep pit.|Глубокая яма.|A cherry pit.|Вишнёвая косточка.
+pizza|«Пицца».|Order a pizza.|Заказать пиццу.|A slice of pizza.|Кусок пиццы.
+placement|«Размещение, стажировка».|Furniture placement.|Расстановка мебели.|A job placement.|Трудоустройство.
+plague|«Чума, бедствие».|The plague.|Чума.|Avoid it like the plague.|Избегать как огня.
+planning|«Планирование».|Good planning.|Хорошее планирование.|Urban planning.|Градостроительство.
+plantation|«Плантация».|A tea plantation.|Чайная плантация.|Work on a plantation.|Работать на плантации.
+playground|«Детская площадка».|Kids on the playground.|Дети на площадке.|A new playground.|Новая детская площадка.
+plea|«Просьба, мольба».|A plea for help.|Мольба о помощи.|A guilty plea.|Признание вины.
+pledge|«Обещание, залог» и «обещать».|Make a pledge.|Дать обещание.|Pledge your house.|Заложить дом.
+plumber|«Сантехник». b не читается.|Call a plumber.|Вызови сантехника.|The plumber is late.|Сантехник опаздывает.
+pneumonia|«Пневмония». p не читается.|He has pneumonia.|У него воспаление лёгких.|Treat pneumonia.|Лечить пневмонию.
+poet|«Поэт».|A Russian poet.|Русский поэт.|A great poet.|Великий поэт.
+pollution|«Загрязнение».|Air pollution.|Загрязнение воздуха.|Noise pollution.|Шумовое загрязнение.
+pond|«Пруд».|A small pond.|Маленький пруд.|Fish in the pond.|Рыба в пруду.
+pope|«Папа римский».|The Pope's visit.|Визит Папы.|Is the Pope Catholic?|А то! (очевидно)
+portfolio|«Портфолио, портфель».|A design portfolio.|Портфолио дизайнера.|An investment portfolio.|Инвестиционный портфель.
+postcard|«Открытка».|Send a postcard.|Отправить открытку.|A postcard view.|Вид как на открытке.
+postman|«Почтальон».|The postman came.|Пришёл почтальон.|Ask the postman.|Спроси почтальона.
+pottery|«Керамика, гончарное дело».|Pottery class.|Урок гончарного дела.|Old pottery.|Старая керамика.
+pound|«Фунт».|Ten pounds.|Десять фунтов.|Lose a few pounds.|Сбросить пару килограммов.
+precaution|«Мера предосторожности».|Take precautions.|Принять меры.|As a precaution.|На всякий случай.
+precision|«Точность».|With precision.|С точностью.|Precision tools.|Точные инструменты.
+predator|«Хищник».|A top predator.|Высший хищник.|Online predators.|Сетевые хищники.
+prediction|«Прогноз, предсказание».|Make a prediction.|Сделать прогноз.|My prediction came true.|Моё предсказание сбылось.
+prejudice|«Предрассудок, предубеждение».|Pride and Prejudice.|«Гордость и предубеждение».|Without prejudice.|Без предубеждения.
+premises|«Помещение, территория».|On the premises.|На территории.|Office premises.|Офисное помещение.
+prescription|«Рецепт (врача)».|A doctor's prescription.|Рецепт от врача.|Prescription glasses.|Очки по рецепту.
+preservation|«Сохранение, консервация».|Food preservation.|Консервирование.|Preservation of nature.|Сохранение природы.
+prey|«Добыча, жертва».|Birds of prey.|Хищные птицы.|Easy prey.|Лёгкая добыча.
+principal|«Директор школы» и «главный».|The school principal.|Директор школы.|The principal reason.|Главная причина.
+print|«Печать, отпечаток» и «печатать».|Print the contract.|Распечатай договор.|The small print.|Мелкий шрифт.
+prisoner|«Заключённый, пленник».|A prisoner of war.|Военнопленный.|Release a prisoner.|Освободить заключённого.
+privilege|«Привилегия».|It's a privilege.|Это честь.|Special privileges.|Особые привилегии.
+probe|«Зонд, расследование» и «исследовать».|A space probe.|Космический зонд.|A police probe.|Полицейское расследование.
+proceeds|«Выручка».|The proceeds from the sale.|Выручка от продажи.|Net proceeds.|Чистая выручка.
+producer|«Продюсер, производитель».|A film producer.|Кинопродюсер.|A milk producer.|Производитель молока.
+profile|«Профиль».|A profile picture.|Аватарка.|Keep a low profile.|Не высовываться.
+prohibition|«Запрет».|A prohibition on smoking.|Запрет на курение.|The Prohibition era.|Эпоха сухого закона.
+projection|«Прогноз, проекция».|Sales projection.|Прогноз продаж.|A projection screen.|Проекционный экран.
+promotion|«Повышение, акция».|Get a promotion.|Получить повышение.|A special promotion.|Специальная акция.
+proportion|«Пропорция, доля».|In proportion.|Пропорционально.|Out of proportion.|Чересчур раздуто.
+prosecutor|«Прокурор».|The prosecutor's office.|Прокуратура.|A tough prosecutor.|Жёсткий прокурор.
+prospect|«Перспектива».|Good prospects.|Хорошие перспективы.|The prospect of moving.|Перспектива переезда.
+prosperity|«Процветание».|Peace and prosperity.|Мир и процветание.|Economic prosperity.|Экономическое благополучие.
+prostitute|«Проститутка».|A street prostitute.|Уличная проститутка.|Prostitute his talent.|Продавать свой талант.
+protein|«Белок, протеин».|High in protein.|Богато белком.|A protein shake.|Протеиновый коктейль.
+province|«Провинция, область».|A Canadian province.|Канадская провинция.|In the provinces.|В провинции.
+provision|«Обеспечение, условие».|Provision of services.|Оказание услуг.|A provision in the contract.|Пункт договора.
+psychologist|«Психолог». p не читается.|See a psychologist.|Сходить к психологу.|A child psychologist.|Детский психолог.
+publication|«Публикация, издание».|Ready for publication.|Готово к публикации.|A monthly publication.|Ежемесячное издание.
+publicity|«Огласка, реклама».|Bad publicity.|Плохая реклама.|Get publicity.|Привлечь внимание.
+publisher|«Издатель».|A book publisher.|Книжное издательство.|Find a publisher.|Найти издателя.
+pulse|«Пульс».|Check the pulse.|Проверить пульс.|A fast pulse.|Учащённый пульс.
+pump|«Насос» и «качать».|A water pump.|Водяной насос.|Pump up the tires.|Подкачать шины.
+pumpkin|«Тыква».|Pumpkin soup.|Тыквенный суп.|A Halloween pumpkin.|Тыква на Хэллоуин.
+pupil|«Ученик, зрачок».|A good pupil.|Хороший ученик.|Dilated pupils.|Расширенные зрачки.
+puppet|«Кукла (марионетка)».|A puppet show.|Кукольный театр.|A puppet government.|Марионеточное правительство.
+purse|«Кошелёк, сумочка».|Lost my purse.|Потерял кошелёк.|A leather purse.|Кожаная сумочка.
+pursuit|«Погоня, стремление».|The pursuit of happiness.|Стремление к счастью.|In hot pursuit.|По горячим следам.
+pyramid|«Пирамида».|The Egyptian pyramids.|Египетские пирамиды.|A pyramid scheme.|Финансовая пирамида.
+quarrel|«Ссора» и «ссориться».|A family quarrel.|Семейная ссора.|Don't quarrel.|Не ссорьтесь.
+quest|«Поиск, квест».|A quest for truth.|Поиск истины.|Complete a quest.|Пройти квест.
+queue|«Очередь (брит.)».|Stand in a queue.|Стоять в очереди.|Jump the queue.|Пролезть без очереди.
+quilt|«Стёганое одеяло».|A warm quilt.|Тёплое одеяло.|A patchwork quilt.|Лоскутное одеяло.
+racism|«Расизм».|Fight racism.|Бороться с расизмом.|No to racism.|Нет расизму.
+rack|«Стойка, полка».|A shoe rack.|Обувница.|A roof rack.|Багажник на крыше.
+radar|«Радар».|On the radar.|В поле зрения.|Under the radar.|Незаметно.
+radiation|«Излучение, радиация».|Radiation level.|Уровень радиации.|Solar radiation.|Солнечное излучение.
+raft|«Плот».|Build a raft.|Построить плот.|A raft on the river.|Плот на реке.
+rage|«Ярость».|Road rage.|Агрессия на дороге.|All the rage.|Последний писк моды.
+raid|«Налёт, облава».|A police raid.|Полицейская облава.|An air raid.|Авианалёт.
+rail|«Рельс, перила».|By rail.|По железной дороге.|Hold the rail.|Держись за перила.
+rainfall|«Осадки».|Heavy rainfall.|Сильные осадки.|Annual rainfall.|Годовое количество осадков.
+ranch|«Ранчо».|A cattle ranch.|Скотоводческое ранчо.|Live on a ranch.|Жить на ранчо.
+ransom|«Выкуп».|Pay a ransom.|Заплатить выкуп.|Hold for ransom.|Требовать выкуп.
+ratio|«Соотношение».|Price-to-quality ratio.|Соотношение цены и качества.|A ratio of two to one.|Соотношение два к одному.
+razor|«Бритва».|A sharp razor.|Острая бритва.|An electric razor.|Электробритва.
+realm|«Царство, сфера».|In the realm of fantasy.|В области фантазий.|The realm of science.|Сфера науки.
+rear|«Тыл, задняя часть» и «задний».|The rear door.|Задняя дверь.|Rear view mirror.|Зеркало заднего вида.
+rebel|«Бунтарь».|A teenage rebel.|Подросток-бунтарь.|Rebel forces.|Повстанцы.
+rebellion|«Восстание, бунт».|An armed rebellion.|Вооружённое восстание.|Teenage rebellion.|Подростковый бунт.
+receiver|«Получатель, трубка».|Pick up the receiver.|Снять трубку.|The receiver of the letter.|Получатель письма.
+reception|«Приём, ресепшен».|Ask at reception.|Спроси на ресепшене.|A wedding reception.|Свадебный банкет.
+recession|«Спад, рецессия».|An economic recession.|Экономический спад.|During the recession.|Во время кризиса.
+recipient|«Получатель».|The recipient of the award.|Лауреат награды.|Payment recipient.|Получатель платежа.
+reckoning|«Расплата, расчёт».|Day of reckoning.|Судный день.|By my reckoning.|По моим подсчётам.
+recognition|«Признание, распознавание».|Face recognition.|Распознавание лиц.|Gain recognition.|Получить признание.
+recording|«Запись».|A video recording.|Видеозапись.|A studio recording.|Студийная запись.
+recruitment|«Набор персонала».|Staff recruitment.|Набор сотрудников.|A recruitment agency.|Кадровое агентство.
+reef|«Риф».|A coral reef.|Коралловый риф.|Dive on the reef.|Нырять у рифа.
+referee|«Судья (спорт), рекомендатель».|The referee blew the whistle.|Судья свистнул.|A football referee.|Футбольный судья.
+referendum|«Референдум».|Hold a referendum.|Провести референдум.|Vote in a referendum.|Голосовать на референдуме.
+refrigerator|«Холодильник».|Keep in the refrigerator.|Хранить в холодильнике.|A new refrigerator.|Новый холодильник.
+refugee|«Беженец».|A refugee camp.|Лагерь беженцев.|Help refugees.|Помогать беженцам.
+regime|«Режим».|A strict regime.|Строгий режим.|A political regime.|Политический режим.
+rehearsal|«Репетиция».|A dress rehearsal.|Генеральная репетиция.|Rehearsal at six.|Репетиция в шесть.
+reign|«Правление» и «царствовать». g не читается.|The reign of Peter.|Правление Петра.|Reign supreme.|Господствовать.
+reliability|«Надёжность».|Car reliability.|Надёжность машины.|Check reliability.|Проверить надёжность.
+remedy|«Средство, лекарство».|A home remedy.|Домашнее средство.|A remedy for colds.|Средство от простуды.
+removal|«Удаление, вывоз, переезд».|Snow removal.|Уборка снега.|A removal company.|Компания по переездам.
+rental|«Аренда, прокат».|A car rental.|Прокат машин.|Rental income.|Доход от аренды.
+reporter|«Репортёр».|A TV reporter.|Телерепортёр.|Talk to a reporter.|Поговорить с журналистом.
+republic|«Республика».|The Republic of Khakassia.|Республика Хакасия.|A banana republic.|Банановая республика.
+reservation|«Бронь, оговорка».|Make a reservation.|Забронировать.|Without reservation.|Безоговорочно.
+reservoir|«Водохранилище, резервуар».|A big reservoir.|Большое водохранилище.|An oil reservoir.|Нефтяной резервуар.
+residence|«Место жительства, резиденция».|Permanent residence.|Постоянное место жительства.|A summer residence.|Летняя резиденция.
+resignation|«Отставка, увольнение по собственному».|Hand in a resignation.|Подать заявление об уходе.|A letter of resignation.|Заявление об увольнении.
+resolution|«Решение, разрешение (экрана)».|New Year's resolution.|Новогоднее обещание себе.|High resolution.|Высокое разрешение.
+resort|«Курорт, прибегать». last resort — крайняя мера.|A ski resort.|Горнолыжный курорт.|As a last resort.|В крайнем случае.
+restoration|«Восстановление, реставрация».|Building restoration.|Реставрация здания.|Restoration of power.|Восстановление электричества.
+restriction|«Ограничение».|Speed restriction.|Ограничение скорости.|No restrictions.|Без ограничений.
+retailer|«Розничный продавец».|A big retailer.|Крупный ритейлер.|An online retailer.|Интернет-магазин.
+reunion|«Встреча (воссоединение)».|A school reunion.|Встреча выпускников.|A family reunion.|Семейная встреча.
+revenge|«Месть».|Take revenge.|Отомстить.|Sweet revenge.|Сладкая месть.
+revolt|«Бунт» и «восставать».|A peasant revolt.|Крестьянское восстание.|Revolt against the rules.|Восстать против правил.
+rhyme|«Рифма» и «рифмоваться».|A nursery rhyme.|Детский стишок.|Without rhyme or reason.|Без всякой причины.
+rib|«Ребро».|A broken rib.|Сломанное ребро.|Pork ribs.|Свиные рёбрышки.
+ribbon|«Лента».|A red ribbon.|Красная лента.|Cut the ribbon.|Перерезать ленточку.
+rider|«Наездник, гонщик».|A horse rider.|Наездник.|A bike rider.|Велосипедист.
+rifle|«Винтовка».|A hunting rifle.|Охотничье ружьё.|Load the rifle.|Зарядить винтовку.
+riot|«Бунт, беспорядки».|Riot police.|ОМОН.|Run riot.|Выйти из-под контроля.
