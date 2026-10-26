@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Словопад</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Russo+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Russo+One&display=swap" media="print" onload="this.media='all'">
 <style>
 /* Layout: one-screen game (HUD · falling field · 2×2 answers) + full-screen hub with five tabs.
    Theme: words are bricks — brick accent for progress, blueprint blue for actions. */
@@ -248,6 +248,7 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 .ex .t span{color:var(--muted)}
 .ex .t i{color:var(--muted);font-style:italic}
 .ex.locked{opacity:.5}
+.dsc{font-size:15px;line-height:1.45;margin:0 0 4px}
 .mini{flex:none;border:0;width:34px;height:34px;border-radius:10px;background:var(--panel2);box-shadow:0 0 0 1px var(--line);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
 .mini svg{width:16px;height:16px}
 .pos{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brick);margin-top:6px}
@@ -311,6 +312,7 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 
 <script src="words.js"></script>
 <script src="phrases.js"></script>
+<script src="dict.js"></script>
 <script>
 /* ================= data ================= */
 const RAW = window.WORDS_RAW || 'be|быть\nhave|иметь\ndo|делать\nsay|сказать\ngo|идти';
@@ -415,8 +417,8 @@ const st = en => (S.w[en] ? S.w[en].s : 0);
 
 const nLearned = () => W.reduce((a, w) => a + (st(w.en) === 2), 0);
 const nBricks = () => W.reduce((a, w) => a + (st(w.en) >= 2), 0);
-const pOpen = p => p.keys.every(k => st(k) >= 2) && p.keys.some(k => st(k) === 2);
-const pFresh = p => Math.max(0, ...p.keys.map(k => (S.w[k] && S.w[k].s === 2 && S.w[k].t) || 0));
+const pOpen = p => p.keys.every(k => st(k) >= 2); // все слова фразы выучены или отмечены «знал»
+const pFresh = p => Math.max(0, ...p.keys.map(k => (S.w[k] && S.w[k].t) || 0));
 const pUnlocked = () => P.filter(pOpen);
 const pLearned = () => P.filter(p => st(p.k) === 2);
 const learningList = () => W.filter(w => st(w.en) === 1);
@@ -829,22 +831,8 @@ function showModal(cb) {
 }
 
 
-/* ================= word sheet ================= */
-const POS = { noun: 'существительное', verb: 'глагол', adjective: 'прилагательное', adverb: 'наречие', pronoun: 'местоимение', preposition: 'предлог', conjunction: 'союз', interjection: 'междометие', determiner: 'определитель' };
-const DKEY = 'slovopad-dict-v1';
-let dictCache = {}; try { dictCache = JSON.parse(localStorage.getItem(DKEY)) || {}; } catch (e) {}
-function dictSave() { try { const k = Object.keys(dictCache); if (k.length > 600) k.slice(0, 100).forEach(x => delete dictCache[x]); localStorage.setItem(DKEY, JSON.stringify(dictCache)); } catch (e) {} }
-function openUrl(u) { if (window.Android && Android.openUrl) { try { Android.openUrl(u); return; } catch (e) {} } window.open(u, '_blank'); }
-async function getJSON(url, ms = 9000) {
-  const c = new AbortController(), t = setTimeout(() => c.abort(), ms);
-  try { const r = await fetch(url, { signal: c.signal }); if (!r.ok) return { status: r.status }; return { data: await r.json() }; }
-  finally { clearTimeout(t); }
-}
-async function translate(text) {
-  const { data } = await getJSON('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=' + encodeURIComponent(text));
-  if (!data || !data[0]) throw new Error('no');
-  return data[0].map(x => x[0]).join('');
-}
+/* ================= word sheet (всё офлайн, словарь встроен) ================= */
+const DICT = window.DICT || {};
 let infoResume = false, infoStack = [];
 function openInfo(w, push) {
   if (running) { running = false; elapsed += performance.now() - t0; cancelAnimationFrame(raf); infoResume = true; }
@@ -852,37 +840,34 @@ function openInfo(w, push) {
   if (push) infoStack.push(push);
   const r = S.w[K(w)] || { s: 0, m: 0, e: 0 }, M = mx(w);
   const status = ['новое', 'учу', 'выучено', 'знал'][r.s];
-  const phr = w.ph ? [] : P.filter(p => p.keys.includes(w.en)).sort((a, b) => pOpen(b) - pOpen(a)).slice(0, 8);
-  const ex = p => `<div class="ex ${pOpen(p) ? '' : 'locked'}"><div class="t"><b>${esc(p.en)}</b><span>${esc(p.ru)}</span>${pOpen(p) ? '' : '<i>откроется, когда выучишь остальные слова</i>'}</div><button class="mini" data-say="${esc(p.en)}" aria-label="Озвучить">${SPK}</button></div>`;
+  const d = w.ph ? null : DICT[w.en];
+  const phr = w.ph ? [] : P.filter(p => p.keys.includes(w.en) && !(d && d.slice(1).some(x => x[0].toLowerCase().replace(/[.?!]$/, "") === p.en.toLowerCase().replace(/[.?!]$/, "")))).sort((a, b) => pOpen(b) - pOpen(a)).slice(0, 8);
+  const lockTxt = p => { const need = p.keys.filter(k => st(k) < 2); return need.length ? `<i>откроется, когда выучишь: ${need.map(esc).join(', ')}</i>` : ''; };
+  const ex = p => `<div class="ex ${pOpen(p) ? '' : 'locked'}"><div class="t"><b>${esc(p.en)}</b><span>${esc(p.ru)}</span>${pOpen(p) ? '' : lockTxt(p)}</div><button class="mini" data-say="${esc(p.en)}" aria-label="Озвучить">${SPK}</button></div>`;
+  const dex = x => `<div class="ex"><div class="t"><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div><button class="mini" data-say="${esc(x[0])}" aria-label="Озвучить">${SPK}</button></div>`;
   const el = $('sheet');
   el.innerHTML = `<div class="sh-top"><button class="back" id="shBack">← Назад</button><button class="mini sp2" data-say="${esc(w.en)}" aria-label="Озвучить">${SPK}</button></div>
   <div class="sh-body">
-    <div class="sh-head"><div class="sh-en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="sh-phon" id="shPhon"></div><div class="sh-ru">${esc(w.ru)}</div>
+    <div class="sh-head"><div class="sh-en${w.ph ? ' ph' : ''}">${esc(w.en)}</div><div class="sh-ru">${esc(w.ru)}</div>
       <div class="sh-meta num">${w.ph ? 'Фраза' : `Слово №${w.i + 1} по частоте`} · ${status}${r.s === 1 ? ` · прогресс ${r.m}/${M}` : ''}${r.e ? ` · ошибок ${r.e}` : ''}</div></div>
     ${w.ph ? `<section class="block"><h3>Из каких слов</h3><div class="kw">${w.keys.map(k => BY[k] ? `<button data-word="${esc(k)}">${esc(k)} — ${esc(BY[k].ru)}</button>` : '').join('')}</div></section>`
-      : `<section class="block"><h3>Фразы с этим словом <span>${phr.length ? '' : 'пока нет'}</span></h3>${phr.map(ex).join('') || '<p>Для этого слова фраз в банке пока нет.</p>'}</section>
-    <section class="block" id="shDict"><h3>Значения и примеры <span>англ. словарь</span></h3><p>Загружаю…</p></section>`}
-    <section class="block"><h3>Разобраться глубже</h3>
-      <p>ChatGPT распишет ${w.ph ? 'фразу' : 'слово'} подробно: значения, примеры с переводом, похожие слова, как запомнить.</p>
-      <div class="btnrow"><button class="btn" id="shGpt">Подробно в ChatGPT</button><button class="btn ghost" id="shRev">Примеры в Reverso</button>${w.ph ? '' : '<button class="btn ghost" id="shCam">Словарь Cambridge</button>'}</div>
+      : `${d ? `<section class="block" id="shDict"><h3>Что значит и как сказать</h3><p class="dsc">${esc(d[0])}</p>${d.slice(1).map(dex).join('')}</section>` : ''}
+    <section class="block"><h3>Ещё фразы с этим словом <span>${phr.length ? '' : 'пока нет'}</span></h3>${phr.map(ex).join('') || '<p>Других фраз с этим словом в банке пока нет.</p>'}</section>`}
+    <section class="block"><h3>Разобраться ещё глубже <span>по желанию</span></h3>
+      <p>Всё нужное уже здесь, без интернета. Если захочешь копнуть глубже — ChatGPT распишет ${w.ph ? 'фразу' : 'слово'} подробно.</p>
+      <div class="btnrow"><button class="btn ghost" id="shGpt">Подробно в ChatGPT</button></div>
     </section>
   </div>`;
   el.hidden = false; el.querySelector('.sh-body').scrollTop = 0;
   el.onclick = e => {
     const s = e.target.closest('[data-say]'); if (s) return say(s.dataset.say, true);
     const wd = e.target.closest('[data-word]'); if (wd && BY[wd.dataset.word]) return openInfo(BY[wd.dataset.word], w);
-    const t = e.target.closest('[data-tr]'); if (t) {
-      t.textContent = 'Перевожу…';
-      translate(t.dataset.tr).then(x => { t.outerHTML = `<div class="trout">${esc(x)}</div>`; }).catch(() => { t.textContent = 'Нет интернета — попробуй позже'; });
-    }
   };
   $('shBack').onclick = closeInfo;
   const gptText = w.ph
     ? `Я учу английский, уровень начальный. Разбери фразу «${w.en}» (${w.ru}): дословный перевод по словам, как и когда так говорят, 5 похожих примеров на простом английском с переводом на русский. Коротко и понятно.`
     : `Я учу английский, уровень начальный. Объясни слово «${w.en}» (${w.ru}) по-русски: 1) основные значения с переводом; 2) 5 примеров употребления на простом английском с переводом; 3) частые словосочетания; 4) похожие слова и чем отличаются; 5) как легко запомнить. Без лишней воды.`;
   $('shGpt').onclick = () => share(gptText);
-  $('shRev').onclick = () => openUrl('https://context.reverso.net/перевод/английский-русский/' + encodeURIComponent(w.en));
-  if (!w.ph) { $('shCam').onclick = () => openUrl('https://dictionary.cambridge.org/dictionary/english-russian/' + encodeURIComponent(w.en.toLowerCase().replace(/ /g, '-'))); loadDict(w); }
   say(w.en, true);
 }
 function closeInfo() {
@@ -891,37 +876,6 @@ function closeInfo() {
   $('sheet').hidden = true; $('sheet').innerHTML = '';
   if (infoResume && !paused) { infoResume = false; running = true; t0 = performance.now(); raf = requestAnimationFrame(tick); }
   infoResume = false;
-}
-async function loadDict(w) {
-  const box = () => $('shDict');
-  let d = dictCache[w.en];
-  if (!d) {
-    try {
-      const res = await getJSON('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(w.en.toLowerCase()));
-      if (res.status === 404) d = { none: true };
-      else if (res.data) d = res.data;
-      if (d) { dictCache[w.en] = d; dictSave(); }
-    } catch (e) {}
-  }
-  if (!box() || $('sheet').hidden) return;
-  if (!d) { box().innerHTML = '<h3>Значения и примеры</h3><p>Нет интернета, словарь не загрузился. Фразы выше и кнопки ниже работают.</p>'; return; }
-  if (d.none || !d[0]) { box().innerHTML = '<h3>Значения и примеры</h3><p>В английском словаре этого слова нет — обычно так бывает со словосочетаниями. Загляни в Reverso или спроси ChatGPT.</p>'; return; }
-  const e0 = d[0], phon = e0.phonetic || (e0.phonetics || []).map(x => x.text).find(Boolean) || '';
-  const audio = (e0.phonetics || []).map(x => x.audio).find(a => a && /us/.test(a)) || (e0.phonetics || []).map(x => x.audio).find(Boolean);
-  if ($('shPhon')) $('shPhon').innerHTML = esc(phon) + (audio ? ` <button class="tr" id="shAud">▶ голос носителя</button>` : '');
-  if (audio && $('shAud')) $('shAud').onclick = () => { try { new Audio(audio).play(); } catch (e) {} };
-  const syn = new Set(); let html = '<h3>Значения и примеры <span>англ. словарь</span></h3>';
-  d.flatMap(x => x.meanings || []).slice(0, 4).forEach(m => {
-    html += `<div class="pos">${esc(POS[m.partOfSpeech] || m.partOfSpeech)}</div>`;
-    (m.definitions || []).slice(0, 2).forEach(df => {
-      const both = df.definition + (df.example ? ' — ' + df.example : '');
-      html += `<div class="ex"><div class="t"><span>${esc(df.definition)}</span>${df.example ? `<b>${esc(df.example)}</b>` : ''}<button class="tr" data-tr="${esc(both)}">Перевести на русский</button></div>${df.example ? `<button class="mini" data-say="${esc(df.example)}" aria-label="Озвучить пример">${SPK}</button>` : ''}</div>`;
-      (df.synonyms || []).forEach(s => syn.add(s));
-    });
-    (m.synonyms || []).forEach(s => syn.add(s));
-  });
-  if (syn.size) html += `<div class="pos">похожие слова</div><div class="syn">${[...syn].slice(0, 8).map(s => `<span>${esc(s)}</span>`).join('')}</div>`;
-  box().innerHTML = html;
 }
 
 /* ================= hub ================= */
@@ -983,7 +937,7 @@ function tabHome() {
         <div><dt>Оценка</dt><dd class="num">${fmt(learned * PRICE_M2)} ₽</dd><small>условно по ${fmt(PRICE_M2)} ₽/м²</small></div>
         <div><dt>Этажность</dt><dd>${STAGES[sg].f || '—'}</dd><small>растёт со стройкой</small></div>
         <div><dt>В работе</dt><dd class="num">${inWork} ${pl(inWork, 'слово', 'слова', 'слов')}</dd><small>к повтору сегодня: ${dueList().length}</small></div>
-        <div><dt>Фразы открыты</dt><dd class="num">${pUnlocked().length} из ${P.length}</dd><small>собираются из выученных слов</small></div>
+        <div><dt>Фразы открыты</dt><dd class="num">${pUnlocked().length} из ${P.length}</dd><small>из выученных и знакомых слов</small></div>
         <div><dt>Фразы выучены</dt><dd class="num">${pLearned().length}</dd><small>режим «Фразы»</small></div>
       </dl>
       <div class="flabel">Характеристики владельца</div>
@@ -1036,7 +990,7 @@ function tabPlan() {
       <li><b>Очки идут в прогресс слова.</b> Чтобы выучить слово, нужно набрать ${MAX}: быстрыми ответами это 6 попаданий, медленными 8–12. Ошибка отнимает 150.</li>
       <li><b>Выученные слова возвращаются на повтор</b> по интервалам, чтобы осели в долгой памяти.</li>
       <li><b>Объект строится только из выученных слов:</b> каждое слово — кирпич и 1 м². Опыт и уровень идут за каждый верный ответ, а <b>комбо</b> (верные подряд) даёт к опыту до ×2.</li>
-      <li><b>Фразы открываются сами</b> из твоих слов: все слова фразы тебе известны, и хотя бы одно ты выучил в игре. Свежевыученные слова идут первыми. Учить их — в режиме «Фразы»: 3 быстрых попадания, и фраза твоя.</li>
+      <li><b>Фразы открываются сами</b> из твоих слов: каждое слово фразы ты выучил в игре или отметил «знал». Ни одного незнакомого слова. Свежие слова идут первыми. Учить их — в режиме «Фразы»: 3 быстрых попадания, и фраза твоя.</li>
       <li><b>Наборы и режимы</b> выбираются внизу меню: тема слов, на слух, работа над ошибками, повторы, фразы.</li>
     </ol>
   </section>`;

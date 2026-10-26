@@ -15,6 +15,26 @@ def lem(t):
       if len(b)>2 and b[-1]==b[-2] and b[:-1] in IDX: return b[:-1]
   return None
 FREE=set("can can't cannot will won't would could should must may might shall one".split())
+BASIC=set("""a an the of in to i my me you your yours it its on for at he him his she her we us our they them their
+and or no not yes so as by from into out up off this these that those please hi oh tv qr ok per st bon
+abakan moscow russia russian khakassia siberian siberia lenin sasha europe soviet british french german african
+halloween catholic than igor england""".split())
+SUF=("'s","'ve","'ll","'re","'m","'d","s'")
+def base(t):
+  if t in IRR or t in IDX: return t
+  for suf in SUF:
+    if t.endswith(suf): return t[:-len(suf)]
+  return t
+def strict_ok(en):
+  """True, если в фразе нет ни одного слова вне словаря (служебные слова и имена — можно)."""
+  s=' '+re.sub(r"[^a-z' -]",' ',en.lower())+' '
+  for m in MULTI: s=s.replace(' '+m+' ','  ')
+  for t in s.split():
+    t=t.strip("'-")
+    if not t or t in FREE or t in BASIC: continue
+    b=base(t)
+    if b and b not in BASIC and b not in FREE and not lem(b): return False
+  return True
 def keys(en):
   s=' '+re.sub(r"[^a-z' -]",' ',en.lower())+' '; ks=set()
   for m in MULTI:
@@ -22,7 +42,7 @@ def keys(en):
   for t in s.split():
     t=t.strip("'")
     if not t or t in FREE: continue
-    k=lem(t)
+    k=lem(t) or lem(base(t))
     if k: ks.add(k)
   return sorted(ks,key=lambda k:IDX[k])
 if __name__=='__main__':
