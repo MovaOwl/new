@@ -147,6 +147,14 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public int foxTakeCatches() {
+            android.content.SharedPreferences p = getSharedPreferences(FoxService.PREF, MODE_PRIVATE);
+            int n = p.getInt("catches", 0);
+            if (n > 0) p.edit().putInt("catches", 0).apply();
+            return n;
+        }
+
+        @JavascriptInterface
         public void foxStop() {
             runOnUiThread(() -> {
                 getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putBoolean("on", false).apply();

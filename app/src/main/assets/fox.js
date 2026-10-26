@@ -164,7 +164,7 @@ function foxOnBoot() {
   if (S.lastActive && S.lastActive < dAdd(-2) && foxCur() > 0) S.foxMood = 'grumpy';
   if (S.foxSt == null) S.foxSt = foxCur();
   if (S.coins == null) { let c = 0; for (let L = 2; L <= lv().L; L++) c += coinsFor(L); S.coins = c; }
-  foxSync();
+  foxSync(); foxCatches();
 }
 
 /* ---------- вкладка «Лис» ---------- */
@@ -269,7 +269,9 @@ function foxData() {
   if (s >= 4) { const U = pUnlocked(); for (let i = 0; i < 200 && U.length; i++) { const p = rnd(U); add(p.en, p.ru); } }
   if (s >= 6) FOX_JOKES.forEach(j => add(j[0], '', j[1]));
   if (s >= 7) FOX_SLANG.forEach(j => add(j[0], '', j[1]));
-  return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, every: S.foxEvery || 10 });
+  const known = W.filter(w => st(w.en) >= 2), words = [];
+  for (let i = 0; i < 300 && known.length; i++) { const w = rnd(known); words.push([w.en, w.ru]); }
+  return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, words, every: S.foxEvery || 10, dropEvery: S.foxDrop == null ? 20 : S.foxDrop });
 }
 function foxSync() { try { if (NATIVE() && S.foxOn && Android.foxCanOverlay()) Android.foxStart(foxData()); } catch (e) {} }
 function foxOverlayToggle() {
@@ -278,8 +280,10 @@ function foxOverlayToggle() {
   if (!Android.foxCanOverlay()) { S.foxWant = true; save(); toast('Разреши «Поверх других приложений» и вернись'); Android.foxAskOverlay(); return; }
   S.foxOn = true; S.foxWant = false; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); renderHub();
 }
+function foxCatches() { try { const n = window.Android && Android.foxTakeCatches ? Android.foxTakeCatches() : 0; if (n > 0) { addCoins(n, `за ${n} ${pl(n, 'пойманное слово', 'пойманных слова', 'пойманных слов')} от лиса`); save(); } } catch (e) {} }
 window.androidResume = () => {
   try {
+    foxCatches();
     if (S.foxWant && NATIVE() && Android.foxCanOverlay()) { S.foxWant = false; S.foxOn = true; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); }
     if (!$('hub').hidden && tab === 'home') renderHub();
   } catch (e) {}
@@ -293,12 +297,14 @@ function foxShop() {
     <div class="shop-row"><div><b>Лис на экране телефона</b><small>Живёт поверх всех приложений: гуляет, болтает по-английски. Голодный — грустит и зовёт играть, а если забросить на 3 дня — уходит.</small></div>
       <button class="btn ${on ? 'ghost' : ''}" id="foxOverlayBtn">${on ? 'Забрать' : 'Выпустить'}</button></div>
     ${on ? `<div class="shop-row"><div><b>Как часто болтает</b><small>Фраза из твоих слов раз в…</small></div><select id="foxEvery">${[3, 10, 20, 60].map(m => `<option value="${m}" ${(S.foxEvery || 10) === m ? 'selected' : ''}>${m} мин</option>`).join('')}</select></div>` : ''}
+    ${on ? `<div class="shop-row"><div><b>Кидает слова сверху</b><small>Лис исчезает, появляется вверху и бросает вниз твоё слово. Поймал — перевод и +1 🪙</small></div><select id="foxDrop">${[[10, '10 мин'], [20, '20 мин'], [40, '40 мин'], [0, 'выкл']].map(([m, t]) => `<option value="${m}" ${(S.foxDrop == null ? 20 : S.foxDrop) === m ? 'selected' : ''}>${t}</option>`).join('')}</select></div>` : ''}
     ${nx ? `<div class="shop-row"><div><b>Открыть раньше: «${esc(nx.n)}»</b><small>${esc(nx.d)} Без монеток — на ${nx.at} словах.</small></div>
       <button class="btn ${c >= price ? '' : 'ghost'}" id="foxBuyBtn">${price} 🪙</button></div>` : ''}
-    <p class="muted">Монетки: ${coinsFor(lv().L + 1)} 🪙 за следующий уровень, 15 🪙 за выполненный план дня.</p></section>`;
+    <p class="muted">Монетки: ${coinsFor(lv().L + 1)} 🪙 за следующий уровень, 15 🪙 за план дня, 1 🪙 за каждое пойманное слово от лиса.</p></section>`;
 }
 function foxShopBind() {
   if ($('foxOverlayBtn')) $('foxOverlayBtn').onclick = foxOverlayToggle;
+  if ($('foxDrop')) $('foxDrop').onchange = e => { S.foxDrop = +e.target.value; save(); foxSync(); toast('Готово'); };
   if ($('foxEvery')) $('foxEvery').onchange = e => { S.foxEvery = +e.target.value; save(); foxSync(); toast('Готово'); };
   if ($('foxBuyBtn')) $('foxBuyBtn').onclick = () => {
     const s = foxCur(), price = FOX_PRICE[s + 1];

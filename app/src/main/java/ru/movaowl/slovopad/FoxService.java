@@ -78,6 +78,13 @@ public class FoxService extends Service {
     private TextToSpeech tts;
     private boolean ttsReady = false;
     private boolean ticking = false;
+    /* словопад от лиса: слова, которые ты знаешь */
+    private final List<String[]> words = new ArrayList<>();
+    private long dropEveryMs = 20 * 60000L, nextDropAt = 0;
+    private boolean inDrop = false;
+    private int homeX, homeY;
+    private TextView wordV;
+    private WindowManager.LayoutParams wlp;
     /* голод: 0 сыт, 1 проголодался, 2 грустит, 3 обиделся, 4 ушёл */
     private int mood = -1;
     private long moodCheckAt = 0, peekUntil = 0, nextPeekAt = 0;
@@ -159,10 +166,16 @@ public class FoxService extends Service {
                 JSONArray x = l.getJSONArray(i);
                 lines.add(new String[]{x.getString(0), x.optString(1, ""), x.optString(2, "")});
             }
+            words.clear();
+            JSONArray wd = data.optJSONArray("words");
+            if (wd != null) for (int i = 0; i < wd.length(); i++) { JSONArray x = wd.getJSONArray(i); words.add(new String[]{x.getString(0), x.optString(1, "")}); }
+            long de = data.optLong("dropEvery", 20);
+            dropEveryMs = de <= 0 ? 0 : Math.max(3, de) * 60000L;
         } catch (Exception e) {
             data = new JSONObject();
             meta = new JSONObject();
         }
+        if (nextDropAt == 0 && dropEveryMs > 0) nextDropAt = System.currentTimeMillis() + Math.min(dropEveryMs, 5 * 60000L);
         if (nextPhraseAt == 0) nextPhraseAt = System.currentTimeMillis() + 20000;
     }
 
@@ -360,7 +373,7 @@ public class FoxService extends Service {
                     if (Math.abs(lp.x - targetX) <= step) { lp.x = targetX; targetX = -1; pickNext(); }
                     else lp.x += lp.x < targetX ? step : -step;
                     clampAndUpdate();
-                } else if (loopsLeft <= 0) pickNext();
+                } else if (loopsLeft <= 0) { if (inDrop) loopsLeft = 999; else pickNext(); }
             }
             long now = System.currentTimeMillis();
             if (now >= moodCheckAt) { moodCheckAt = now + 30000; checkMood(); }
@@ -373,7 +386,9 @@ public class FoxService extends Service {
                 }
                 h.postDelayed(this, 1000); return;
             }
-            if (stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
+            if (!inDrop && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
+                    && targetX < 0 && ("read".equals(anim) || "sit".equals(anim))) { nextDropAt = now + dropEveryMs; startDrop(); }
+            if (!inDrop && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
             h.postDelayed(this, (long) (1000 / Math.max(1, fps)));
         }
     };
@@ -401,6 +416,92 @@ public class FoxService extends Service {
         h.postDelayed(hideBub, 9000);
         if (targetX < 0 && "sleep".equals(anim)) playFor("sit", 20, 40); // проснулся сказать фразу
         h.postDelayed(this::clampAndUpdate, 50);
+    }
+
+    /* лис исчезает, появляется наверху и кидает вниз слово */
+    private void startDrop() {
+        inDrop = true; homeX = lp.x; homeY = lp.y;
+        bub.setVisibility(View.GONE);
+        root.animate().alpha(0f).setDuration(400).withEndAction(() -> {
+            lp.x = (int) (30 * dp) + rnd.nextInt(Math.max(1, screenW - foxH * 2));
+            lp.y = (int) (60 * dp);
+            clampAndUpdate();
+            play(has("jump") ? "jump" : "sit", 1); loopsLeft = 999;
+            root.animate().alpha(1f).setDuration(350).withEndAction(() -> {
+                h.postDelayed(this::throwWord, 500);
+            }).start();
+        }).start();
+    }
+
+    private void throwWord() {
+        if (root == null) return;
+        String[] w = words.get(rnd.nextInt(words.size()));
+        play(has("cheer") ? "cheer" : "sit", 1); loopsLeft = 999;
+        wordV = new TextView(this);
+        wordV.setText(w[0]);
+        wordV.setTextColor(Color.WHITE);
+        wordV.setTextSize(19);
+        wordV.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        int pd = (int) (12 * dp);
+        wordV.setPadding(pd, (int) (7 * dp), pd, (int) (7 * dp));
+        GradientDrawable g = new GradientDrawable();
+        g.setColor(Color.parseColor("#e8743b"));
+        g.setCornerRadius(12 * dp);
+        g.setStroke((int) (2 * dp), Color.parseColor("#2a1a10"));
+        wordV.setBackground(g);
+        wlp = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                PixelFormat.TRANSLUCENT);
+        wlp.gravity = Gravity.TOP | Gravity.START;
+        wlp.x = Math.max(0, lp.x);
+        wlp.y = lp.y + foxH;
+        final boolean[] caught = {false};
+        wordV.setOnClickListener(v -> {
+            if (caught[0]) return;
+            caught[0] = true;
+            wordV.setText(w[0] + " — " + w[1] + "   +1 🪙");
+            GradientDrawable ok = new GradientDrawable();
+            ok.setColor(Color.parseColor("#2f9e5b")); ok.setCornerRadius(12 * dp); ok.setStroke((int) (2 * dp), Color.parseColor("#123d22"));
+            wordV.setBackground(ok);
+            SharedPreferences p = getSharedPreferences(PREF, MODE_PRIVATE);
+            p.edit().putInt("catches", p.getInt("catches", 0) + 1).apply();
+            h.postDelayed(this::endWord, 2600);
+        });
+        try { wm.addView(wordV, wlp); } catch (Exception e) { wordV = null; endDrop(); return; }
+        final int startY = wlp.y, endY = screenH - (int) (190 * dp);
+        final long t0 = System.currentTimeMillis(), dur = 7500;
+        h.post(new Runnable() {
+            @Override public void run() {
+                if (wordV == null) return;
+                if (caught[0]) return;
+                float pr = Math.min(1f, (System.currentTimeMillis() - t0) / (float) dur);
+                wlp.y = (int) (startY + (endY - startY) * pr);
+                int ww = wordV.getWidth() > 0 ? wordV.getWidth() : (int) (120 * dp);
+                wlp.x = Math.max(0, Math.min(wlp.x, screenW - ww));
+                try { wm.updateViewLayout(wordV, wlp); } catch (Exception ignored) { }
+                if (pr >= 1f) { h.postDelayed(FoxService.this::endWord, 1500); return; }
+                h.postDelayed(this, 33);
+            }
+        });
+        h.postDelayed(this::endDrop, 1800);
+    }
+
+    private void endWord() {
+        if (wordV == null) return;
+        final TextView v = wordV; wordV = null;
+        v.animate().alpha(0f).setDuration(400).withEndAction(() -> { try { wm.removeView(v); } catch (Exception ignored) { } }).start();
+    }
+
+    private void endDrop() {
+        if (root == null) return;
+        root.animate().alpha(0f).setDuration(400).withEndAction(() -> {
+            lp.x = homeX; lp.y = homeY; clampAndUpdate();
+            inDrop = false; loopsLeft = 0;
+            playFor("read", 30, 60);
+            root.animate().alpha(1f).setDuration(400).start();
+        }).start();
     }
 
     private void onTap() {
@@ -435,6 +536,7 @@ public class FoxService extends Service {
     public void onDestroy() {
         ticking = false;
         h.removeCallbacksAndMessages(null);
+        if (wordV != null) { try { wm.removeView(wordV); } catch (Exception ignored) { } wordV = null; }
         if (root != null) { try { wm.removeView(root); } catch (Exception ignored) { } root = null; }
         if (tts != null) tts.shutdown();
         super.onDestroy();
