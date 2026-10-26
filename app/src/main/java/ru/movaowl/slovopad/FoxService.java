@@ -381,10 +381,28 @@ public class FoxService extends Service {
         loopsLeft = Math.max(1, Math.round(secs * fps / frames.length));
     }
 
+    /* режим дня по часам телефона: 0 день, 1 вечер (сонный), 2 ночь */
+    private int dayPhase() {
+        int h = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
+        return (h >= 23 || h < 7) ? 2 : (h >= 21) ? 1 : 0;
+    }
+    private boolean wasNight = false;
+
     private void pickNext() {
         img.setScaleX(1);
         targetX = -1;
         if (stage <= 0) { playFor("sleep", 120, 300); return; }
+        int ph = dayPhase();
+        if (ph == 2) {                                   // ночь: почти всё время спит, иногда ворочается
+            wasNight = true;
+            if (rnd.nextInt(100) < 92) playFor("sleep", 240, 480); else playFor("sit", 15, 30);
+            return;
+        }
+        if (wasNight) {                                  // утро: потягивается и просыпается
+            wasNight = false;
+            if (has("wake")) { play("wake", 1); return; }
+        }
+        if (ph == 1 && rnd.nextInt(100) < 50) { playFor("sleep", 90, 240); return; } // вечером клюёт носом
         if (mood == 3 || mood == 4) { playFor(rnd.nextBoolean() && has("grumpy") ? "grumpy" : "sad", 30, 70); return; }
         int r = rnd.nextInt(100);
         if (mood == 2 && r < 60) { playFor("sad", 30, 60); return; }
@@ -425,15 +443,16 @@ public class FoxService extends Service {
             if (now >= moodCheckAt) { moodCheckAt = now + 30000; checkMood(); }
             if (mood == 4) {
                 if (peekUntil > 0 && now > peekUntil) { peekUntil = 0; root.setVisibility(View.GONE); nextPeekAt = now + 25 * 60000L; }
-                else if (peekUntil == 0 && now >= nextPeekAt) {
+                else if (peekUntil == 0 && now >= nextPeekAt && dayPhase() != 2) {
                     peekUntil = now + 15000; root.setVisibility(View.VISIBLE);
                     curEn = GONE[0]; curRu = GONE[1]; showBub(GONE[0], 14000);
                     play(has("sad") ? "sad" : "sit", 3);
                 }
                 h.postDelayed(this, 1000); return;
             }
-            if (!inDrop && !thinking && bub.getVisibility() != View.VISIBLE && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
+            if (dayPhase() == 0 && !inDrop && !thinking && bub.getVisibility() != View.VISIBLE && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
                     && targetX < 0 && ("read".equals(anim) || "sit".equals(anim))) { nextDropAt = now + dropEveryMs; startDrop(); }
+            if (dayPhase() == 2 && now >= nextPhraseAt) nextPhraseAt = now + everyMs; // ночью молчит
             if (!inDrop && !thinking && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
             h.postDelayed(this, (long) (1000 / Math.max(1, fps)));
         }

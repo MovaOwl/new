@@ -132,8 +132,13 @@ FoxView.prototype.stop = function () { clearInterval(this.t); this.t = null; };
 
 /* ---------- мини-лис на игровом поле ---------- */
 let foxMini = null, foxMiniBusy = false;
+/* лис выпущен на экран телефона — в приложении его нет, он один */
+function foxOut() { try { return !!(S.foxOn && window.Android && Android.foxRunning && Android.foxRunning()); } catch (e) { return false; } }
 function foxMiniIdle() {
   if (!foxMini) return;
+  const mf = document.getElementById('foxMini');
+  if (foxOut()) { foxMini.stop(); if (mf) mf.style.display = 'none'; return; }
+  if (mf) mf.style.display = '';
   const s = foxCur();
   if (S.foxMood === 'grumpy') return foxMini.play('grumpy');
   foxMini.play(s === 0 ? 'sleep' : s < 2 ? 'sit' : rnd(['sit', 'idle', 'wag']), { loops: s === 0 ? Infinity : 3, then: foxMiniIdle });
@@ -153,7 +158,7 @@ function foxEv(ev) {
     setTimeout(() => toast(`Лис: «${FOX_ST[s].n}» — ${FOX_ST[s].d}`, 'ach'), 900);
   }
   if (ev === 'ok' && S.foxMood === 'grumpy') { S.foxMood = ''; }
-  if (!ev || !foxMini || s === 0) return;
+  if (!ev || !foxMini || s === 0 || foxOut()) return;
   const map = { ok: ['jump', 1], learn: [s >= 3 ? 'eat' : 'jump', 1], bad: ['sad', 1], lvl: ['cheer', 3], combo: ['laugh', 1] };
   const a = map[ev]; if (!a) return;
   if (foxMiniBusy && ev === 'ok') return;
@@ -227,6 +232,9 @@ function foxFeed() {
 /* панель лиса внутри паспорта объекта */
 function foxPanel() {
   const n = foxN(), s = foxCur(), cs = FOX_ST[s], fed = S.foxFed === S.day;
+  if (foxOut()) return `<div class="foxline"><div class="fox-name"><b>${esc(S.foxName || 'Лис')}</b><span>${esc(cs.n)} · на твоём экране</span></div>
+    <p>Лис сейчас гуляет у тебя по экрану, поэтому дома его нет. Зажми его там — послушает и ответит. Кормится он тем, что ты играешь в Словопад.</p>
+    <div class="btnrow"><button class="btn ghost" id="foxHomeBtn">Забрать домой</button></div></div>`;
   return `<div class="foxline"><div class="fox-name"><b>${esc(S.foxName || 'Лис')}</b><span>${esc(cs.n)}${S.foxMood === 'grumpy' ? ' · обиделся' : ''}</span></div>
     <p>${esc(cs.d)}</p>
     <div class="btnrow"><button class="btn" id="foxPetBtn">Погладить</button>${s >= 3 ? `<button class="btn ${fed ? 'ghost' : ''}" id="foxFeedBtn">${fed ? 'Сытый' : 'Покормить'}</button>` : ''}${s >= 1 ? '<button class="btn ghost" id="foxTalkBtn">Скажи что-нибудь</button>' : ''}</div></div>`;
@@ -244,6 +252,13 @@ function pathBlock() {
 function foxMountScene() {
   const wrap = document.getElementById('foxBig'); if (!wrap) return;
   const n = foxN(), s = foxCur();
+  if (foxOut()) {
+    wrap.style.display = 'none'; foxBig = null;
+    const b = document.getElementById('foxBub'); if (b) { b.innerHTML = '<span>🦊 Лис ушёл гулять к тебе на экран</span>'; b.hidden = false; b.onclick = null; }
+    if ($('foxHomeBtn')) $('foxHomeBtn').onclick = foxOverlayToggle;
+    return;
+  }
+  wrap.style.display = '';
   foxBig = new FoxView(wrap, 84); foxWalkX = 0; wrap.style.transform = ''; foxDoIdle();
   wrap.onclick = foxPet; $('foxPetBtn').onclick = foxPet;
   if ($('foxFeedBtn')) $('foxFeedBtn').onclick = foxFeed;
@@ -272,13 +287,13 @@ function foxData() {
   const known = W.filter(w => st(w.en) >= 2), words = [];
   for (let i = 0; i < 300 && known.length; i++) { const w = rnd(known); words.push([w.en, w.ru]); }
   const sample = [...known].sort(() => Math.random() - .5).slice(0, 120).map(w => w.en).join(', ');
-  const ai = { provider: S.aiProv || 'giga', key: S.aiKey || '', owner: S.name || 'Игорь', fox: S.foxName || 'Лис', known: known.length, sample };
+  const ai = { provider: 'gemini', key: (S.aiKey || S.gemKey || '').replace(/\s+/g, ''), owner: S.name || 'Игорь', fox: S.foxName || 'Лис', known: known.length, sample };
   return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, words, ai, every: S.foxEvery || 10, dropEvery: S.foxDrop == null ? 20 : S.foxDrop });
 }
 function foxSync() { try { if (NATIVE() && S.foxOn && Android.foxCanOverlay()) { Android.foxStart(foxData()); Android.foxLang && Android.foxLang(S.aiLang || 'auto'); } } catch (e) {} }
 function foxOverlayToggle() {
   if (!NATIVE()) { toast('Лис на экране работает только в приложении на телефоне'); return; }
-  if (S.foxOn && Android.foxRunning()) { S.foxOn = false; save(); Android.foxStop(); toast('Лис вернулся домой, в приложение'); renderHub(); return; }
+  if (S.foxOn && Android.foxRunning()) { S.foxOn = false; save(); Android.foxStop(); toast('Лис вернулся домой, в приложение'); setTimeout(() => { renderHub(); foxMiniIdle(); }, 300); return; }
   if (!Android.foxCanOverlay()) { S.foxWant = true; save(); toast('Разреши «Поверх других приложений» и вернись'); Android.foxAskOverlay(); return; }
   S.foxOn = true; S.foxWant = false; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); renderHub();
 }
@@ -288,6 +303,7 @@ window.androidResume = () => {
     foxCatches();
     if (S.foxWant && NATIVE() && Android.foxCanOverlay()) { S.foxWant = false; S.foxOn = true; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); }
     if (!$('hub').hidden && tab === 'home') renderHub();
+    foxMiniIdle();
   } catch (e) {}
 };
 

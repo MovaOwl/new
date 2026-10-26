@@ -132,6 +132,8 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface
         public void foxStart(String json) {
+            if (Settings.canDrawOverlays(MainActivity.this))
+                getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putBoolean("on", true).apply();
             runOnUiThread(() -> {
                 if (!Settings.canDrawOverlays(MainActivity.this)) return;
                 if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED)

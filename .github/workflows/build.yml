@@ -23,48 +23,6 @@ jobs:
         with:
           gradle-version: '8.14.3'
 
-      - name: GigaChat certificates (НУЦ Минцифры)
-        id: certs
-        run: |
-          set +e
-          d=app/src/main/res/raw; t=$(mktemp -d)
-          get() { curl -fsSL --retry 2 -m 40 "$1" -o "$2" || curl -kfsSL --retry 2 -m 40 "$1" -o "$2"; }
-          get https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt $t/root.pem
-          get https://gu-st.ru/content/lending/russian_trusted_sub_ca_pem.crt $t/sub.pem
-          # запасной источник — пакет ca-certificates-digital.gov.ru из ALT Linux
-          if ! openssl x509 -in $t/root.pem -noout -subject 2>/dev/null | grep -q "Russian Trusted Root"; then
-            command -v rpm2cpio >/dev/null || sudo apt-get install -y -qq rpm2cpio cpio >/dev/null
-            for base in https://ftp.altlinux.org/pub/distributions/ALTLinux https://mirror.yandex.ru/altlinux; do
-              for br in p11 p10 Sisyphus; do
-                dir="$base/$br/branch/noarch/RPMS.classic/"; [ "$br" = Sisyphus ] && dir="$base/Sisyphus/noarch/RPMS.classic/"
-                f=$(curl -fsSL -m 60 "$dir" | grep -o 'ca-certificates-digital.gov.ru-[^"<>]*\.noarch\.rpm' | sort -u | tail -1)
-                [ -n "$f" ] || continue
-                curl -fsSL -m 60 "$dir$f" -o $t/p.rpm && (cd $t && rpm2cpio p.rpm | cpio -idm --quiet) && break 2
-              done
-            done
-            for c in $(find $t -type f \( -name '*.crt' -o -name '*.pem' -o -name '*.cer' \) 2>/dev/null); do
-              subj=$(openssl x509 -in "$c" -noout -subject 2>/dev/null || openssl x509 -inform der -in "$c" -noout -subject 2>/dev/null)
-              case "$subj" in
-                *"Russian Trusted Root"*) openssl x509 -in "$c" -out $t/root.pem 2>/dev/null || openssl x509 -inform der -in "$c" -out $t/root.pem ;;
-                *"Russian Trusted Sub"*) openssl x509 -in "$c" -out $t/sub.pem 2>/dev/null || openssl x509 -inform der -in "$c" -out $t/sub.pem ;;
-              esac
-            done
-          fi
-          ok=0
-          for n in root sub; do
-            if openssl x509 -in $t/$n.pem -noout -subject 2>/dev/null | grep -q "Russian Trusted"; then
-              cp $t/$n.pem $d/russian_trusted_${n}_ca.pem; openssl x509 -in $d/russian_trusted_${n}_ca.pem -noout -subject -fingerprint -sha256; ok=$((ok+1))
-            fi
-          done
-          if [ ! -s $d/russian_trusted_root_ca.pem ]; then
-            sed -i '/russian_trusted_root_ca/d' app/src/main/res/xml/network_security_config.xml
-          fi
-          if [ ! -s $d/russian_trusted_sub_ca.pem ]; then
-            sed -i '/russian_trusted_sub_ca/d' app/src/main/res/xml/network_security_config.xml
-          fi
-          echo "ok=$ok" >> $GITHUB_OUTPUT
-          exit 0
-
       - name: Build release APK
         run: gradle assembleRelease --no-daemon
 
@@ -81,6 +39,6 @@ jobs:
         with:
           tag_name: v1.${{ github.run_number }}
           name: Словопад 1.${{ github.run_number }}
-          body: "Скачай APK ниже и установи на телефон. Новая версия ставится поверх старой, прогресс сохраняется. (certs: ${{ steps.certs.outputs.ok }}/2)"
+          body: "Скачай APK ниже и установи на телефон. Новая версия ставится поверх старой, прогресс сохраняется."
           files: Slovopad-1.${{ github.run_number }}.apk
           make_latest: true

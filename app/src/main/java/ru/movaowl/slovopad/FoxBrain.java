@@ -15,7 +15,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,7 +24,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,25 +54,24 @@ class FoxBrain {
         String l = text.toLowerCase(Locale.ROOT);
         String tool = toolsOffline(l);
         if (tool != null) return tool;
-        String key = ai.optString("key", "").trim();
-        String provider = ai.optString("provider", "giga");
+        String key = ai.optString("key", "").trim().replaceAll("\\s+", "");
         String off = offline(l);
         if (key.isEmpty()) {
-            return off != null ? off : "Без мозгов-нейросети я умею немного: «что значит window», «как сказать окно», таймер, будильник. Добавь ключ GigaChat в Словопаде → Опции → Мозги лиса.";
+            return off != null ? off : "Без нейросети я умею немного: «что значит window», «как сказать окно», таймер, будильник. Ключ Gemini: Словопад → Опции → Мозги лиса.";
         }
         hist.add(new String[]{"user", text});
         while (hist.size() > 12) hist.remove(0);
-        String sys = prompt(ai, mood, stage);
         String res;
         try {
-            res = "gemini".equals(provider) ? gemini(key, sys) : giga(key, sys);
+            res = gemini(key, prompt(ai, mood, stage));
         } catch (Exception e) {
             hist.remove(hist.size() - 1);
             String why = e.getMessage() == null ? "" : e.getMessage();
-            if (why.startsWith("key")) return "Ключ не подходит. Проверь его в Словопаде → Опции → Мозги лиса.";
-            if (why.startsWith("limit")) return "Я на сегодня наболтался — лимит нейросети кончился." + (off != null ? " " + off : "");
-            if (why.startsWith("region")) return "Gemini не работает из России без VPN. Выбери GigaChat в Опциях.";
-            return "Нет связи с моими мозгами." + (off != null ? " " + off : " Без интернета умею переводить слова и ставить таймеры.");
+            if (why.startsWith("key")) return "Ключ не подходит: " + why.substring(3).trim() + " Проверь его в Опциях → Мозги лиса.";
+            if (why.startsWith("limit")) return "Лимит Gemini на сейчас кончился, подожди минутку." + (off != null ? " " + off : "");
+            if (why.startsWith("region")) return "Gemini видит, что ты в России. Включи VPN для всего телефона (или для Словопада) и зажми меня ещё раз.";
+            if (why.startsWith("io")) return "Не достучался до Gemini (" + why.substring(2).trim() + "). Проверь интернет и VPN." + (off != null ? " " + off : "");
+            return "Gemini ответил ошибкой: " + why + (off != null ? " " + off : "");
         }
         hist.add(new String[]{"assistant", res});
         return toolsFromTags(res);
@@ -95,95 +92,96 @@ class FoxBrain {
                 + "Таймер или будильник ставь сам: в КОНЦЕ ответа тег [[TIMER:секунды]] или [[ALARM:ЧЧ:ММ]].";
     }
 
-    /* ---------- GigaChat ---------- */
-    private String giga(String authKey, String sys) throws Exception {
-        String token = gigaToken(authKey, false);
-        String[] models = {"GigaChat-2-Pro", "GigaChat-2", "GigaChat"};
-        SharedPreferences p = ctx.getSharedPreferences(FoxService.PREF, Context.MODE_PRIVATE);
-        String pref = p.getString("gigaModel", "");
-        List<String> order = new ArrayList<>();
-        if (!pref.isEmpty()) order.add(pref);
-        for (String m : models) if (!order.contains(m)) order.add(m);
-        Exception last = null;
-        for (String m : order) {
-            JSONObject body = new JSONObject();
-            body.put("model", m);
-            JSONArray msgs = new JSONArray();
-            msgs.put(new JSONObject().put("role", "system").put("content", sys));
-            for (String[] x : hist) msgs.put(new JSONObject().put("role", x[0]).put("content", x[1]));
-            body.put("messages", msgs);
-            body.put("temperature", 0.8);
-            body.put("max_tokens", 220);
+    /* ---------- Gemini (из России — через VPN) ---------- */
+    private static String errMsg(String raw) {
+        try { return new JSONObject(raw).getJSONObject("error").optString("message", raw); } catch (Exception e) { return raw.length() > 120 ? raw.substring(0, 120) : raw; }
+    }
+
+    /** Спросить у Google список моделей и выбрать свежую Flash. */
+    private List<String> discover(String key) {
+        List<String> out = new ArrayList<>();
+        try {
             Map<String, String> hd = new HashMap<>();
-            hd.put("Authorization", "Bearer " + token);
-            hd.put("Content-Type", "application/json");
-            hd.put("Accept", "application/json");
-            Object[] r = http("https://gigachat.devices.sberbank.ru/api/v1/chat/completions", hd, body.toString());
-            int code = (Integer) r[0];
-            if (code == 401) { token = gigaToken(authKey, true); hd.put("Authorization", "Bearer " + token); r = http("https://gigachat.devices.sberbank.ru/api/v1/chat/completions", hd, body.toString()); code = (Integer) r[0]; }
-            if (code == 200) {
-                JSONObject j = new JSONObject((String) r[1]);
-                String out = j.getJSONArray("choices").getJSONObject(0).getJSONObject("message").optString("content", "").trim();
-                if (!pref.equals(m)) p.edit().putString("gigaModel", m).apply();
-                return out;
+            hd.put("x-goog-api-key", key);
+            Object[] r = get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", hd);
+            if ((Integer) r[0] != 200) return out;
+            JSONArray ms = new JSONObject((String) r[1]).optJSONArray("models");
+            List<String[]> c = new ArrayList<>();
+            for (int i = 0; ms != null && i < ms.length(); i++) {
+                JSONObject m = ms.getJSONObject(i);
+                String name = m.optString("name").replace("models/", "");
+                String meth = String.valueOf(m.optJSONArray("supportedGenerationMethods"));
+                if (!meth.contains("generateContent") || !name.contains("flash")) continue;
+                if (name.matches(".*(image|tts|audio|live|embed|vision|thinking-exp|exp-).*")) continue;
+                Matcher v = Pattern.compile("gemini-(\\d+(?:\\.\\d+)?)").matcher(name);
+                double ver = v.find() ? Double.parseDouble(v.group(1)) : 0;
+                int pen = (name.contains("lite") ? 1 : 0) + (name.contains("preview") ? 2 : 0) + (name.contains("latest") ? 1 : 0);
+                c.add(new String[]{name, String.valueOf(ver * 10 - pen)});
             }
-            if (code == 402 || code == 403 || code == 404 || code == 400) { last = new Exception("model " + code); continue; } // кончились токены этой модели или нет доступа — пробуем следующую
-            if (code == 429) throw new Exception("limit");
-            throw new Exception("net " + code);
-        }
-        throw last != null ? new Exception("limit") : new Exception("net");
+            c.sort((x, y) -> Double.compare(Double.parseDouble(y[1]), Double.parseDouble(x[1])));
+            for (String[] x : c) out.add(x[0]);
+        } catch (Exception ignored) { }
+        return out;
     }
 
-    private String gigaToken(String authKey, boolean force) throws Exception {
-        SharedPreferences p = ctx.getSharedPreferences(FoxService.PREF, Context.MODE_PRIVATE);
-        String t = p.getString("gigaTok", "");
-        long exp = p.getLong("gigaExp", 0);
-        if (!force && !t.isEmpty() && System.currentTimeMillis() < exp - 60000) return t;
-        Map<String, String> hd = new HashMap<>();
-        hd.put("Authorization", "Basic " + authKey.replaceFirst("(?i)^basic\\s+", ""));
-        hd.put("RqUID", UUID.randomUUID().toString());
-        hd.put("Content-Type", "application/x-www-form-urlencoded");
-        hd.put("Accept", "application/json");
-        Object[] r = http("https://ngw.devices.sberbank.ru:9443/api/v2/oauth", hd, "scope=" + URLEncoder.encode("GIGACHAT_API_PERS", "UTF-8"));
-        int code = (Integer) r[0];
-        if (code == 401 || code == 400 || code == 403) throw new Exception("key");
-        if (code != 200) throw new Exception("net " + code);
-        JSONObject j = new JSONObject((String) r[1]);
-        t = j.getString("access_token");
-        exp = j.optLong("expires_at", System.currentTimeMillis() + 25 * 60000L);
-        if (exp < 1e12) exp *= 1000; // на случай секунд
-        p.edit().putString("gigaTok", t).putLong("gigaExp", exp).apply();
-        return t;
-    }
-
-    /* ---------- Gemini (нужен VPN из России) ---------- */
     private String gemini(String key, String sys) throws Exception {
-        String[] models = {"gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-flash-latest"};
+        SharedPreferences p = ctx.getSharedPreferences(FoxService.PREF, Context.MODE_PRIVATE);
+        List<String> order = new ArrayList<>();
+        String cached = p.getString("gemModel", "");
+        if (!cached.isEmpty()) order.add(cached);
+        for (String m : new String[]{"gemini-3.8-flash", "gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash-lite", "gemini-2.5-flash"}) if (!order.contains(m)) order.add(m);
         JSONObject body = new JSONObject();
         body.put("systemInstruction", new JSONObject().put("parts", new JSONArray().put(new JSONObject().put("text", sys))));
         JSONArray contents = new JSONArray();
         for (String[] x : hist) contents.put(new JSONObject().put("role", "user".equals(x[0]) ? "user" : "model").put("parts", new JSONArray().put(new JSONObject().put("text", x[1]))));
         body.put("contents", contents);
-        body.put("generationConfig", new JSONObject().put("temperature", 0.8).put("maxOutputTokens", 300));
+        body.put("generationConfig", new JSONObject().put("temperature", 0.8).put("maxOutputTokens", 400));
         Map<String, String> hd = new HashMap<>();
         hd.put("Content-Type", "application/json");
         hd.put("x-goog-api-key", key);
-        for (String m : models) {
-            Object[] r = http("https://generativelanguage.googleapis.com/v1beta/models/" + m + ":generateContent", hd, body.toString());
+        boolean discovered = false;
+        String lastErr = "";
+        for (int i = 0; i < order.size() && i < 12; i++) {
+            String m = order.get(i);
+            Object[] r;
+            try { r = http("https://generativelanguage.googleapis.com/v1beta/models/" + m + ":generateContent", hd, body.toString()); }
+            catch (Exception e) { throw new Exception("io " + e.getClass().getSimpleName() + (e.getMessage() != null ? ": " + e.getMessage() : "")); }
             int code = (Integer) r[0]; String raw = (String) r[1];
             if (code == 200) {
-                JSONArray parts = new JSONObject(raw).getJSONArray("candidates").getJSONObject(0).getJSONObject("content").getJSONArray("parts");
+                JSONObject j = new JSONObject(raw);
+                JSONArray cands = j.optJSONArray("candidates");
+                if (cands == null || cands.length() == 0) return "Gemini промолчал (фильтр). Спроси по-другому.";
+                JSONArray parts = cands.getJSONObject(0).optJSONObject("content") != null ? cands.getJSONObject(0).getJSONObject("content").optJSONArray("parts") : null;
                 StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < parts.length(); i++) sb.append(parts.getJSONObject(i).optString("text", ""));
-                return sb.toString().trim();
+                for (int k = 0; parts != null && k < parts.length(); k++) if (!parts.getJSONObject(k).optBoolean("thought")) sb.append(parts.getJSONObject(k).optString("text", ""));
+                if (!m.equals(cached)) p.edit().putString("gemModel", m).apply();
+                String out = sb.toString().trim();
+                return out.isEmpty() ? "…" : out;
             }
-            if (raw.contains("location is not supported")) throw new Exception("region");
-            if (code == 404) continue;
-            if (code == 401 || code == 403 || raw.contains("API key")) throw new Exception("key");
+            String msg = errMsg(raw);
+            if (msg.toLowerCase(Locale.ROOT).contains("location is not supported")) throw new Exception("region");
+            if (code == 400 && msg.toLowerCase(Locale.ROOT).contains("api key") || code == 401 || code == 403 && msg.toLowerCase(Locale.ROOT).contains("key")) throw new Exception("key " + msg);
             if (code == 429) throw new Exception("limit");
-            throw new Exception("net " + code);
+            lastErr = code + " " + msg;
+            if (code == 404 || code == 400 || code == 403) {
+                if (m.equals(cached)) p.edit().remove("gemModel").apply();
+                if (!discovered) { discovered = true; int at = i + 1; for (String d : discover(key)) if (!order.contains(d)) order.add(Math.min(at++, order.size()), d); }
+                continue;
+            }
+            throw new Exception(lastErr);
         }
-        throw new Exception("net");
+        throw new Exception(lastErr.isEmpty() ? "нет доступных моделей" : lastErr);
+    }
+
+    private static Object[] get(String url, Map<String, String> headers) throws Exception {
+        HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
+        c.setConnectTimeout(12000); c.setReadTimeout(20000);
+        for (Map.Entry<String, String> e : headers.entrySet()) c.setRequestProperty(e.getKey(), e.getValue());
+        int code = c.getResponseCode();
+        InputStream in = code >= 400 ? c.getErrorStream() : c.getInputStream();
+        ByteArrayOutputStream bo = new ByteArrayOutputStream();
+        if (in != null) { byte[] b = new byte[8192]; int n; while ((n = in.read(b)) > 0) bo.write(b, 0, n); in.close(); }
+        return new Object[]{code, bo.toString("UTF-8")};
     }
 
     private static Object[] http(String url, Map<String, String> headers, String body) throws Exception {
