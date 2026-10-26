@@ -1,0 +1,250 @@
+ritual|«Ритуал».|A morning ritual.|Утренний ритуал.|A daily ritual.|Ежедневный ритуал.
+robbery|«Ограбление».|A bank robbery.|Ограбление банка.|Daylight robbery!|Грабёж средь бела дня!
+robot|«Робот».|A robot vacuum.|Робот-пылесос.|Work like a robot.|Работать как робот.
+rocket|«Ракета».|Launch a rocket.|Запустить ракету.|It's not rocket science.|Это не высшая математика.
+romance|«Роман (отношения), романтика».|A summer romance.|Летний роман.|Romance novels.|Любовные романы.
+rookie|«Новичок».|A rookie mistake.|Ошибка новичка.|A rookie agent.|Начинающий агент.
+rose|«Роза».|A red rose.|Красная роза.|Smell the roses.|Наслаждайся жизнью.
+rubber|«Резина».|Rubber boots.|Резиновые сапоги.|Rubber gloves.|Резиновые перчатки.
+rug|«Коврик».|A soft rug.|Мягкий коврик.|Sweep it under the rug.|Замести под ковёр.
+ruler|«Линейка, правитель».|A wooden ruler.|Деревянная линейка.|A wise ruler.|Мудрый правитель.
+runway|«Взлётная полоса, подиум».|The plane is on the runway.|Самолёт на полосе.|A fashion runway.|Подиум.
+saddle|«Седло».|A leather saddle.|Кожаное седло.|Back in the saddle.|Снова в деле.
+saint|«Святой».|Saint Petersburg.|Санкт-Петербург.|She's a saint.|Она святая.
+sake|for the sake of — «ради».|For your sake.|Ради тебя.|For God's sake!|Ради бога!
+sale|«Продажа, распродажа».|For sale.|Продаётся.|On sale.|Со скидкой.
+salesman|«Продавец».|A car salesman.|Продавец машин.|A good salesman.|Хороший продажник.
+salmon|«Лосось». l не читается.|Grilled salmon.|Лосось на гриле.|Smoked salmon.|Копчёный лосось.
+sanction|«Санкция» и «разрешать».|Economic sanctions.|Экономические санкции.|Sanction the deal.|Одобрить сделку.
+sandwich|«Бутерброд, сэндвич».|A ham sandwich.|Бутерброд с ветчиной.|Make a sandwich.|Сделать бутерброд.
+satellite|«Спутник».|Satellite TV.|Спутниковое ТВ.|A weather satellite.|Метеоспутник.
+saving|«Экономия, сбережения».|Savings account.|Накопительный счёт.|A big saving.|Большая экономия.
+scanner|«Сканер».|A document scanner.|Сканер документов.|A QR scanner.|QR-сканер.
+scarf|«Шарф».|A warm scarf.|Тёплый шарф.|A silk scarf.|Шёлковый платок.
+scenario|«Сценарий».|Worst-case scenario.|Худший сценарий.|A possible scenario.|Возможный сценарий.
+scent|«Аромат, запах».|A sweet scent.|Сладкий аромат.|The dog lost the scent.|Собака потеряла след.
+sceptic|«Скептик».|I'm a sceptic.|Я скептик.|Even sceptics agree.|Даже скептики согласны.
+scholar|«Учёный, стипендиат».|A Russian scholar.|Русский учёный.|A scholarship.|Стипендия.
+scientist|«Учёный».|A famous scientist.|Известный учёный.|Scientists say…|Учёные говорят…
+scrap|«Обрывок, металлолом».|A scrap of paper.|Клочок бумаги.|Scrap metal.|Металлолом.
+sculptor|«Скульптор».|A famous sculptor.|Известный скульптор.|The sculptor's work.|Работа скульптора.
+seal|«Печать, тюлень» и «запечатывать».|The company seal.|Печать компании.|Seal the deal.|Закрыть сделку.
+seaside|«Морское побережье».|A seaside town.|Приморский город.|Holiday at the seaside.|Отдых на море.
+second-hand|«Подержанный».|A second-hand car.|Подержанная машина.|Second-hand clothes.|Одежда из секонда.
+secretary|«Секретарь».|Ask the secretary.|Спроси секретаря.|Secretary of State.|Госсекретарь.
+sect|«Секта».|A religious sect.|Религиозная секта.|Leave the sect.|Уйти из секты.
+segment|«Сегмент».|Market segment.|Сегмент рынка.|A segment of orange.|Долька апельсина.
+seminar|«Семинар».|Attend a seminar.|Посетить семинар.|A sales seminar.|Семинар по продажам.
+senate|«Сенат».|The US Senate.|Сенат США.|A senate vote.|Голосование в сенате.
+sensor|«Датчик».|A motion sensor.|Датчик движения.|A smoke sensor.|Датчик дыма.
+sentiment|«Настроение, чувство».|Market sentiment.|Настроение рынка.|I share your sentiment.|Разделяю твои чувства.
+sewage|«Канализация, сточные воды».|Sewage system.|Канализация.|Central sewage.|Центральная канализация.
+shareholder|«Акционер».|A major shareholder.|Крупный акционер.|Shareholders' meeting.|Собрание акционеров.
+shark|«Акула».|A great white shark.|Белая акула.|A loan shark.|Ростовщик.
+shed|«Сарай» и «сбрасывать».|A garden shed.|Садовый сарай.|Shed some weight.|Сбросить вес.
+shell|«Раковина, скорлупа».|A sea shell.|Морская ракушка.|An egg shell.|Яичная скорлупа.
+shield|«Щит» и «защищать».|A heat shield.|Тепловой щит.|Shield your eyes.|Прикрой глаза.
+shipment|«Партия товара, отгрузка».|A new shipment.|Новая поставка.|Track the shipment.|Отследить посылку.
+shipping|«Доставка».|Free shipping.|Бесплатная доставка.|Shipping costs.|Стоимость доставки.
+shopper|«Покупатель».|Holiday shoppers.|Праздничные покупатели.|A smart shopper.|Умный покупатель.
+shortage|«Нехватка».|A shortage of flats.|Нехватка квартир.|Staff shortage.|Нехватка персонала.
+shorts|«Шорты».|Wear shorts.|Носить шорты.|Swim shorts.|Плавательные шорты.
+shortcut|«Короткий путь, ярлык».|Take a shortcut.|Срезать путь.|Keyboard shortcut.|Сочетание клавиш.
+shrimp|«Креветка».|Fried shrimp.|Жареные креветки.|Shrimp salad.|Салат с креветками.
+sibling|«Брат или сестра».|Do you have siblings?|У тебя есть братья или сёстры?|Sibling rivalry.|Соперничество между детьми.
+siege|«Осада».|Under siege.|В осаде.|The siege of Leningrad.|Блокада Ленинграда.
+silk|«Шёлк».|A silk shirt.|Шёлковая рубашка.|Smooth as silk.|Гладкий как шёлк.
+singer|«Певец».|A famous singer.|Известный певец.|A lead singer.|Солист.
+skeleton|«Скелет».|A human skeleton.|Скелет человека.|A skeleton key.|Отмычка.
+skirt|«Юбка».|A short skirt.|Короткая юбка.|A long skirt.|Длинная юбка.
+skull|«Череп».|A human skull.|Человеческий череп.|Skull and bones.|Череп и кости.
+slavery|«Рабство».|Abolish slavery.|Отменить рабство.|Modern slavery.|Современное рабство.
+slice|«Ломтик» и «нарезать».|A slice of bread.|Ломтик хлеба.|A slice of life.|Кусочек жизни.
+slogan|«Лозунг, слоган».|A catchy slogan.|Запоминающийся слоган.|An ad slogan.|Рекламный слоган.
+slot|«Слот, щель, окошко (по времени)».|A free slot.|Свободное окно.|A coin slot.|Щель для монет.
+slum|«Трущобы».|Live in a slum.|Жить в трущобах.|City slums.|Городские трущобы.
+smartphone|«Смартфон».|A new smartphone.|Новый смартфон.|Smartphone apps.|Приложения для смартфона.
+sneaker|«Кроссовок».|White sneakers.|Белые кроссовки.|A pair of sneakers.|Пара кроссовок.
+soap|«Мыло».|Wash with soap.|Помой с мылом.|A soap opera.|Мыльная опера.
+soccer|«Футбол (амер.)».|Play soccer.|Играть в футбол.|A soccer ball.|Футбольный мяч.
+solar panel|«Солнечная панель».|Install solar panels.|Поставить солнечные панели.|Solar panels on the roof.|Солнечные панели на крыше.
+sovereignty|«Суверенитет».|National sovereignty.|Национальный суверенитет.|Respect sovereignty.|Уважать суверенитет.
+spa|«Спа».|A day at the spa.|День в спа.|A spa hotel.|Спа-отель.
+spam|«Спам».|Spam folder.|Папка спама.|Delete the spam.|Удали спам.
+spark|«Искра» и «вызывать».|A spark of hope.|Искра надежды.|Spark a fire.|Вызвать пожар.
+speaker|«Динамик, оратор».|A Bluetooth speaker.|Блютус-колонка.|A great speaker.|Отличный оратор.
+spectator|«Зритель».|Spectators cheered.|Зрители ликовали.|Spectator sport.|Зрелищный спорт.
+spectrum|«Спектр».|A wide spectrum.|Широкий спектр.|The color spectrum.|Цветовой спектр.
+sphere|«Сфера».|Sphere of influence.|Сфера влияния.|A glass sphere.|Стеклянный шар.
+spice|«Специя».|Add some spice.|Добавь специй.|Spice up your life.|Добавь жизни перчинки.
+spine|«Позвоночник, корешок».|Spine pain.|Боль в позвоночнике.|The book's spine.|Корешок книги.
+spokesman|«Представитель, пресс-секретарь».|A company spokesman.|Представитель компании.|The spokesman said…|Пресс-секретарь сказал…
+sponge|«Губка».|A kitchen sponge.|Кухонная губка.|Sponge cake.|Бисквит.
+spouse|«Супруг(а)».|Your spouse.|Твой супруг.|Spouse's consent.|Согласие супруга.
+squad|«Отряд, команда».|A rescue squad.|Спасательный отряд.|The whole squad.|Вся команда.
+squirrel|«Белка».|A red squirrel.|Рыжая белка.|Feed the squirrels.|Кормить белок.
+stability|«Стабильность».|Financial stability.|Финансовая стабильность.|Price stability.|Стабильность цен.
+stadium|«Стадион».|A football stadium.|Футбольный стадион.|A full stadium.|Полный стадион.
+stair|«Ступенька». stairs — лестница.|Go up the stairs.|Поднимись по лестнице.|Mind the stair.|Осторожно, ступенька.
+stall|«Ларёк, прилавок» и «глохнуть».|A market stall.|Прилавок на рынке.|The engine stalled.|Двигатель заглох.
+standpoint|«Точка зрения».|From my standpoint.|С моей точки зрения.|A legal standpoint.|С юридической точки зрения.
+staple|«Основной продукт, скоба».|Bread is a staple.|Хлеб — основной продукт.|A staple gun.|Строительный степлер.
+starter|«Закуска, стартер».|A cold starter.|Холодная закуска.|The car starter.|Стартер машины.
+statistics|«Статистика».|Sales statistics.|Статистика продаж.|According to statistics.|По статистике.
+steak|«Стейк».|A juicy steak.|Сочный стейк.|Steak and fries.|Стейк с картошкой.
+stem|«Стебель» и «происходить».|A flower stem.|Стебель цветка.|Stem from fear.|Происходить от страха.
+stereotype|«Стереотип».|Break the stereotype.|Сломать стереотип.|A common stereotype.|Распространённый стереотип.
+sticker|«Наклейка».|A price sticker.|Ценник-наклейка.|Stickers on the fridge.|Наклейки на холодильнике.
+stimulus|«Стимул».|A stimulus to buy.|Стимул купить.|Economic stimulus.|Стимулирование экономики.
+stitch|«Стежок, шов».|Five stitches.|Пять швов.|A stitch in time saves nine.|Вовремя сделанное спасает от лишних хлопот.
+stockholder|«Акционер».|Stockholders' meeting.|Собрание акционеров.|A small stockholder.|Мелкий акционер.
+stool|«Табурет».|A kitchen stool.|Кухонный табурет.|A bar stool.|Барный стул.
+storage|«Хранение, кладовка».|A storage room.|Кладовка.|Cloud storage.|Облачное хранилище.
+strand|«Прядь, нить».|A strand of hair.|Прядь волос.|A strand of DNA.|Цепочка ДНК.
+strawberry|«Клубника».|Strawberry jam.|Клубничное варенье.|Fresh strawberries.|Свежая клубника.
+streak|«Полоса, серия».|A winning streak.|Серия побед.|A streak of luck.|Полоса везения.
+stripe|«Полоса (узор)».|Red stripes.|Красные полоски.|Stars and Stripes.|Звёздно-полосатый флаг.
+stroller|«Детская коляска».|Push a stroller.|Катить коляску.|A baby stroller.|Детская коляска.
+stuff|«Вещи, штука» и «набивать».|My stuff.|Мои вещи.|Stuff like that.|Всякое такое.
+submarine|«Подводная лодка».|A nuclear submarine.|Атомная подлодка.|A yellow submarine.|Жёлтая подводная лодка.
+submission|«Подача, подчинение».|Submission deadline.|Срок подачи.|Total submission.|Полное подчинение.
+subscriber|«Подписчик».|A new subscriber.|Новый подписчик.|1000 subscribers.|Тысяча подписчиков.
+subsidy|«Субсидия».|A housing subsidy.|Жилищная субсидия.|Get a subsidy.|Получить субсидию.
+subway|«Метро (амер.)».|Take the subway.|Поехать на метро.|A subway station.|Станция метро.
+successor|«Преемник».|Choose a successor.|Выбрать преемника.|His successor.|Его преемник.
+suicide|«Самоубийство».|Political suicide.|Политическое самоубийство.|Suicide prevention.|Профилактика самоубийств.
+sunrise|«Восход».|Watch the sunrise.|Смотреть рассвет.|At sunrise.|На рассвете.
+sunshine|«Солнечный свет».|Bright sunshine.|Яркое солнце.|Hello, sunshine!|Привет, солнышко!
+superstition|«Суеверие».|An old superstition.|Старое суеверие.|Pure superstition.|Чистое суеверие.
+supervisor|«Руководитель, начальник».|Talk to your supervisor.|Поговори с начальником.|A shift supervisor.|Начальник смены.
+supplement|«Добавка, приложение».|A food supplement.|БАД.|A Sunday supplement.|Воскресное приложение.
+supplier|«Поставщик».|A reliable supplier.|Надёжный поставщик.|Change suppliers.|Сменить поставщиков.
+surgeon|«Хирург».|A skilled surgeon.|Опытный хирург.|A heart surgeon.|Кардиохирург.
+surplus|«Излишек».|A budget surplus.|Профицит бюджета.|Surplus food.|Излишки еды.
+surrounding|«Окружающий». surroundings — окрестности.|Nice surroundings.|Приятная обстановка.|Surrounding area.|Окрестности.
+survivor|«Выживший».|The only survivor.|Единственный выживший.|A true survivor.|Настоящий боец.
+suspicion|«Подозрение».|Under suspicion.|Под подозрением.|A deep suspicion.|Сильное подозрение.
+swamp|«Болото».|A swamp in the forest.|Болото в лесу.|Swamped with work.|Завален работой.
+swan|«Лебедь».|A white swan.|Белый лебедь.|Swan Lake.|«Лебединое озеро».
+sweat|«Пот» и «потеть».|Cold sweat.|Холодный пот.|No sweat.|Без проблем.
+sweater|«Свитер».|A warm sweater.|Тёплый свитер.|A wool sweater.|Шерстяной свитер.
+syndrome|«Синдром».|Impostor syndrome.|Синдром самозванца.|A rare syndrome.|Редкий синдром.
+syrup|«Сироп».|Maple syrup.|Кленовый сироп.|Cough syrup.|Сироп от кашля.
+tablet|«Таблетка, планшет».|Take a tablet.|Прими таблетку.|A new tablet.|Новый планшет.
+tag|«Бирка, тег».|A price tag.|Ценник.|A name tag.|Бейдж с именем.
+tale|«Сказка, история».|A fairy tale.|Сказка.|Tell tales.|Ябедничать.
+taxpayer|«Налогоплательщик».|Taxpayers' money.|Деньги налогоплательщиков.|An honest taxpayer.|Честный налогоплательщик.
+teammate|«Товарищ по команде».|My teammates.|Мои товарищи по команде.|Help your teammate.|Помоги товарищу.
+telescope|«Телескоп».|Look through a telescope.|Посмотреть в телескоп.|A space telescope.|Космический телескоп.
+tendency|«Тенденция, склонность».|A tendency to be late.|Привычка опаздывать.|A market tendency.|Тенденция рынка.
+tent|«Палатка».|Pitch a tent.|Поставить палатку.|Sleep in a tent.|Спать в палатке.
+terminal|«Терминал» и «неизлечимый».|Airport terminal.|Терминал аэропорта.|A payment terminal.|Платёжный терминал.
+terror|«Ужас, террор».|In terror.|В ужасе.|A reign of terror.|Царство террора.
+terrorism|«Терроризм».|Fight terrorism.|Бороться с терроризмом.|Act of terrorism.|Теракт.
+testimony|«Показания».|Give testimony.|Давать показания.|Witness testimony.|Показания свидетеля.
+textbook|«Учебник».|An English textbook.|Учебник английского.|A textbook example.|Хрестоматийный пример.
+texture|«Текстура».|Soft texture.|Мягкая текстура.|Wall texture.|Фактура стены.
+theft|«Кража».|Car theft.|Угон машины.|Identity theft.|Кража личных данных.
+therapist|«Терапевт, психотерапевт».|See a therapist.|Сходить к психотерапевту.|A massage therapist.|Массажист.
+thesis|«Тезис, диссертация».|A master's thesis.|Магистерская диссертация.|The main thesis.|Основной тезис.
+thirst|«Жажда».|Quench your thirst.|Утолить жажду.|Thirst for knowledge.|Жажда знаний.
+thorn|«Шип, колючка».|A rose has thorns.|У розы есть шипы.|A thorn in my side.|Бельмо на глазу.
+threshold|«Порог».|On the threshold.|На пороге.|Pain threshold.|Болевой порог.
+thrill|«Трепет, восторг».|The thrill of the deal.|Азарт сделки.|What a thrill!|Какой кайф!
+ticket office|«Билетная касса».|Go to the ticket office.|Подойди к кассе.|The ticket office is closed.|Касса закрыта.
+tile|«Плитка».|Bathroom tiles.|Плитка в ванной.|Roof tiles.|Черепица.
+timetable|«Расписание».|Bus timetable.|Расписание автобусов.|A school timetable.|Школьное расписание.
+tin|«Олово, жестяная банка».|A tin of beans.|Банка фасоли.|A tin roof.|Жестяная крыша.
+toast|«Тост, поджаренный хлеб».|Toast with butter.|Тост с маслом.|Raise a toast.|Поднять тост.
+tobacco|«Табак».|Tobacco smoke.|Табачный дым.|Chewing tobacco.|Жевательный табак.
+toilet paper|«Туалетная бумага».|Buy toilet paper.|Купи туалетную бумагу.|Out of toilet paper.|Кончилась туалетная бумага.
+tolerance|«Терпимость, допуск».|Zero tolerance.|Нулевая терпимость.|Low tolerance for pain.|Низкий болевой порог.
+toll|«Плата за проезд, потери».|A toll road.|Платная дорога.|The death toll.|Число погибших.
+ton|«Тонна».|A ton of work.|Куча работы.|Weighs a ton.|Весит тонну.
+toolbox|«Ящик с инструментами».|Open the toolbox.|Открой ящик с инструментами.|A realtor's toolbox.|Арсенал риелтора.
+toothbrush|«Зубная щётка».|An electric toothbrush.|Электрощётка.|A new toothbrush.|Новая зубная щётка.
+toothpaste|«Зубная паста».|A tube of toothpaste.|Тюбик пасты.|Mint toothpaste.|Мятная паста.
+tornado|«Торнадо».|A tornado warning.|Предупреждение о торнадо.|Like a tornado.|Как ураган.
+torture|«Пытка» и «пытать».|This is torture!|Это пытка!|Torture chamber.|Камера пыток.
+tourism|«Туризм».|Mass tourism.|Массовый туризм.|Tourism in Khakassia.|Туризм в Хакасии.
+toxin|«Токсин».|Remove toxins.|Выводить токсины.|A deadly toxin.|Смертельный токсин.
+tractor|«Трактор».|Drive a tractor.|Водить трактор.|An old tractor.|Старый трактор.
+trader|«Трейдер, торговец».|A stock trader.|Биржевой трейдер.|A street trader.|Уличный торговец.
+traffic light|«Светофор».|Stop at the traffic light.|Остановись на светофоре.|The traffic light is red.|Горит красный.
+tragedy|«Трагедия».|A real tragedy.|Настоящая трагедия.|A Shakespeare tragedy.|Трагедия Шекспира.
+trailer|«Прицеп, трейлер».|A car trailer.|Автоприцеп.|A movie trailer.|Трейлер фильма.
+trainee|«Стажёр».|A new trainee.|Новый стажёр.|A trainee realtor.|Риелтор-стажёр.
+trainer|«Тренер, кроссовок (брит.)».|A personal trainer.|Личный тренер.|A pair of trainers.|Пара кроссовок.
+trait|«Черта (характера)».|A personality trait.|Черта характера.|A family trait.|Семейная черта.
+traitor|«Предатель».|A traitor to the team.|Предатель команды.|Don't be a traitor.|Не будь предателем.
+transaction|«Сделка, транзакция».|A real estate transaction.|Сделка с недвижимостью.|A bank transaction.|Банковская операция.
+transcript|«Расшифровка, выписка оценок».|A call transcript.|Расшифровка звонка.|A school transcript.|Табель оценок.
+transition|«Переход».|A smooth transition.|Плавный переход.|In transition.|В переходном периоде.
+translator|«Переводчик».|A Google translator.|Гугл-переводчик.|Hire a translator.|Нанять переводчика.
+transparency|«Прозрачность».|Full transparency.|Полная прозрачность.|Price transparency.|Прозрачность цен.
+trash|«Мусор (амер.)».|Take out the trash.|Вынеси мусор.|Trash can.|Мусорное ведро.
+tray|«Поднос».|A tea tray.|Поднос для чая.|An ice tray.|Форма для льда.
+treaty|«Договор (международный)».|A peace treaty.|Мирный договор.|Sign a treaty.|Подписать договор.
+trench|«Траншея».|Dig a trench.|Выкопать траншею.|A trench coat.|Плащ-тренч.
+tribute|«Дань, дань уважения».|Pay tribute.|Отдать дань уважения.|A tribute band.|Кавер-группа.
+trio|«Трио».|A jazz trio.|Джазовое трио.|A funny trio.|Весёлая троица.
+triumph|«Триумф».|A great triumph.|Большой триумф.|In triumph.|Торжествующе.
+trophy|«Трофей, кубок».|Win a trophy.|Выиграть кубок.|A trophy wife.|Жена-трофей.
+trout|«Форель».|Catch a trout.|Поймать форель.|Grilled trout.|Форель на гриле.
+truce|«Перемирие».|Call a truce.|Объявить перемирие.|A short truce.|Короткое перемирие.
+trunk|«Ствол, багажник, хобот».|Put it in the trunk.|Положи в багажник.|A tree trunk.|Ствол дерева.
+trustee|«Доверенное лицо, попечитель».|A board of trustees.|Совет попечителей.|Appoint a trustee.|Назначить доверенное лицо.
+tube|«Труба, тюбик, метро (брит.)».|A tube of cream.|Тюбик крема.|Take the tube.|Поехать на метро.
+tuition|«Плата за обучение».|Tuition fees.|Плата за обучение.|Free tuition.|Бесплатное обучение.
+tulip|«Тюльпан».|Red tulips.|Красные тюльпаны.|Tulips in spring.|Тюльпаны весной.
+turkey|«Индейка».|Roast turkey.|Запечённая индейка.|Cold turkey.|Резко бросить.
+turnover|«Оборот, текучесть».|Annual turnover.|Годовой оборот.|Staff turnover.|Текучка кадров.
+tutor|«Репетитор».|An English tutor.|Репетитор английского.|Hire a tutor.|Нанять репетитора.
+twilight|«Сумерки».|At twilight.|В сумерках.|The twilight zone.|Сумеречная зона.
+typewriter|«Печатная машинка».|An old typewriter.|Старая печатная машинка.|Type on a typewriter.|Печатать на машинке.
+tyre|«Шина (брит.)».|A flat tyre.|Спущенная шина.|Winter tyres.|Зимняя резина.
+uncertainty|«Неопределённость».|Market uncertainty.|Неопределённость рынка.|Times of uncertainty.|Времена неопределённости.
+underground|«Метро» и «подземный».|Underground parking.|Подземная парковка.|Take the underground.|Поехать на метро.
+underwear|«Нижнее бельё».|Clean underwear.|Чистое бельё.|Thermal underwear.|Термобельё.
+unemployment|«Безработица».|High unemployment.|Высокая безработица.|Unemployment benefits.|Пособие по безработице.
+unity|«Единство».|Unity is strength.|В единстве сила.|National unity.|Национальное единство.
+upgrade|«Улучшение» и «обновлять».|A free upgrade.|Бесплатное повышение класса.|Upgrade your phone.|Обнови телефон.
+utility|«Коммунальная услуга, полезность».|Utility bills.|Коммуналка.|Utilities included.|Коммунальные включены.
+vaccine|«Вакцина».|A flu vaccine.|Вакцина от гриппа.|Get the vaccine.|Привиться.
+vacuum cleaner|«Пылесос».|A robot vacuum cleaner.|Робот-пылесос.|Turn on the vacuum cleaner.|Включи пылесос.
+validity|«Действительность, обоснованность».|Check the validity.|Проверить действительность.|Validity period.|Срок действия.
+vampire|«Вампир».|A vampire movie.|Фильм про вампиров.|An energy vampire.|Энергетический вампир.
+vanity|«Тщеславие».|Pure vanity.|Чистое тщеславие.|A vanity table.|Туалетный столик.
+vase|«Ваза».|A glass vase.|Стеклянная ваза.|Flowers in a vase.|Цветы в вазе.
+vegetarian|«Вегетарианец» и «вегетарианский».|I'm a vegetarian.|Я вегетарианец.|A vegetarian meal.|Вегетарианское блюдо.
+veil|«Вуаль, завеса».|A wedding veil.|Свадебная фата.|A veil of secrecy.|Завеса тайны.
+vein|«Вена, жилка».|Blood veins.|Кровеносные вены.|In the same vein.|В том же духе.
+velocity|«Скорость».|High velocity.|Высокая скорость.|The velocity of light.|Скорость света.
+vendor|«Продавец».|A street vendor.|Уличный торговец.|A software vendor.|Поставщик ПО.
+verdict|«Приговор, вердикт».|A guilty verdict.|Обвинительный приговор.|What's your verdict?|Твой вердикт?
+verse|«Стих, куплет».|The first verse.|Первый куплет.|Written in verse.|Написано стихами.
+vet|«Ветеринар».|Take the dog to the vet.|Отвези собаку к ветеринару.|A good vet.|Хороший ветеринар.
+veteran|«Ветеран».|A war veteran.|Ветеран войны.|A veteran realtor.|Риелтор со стажем.
+viewer|«Зритель».|TV viewers.|Телезрители.|Dear viewers.|Дорогие зрители.
+villa|«Вилла».|A seaside villa.|Вилла у моря.|Rent a villa.|Снять виллу.
+villain|«Злодей».|The movie villain.|Злодей фильма.|Play the villain.|Играть злодея.
+violation|«Нарушение».|A traffic violation.|Нарушение ПДД.|A violation of the contract.|Нарушение договора.
+violin|«Скрипка».|Play the violin.|Играть на скрипке.|First violin.|Первая скрипка.
+virus|«Вирус».|A computer virus.|Компьютерный вирус.|Catch a virus.|Подхватить вирус.
+volcano|«Вулкан».|An active volcano.|Действующий вулкан.|The volcano erupted.|Вулкан извергся.
+volunteer|«Доброволец» и «вызваться».|Volunteer work.|Волонтёрство.|Any volunteers?|Есть добровольцы?
+voter|«Избиратель».|Young voters.|Молодые избиратели.|Voter turnout.|Явка избирателей.
+voucher|«Ваучер, купон».|A gift voucher.|Подарочный сертификат.|A discount voucher.|Купон на скидку.
+voyage|«Путешествие (морское)».|A long voyage.|Долгое плавание.|Bon voyage!|Счастливого пути!
+waitress|«Официантка».|Ask the waitress.|Спроси официантку.|Tip the waitress.|Оставь чаевые официантке.
+walnut|«Грецкий орех».|Walnut cake.|Ореховый торт.|Walnut furniture.|Мебель из ореха.
+wardrobe|«Гардероб, шкаф».|A big wardrobe.|Большой шкаф.|A winter wardrobe.|Зимний гардероб.
+warmth|«Тепло».|The warmth of the sun.|Тепло солнца.|With warmth.|С теплом.
+warrant|«Ордер» и «оправдывать».|A search warrant.|Ордер на обыск.|An arrest warrant.|Ордер на арест.
+warrior|«Воин».|A brave warrior.|Храбрый воин.|A weekend warrior.|Спортсмен выходного дня.
+wax|«Воск».|Candle wax.|Свечной воск.|Car wax.|Полироль для машины.
+weakness|«Слабость».|My weakness.|Моя слабость.|A sign of weakness.|Признак слабости.
+weed|«Сорняк» и «полоть».|Pull the weeds.|Выдернуть сорняки.|Weed the garden.|Прополоть огород.
+well|«Колодец, скважина».|A deep well.|Глубокий колодец.|An oil well.|Нефтяная скважина.
+whale|«Кит».|A blue whale.|Синий кит.|A whale of a time.|Отлично провести время.
+wheelchair|«Инвалидное кресло».|In a wheelchair.|В инвалидной коляске.|Wheelchair access.|Доступ для колясок.

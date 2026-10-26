@@ -1,0 +1,250 @@
+whisky|«Виски».|A glass of whisky.|Стакан виски.|Scotch whisky.|Шотландский виски.
+widow|«Вдова».|A young widow.|Молодая вдова.|She's a widow.|Она вдова.
+wildlife|«Дикая природа».|Siberian wildlife.|Дикая природа Сибири.|Protect wildlife.|Охранять дикую природу.
+windmill|«Ветряная мельница».|An old windmill.|Старая мельница.|Fight windmills.|Бороться с ветряными мельницами.
+windshield|«Лобовое стекло».|A cracked windshield.|Треснувшее лобовое.|Clean the windshield.|Протри лобовое стекло.
+wit|«Остроумие, ум».|Quick wit.|Острый ум.|At my wit's end.|Не знаю, что делать.
+witch|«Ведьма».|A wicked witch.|Злая ведьма.|A witch hunt.|Охота на ведьм.
+withdrawal|«Снятие (денег), уход, ломка».|Cash withdrawal.|Снятие наличных.|Troop withdrawal.|Вывод войск.
+workplace|«Рабочее место».|A safe workplace.|Безопасное рабочее место.|Workplace stress.|Стресс на работе.
+workshop|«Мастерская, практикум».|A car workshop.|Автомастерская.|A sales workshop.|Тренинг по продажам.
+yacht|«Яхта». ch не читается.|A luxury yacht.|Роскошная яхта.|Sail a yacht.|Ходить на яхте.
+yoga|«Йога».|Do yoga.|Заниматься йогой.|A yoga mat.|Коврик для йоги.
+yogurt|«Йогурт».|Greek yogurt.|Греческий йогурт.|Strawberry yogurt.|Клубничный йогурт.
+zoo|«Зоопарк».|Go to the zoo.|Сходить в зоопарк.|It's a zoo in here!|Тут дурдом!
+bathhouse|«Баня».|A Russian bathhouse.|Русская баня.|Build a bathhouse.|Построить баню.
+greenhouse|«Теплица».|Tomatoes in the greenhouse.|Помидоры в теплице.|Greenhouse effect.|Парниковый эффект.
+doghouse|«Собачья будка». in the doghouse — в немилости.|A new doghouse.|Новая будка.|I'm in the doghouse.|Я в опале у жены.
+vegetable garden|«Огород».|Work in the vegetable garden.|Работать в огороде.|A house with a vegetable garden.|Дом с огородом.
+log house|«Бревенчатый дом».|A cozy log house.|Уютный бревенчатый дом.|Caulk the log house.|Конопатить сруб.
+skyscraper|«Небоскрёб».|A tall skyscraper.|Высокий небоскрёб.|Skyscrapers in Moscow.|Небоскрёбы в Москве.
+crane operator|«Крановщик».|An experienced crane operator.|Опытный крановщик.|The crane operator waved.|Крановщик махнул.
+construction site|«Стройплощадка».|Safety on the construction site.|Безопасность на стройке.|Visit the construction site.|Съездить на стройку.
+builder|«Строитель».|A reliable builder.|Надёжный строитель.|The builders are late.|Строители опаздывают.
+architect|«Архитектор».|A famous architect.|Известный архитектор.|Hire an architect.|Нанять архитектора.
+bricklayer|«Каменщик».|A skilled bricklayer.|Опытный каменщик.|The bricklayer is working.|Каменщик работает.
+foreman|«Прораб, бригадир».|Talk to the foreman.|Поговори с прорабом.|A strict foreman.|Строгий прораб.
+floor plan|«Планировка, поэтажный план».|Show me the floor plan.|Покажи планировку.|An open floor plan.|Открытая планировка.
+property manager|«Управляющий недвижимостью».|Call the property manager.|Позвони управляющему.|A good property manager.|Хороший управляющий.
+open house|«День открытых дверей, показ».|An open house on Sunday.|Показ в воскресенье.|Come to the open house.|Приходите на показ.
+move in|«Въезжать».|When can we move in?|Когда можно заехать?|They moved in yesterday.|Они въехали вчера.
+move out|«Съезжать».|We move out on Friday.|Съезжаем в пятницу.|The tenants moved out.|Жильцы съехали.
+back up|«Поддержать, сделать резервную копию».|Back me up.|Поддержи меня.|Back up your phone.|Сделай резервную копию телефона.
+blow up|«Взорвать, разозлиться».|Blow up a balloon.|Надуть шарик.|He blew up at me.|Он на меня наорал.
+break in|«Вломиться».|Someone broke in.|Кто-то вломился.|Break in new shoes.|Разносить новые туфли.
+break up|«Расстаться, разбить».|They broke up.|Они расстались.|Break up the fight.|Разнять драку.
+bring up|«Воспитывать, поднимать тему».|Bring up children.|Воспитывать детей.|Don't bring it up.|Не поднимай эту тему.
+call off|«Отменить».|Call off the meeting.|Отменить встречу.|The deal was called off.|Сделку отменили.
+catch up|«Догнать, наверстать».|Catch up with me.|Догони меня.|Let's catch up.|Давай повидаемся, поболтаем.
+cheer up|«Подбодрить, взбодриться».|Cheer up!|Не вешай нос!|Cheer him up.|Подбодри его.
+clean up|«Убрать».|Clean up your room.|Убери в комнате.|Clean up the mess.|Убери этот бардак.
+come across|«Наткнуться, производить впечатление».|I came across a great flat.|Наткнулся на отличную квартиру.|He comes across as rude.|Он кажется грубым.
+come up with|«Придумать».|Come up with an idea.|Придумать идею.|Come up with a plan.|Придумать план.
+count on|«Рассчитывать на».|Count on me.|Рассчитывай на меня.|You can count on him.|На него можно положиться.
+cut down|«Сократить, срубить».|Cut down on sugar.|Меньше есть сахара.|Cut down a tree.|Срубить дерево.
+deal with|«Иметь дело с, разбираться».|I'll deal with it.|Я разберусь.|Deal with clients.|Работать с клиентами.
+drop by|«Заглянуть».|Drop by anytime.|Заходи в любое время.|I'll drop by later.|Заскочу позже.
+drop off|«Подвезти, высадить, задремать».|Drop me off here.|Высади меня здесь.|Drop off the keys.|Завези ключи.
+eat out|«Поесть вне дома».|Let's eat out tonight.|Давай поужинаем в кафе.|We rarely eat out.|Мы редко ходим в кафе.
+end up|«В итоге оказаться».|We ended up at home.|В итоге остались дома.|You'll end up broke.|Останешься без денег.
+fall apart|«Развалиться».|The house is falling apart.|Дом разваливается.|The deal fell apart.|Сделка сорвалась.
+fall behind|«Отстать».|Don't fall behind.|Не отставай.|Fall behind on payments.|Просрочить платежи.
+fill out|«Заполнить (анкету)».|Fill out the form.|Заполни анкету.|Fill out the application.|Заполни заявку.
+get along|«Ладить».|We get along well.|Мы хорошо ладим.|Get along with neighbors.|Ладить с соседями.
+get away|«Сбежать, уехать отдохнуть».|Get away from here.|Уходи отсюда.|A weekend getaway.|Поездка на выходные.
+get back|«Вернуться, вернуть».|Get back home.|Вернуться домой.|I'll get back to you.|Я тебе перезвоню.
+get by|«Сводить концы с концами».|Get by on a small salary.|Жить на маленькую зарплату.|I can get by in English.|Могу объясниться по-английски.
+get over|«Пережить, оправиться».|Get over it.|Забей, переживи.|Get over a cold.|Оправиться от простуды.
+get rid of|«Избавиться от».|Get rid of old stuff.|Избавиться от старья.|Get rid of the smell.|Избавиться от запаха.
+give away|«Отдать даром, выдать».|Give away old clothes.|Раздать старую одежду.|Don't give away the secret.|Не выдавай секрет.
+give back|«Вернуть».|Give back my keys.|Верни мои ключи.|Give back to society.|Отдавать долг обществу.
+go ahead|«Давай, вперёд, приступай».|Go ahead.|Давай, валяй.|Go ahead with the deal.|Продолжить сделку.
+go back|«Вернуться».|Go back home.|Вернуться домой.|No going back.|Пути назад нет.
+go down|«Снижаться, спускаться».|Prices went down.|Цены упали.|Go down the stairs.|Спуститься по лестнице.
+go over|«Просмотреть, перейти».|Go over the contract.|Просмотреть договор.|Go over the details.|Пройтись по деталям.
+go through|«Пройти через, пережить».|Go through hard times.|Пережить трудные времена.|The deal went through.|Сделка прошла.
+go up|«Расти, подниматься».|Prices went up.|Цены выросли.|Go up to the fifth floor.|Поднимись на пятый этаж.
+grow up|«Вырасти, повзрослеть».|Grow up!|Повзрослей!|I grew up in Abakan.|Я вырос в Абакане.
+hand in|«Сдать».|Hand in your homework.|Сдай домашку.|Hand in the keys.|Сдать ключи.
+hang up|«Повесить трубку».|Don't hang up!|Не клади трубку!|He hung up on me.|Он бросил трубку.
+hold on|«Подожди, держись».|Hold on a second.|Подожди секунду.|Hold on tight.|Держись крепче.
+hurry up|«Поторопись».|Hurry up!|Поторопись!|Hurry up, we're late.|Быстрее, мы опаздываем.
+keep up|«Не отставать, продолжать».|Keep up the good work.|Продолжай в том же духе.|Keep up with the news.|Следить за новостями.
+kick off|«Начать».|Kick off the meeting.|Начать совещание.|The match kicks off at seven.|Матч начинается в семь.
+knock out|«Вырубить, нокаутировать».|Knock him out.|Вырубить его.|I'm knocked out.|Я вымотан.
+leave out|«Пропустить, не включить».|Don't leave me out.|Не забывай про меня.|Leave out the details.|Опусти детали.
+let down|«Подвести».|Don't let me down.|Не подведи меня.|I feel let down.|Я разочарован.
+log in|«Войти (в аккаунт)».|Log in to the app.|Войди в приложение.|I can't log in.|Не могу войти.
+look out|«Берегись, высматривать».|Look out!|Берегись!|Look out for a good deal.|Высматривай выгодную сделку.
+look up|«Найти (в словаре), поднять глаза».|Look up the word.|Найди слово в словаре.|Things are looking up.|Дела налаживаются.
+make up|«Помириться, выдумать, накраситься».|Kiss and make up.|Поцеловаться и помириться.|Make up a story.|Выдумать историю.
+mess up|«Напортачить».|Don't mess up.|Не облажайся.|I messed up.|Я накосячил.
+move on|«Двигаться дальше».|Time to move on.|Пора двигаться дальше.|Let's move on.|Идём дальше.
+pass away|«Скончаться».|He passed away last year.|Он скончался в прошлом году.|My grandfather passed away.|Мой дед умер.
+pay back|«Вернуть долг».|I'll pay you back.|Я верну тебе деньги.|Pay back the loan.|Погасить кредит.
+pay off|«Окупиться, расплатиться».|Hard work pays off.|Труд окупается.|Pay off the mortgage.|Выплатить ипотеку.
+put away|«Убрать, отложить».|Put away your phone.|Убери телефон.|Put away some money.|Отложить денег.
+put off|«Отложить».|Don't put it off.|Не откладывай.|Put off the meeting.|Перенести встречу.
+put out|«Потушить».|Put out the fire.|Потуши огонь.|Put out the cigarette.|Затуши сигарету.
+put up with|«Терпеть».|I can't put up with it.|Я не могу это терпеть.|Put up with the noise.|Терпеть шум.
+run away|«Убежать».|Don't run away.|Не убегай.|Run away from problems.|Бежать от проблем.
+run into|«Столкнуться, наткнуться».|I ran into an old friend.|Встретил старого друга.|Run into problems.|Столкнуться с проблемами.
+see off|«Провожать».|See off at the airport.|Проводить в аэропорту.|I'll see you off.|Я тебя провожу.
+sell out|«Распродать, продаться».|Tickets sold out.|Билеты распроданы.|He sold out.|Он продался.
+set off|«Отправиться, запустить».|Set off early.|Выехать пораньше.|Set off the alarm.|Включить сигнализацию.
+settle down|«Остепениться, успокоиться».|Settle down and have kids.|Остепениться и завести детей.|Settle down, guys.|Успокойтесь, ребята.
+show off|«Выпендриваться».|Stop showing off.|Хватит выпендриваться.|Show off the new car.|Похвастаться машиной.
+shut down|«Выключить, закрыть».|Shut down the computer.|Выключи компьютер.|The factory shut down.|Завод закрылся.
+sign up|«Записаться».|Sign up for the course.|Записаться на курс.|Sign up here.|Регистрация здесь.
+slow down|«Замедлиться».|Slow down!|Помедленнее!|The market slowed down.|Рынок замедлился.
+sort out|«Разобраться, уладить».|Sort out the problem.|Решить проблему.|I'll sort it out.|Я разберусь.
+speak up|«Говорить громче, высказаться».|Speak up, please.|Говорите громче.|Speak up for yourself.|Постой за себя.
+stand out|«Выделяться».|Stand out from the crowd.|Выделяться из толпы.|This flat stands out.|Эта квартира выделяется.
+stay up|«Не ложиться спать».|Stay up late.|Засидеться допоздна.|Don't stay up all night.|Не сиди всю ночь.
+take after|«Быть похожим (на родителя)».|He takes after his dad.|Он весь в отца.|She takes after her mom.|Она в маму.
+take back|«Забрать обратно».|I take it back.|Беру свои слова назад.|Take back the gift.|Забрать подарок.
+take on|«Взяться за».|Take on a new client.|Взять нового клиента.|Take on too much.|Взвалить слишком много.
+take over|«Взять под контроль, перенять».|Take over the business.|Перенять бизнес.|I'll take over from here.|Дальше я сам.
+take up|«Заняться (хобби), занимать».|Take up English.|Взяться за английский.|It takes up space.|Это занимает место.
+talk over|«Обсудить».|Let's talk it over.|Давай обсудим.|Talk over the price.|Обсудить цену.
+tear down|«Снести».|Tear down the old house.|Снести старый дом.|Tear down the wall.|Снести стену.
+think over|«Обдумать».|Think it over.|Подумай над этим.|I need to think it over.|Мне надо подумать.
+throw away|«Выбросить».|Throw away the trash.|Выбрось мусор.|Don't throw away money.|Не выбрасывай деньги на ветер.
+try on|«Примерить».|Try on this jacket.|Примерь эту куртку.|Can I try it on?|Можно примерить?
+turn down|«Отказать, убавить».|Turn down the offer.|Отклонить предложение.|Turn down the music.|Сделай музыку тише.
+turn up|«Появиться, прибавить».|He turned up late.|Он пришёл поздно.|Turn up the volume.|Сделай погромче.
+wake up|«Проснуться, разбудить».|Wake up!|Просыпайся!|Wake me up at six.|Разбуди меня в шесть.
+warm up|«Разогреться, разминаться».|Warm up the car.|Прогреть машину.|Warm up before running.|Разомнись перед бегом.
+watch out|«Осторожно».|Watch out!|Осторожно!|Watch out for ice.|Осторожно, гололёд.
+wear out|«Износиться, вымотать».|My shoes wore out.|Ботинки износились.|I'm worn out.|Я вымотан.
+work on|«Работать над».|Work on your English.|Работай над английским.|I'm working on it.|Я над этим работаю.
+write down|«Записать».|Write down the address.|Запиши адрес.|Write it down.|Запиши это.
+accordingly|«Соответственно».|Act accordingly.|Действуй соответственно.|Prices changed accordingly.|Цены изменились соответственно.
+additionally|«Кроме того».|Additionally, there's a garage.|Кроме того, есть гараж.|Pay additionally.|Доплатить.
+admittedly|«Надо признать».|Admittedly, it's expensive.|Надо признать, это дорого.|Admittedly, I was wrong.|Признаю, я ошибался.
+alongside|«Рядом, наряду с».|Work alongside experts.|Работать рядом с профи.|Parked alongside the house.|Припаркован у дома.
+altogether|«В целом, совсем».|Altogether ten people.|Всего десять человек.|Stop altogether.|Бросить совсем.
+annually|«Ежегодно».|Paid annually.|Оплата раз в год.|Updated annually.|Обновляется ежегодно.
+anymore|not anymore — «больше не».|I don't smoke anymore.|Я больше не курю.|Not anymore.|Уже нет.
+apparently|«По-видимому».|Apparently, he's sold it.|Похоже, он уже продал.|Apparently not.|Видимо, нет.
+approximately|«Приблизительно».|Approximately fifty meters.|Примерно пятьдесят метров.|Approximately two hours.|Около двух часов.
+arguably|«Пожалуй, возможно».|Arguably the best district.|Пожалуй, лучший район.|Arguably true.|Вероятно, правда.
+backwards|«Назад, задом наперёд».|Walk backwards.|Идти задом.|Count backwards.|Считать в обратном порядке.
+basically|«По сути».|Basically, it's done.|По сути, всё готово.|Basically, no.|В общем-то, нет.
+beforehand|«Заранее».|Call beforehand.|Позвони заранее.|Pay beforehand.|Заплати заранее.
+consequently|«Следовательно».|Consequently, prices rose.|Следовательно, цены выросли.|And consequently…|И, как следствие…
+considerably|«Значительно».|Considerably cheaper.|Значительно дешевле.|Grow considerably.|Значительно вырасти.
+deliberately|«Намеренно».|He did it deliberately.|Он сделал это нарочно.|Speak deliberately.|Говорить размеренно.
+downstairs|«Внизу, вниз (по лестнице)».|Go downstairs.|Спустись вниз.|The neighbors downstairs.|Соседи снизу.
+effectively|«Эффективно, фактически».|Work effectively.|Работать эффективно.|It's effectively sold.|Фактически она продана.
+equally|«Одинаково, поровну».|Split equally.|Поделить поровну.|Equally important.|Одинаково важно.
+essentially|«По существу».|Essentially the same.|По сути то же самое.|Essentially, yes.|По сути, да.
+evenly|«Ровно, равномерно».|Spread evenly.|Распределить равномерно.|Evenly matched.|Равные по силам.
+everywhere|«Везде».|I looked everywhere.|Я везде искал.|Everywhere you go.|Куда ни пойди.
+evidently|«Очевидно».|Evidently, he's tired.|Он явно устал.|Evidently not.|Очевидно, нет.
+fortunately|«К счастью».|Fortunately, no one was hurt.|К счастью, никто не пострадал.|Fortunately, it's cheap.|К счастью, недорого.
+furthermore|«Более того».|Furthermore, it's new.|Более того, она новая.|Furthermore, the price is fair.|Более того, цена честная.
+genuinely|«Искренне, по-настоящему».|Genuinely happy.|По-настоящему счастлив.|I genuinely care.|Мне правда не всё равно.
+happily|«Счастливо, охотно».|Happily married.|Счастливо женат.|I'll happily help.|С радостью помогу.
+hence|«Следовательно, отсюда».|Hence the price.|Отсюда и цена.|Hence the name.|Отсюда и название.
+honestly|«Честно».|Honestly, I don't know.|Честно, не знаю.|Speak honestly.|Говори честно.
+hopefully|«Надеюсь».|Hopefully tomorrow.|Надеюсь, завтра.|Hopefully it works.|Надеюсь, сработает.
+increasingly|«Всё больше».|Increasingly popular.|Всё популярнее.|Increasingly expensive.|Всё дороже.
+indoors|«В помещении».|Stay indoors.|Сиди дома.|Play indoors.|Играть в помещении.
+initially|«Изначально».|Initially I said no.|Сначала я отказался.|Initially planned.|Изначально запланировано.
+instantly|«Мгновенно».|It works instantly.|Работает мгновенно.|I instantly liked it.|Мне сразу понравилось.
+largely|«В основном».|Largely true.|В основном верно.|Largely because of the price.|Во многом из-за цены.
+literally|«Буквально».|Literally five minutes.|Буквально пять минут.|I literally died laughing.|Я буквально помер со смеху.
+moreover|«Кроме того».|Moreover, it's cheap.|Кроме того, дёшево.|Moreover, he lied.|Более того, он соврал.
+naturally|«Естественно».|Naturally, I agreed.|Естественно, я согласился.|Act naturally.|Веди себя естественно.
+nonetheless|«Тем не менее».|Nonetheless, we bought it.|Тем не менее мы купили.|Risky but nonetheless good.|Рискованно, но всё же хорошо.
+notably|«В частности, заметно».|Notably cheaper.|Заметно дешевле.|Most notably…|Прежде всего…
+occasionally|«Изредка».|I occasionally drink.|Иногда выпиваю.|Only occasionally.|Лишь изредка.
+officially|«Официально».|Officially open.|Официально открыто.|Officially married.|Официально женаты.
+originally|«Первоначально, родом».|Originally from Abakan.|Родом из Абакана.|Originally it was cheaper.|Сначала было дешевле.
+outdoors|«На улице, на природе».|Play outdoors.|Играть на улице.|I love the outdoors.|Обожаю природу.
+overseas|«За границей, за рубеж».|Work overseas.|Работать за границей.|Overseas buyers.|Иностранные покупатели.
+partly|«Частично».|Partly true.|Отчасти правда.|Partly cloudy.|Переменная облачность.
+personally|«Лично».|Personally, I like it.|Лично мне нравится.|Don't take it personally.|Не принимай на свой счёт.
+precisely|«Точно, именно».|Precisely!|Именно!|At precisely nine.|Ровно в девять.
+presumably|«Предположительно».|Presumably he knows.|Он, вероятно, знает.|Presumably yes.|Предположительно да.
+previously|«Ранее».|Previously owned.|Бывший в употреблении.|As previously agreed.|Как договаривались ранее.
+primarily|«В первую очередь».|Primarily for families.|В первую очередь для семей.|Primarily price.|Прежде всего цена.
+properly|«Правильно, как следует».|Do it properly.|Сделай как следует.|Eat properly.|Нормально питайся.
+purely|«Исключительно, чисто».|Purely by chance.|Чисто случайно.|Purely business.|Только бизнес.
+readily|«Охотно, легко».|Readily available.|Легко доступно.|He readily agreed.|Он охотно согласился.
+reasonably|«Разумно, вполне».|Reasonably priced.|По разумной цене.|Reasonably good.|Вполне хороший.
+relatively|«Относительно».|Relatively cheap.|Относительно дёшево.|Relatively new.|Сравнительно новый.
+reportedly|«По сообщениям».|Reportedly sold.|Говорят, продано.|He reportedly left.|Он, по слухам, уехал.
+respectively|«Соответственно».|Ten and twenty, respectively.|Десять и двадцать соответственно.|Ivan and Olga, respectively.|Иван и Ольга соответственно.
+roughly|«Примерно, грубо».|Roughly a million.|Примерно миллион.|Roughly speaking.|Грубо говоря.
+sadly|«К сожалению, грустно».|Sadly, it's sold.|К сожалению, продано.|She smiled sadly.|Она грустно улыбнулась.
+secondly|«Во-вторых».|Firstly, price; secondly, location.|Во-первых, цена; во-вторых, место.|Secondly, it's far.|Во-вторых, это далеко.
+separately|«Отдельно».|Sold separately.|Продаётся отдельно.|Live separately.|Жить раздельно.
+sharply|«Резко».|Prices rose sharply.|Цены резко выросли.|Turn sharply.|Резко повернуть.
+significantly|«Значительно».|Significantly better.|Значительно лучше.|Prices fell significantly.|Цены заметно упали.
+similarly|«Аналогично».|Similarly priced.|По схожей цене.|Act similarly.|Поступить так же.
+simultaneously|«Одновременно».|Two calls simultaneously.|Два звонка одновременно.|Happen simultaneously.|Происходить одновременно.
+smoothly|«Гладко».|Everything went smoothly.|Всё прошло гладко.|Run smoothly.|Работать без сбоев.
+solely|«Исключительно».|Solely responsible.|Единственный ответственный.|Solely for you.|Только для тебя.
+specifically|«Конкретно, специально».|Specifically for you.|Специально для тебя.|What specifically?|Что конкретно?
+steadily|«Неуклонно».|Prices grow steadily.|Цены стабильно растут.|Walk steadily.|Идти уверенно.
+strictly|«Строго».|Strictly forbidden.|Строго запрещено.|Strictly speaking.|Строго говоря.
+strongly|«Сильно, решительно».|I strongly recommend it.|Настоятельно рекомендую.|Strongly disagree.|Категорически не согласен.
+subsequently|«Впоследствии».|Subsequently sold.|Впоследствии продан.|He subsequently left.|Потом он ушёл.
+sufficiently|«Достаточно».|Sufficiently large.|Достаточно большой.|Not sufficiently prepared.|Недостаточно подготовлен.
+supposedly|«Якобы».|Supposedly new.|Якобы новый.|He's supposedly rich.|Он вроде как богат.
+temporarily|«Временно».|Temporarily closed.|Временно закрыто.|Temporarily unavailable.|Временно недоступно.
+thereby|«Тем самым».|Thereby saving money.|Тем самым экономя деньги.|And thereby lost.|И тем самым проиграл.
+thoroughly|«Тщательно».|Check thoroughly.|Проверить тщательно.|Thoroughly enjoyed.|Получил огромное удовольствие.
+tightly|«Плотно, крепко».|Hold tightly.|Держи крепко.|Tightly closed.|Плотно закрыто.
+traditionally|«Традиционно».|Traditionally made.|Сделано по традиции.|Traditionally, we celebrate.|По традиции мы празднуем.
+typically|«Обычно, типично».|Typically it takes a month.|Обычно это занимает месяц.|Typically Russian.|Типично по-русски.
+ultimately|«В конечном счёте».|Ultimately, it's your choice.|В конечном счёте, выбор за тобой.|Ultimately, we won.|В итоге мы победили.
+undoubtedly|«Несомненно».|Undoubtedly the best.|Несомненно лучший.|He's undoubtedly right.|Он, без сомнения, прав.
+unexpectedly|«Неожиданно».|He came unexpectedly.|Он пришёл неожиданно.|Unexpectedly cheap.|Неожиданно дёшево.
+virtually|«Практически».|Virtually new.|Практически новый.|Virtually impossible.|Практически невозможно.
+widely|«Широко».|Widely known.|Широко известно.|Widely used.|Широко используется.
+wildly|«Дико, бешено».|Wildly popular.|Бешено популярный.|Wildly different.|Совершенно разные.
+worldwide|«По всему миру».|Known worldwide.|Известно во всём мире.|Worldwide shipping.|Доставка по всему миру.
+abortion|«Аборт».|Abortion rights.|Право на аборт.|The abortion debate.|Споры об абортах.
+absorption|«Поглощение, впитывание».|Water absorption.|Впитывание воды.|Sound absorption.|Звукопоглощение.
+abundance|«Изобилие».|In abundance.|В изобилии.|An abundance of choice.|Огромный выбор.
+acceleration|«Ускорение, разгон».|Fast acceleration.|Быстрый разгон.|Acceleration of growth.|Ускорение роста.
+accomplishment|«Достижение».|A great accomplishment.|Большое достижение.|A sense of accomplishment.|Чувство выполненного дела.
+accountant|«Бухгалтер».|Ask the accountant.|Спроси бухгалтера.|A chief accountant.|Главбух.
+acquaintance|«Знакомый, знакомство».|An old acquaintance.|Старый знакомый.|Nice to make your acquaintance.|Приятно познакомиться.
+acre|«Акр (≈ 40 соток)».|Ten acres of land.|Десять акров земли.|An acre plot.|Участок в акр.
+actor|«Актёр».|A famous actor.|Известный актёр.|A bad actor.|Плохой актёр.
+actress|«Актриса».|A young actress.|Молодая актриса.|Best actress.|Лучшая актриса.
+addiction|«Зависимость».|Phone addiction.|Зависимость от телефона.|Fight addiction.|Бороться с зависимостью.
+addressee|«Адресат».|The addressee is unknown.|Адресат неизвестен.|Deliver to the addressee.|Вручить адресату.
+admiration|«Восхищение».|Full of admiration.|Полон восхищения.|With admiration.|С восхищением.
+adolescent|«Подросток» и «подростковый».|Adolescent problems.|Подростковые проблемы.|A troubled adolescent.|Трудный подросток.
+adviser|«Советник, консультант».|A financial adviser.|Финансовый консультант.|Ask your adviser.|Спроси советника.
+aesthetic|«Эстетика» и «эстетичный».|A modern aesthetic.|Современная эстетика.|Aesthetic value.|Эстетическая ценность.
+affordability|«Доступность (по цене)».|Housing affordability.|Доступность жилья.|Affordability is key.|Главное — доступность.
+agriculture|«Сельское хозяйство».|Work in agriculture.|Работать в сельском хозяйстве.|Modern agriculture.|Современное сельское хозяйство.
+aide|«Помощник».|A presidential aide.|Помощник президента.|My aide.|Мой помощник.
+aisle|«Проход (между рядами)». s не читается.|Aisle seat.|Место у прохода.|Walk down the aisle.|Идти к алтарю.
+allergy|«Аллергия».|A food allergy.|Пищевая аллергия.|Allergy to cats.|Аллергия на кошек.
+alley|«Переулок, аллея».|A dark alley.|Тёмный переулок.|A bowling alley.|Боулинг.
+allocation|«Распределение, выделение».|Budget allocation.|Распределение бюджета.|Land allocation.|Выделение земли.
+altar|«Алтарь».|At the altar.|У алтаря.|A church altar.|Церковный алтарь.
+aluminum|«Алюминий».|Aluminum windows.|Алюминиевые окна.|Aluminum foil.|Фольга.
+ambassador|«Посол».|The Russian ambassador.|Посол России.|A brand ambassador.|Амбассадор бренда.
+amusement|«Развлечение, веселье».|Amusement park.|Парк развлечений.|To my amusement.|К моему веселью.
+announcement|«Объявление».|An important announcement.|Важное объявление.|Make an announcement.|Сделать объявление.
+antenna|«Антенна».|A TV antenna.|Телеантенна.|Insect antennae.|Усики насекомых.
+anthem|«Гимн».|The national anthem.|Государственный гимн.|A rock anthem.|Рок-гимн.
+antique|«Антиквариат» и «старинный».|An antique clock.|Старинные часы.|Antique shop.|Антикварный магазин.
+apron|«Фартук».|A kitchen apron.|Кухонный фартук.|Put on an apron.|Надень фартук.
+aquarium|«Аквариум».|A fish aquarium.|Аквариум с рыбками.|Visit the aquarium.|Сходить в океанариум.
+arch|«Арка».|A stone arch.|Каменная арка.|Under the arch.|Под аркой.
+archive|«Архив».|The city archive.|Городской архив.|Archive the files.|Заархивировать файлы.
+armchair|«Кресло».|A comfy armchair.|Удобное кресло.|An armchair expert.|Диванный эксперт.
+armor|«Броня, доспехи».|Body armor.|Бронежилет.|A knight in shining armor.|Рыцарь в сияющих доспехах.
+arson|«Поджог».|Arson attack.|Поджог.|Charged with arson.|Обвинён в поджоге.
+artery|«Артерия, магистраль».|A blocked artery.|Закупоренная артерия.|A main traffic artery.|Главная транспортная артерия.
+artwork|«Произведение искусства, иллюстрации».|Original artwork.|Оригинальная работа.|Album artwork.|Обложка альбома.
+ash|«Пепел, зола» и «ясень».|Cigarette ash.|Сигаретный пепел.|An ash tree.|Ясень.
