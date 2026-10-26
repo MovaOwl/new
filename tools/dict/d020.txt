@@ -1,0 +1,264 @@
+letterbox|«Почтовый ящик (в двери, брит.)».|Check the letterbox.|Проверь почтовый ящик.|A letter in the letterbox.|Письмо в ящике.
+lettuce|«Салат-латук».|A head of lettuce.|Кочан салата.|Lettuce and tomato.|Салат и помидор.
+lifeguard|«Спасатель (на пляже)».|The lifeguard saved him.|Спасатель его вытащил.|Swim near the lifeguard.|Плавай рядом со спасателем.
+lighter|«Зажигалка» и «легче, светлее».|Got a lighter?|Есть зажигалка?|A lighter color.|Цвет посветлее.
+lily|«Лилия».|A white lily.|Белая лилия.|Water lilies.|Кувшинки.
+lime|«Лайм, известь».|Lime juice.|Сок лайма.|Lime wash.|Побелка известью.
+lipstick|«Помада».|Red lipstick.|Красная помада.|Put on lipstick.|Накрасить губы.
+lizard|«Ящерица».|A small lizard.|Маленькая ящерица.|A lizard on the rock.|Ящерица на камне.
+lobster|«Омар, лобстер».|Lobster dinner.|Ужин с лобстером.|Red as a lobster.|Красный как рак.
+lollipop|«Леденец на палочке».|A cherry lollipop.|Вишнёвый леденец.|Kids love lollipops.|Дети любят чупа-чупсы.
+macaroni|«Макароны».|Macaroni and cheese.|Макароны с сыром.|Boil the macaroni.|Свари макароны.
+mailbox|«Почтовый ящик (амер.)».|Check the mailbox.|Проверь почту в ящике.|An empty mailbox.|Пустой почтовый ящик.
+mango|«Манго».|A ripe mango.|Спелое манго.|Mango juice.|Сок манго.
+maple|«Клён».|A maple leaf.|Кленовый лист.|Maple syrup.|Кленовый сироп.
+marble|«Мрамор, шарик».|A marble floor.|Мраморный пол.|Play marbles.|Играть в шарики.
+mayonnaise|«Майонез».|Salad with mayonnaise.|Салат с майонезом.|A jar of mayonnaise.|Банка майонеза.
+measles|«Корь».|Catch measles.|Заболеть корью.|A measles vaccine.|Прививка от кори.
+melon|«Дыня».|A sweet melon.|Сладкая дыня.|Slice the melon.|Нарежь дыню.
+mermaid|«Русалка».|The Little Mermaid.|«Русалочка».|A mermaid's tail.|Хвост русалки.
+microphone|«Микрофон».|Speak into the microphone.|Говори в микрофон.|Turn off the microphone.|Выключи микрофон.
+milkshake|«Молочный коктейль».|A chocolate milkshake.|Шоколадный коктейль.|Order a milkshake.|Заказать молочный коктейль.
+mitten|«Варежка».|Warm mittens.|Тёплые варежки.|Lose a mitten.|Потерять варежку.
+mole|«Крот, родинка».|A mole in the garden.|Крот в огороде.|A mole on the cheek.|Родинка на щеке.
+monkey|«Обезьяна».|A funny monkey.|Смешная обезьянка.|Monkey business.|Проделки.
+mop|«Швабра» и «мыть шваброй».|Mop the floor.|Помой пол шваброй.|A wet mop.|Мокрая швабра.
+mosquito net|«Москитная сетка».|Put up a mosquito net.|Повесь москитную сетку.|Windows with mosquito nets.|Окна с москитными сетками.
+moth|«Моль, мотылёк».|Moths in the closet.|Моль в шкафу.|Like a moth to a flame.|Как мотылёк на огонь.
+motorcycle|«Мотоцикл».|Ride a motorcycle.|Ездить на мотоцикле.|A motorcycle helmet.|Мотошлем.
+muffin|«Кекс, маффин».|A blueberry muffin.|Черничный маффин.|Coffee and a muffin.|Кофе с кексом.
+mule|«Мул».|Stubborn as a mule.|Упрямый как осёл.|A mule carries loads.|Мул носит грузы.
+mussel|«Мидия».|Mussels in wine.|Мидии в вине.|Fresh mussels.|Свежие мидии.
+mustard|«Горчица».|Hot mustard.|Острая горчица.|Sausage with mustard.|Сосиска с горчицей.
+napkin|«Салфетка».|A paper napkin.|Бумажная салфетка.|Pass me a napkin.|Передай салфетку.
+necktie|«Галстук».|A silk necktie.|Шёлковый галстук.|Wear a necktie.|Носить галстук.
+nest egg|«Сбережения, заначка на будущее».|A nice nest egg.|Хорошая заначка.|Build a nest egg.|Копить на будущее.
+nightgown|«Ночная рубашка».|A cotton nightgown.|Хлопковая ночнушка.|In her nightgown.|В ночной рубашке.
+noodle|«Лапша».|Chicken noodle soup.|Куриный суп с лапшой.|Instant noodles.|Лапша быстрого приготовления.
+nostril|«Ноздря».|Breathe through your nostrils.|Дыши носом.|A blocked nostril.|Заложенная ноздря.
+nun|«Монахиня».|A Catholic nun.|Католическая монахиня.|Live like a nun.|Жить как монашка.
+nutshell|«Ореховая скорлупа». in a nutshell — в двух словах.|In a nutshell.|В двух словах.|Crack a nutshell.|Расколоть скорлупу.
+oar|«Весло».|Pull the oars.|Грести вёслами.|A wooden oar.|Деревянное весло.
+octopus|«Осьминог».|An octopus has eight arms.|У осьминога восемь щупалец.|Grilled octopus.|Осьминог на гриле.
+olive|«Оливка, маслина».|Olive oil.|Оливковое масло.|Green olives.|Зелёные оливки.
+orphan|«Сирота».|An orphan child.|Ребёнок-сирота.|Orphan support.|Помощь сиротам.
+ostrich|«Страус».|An ostrich egg.|Страусиное яйцо.|Bury your head like an ostrich.|Прятать голову в песок.
+otter|«Выдра».|A sea otter.|Морская выдра.|Otters play in the river.|Выдры играют в реке.
+overalls|«Комбинезон».|Work overalls.|Рабочий комбинезон.|Kids in overalls.|Дети в комбинезонах.
+ox|«Бык, вол». Мн. ч. — oxen.|Strong as an ox.|Сильный как бык.|A team of oxen.|Упряжка волов.
+oyster|«Устрица».|Fresh oysters.|Свежие устрицы.|The world is your oyster.|Весь мир у твоих ног.
+paddle|«Весло» и «грести».|Paddle the canoe.|Грести на каноэ.|A table tennis paddle.|Ракетка для пинг-понга.
+pancake|«Блин».|Pancakes with honey.|Блины с мёдом.|Flat as a pancake.|Плоский как блин.
+panther|«Пантера».|A black panther.|Чёрная пантера.|Quick as a panther.|Быстрый как пантера.
+parachute|«Парашют».|Jump with a parachute.|Прыгнуть с парашютом.|The parachute opened.|Парашют раскрылся.
+parrot|«Попугай».|A talking parrot.|Говорящий попугай.|Repeat like a parrot.|Повторять как попугай.
+parsley|«Петрушка».|Fresh parsley.|Свежая петрушка.|Chop the parsley.|Нарежь петрушку.
+partition|«Перегородка, раздел».|A glass partition.|Стеклянная перегородка.|Remove the partition.|Убрать перегородку.
+passerby|«Прохожий».|Ask a passerby.|Спроси прохожего.|Passersby stopped.|Прохожие остановились.
+pasture|«Пастбище».|Cows in the pasture.|Коровы на пастбище.|Greener pastures.|Где трава зеленее.
+pea|«Горошина». peas — горох.|Green peas.|Зелёный горошек.|Like two peas in a pod.|Как две капли воды.
+peacock|«Павлин».|Proud as a peacock.|Гордый как павлин.|Peacock feathers.|Павлиньи перья.
+pebble|«Галька».|A smooth pebble.|Гладкий камешек.|A pebble beach.|Галечный пляж.
+pedal|«Педаль».|Press the pedal.|Нажми педаль.|Gas pedal.|Педаль газа.
+pet shop|«Зоомагазин».|Buy food at the pet shop.|Купи корм в зоомагазине.|A puppy from the pet shop.|Щенок из зоомагазина.
+pickle|«Солёный огурец, маринад».|A jar of pickles.|Банка солёных огурцов.|In a pickle.|В затруднительном положении.
+picnic|«Пикник».|Have a picnic.|Устроить пикник.|It's no picnic.|Это не сахар.
+pillowcase|«Наволочка».|Change the pillowcase.|Смени наволочку.|A cotton pillowcase.|Хлопковая наволочка.
+pineapple|«Ананас».|Pineapple juice.|Ананасовый сок.|Pizza with pineapple.|Пицца с ананасом.
+plum|«Слива».|A ripe plum.|Спелая слива.|A plum job.|Тёплое местечко.
+pocket money|«Карманные деньги».|Give pocket money.|Давать карманные деньги.|Save pocket money.|Копить карманные деньги.
+polar bear|«Белый медведь».|A polar bear on the ice.|Белый медведь на льду.|Polar bears are big.|Белые медведи огромные.
+popcorn|«Попкорн».|Popcorn and a movie.|Попкорн и кино.|Make popcorn.|Сделать попкорн.
+poppy|«Мак».|Red poppies.|Красные маки.|Poppy seeds.|Маковые зёрна.
+porridge|«Каша».|Oat porridge.|Овсяная каша.|Porridge for breakfast.|Каша на завтрак.
+poultry|«Домашняя птица».|Poultry farm.|Птицефабрика.|Meat and poultry.|Мясо и птица.
+pram|«Детская коляска (брит.)».|Push the pram.|Катить коляску.|A baby in a pram.|Малыш в коляске.
+puddle|«Лужа».|Jump in puddles.|Прыгать по лужам.|A big puddle.|Большая лужа.
+pyjamas|«Пижама».|Put on pyjamas.|Надень пижаму.|Still in pyjamas.|Ещё в пижаме.
+raccoon|«Енот».|A cute raccoon.|Милый енот.|A raccoon in the trash.|Енот в мусорке.
+radish|«Редиска».|Fresh radishes.|Свежая редиска.|Radish salad.|Салат из редиски.
+railway station|«Железнодорожный вокзал».|Meet at the railway station.|Встретимся на вокзале.|Abakan railway station.|Вокзал Абакана.
+raincoat|«Плащ, дождевик».|Take a raincoat.|Возьми дождевик.|A yellow raincoat.|Жёлтый плащ.
+raisin|«Изюм».|Buns with raisins.|Булочки с изюмом.|A handful of raisins.|Горсть изюма.
+raspberry|«Малина». p не читается.|Raspberry jam.|Малиновое варенье.|Tea with raspberries.|Чай с малиной.
+recycling|«Переработка (отходов)».|Recycling bin.|Контейнер для переработки.|Plastic recycling.|Переработка пластика.
+reindeer|«Северный олень».|Santa's reindeer.|Олени Санты.|A herd of reindeer.|Стадо оленей.
+remote control|«Пульт».|Where's the remote control?|Где пульт?|A TV remote control.|Пульт от телевизора.
+rhino|«Носорог».|A big rhino.|Большой носорог.|Thick-skinned as a rhino.|Толстокожий как носорог.
+rocking chair|«Кресло-качалка».|Grandpa's rocking chair.|Дедушкино кресло-качалка.|Sit in a rocking chair.|Сидеть в кресле-качалке.
+rooftop|«Крыша (верх здания)».|A rooftop terrace.|Терраса на крыше.|Shout from the rooftops.|Кричать на каждом углу.
+rooster|«Петух».|The rooster crows.|Петух кукарекает.|Wake up with the rooster.|Вставать с петухами.
+rowing|«Гребля».|A rowing boat.|Гребная лодка.|Go rowing.|Заниматься греблей.
+runner|«Бегун».|A fast runner.|Быстрый бегун.|A marathon runner.|Марафонец.
+saucepan|«Кастрюля (с ручкой)».|Boil water in a saucepan.|Вскипяти воду в кастрюле.|A small saucepan.|Маленький ковшик.
+saucer|«Блюдце».|A cup and saucer.|Чашка с блюдцем.|A flying saucer.|Летающая тарелка.
+sawdust|«Опилки».|Covered in sawdust.|Весь в опилках.|Sawdust insulation.|Утепление опилками.
+scarecrow|«Пугало».|A scarecrow in the garden.|Пугало в огороде.|Dressed like a scarecrow.|Одет как пугало.
+schoolbag|«Школьный портфель».|A heavy schoolbag.|Тяжёлый портфель.|Pack your schoolbag.|Собери портфель.
+scooter|«Самокат, скутер».|An electric scooter.|Электросамокат.|Ride a scooter.|Кататься на самокате.
+scorpion|«Скорпион».|A scorpion sting.|Укус скорпиона.|I'm a Scorpio.|Я Скорпион.
+screwdriver|«Отвёртка».|Hand me the screwdriver.|Дай отвёртку.|A Phillips screwdriver.|Крестовая отвёртка.
+seagull|«Чайка».|Seagulls by the sea.|Чайки у моря.|A noisy seagull.|Шумная чайка.
+seashell|«Ракушка».|Collect seashells.|Собирать ракушки.|A pretty seashell.|Красивая ракушка.
+seatbelt|«Ремень безопасности».|Fasten your seatbelt.|Пристегни ремень.|Wear a seatbelt.|Пристёгиваться.
+sheet|«Простыня, лист».|A clean sheet.|Чистая простыня.|A sheet of paper.|Лист бумаги.
+shepherd|«Пастух».|A shepherd and his sheep.|Пастух и овцы.|A German shepherd.|Немецкая овчарка.
+shoelace|«Шнурок».|Tie your shoelaces.|Завяжи шнурки.|Your shoelace is untied.|У тебя шнурок развязался.
+shopping cart|«Тележка для покупок».|Push the shopping cart.|Кати тележку.|A full shopping cart.|Полная тележка.
+silverware|«Столовые приборы, серебро».|Clean the silverware.|Почисти приборы.|Grandma's silverware.|Бабушкино серебро.
+skate|«Конёк» и «кататься на коньках».|Ice skates.|Коньки.|Can you skate?|Умеешь кататься на коньках?
+skateboard|«Скейтборд».|Ride a skateboard.|Кататься на скейте.|A new skateboard.|Новый скейт.
+ski|«Лыжа» и «кататься на лыжах».|Go skiing.|Кататься на лыжах.|Ski resort.|Горнолыжный курорт.
+sledge|«Санки».|Ride a sledge.|Кататься на санках.|Pull the sledge.|Тянуть санки.
+slipper|«Тапочек».|A pair of slippers.|Пара тапочек.|Put on your slippers.|Надень тапки.
+snail|«Улитка».|Slow as a snail.|Медленный как улитка.|Snail mail.|Обычная почта.
+snowflake|«Снежинка».|A big snowflake.|Большая снежинка.|No two snowflakes are alike.|Нет двух одинаковых снежинок.
+snowman|«Снеговик».|Build a snowman.|Слепить снеговика.|A snowman with a carrot nose.|Снеговик с морковкой.
+spaceship|«Космический корабль».|A spaceship to Mars.|Корабль на Марс.|Board the spaceship.|Подняться на корабль.
+sparrow|«Воробей».|A little sparrow.|Маленький воробей.|Sparrows on the wire.|Воробьи на проводе.
+spinach|«Шпинат».|Fresh spinach.|Свежий шпинат.|Spinach salad.|Салат со шпинатом.
+spoonful|«Ложка (чего-то)».|A spoonful of sugar.|Ложка сахара.|Two spoonfuls of honey.|Две ложки мёда.
+stapler|«Степлер».|Use a stapler.|Скрепи степлером.|The stapler is empty.|В степлере нет скоб.
+starfish|«Морская звезда».|A starfish on the beach.|Морская звезда на пляже.|A red starfish.|Красная морская звезда.
+steering wheel|«Руль».|Hold the steering wheel.|Держи руль.|A heated steering wheel.|Руль с подогревом.
+stepmother|«Мачеха».|A kind stepmother.|Добрая мачеха.|Cinderella's stepmother.|Мачеха Золушки.
+stork|«Аист».|A white stork.|Белый аист.|The stork brought a baby.|Аист принёс ребёнка.
+streetlight|«Уличный фонарь».|Streetlights came on.|Включились фонари.|Under the streetlight.|Под фонарём.
+sunflower|«Подсолнух».|Sunflower seeds.|Семечки.|Sunflower oil.|Подсолнечное масло.
+sunglasses|«Солнечные очки».|Put on sunglasses.|Надень солнечные очки.|Cool sunglasses.|Крутые очки.
+swimsuit|«Купальник».|A new swimsuit.|Новый купальник.|Pack a swimsuit.|Возьми купальник.
+tadpole|«Головастик».|Tadpoles in the pond.|Головастики в пруду.|A tiny tadpole.|Крошечный головастик.
+tangerine|«Мандарин».|New Year tangerines.|Новогодние мандарины.|Peel a tangerine.|Почистить мандарин.
+teapot|«Заварочный чайник».|A china teapot.|Фарфоровый чайник.|A storm in a teapot.|Буря в стакане воды.
+teddy bear|«Плюшевый мишка».|A soft teddy bear.|Мягкий мишка.|Hug a teddy bear.|Обнимать мишку.
+thermometer|«Термометр, градусник».|Check the thermometer.|Посмотри на градусник.|The thermometer shows minus thirty.|Градусник показывает минус тридцать.
+tiger|«Тигр».|An Amur tiger.|Амурский тигр.|Fight like a tiger.|Драться как тигр.
+toad|«Жаба».|An ugly toad.|Уродливая жаба.|Toads by the pond.|Жабы у пруда.
+toaster|«Тостер».|Put bread in the toaster.|Положи хлеб в тостер.|A new toaster.|Новый тостер.
+tortoise|«Черепаха (сухопутная)».|Slow as a tortoise.|Медленный как черепаха.|The tortoise and the hare.|Черепаха и заяц.
+traffic cone|«Дорожный конус».|Place a traffic cone.|Поставь конус.|Orange traffic cones.|Оранжевые конусы.
+trampoline|«Батут».|Jump on the trampoline.|Прыгать на батуте.|A trampoline park.|Батутный центр.
+treadmill|«Беговая дорожка».|Run on the treadmill.|Бегать на дорожке.|Life on a treadmill.|Жизнь как бег по кругу.
+trolley|«Тележка, троллейбус».|A luggage trolley.|Багажная тележка.|A shopping trolley.|Тележка в магазине.
+trumpet|«Труба (муз.)».|Play the trumpet.|Играть на трубе.|Blow your own trumpet.|Хвалить себя.
+turtle|«Черепаха (морская)».|A sea turtle.|Морская черепаха.|Turtle speed.|Черепашья скорость.
+tweezers|«Пинцет».|A pair of tweezers.|Пинцет.|Use tweezers.|Возьми пинцетом.
+twig|«Веточка».|A dry twig.|Сухая веточка.|Twigs for the fire.|Хворост для костра.
+vacuum flask|«Термос».|Tea in a vacuum flask.|Чай в термосе.|Take a vacuum flask.|Возьми термос.
+vest|«Жилет, майка (брит.)».|A warm vest.|Тёплая жилетка.|A life vest.|Спасательный жилет.
+vinegar|«Уксус».|Apple vinegar.|Яблочный уксус.|Oil and vinegar.|Масло и уксус.
+vineyard|«Виноградник».|Visit a vineyard.|Посетить виноградник.|A vineyard in France.|Виноградник во Франции.
+vulture|«Стервятник».|Vultures circle above.|Стервятники кружат.|Like a vulture.|Как стервятник.
+wagon|«Повозка, вагон».|A horse wagon.|Конная повозка.|On the wagon.|В завязке (не пью).
+wallpaper|«Обои».|Hang wallpaper.|Клеить обои.|New wallpaper.|Новые обои.
+washbasin|«Умывальник, раковина».|Wash at the washbasin.|Умыться у раковины.|A new washbasin.|Новая раковина.
+watering can|«Лейка».|Fill the watering can.|Набери лейку.|Water with a watering can.|Полить из лейки.
+watermelon|«Арбуз».|A juicy watermelon.|Сочный арбуз.|Watermelon season.|Сезон арбузов.
+wheelbarrow|«Тачка».|Push a wheelbarrow.|Катить тачку.|A wheelbarrow of sand.|Тачка песка.
+whisker|«Ус (у кота)».|Cat whiskers.|Кошачьи усы.|By a whisker.|На волосок.
+windowsill|«Подоконник».|Flowers on the windowsill.|Цветы на подоконнике.|A wide windowsill.|Широкий подоконник.
+wing mirror|«Боковое зеркало».|Check the wing mirror.|Посмотри в боковое зеркало.|A broken wing mirror.|Разбитое боковое зеркало.
+woodpecker|«Дятел».|A woodpecker on the tree.|Дятел на дереве.|Knock like a woodpecker.|Стучать как дятел.
+wrench|«Гаечный ключ».|Pass me the wrench.|Дай гаечный ключ.|An adjustable wrench.|Разводной ключ.
+zebra|«Зебра».|A zebra crossing.|Пешеходная зебра.|Zebra stripes.|Полоски зебры.
+zipper|«Молния (застёжка)».|The zipper is stuck.|Молнию заело.|Zip up the zipper.|Застегни молнию.
+acknowledgement|«Подтверждение, признание».|Receipt acknowledgement.|Подтверждение получения.|In acknowledgement of…|В знак признания…
+best regards|«С наилучшими пожеланиями» (в письмах).|Best regards, Igor.|С уважением, Игорь.|Send my best regards.|Передай привет.
+by the way|«Кстати».|By the way, the flat is sold.|Кстати, квартира продана.|By the way, how are you?|Кстати, как дела?
+in fact|«На самом деле».|In fact, it's cheaper.|На самом деле дешевле.|In fact, I agree.|Вообще-то я согласен.
+of course|«Конечно».|Of course I'll help.|Конечно, помогу.|Of course not.|Конечно нет.
+at least|«По крайней мере».|At least try.|Хотя бы попробуй.|At least a million.|Минимум миллион.
+as soon as|«Как только».|As soon as possible.|Как можно скорее.|Call me as soon as you know.|Позвони, как узнаешь.
+in advance|«Заранее».|Pay in advance.|Заплатить заранее.|Thanks in advance.|Заранее спасибо.
+on time|«Вовремя (по расписанию)».|Be on time.|Приходи вовремя.|The train is on time.|Поезд по расписанию.
+in time|«Вовремя, успеть».|Just in time.|Как раз вовремя.|We made it in time.|Мы успели.
+by chance|«Случайно».|We met by chance.|Мы встретились случайно.|Do you, by chance, know him?|Ты случайно его не знаешь?
+for sure|«Наверняка».|I'll come for sure.|Я точно приду.|For sure!|Однозначно!
+no way|«Ни за что, не может быть».|No way!|Да ладно!|No way I'm selling.|Ни за что не продам.
+on purpose|«Нарочно».|He did it on purpose.|Он сделал это нарочно.|Not on purpose.|Не специально.
+so far|«Пока что».|So far, so good.|Пока всё хорошо.|Three calls so far.|Пока три звонка.
+after all|«В конце концов, всё-таки».|After all, he's my brother.|В конце концов, он мой брат.|He came after all.|Он всё-таки пришёл.
+as well|«Тоже».|I want one as well.|Я тоже хочу.|Bring the keys as well.|Ключи тоже возьми.
+at once|«Сразу, одновременно».|Come at once.|Иди сейчас же.|All at once.|Все разом.
+by heart|«Наизусть».|Learn by heart.|Выучить наизусть.|I know it by heart.|Знаю наизусть.
+in charge|«Ответственный, главный».|Who's in charge?|Кто здесь главный?|In charge of sales.|Отвечает за продажи.
+in common|«Общее».|We have a lot in common.|У нас много общего.|Nothing in common.|Ничего общего.
+in person|«Лично».|Meet in person.|Встретиться лично.|Better in person.|Лучше вживую.
+on sale|«В продаже, со скидкой».|On sale now.|Уже в продаже.|Shoes on sale.|Обувь со скидкой.
+out of order|«Не работает».|The lift is out of order.|Лифт не работает.|Out of order sign.|Табличка «Не работает».
+under control|«Под контролем».|Everything is under control.|Всё под контролем.|Keep it under control.|Держи под контролем.
+up to date|«Актуальный, современный».|Keep up to date.|Быть в курсе.|An up-to-date list.|Актуальный список.
+for instance|«Например».|For instance, this flat.|Например, эта квартира.|Take Abakan, for instance.|Возьмём, например, Абакан.
+in addition|«В дополнение, кроме того».|In addition, there's a garage.|Кроме того, есть гараж.|In addition to the price.|Помимо цены.
+in general|«В целом».|In general, I like it.|В целом мне нравится.|People in general.|Люди в целом.
+on the other hand|«С другой стороны».|On the other hand, it's cheap.|С другой стороны, дёшево.|On the one hand… on the other hand…|С одной стороны… с другой…
+as a result|«В результате».|As a result, we sold it.|В результате мы продали.|As a result of the crisis.|В результате кризиса.
+at first|«Сначала».|At first I didn't like it.|Сначала мне не нравилось.|Love at first sight.|Любовь с первого взгляда.
+in the end|«В конце концов, в итоге».|In the end, we agreed.|В итоге мы договорились.|It's worth it in the end.|В конце концов оно того стоит.
+make sense|«Иметь смысл».|It makes sense.|Это логично.|That doesn't make sense.|Это бессмыслица.
+take place|«Происходить, состояться».|The deal will take place on Monday.|Сделка состоится в понедельник.|Where did it take place?|Где это произошло?
+pay attention to|«Уделять внимание».|Pay attention to details.|Обращай внимание на детали.|Pay attention to me.|Слушай меня внимательно.
+keep in mind|«Иметь в виду».|Keep in mind the price.|Учитывай цену.|Keep that in mind.|Имей это в виду.
+make a deal|«Заключить сделку, договориться».|Let's make a deal.|Давай договоримся.|We made a deal.|Мы ударили по рукам.
+close a deal|«Закрыть сделку».|Close a deal today.|Закрыть сделку сегодня.|I closed three deals.|Я закрыл три сделки.
+make an offer|«Сделать предложение (цены)».|Make an offer on the house.|Предложить цену за дом.|They made an offer.|Они сделали предложение.
+counteroffer|«Встречное предложение».|Make a counteroffer.|Сделать встречное предложение.|Accept the counteroffer.|Принять встречное предложение.
+walk away|«Уйти (от сделки)».|Be ready to walk away.|Будь готов уйти.|He walked away from the deal.|Он отказался от сделки.
+win-win|«Взаимовыгодный».|A win-win deal.|Взаимовыгодная сделка.|It's win-win.|Все в плюсе.
+bottom line|«Итог, суть».|The bottom line is…|Итог такой…|What's your bottom line?|Какая твоя крайняя цена?
+fair price|«Справедливая цена».|A fair price for the flat.|Справедливая цена за квартиру.|Pay a fair price.|Заплатить честную цену.
+market value|«Рыночная стоимость».|Below market value.|Ниже рынка.|Assess the market value.|Оценить рыночную стоимость.
+first impression|«Первое впечатление».|Make a good first impression.|Произвести хорошее первое впечатление.|First impressions matter.|Первое впечатление важно.
+small talk|«Светская беседа».|Make small talk.|Поболтать о пустяках.|I hate small talk.|Терпеть не могу пустую болтовню.
+follow up|«Напомнить о себе, проследить».|Follow up with the client.|Напомнить клиенту о себе.|A follow-up call.|Повторный звонок.
+cold call|«Холодный звонок».|Make cold calls.|Делать холодные звонки.|A cold call script.|Скрипт холодного звонка.
+key point|«Ключевой момент».|The key point is price.|Ключевой момент — цена.|Three key points.|Три ключевых момента.
+pros and cons|«За и против».|Weigh the pros and cons.|Взвесить за и против.|List the pros and cons.|Перечислить плюсы и минусы.
+gut feeling|«Чутьё, внутреннее чувство».|Trust your gut feeling.|Доверься чутью.|I have a gut feeling.|Нутром чую.
+price drop|«Снижение цены».|A big price drop.|Сильное снижение цены.|After the price drop.|После снижения цены.
+hidden defect|«Скрытый дефект».|A hidden defect in the roof.|Скрытый дефект крыши.|Check for hidden defects.|Проверь скрытые дефекты.
+move-in ready|«Готов к заселению».|A move-in ready flat.|Квартира под ключ.|It's move-in ready.|Можно заезжать.
+fixer-upper|«Дом под ремонт».|Buy a fixer-upper.|Купить дом под ремонт.|A cheap fixer-upper.|Дешёвый дом под ремонт.
+curb appeal|«Привлекательный вид снаружи».|Great curb appeal.|Отличный вид снаружи.|Improve curb appeal.|Улучшить внешний вид дома.
+open-plan|«Свободная планировка».|An open-plan kitchen.|Кухня-гостиная.|Open-plan office.|Офис открытого типа.
+south-facing|«С окнами на юг».|A south-facing balcony.|Балкон на юг.|South-facing windows.|Окна на юг.
+spacious|«Просторный».|A spacious kitchen.|Просторная кухня.|Bright and spacious.|Светлый и просторный.
+well-kept|«Ухоженный».|A well-kept garden.|Ухоженный сад.|A well-kept flat.|Ухоженная квартира.
+furnished|«Меблированный».|A furnished flat.|Квартира с мебелью.|Fully furnished.|Полностью меблирована.
+unfurnished|«Без мебели».|An unfurnished house.|Дом без мебели.|Rent unfurnished.|Сдаётся без мебели.
+gated community|«Закрытый посёлок, ЖК».|Live in a gated community.|Жить в закрытом посёлке.|A safe gated community.|Безопасный закрытый ЖК.
+homeowner|«Домовладелец».|A proud homeowner.|Гордый владелец дома.|Homeowner insurance.|Страхование жилья.
+house hunting|«Поиск жилья».|We're house hunting.|Мы ищем жильё.|House hunting is tiring.|Поиск жилья выматывает.
+real estate agent|«Агент по недвижимости».|Call a real estate agent.|Позвони риелтору.|I'm a real estate agent.|Я риелтор.
+price tag|«Ценник».|Check the price tag.|Посмотри ценник.|A big price tag.|Высокая цена.
+deal breaker|«Причина отказаться от сделки».|That's a deal breaker.|Это меня не устраивает.|No parking is a deal breaker.|Без парковки — не вариант.
+handshake deal|«Сделка на словах».|A handshake deal.|Договорились на словах.|Don't trust a handshake deal.|Не верь устным договорённостям.
+earnest money|«Задаток».|Pay earnest money.|Внести задаток.|Return the earnest money.|Вернуть задаток.
+monthly payment|«Ежемесячный платёж».|A low monthly payment.|Небольшой ежемесячный платёж.|Calculate the monthly payment.|Рассчитать платёж.
+credit score|«Кредитный рейтинг».|A good credit score.|Хороший кредитный рейтинг.|Check your credit score.|Проверь кредитную историю.
+paperwork|«Бумажная волокита, документы».|Lots of paperwork.|Куча бумаг.|Do the paperwork.|Оформить документы.
+ownership|«Право собственности».|Proof of ownership.|Подтверждение права собственности.|Transfer of ownership.|Переход права собственности.
+kitchenette|«Мини-кухня».|A studio with a kitchenette.|Студия с мини-кухней.|A small kitchenette.|Маленькая кухонька.
+storage room|«Кладовая».|A flat with a storage room.|Квартира с кладовкой.|Put it in the storage room.|Убери в кладовку.
+laundry|«Стирка, прачечная».|Do the laundry.|Постирать.|A laundry room.|Постирочная.
+heated floor|«Тёплый пол».|A bathroom with a heated floor.|Ванная с тёплым полом.|Install a heated floor.|Сделать тёплый пол.
+double glazing|«Стеклопакет».|Windows with double glazing.|Окна со стеклопакетами.|Install double glazing.|Поставить стеклопакеты.
+leaky roof|«Протекающая крыша».|Fix the leaky roof.|Починить протекающую крышу.|A house with a leaky roof.|Дом с дырявой крышей.
+mold|«Плесень».|Mold in the bathroom.|Плесень в ванной.|Remove the mold.|Убрать плесень.
+pest|«Вредитель».|Pest control.|Дезинсекция.|Garden pests.|Садовые вредители.
+termite|«Термит».|Termite damage.|Повреждения термитами.|Check for termites.|Проверь на термитов.
+humidity|«Влажность».|High humidity.|Высокая влажность.|Humidity in the basement.|Влажность в подвале.
+ventilation|«Вентиляция».|Good ventilation.|Хорошая вентиляция.|Check the ventilation.|Проверь вентиляцию.
+radiator|«Батарея (отопления), радиатор».|A hot radiator.|Горячая батарея.|Replace the radiators.|Заменить батареи.
+fuse box|«Электрощиток».|Check the fuse box.|Проверь щиток.|The fuse box is in the hall.|Щиток в коридоре.
+meter|«Счётчик, метр».|A water meter.|Счётчик воды.|Fifty square meters.|Пятьдесят квадратных метров.
+water heater|«Водонагреватель».|An electric water heater.|Электрический бойлер.|The water heater broke.|Бойлер сломался.
+septic tank|«Септик».|A house with a septic tank.|Дом с септиком.|Clean the septic tank.|Откачать септик.
+sewer|«Канализация (труба)».|Central sewer.|Центральная канализация.|A blocked sewer.|Засор в канализации.
+skyline|«Силуэт города».|The city skyline.|Панорама города.|A view of the skyline.|Вид на панораму.
+neighborhood watch|«Соседский дозор».|Join the neighborhood watch.|Вступить в соседский дозор.|A neighborhood watch sign.|Табличка «Соседский дозор».
+commute|«Дорога на работу» и «ездить на работу».|A long commute.|Долгая дорога на работу.|I commute by bus.|Езжу на работу на автобусе.
+walkable|«Удобный для пешеходов».|A walkable neighborhood.|Район, где всё рядом.|Very walkable.|Всё в пешей доступности.
+amenities|«Удобства, инфраструктура».|Local amenities.|Местная инфраструктура.|Close to amenities.|Рядом вся инфраструктура.
+public transport|«Общественный транспорт».|Close to public transport.|Рядом остановки.|Take public transport.|Ездить на общественном транспорте.
+grocery store|«Продуктовый магазин».|A grocery store nearby.|Продуктовый рядом.|Go to the grocery store.|Сходить в продуктовый.

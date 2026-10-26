@@ -1,0 +1,260 @@
+astronaut|«Космонавт, астронавт».|A brave astronaut.|Смелый космонавт.|Astronauts in space.|Космонавты в космосе.
+attorney|«Адвокат, поверенный».|Call my attorney.|Позвони моему адвокату.|Power of attorney.|Доверенность.
+avenue|«Проспект».|Lenin Avenue.|Проспект Ленина.|Explore every avenue.|Испробовать все пути.
+avocado|«Авокадо».|Avocado toast.|Тост с авокадо.|A ripe avocado.|Спелый авокадо.
+axis|«Ось».|The Earth's axis.|Ось Земли.|The x-axis.|Ось икс.
+backpack|«Рюкзак».|A school backpack.|Школьный рюкзак.|Pack your backpack.|Собери рюкзак.
+backyard|«Задний двор».|Play in the backyard.|Играть на заднем дворе.|A big backyard.|Большой двор.
+bacon|«Бекон».|Bacon and eggs.|Яичница с беконом.|Bring home the bacon.|Зарабатывать на хлеб.
+ballet|«Балет».|Go to the ballet.|Пойти на балет.|Ballet shoes.|Пуанты.
+bandage|«Бинт, повязка».|Put on a bandage.|Наложить повязку.|An elastic bandage.|Эластичный бинт.
+bang|«Удар, хлопок» и «бахнуть».|A loud bang.|Громкий хлопок.|Bang on the door.|Стучать в дверь.
+banker|«Банкир».|A rich banker.|Богатый банкир.|Talk to the banker.|Поговори с банкиром.
+bar code|«Штрихкод».|Scan the bar code.|Отсканируй штрихкод.|No bar code.|Нет штрихкода.
+barber|«Парикмахер (мужской)».|Go to the barber.|Сходить в барбершоп.|A barber shop.|Барбершоп.
+barn|«Амбар, сарай».|A red barn.|Красный амбар.|Hay in the barn.|Сено в амбаре.
+baseball|«Бейсбол».|Play baseball.|Играть в бейсбол.|A baseball cap.|Бейсболка.
+basketball|«Баскетбол».|Play basketball.|Играть в баскетбол.|A basketball court.|Баскетбольная площадка.
+bat|«Летучая мышь, бита».|A baseball bat.|Бейсбольная бита.|Blind as a bat.|Слепой как крот.
+bathtub|«Ванна».|A hot bathtub.|Горячая ванна.|A new bathtub.|Новая ванна.
+bay|«Залив, отсек».|A quiet bay.|Тихий залив.|Keep at bay.|Держать на расстоянии.
+beak|«Клюв».|A bird's beak.|Птичий клюв.|A sharp beak.|Острый клюв.
+beast|«Зверь».|Beauty and the Beast.|«Красавица и Чудовище».|A wild beast.|Дикий зверь.
+beetle|«Жук».|A black beetle.|Чёрный жук.|A VW Beetle.|«Фольксваген Жук».
+bell pepper|«Болгарский перец».|A red bell pepper.|Красный болгарский перец.|Stuffed bell peppers.|Фаршированные перцы.
+belly|«Живот, пузо».|A full belly.|Полный живот.|Belly laugh.|Хохот до упаду.
+beverage|«Напиток».|Hot beverages.|Горячие напитки.|Food and beverages.|Еда и напитки.
+bicycle|«Велосипед».|Ride a bicycle.|Ездить на велосипеде.|A bicycle path.|Велодорожка.
+bike|«Велосипед, мотоцикл (разг.)».|Ride a bike.|Кататься на велике.|A new bike.|Новый велик.
+billboard|«Рекламный щит».|A big billboard.|Большой билборд.|Rent a billboard.|Арендовать билборд.
+bin|«Мусорное ведро, контейнер».|Put it in the bin.|Выбрось в ведро.|A recycling bin.|Контейнер для вторсырья.
+biscuit|«Печенье».|Tea and biscuits.|Чай с печеньем.|A chocolate biscuit.|Шоколадное печенье.
+bishop|«Епископ, слон (шахматы)».|The bishop of Abakan.|Епископ Абаканский.|Move the bishop.|Пойти слоном.
+blender|«Блендер».|Use a blender.|Используй блендер.|A new blender.|Новый блендер.
+blouse|«Блузка».|A white blouse.|Белая блузка.|A silk blouse.|Шёлковая блузка.
+boarding pass|«Посадочный талон».|Show your boarding pass.|Покажите посадочный.|Print the boarding pass.|Распечатать посадочный.
+bodyguard|«Телохранитель».|A personal bodyguard.|Личный телохранитель.|Hire a bodyguard.|Нанять охранника.
+boiler|«Котёл, бойлер».|A gas boiler.|Газовый котёл.|The boiler broke.|Котёл сломался.
+bolt|«Болт, засов».|Nuts and bolts.|Гайки и болты.|A bolt of lightning.|Удар молнии.
+bomb|«Бомба».|A time bomb.|Бомба замедленного действия.|It costs a bomb.|Стоит кучу денег.
+bonfire|«Костёр».|Light a bonfire.|Развести костёр.|Sit by the bonfire.|Сидеть у костра.
+bookshelf|«Книжная полка».|A full bookshelf.|Полная книжная полка.|Build a bookshelf.|Собрать полку.
+boredom|«Скука».|Die of boredom.|Умереть от скуки.|Out of boredom.|От скуки.
+bouquet|«Букет».|A bouquet of roses.|Букет роз.|A wedding bouquet.|Свадебный букет.
+boutique|«Бутик».|A fashion boutique.|Модный бутик.|A boutique hotel.|Бутик-отель.
+boyfriend|«Парень (бойфренд)».|Her boyfriend.|Её парень.|A new boyfriend.|Новый парень.
+brand new|«Совершенно новый».|A brand new car.|Новенькая машина.|Brand new building.|Новостройка.
+bravery|«Храбрость».|An act of bravery.|Смелый поступок.|A medal for bravery.|Медаль за отвагу.
+breadth|«Ширина».|Length and breadth.|Длина и ширина.|Breadth of knowledge.|Широта знаний.
+bribe|«Взятка» и «подкупать».|Take a bribe.|Брать взятку.|Offer a bribe.|Предложить взятку.
+bricklaying|«Кирпичная кладка».|Bricklaying work.|Кладочные работы.|Learn bricklaying.|Научиться класть кирпич.
+briefcase|«Портфель».|A leather briefcase.|Кожаный портфель.|Carry a briefcase.|Носить портфель.
+broom|«Метла».|Sweep with a broom.|Мести метлой.|A new broom sweeps clean.|Новая метла чисто метёт.
+broth|«Бульон».|Chicken broth.|Куриный бульон.|Hot broth.|Горячий бульон.
+brother-in-law|«Шурин, деверь, зять».|My brother-in-law.|Мой шурин.|Visit my brother-in-law.|Навестить шурина.
+bruise|«Синяк».|A big bruise.|Большой синяк.|Covered in bruises.|Весь в синяках.
+bucket list|«Список дел на жизнь».|On my bucket list.|В моём списке желаний.|Make a bucket list.|Составить список мечт.
+buckle|«Пряжка» и «застегнуть».|A belt buckle.|Пряжка ремня.|Buckle up!|Пристегнись!
+buddy|«Приятель».|My old buddy.|Мой старый приятель.|Hey, buddy!|Эй, дружище!
+buffet|«Шведский стол».|A breakfast buffet.|Завтрак шведский стол.|All-you-can-eat buffet.|Безлимитный шведский стол.
+bulletin|«Бюллетень, сводка».|A news bulletin.|Выпуск новостей.|Bulletin board.|Доска объявлений.
+bully|«Задира, хулиган» и «травить».|A school bully.|Школьный задира.|Don't bully him.|Не задирай его.
+bumper|«Бампер».|The front bumper.|Передний бампер.|Bumper to bumper.|Бампер к бамперу (пробка).
+bun|«Булочка, пучок (волос)».|A sweet bun.|Сладкая булочка.|Hair in a bun.|Волосы в пучке.
+burglar|«Грабитель (взломщик)».|A burglar alarm.|Охранная сигнализация.|Catch a burglar.|Поймать вора.
+burger|«Бургер».|A cheese burger.|Чизбургер.|Burger and fries.|Бургер с картошкой.
+businessman|«Бизнесмен».|A successful businessman.|Успешный бизнесмен.|A local businessman.|Местный бизнесмен.
+butcher|«Мясник».|The butcher's shop.|Мясная лавка.|Ask the butcher.|Спроси у мясника.
+cab|«Такси».|Call a cab.|Вызови такси.|Take a cab.|Поехать на такси.
+cafeteria|«Столовая».|The school cafeteria.|Школьная столовая.|Eat in the cafeteria.|Поесть в столовой.
+calculator|«Калькулятор».|A mortgage calculator.|Ипотечный калькулятор.|Use a calculator.|Посчитай на калькуляторе.
+camel|«Верблюд».|Ride a camel.|Покататься на верблюде.|Camel color.|Цвет кэмел.
+campfire|«Костёр (в походе)».|Stories by the campfire.|Байки у костра.|Make a campfire.|Развести костёр.
+campus|«Кампус, студгородок».|On campus.|В кампусе.|A university campus.|Университетский городок.
+can|«Банка (жестяная)».|A can of beer.|Банка пива.|A trash can.|Мусорное ведро.
+canoe|«Каноэ».|Paddle a canoe.|Грести на каноэ.|A canoe trip.|Поход на каноэ.
+capitalism|«Капитализм».|Modern capitalism.|Современный капитализм.|Wild capitalism.|Дикий капитализм.
+caption|«Подпись (к фото)».|Write a caption.|Написать подпись.|A funny caption.|Смешная подпись.
+cart|«Тележка».|A shopping cart.|Тележка в магазине.|Add to cart.|Добавить в корзину.
+cashier|«Кассир».|Pay the cashier.|Заплати кассиру.|A bank cashier.|Кассир банка.
+caterpillar|«Гусеница».|A green caterpillar.|Зелёная гусеница.|A caterpillar tractor.|Гусеничный трактор.
+cathedral|«Собор».|An old cathedral.|Старый собор.|St. Basil's Cathedral.|Храм Василия Блаженного.
+ceiling fan|«Потолочный вентилятор».|Turn on the ceiling fan.|Включи потолочный вентилятор.|A quiet ceiling fan.|Тихий потолочный вентилятор.
+cellar|«Погреб, подвал».|Potatoes in the cellar.|Картошка в погребе.|A wine cellar.|Винный погреб.
+cemetery|«Кладбище».|An old cemetery.|Старое кладбище.|Near the cemetery.|Рядом с кладбищем.
+chalk|«Мел».|White chalk.|Белый мел.|Like chalk and cheese.|Небо и земля.
+chandelier|«Люстра».|A crystal chandelier.|Хрустальная люстра.|Hang the chandelier.|Повесить люстру.
+cheekbone|«Скула».|High cheekbones.|Высокие скулы.|Sharp cheekbones.|Острые скулы.
+chef|«Шеф-повар».|A famous chef.|Известный шеф.|The chef's special.|Фирменное блюдо.
+chick|«Цыплёнок, девчонка (сленг)».|A yellow chick.|Жёлтый цыплёнок.|Chicks and ducklings.|Цыплята и утята.
+chopsticks|«Палочки для еды».|Eat with chopsticks.|Есть палочками.|A pair of chopsticks.|Пара палочек.
+cigar|«Сигара».|A Cuban cigar.|Кубинская сигара.|Light a cigar.|Закурить сигару.
+claw|«Коготь, клешня».|Sharp claws.|Острые когти.|Crab claws.|Клешни краба.
+cloakroom|«Гардероб (в театре)».|Leave your coat in the cloakroom.|Сдай пальто в гардероб.|Cloakroom ticket.|Номерок.
+clown|«Клоун».|A circus clown.|Цирковой клоун.|Stop clowning around.|Хватит паясничать.
+coal|«Уголь».|Heat with coal.|Топить углём.|Coal mine.|Угольная шахта.
+coastline|«Береговая линия».|A rocky coastline.|Скалистый берег.|Along the coastline.|Вдоль побережья.
+cockroach|«Таракан».|Kill the cockroach.|Убей таракана.|Cockroaches in the kitchen.|Тараканы на кухне.
+coconut|«Кокос».|Coconut milk.|Кокосовое молоко.|Coconut oil.|Кокосовое масло.
+cod|«Треска».|Fried cod.|Жареная треска.|Cod liver oil.|Рыбий жир.
+comb|«Расчёска» и «причёсывать».|A small comb.|Маленькая расчёска.|Comb your hair.|Причешись.
+comma|«Запятая».|Put a comma.|Поставь запятую.|A missing comma.|Пропущенная запятая.
+compass|«Компас».|Use a compass.|Пользоваться компасом.|A moral compass.|Моральный ориентир.
+concert|«Концерт».|A rock concert.|Рок-концерт.|Go to a concert.|Пойти на концерт.
+conductor|«Проводник, дирижёр».|The train conductor.|Проводник поезда.|An orchestra conductor.|Дирижёр оркестра.
+cone|«Конус, рожок, шишка».|An ice cream cone.|Рожок мороженого.|A pine cone.|Сосновая шишка.
+cookbook|«Кулинарная книга».|A family cookbook.|Семейная кулинарная книга.|Follow the cookbook.|Готовить по книге.
+cooker|«Плита (брит.)».|A gas cooker.|Газовая плита.|A slow cooker.|Мультиварка.
+corn|«Кукуруза, зерно».|Corn on the cob.|Кукуруза в початках.|Corn flakes.|Кукурузные хлопья.
+countertop|«Столешница».|A granite countertop.|Гранитная столешница.|Clean the countertop.|Протри столешницу.
+coward|«Трус».|Don't be a coward.|Не будь трусом.|A big coward.|Большой трус.
+crab|«Краб».|Crab sticks.|Крабовые палочки.|Crab salad.|Крабовый салат.
+cracker|«Крекер».|Cheese and crackers.|Сыр с крекерами.|A salty cracker.|Солёный крекер.
+crayon|«Мелок, восковой карандаш».|Draw with crayons.|Рисовать мелками.|A box of crayons.|Коробка мелков.
+crib|«Детская кроватка».|A baby crib.|Детская кроватка.|Put the baby in the crib.|Положи малыша в кроватку.
+crocodile|«Крокодил».|Crocodile tears.|Крокодиловы слёзы.|A big crocodile.|Большой крокодил.
+crossword|«Кроссворд».|Do a crossword.|Разгадывать кроссворд.|A crossword puzzle.|Кроссворд.
+crow|«Ворона».|A black crow.|Чёрная ворона.|As the crow flies.|По прямой.
+crumb|«Крошка».|Bread crumbs.|Хлебные крошки.|Crumbs on the table.|Крошки на столе.
+cupboard|«Буфет, шкаф». p не читается.|A kitchen cupboard.|Кухонный шкаф.|The cupboard is empty.|Шкаф пуст.
+customs officer|«Таможенник».|The customs officer checked the bags.|Таможенник проверил сумки.|A strict customs officer.|Строгий таможенник.
+daisy|«Ромашка, маргаритка».|A field of daisies.|Поле ромашек.|Fresh as a daisy.|Свеж как огурчик.
+dart|«Дротик».|Play darts.|Играть в дартс.|Throw a dart.|Метнуть дротик.
+dashboard|«Приборная панель, дашборд».|The car dashboard.|Приборка машины.|A sales dashboard.|Дашборд продаж.
+detergent|«Моющее средство».|Washing detergent.|Стиральный порошок.|Dish detergent.|Средство для посуды.
+dew|«Роса».|Morning dew.|Утренняя роса.|Dew on the grass.|Роса на траве.
+diaper|«Подгузник».|Change the diaper.|Поменять подгузник.|A pack of diapers.|Пачка подгузников.
+dice|«Игральные кости, кубики» и «нарезать кубиками».|Roll the dice.|Бросить кости.|Dice the onion.|Порежь лук кубиками.
+dinosaur|«Динозавр».|A dinosaur museum.|Музей динозавров.|Kids love dinosaurs.|Дети любят динозавров.
+dishwasher|«Посудомоечная машина».|Load the dishwasher.|Загрузи посудомойку.|A kitchen with a dishwasher.|Кухня с посудомойкой.
+ditch|«Канава» и «бросить» (разг.).|A deep ditch.|Глубокая канава.|Ditch the plan.|Бросить план.
+dock|«Причал, док».|At the dock.|У причала.|A docking station.|Док-станция.
+doll|«Кукла».|A baby doll.|Кукла-пупс.|Play with dolls.|Играть в куклы.
+dolphin|«Дельфин».|Swim with dolphins.|Плавать с дельфинами.|A smart dolphin.|Умный дельфин.
+donkey|«Осёл».|Stubborn as a donkey.|Упрямый как осёл.|For donkey's years.|Сто лет.
+doorbell|«Дверной звонок».|Ring the doorbell.|Позвони в дверь.|The doorbell rang.|Раздался звонок в дверь.
+doorway|«Дверной проём».|Stand in the doorway.|Стоять в дверях.|A narrow doorway.|Узкий проём.
+dove|«Голубь (мира)».|A white dove.|Белый голубь.|A dove of peace.|Голубь мира.
+dragon|«Дракон».|A fire dragon.|Огненный дракон.|The year of the dragon.|Год дракона.
+drawing room|«Гостиная».|Sit in the drawing room.|Посидеть в гостиной.|A large drawing room.|Большая гостиная.
+dressing room|«Раздевалка, гримёрка».|The players' dressing room.|Раздевалка игроков.|A dressing room in the flat.|Гардеробная в квартире.
+driveway|«Подъездная дорожка».|Park in the driveway.|Припаркуйся у дома.|A long driveway.|Длинный подъезд к дому.
+drum|«Барабан, бочка».|Play the drums.|Играть на барабанах.|An oil drum.|Бочка для масла.
+duckling|«Утёнок».|The ugly duckling.|Гадкий утёнок.|Ducklings in the pond.|Утята в пруду.
+dumpling|«Пельмень, клёцка».|Russian dumplings.|Русские пельмени.|Boil dumplings.|Сварить пельмени.
+dune|«Дюна».|Sand dunes.|Песчаные дюны.|Walk on the dunes.|Гулять по дюнам.
+dustbin|«Мусорное ведро (брит.)».|Empty the dustbin.|Вынеси мусор.|The dustbin of history.|Свалка истории.
+duvet|«Одеяло (пуховое)».|A warm duvet.|Тёплое одеяло.|Duvet cover.|Пододеяльник.
+earring|«Серьга».|Gold earrings.|Золотые серьги.|Lose an earring.|Потерять серёжку.
+eel|«Угорь».|Smoked eel.|Копчёный угорь.|Slippery as an eel.|Скользкий как угорь.
+eggplant|«Баклажан (амер.)».|Fried eggplant.|Жареные баклажаны.|Eggplant caviar.|Баклажанная икра.
+elephant|«Слон».|An elephant in the room.|Слон в комнате (очевидная проблема).|An African elephant.|Африканский слон.
+embroidery|«Вышивка».|Hand embroidery.|Ручная вышивка.|A shirt with embroidery.|Рубашка с вышивкой.
+emerald|«Изумруд».|An emerald ring.|Кольцо с изумрудом.|Emerald green.|Изумрудно-зелёный.
+eraser|«Ластик».|A pencil with an eraser.|Карандаш с ластиком.|Use an eraser.|Сотри ластиком.
+escalator|«Эскалатор».|Take the escalator.|Подняться на эскалаторе.|The escalator is broken.|Эскалатор сломан.
+exhaust pipe|«Выхлопная труба».|A rusty exhaust pipe.|Ржавая выхлопная труба.|Smoke from the exhaust pipe.|Дым из выхлопной трубы.
+eyebrow|«Бровь».|Raise an eyebrow.|Поднять бровь.|Thick eyebrows.|Густые брови.
+eyelash|«Ресница».|Long eyelashes.|Длинные ресницы.|An eyelash in my eye.|Ресница в глазу.
+fairy|«Фея».|A fairy tale.|Сказка.|The tooth fairy.|Зубная фея.
+farmhouse|«Фермерский дом».|An old farmhouse.|Старый фермерский дом.|A farmhouse kitchen.|Кухня в деревенском стиле.
+faucet|«Кран (амер.)».|Turn off the faucet.|Закрой кран.|A leaking faucet.|Подтекающий кран.
+feather|«Перо».|Light as a feather.|Лёгкий как пёрышко.|Birds of a feather.|Два сапога пара.
+fern|«Папоротник».|Ferns in the forest.|Папоротники в лесу.|A fern leaf.|Лист папоротника.
+field trip|«Экскурсия (школьная)».|A school field trip.|Школьная экскурсия.|A field trip to the museum.|Поездка в музей.
+fig|«Инжир».|Fresh figs.|Свежий инжир.|A fig tree.|Инжирное дерево.
+fingernail|«Ноготь (на руке)».|Clean fingernails.|Чистые ногти.|Bite your fingernails.|Грызть ногти.
+fire engine|«Пожарная машина».|A red fire engine.|Красная пожарная машина.|Call a fire engine.|Вызвать пожарных.
+firefighter|«Пожарный».|A brave firefighter.|Смелый пожарный.|Firefighters arrived.|Приехали пожарные.
+fireman|«Пожарный».|A fireman's helmet.|Каска пожарного.|The fireman saved the cat.|Пожарный спас кота.
+fist|«Кулак».|Make a fist.|Сжать кулак.|Bang your fist.|Стукнуть кулаком.
+flashlight|«Фонарик».|Turn on the flashlight.|Включи фонарик.|A phone flashlight.|Фонарик телефона.
+flea|«Блоха».|The dog has fleas.|У собаки блохи.|A flea market.|Блошиный рынок.
+flip-flops|«Шлёпанцы».|Wear flip-flops.|Ходить в шлёпанцах.|Beach flip-flops.|Пляжные шлёпки.
+flute|«Флейта, бокал-флюте».|Play the flute.|Играть на флейте.|A champagne flute.|Бокал для шампанского.
+foal|«Жеребёнок».|A newborn foal.|Новорождённый жеребёнок.|The foal runs.|Жеребёнок бежит.
+footpath|«Тропинка».|Follow the footpath.|Иди по тропинке.|A narrow footpath.|Узкая тропа.
+forklift|«Погрузчик».|Drive a forklift.|Водить погрузчик.|A forklift driver.|Водитель погрузчика.
+freckle|«Веснушка».|Freckles on her face.|Веснушки на лице.|Covered in freckles.|Весь в веснушках.
+frying pan|«Сковорода».|A cast iron frying pan.|Чугунная сковорода.|Out of the frying pan into the fire.|Из огня да в полымя.
+fur coat|«Шуба».|A mink fur coat.|Норковая шуба.|Wear a fur coat.|Носить шубу.
+garage door|«Гаражные ворота».|Open the garage door.|Открой ворота гаража.|An automatic garage door.|Автоматические ворота гаража.
+gear stick|«Рычаг КПП».|Move the gear stick.|Переключи передачу.|The gear stick is stuck.|Рычаг заело.
+generator|«Генератор».|A diesel generator.|Дизельный генератор.|Turn on the generator.|Запусти генератор.
+ginger|«Имбирь» и «рыжий».|Ginger tea.|Имбирный чай.|A ginger cat.|Рыжий кот.
+giraffe|«Жираф».|A tall giraffe.|Высокий жираф.|A giraffe's neck.|Шея жирафа.
+girlfriend|«Девушка (подруга)».|His girlfriend.|Его девушка.|My girlfriends.|Мои подружки.
+glacier|«Ледник».|A melting glacier.|Тающий ледник.|Climb a glacier.|Подняться на ледник.
+gloves|«Перчатки».|Winter gloves.|Зимние перчатки.|Work gloves.|Рабочие перчатки.
+goalkeeper|«Вратарь».|A great goalkeeper.|Отличный вратарь.|Beat the goalkeeper.|Обыграть вратаря.
+goldfish|«Золотая рыбка».|A goldfish in a bowl.|Золотая рыбка в аквариуме.|Memory like a goldfish.|Память как у рыбки.
+golf|«Гольф».|Play golf.|Играть в гольф.|A golf course.|Поле для гольфа.
+goose bumps|«Мурашки».|It gives me goose bumps.|У меня от этого мурашки.|Goose bumps on my arms.|Мурашки по рукам.
+gorilla|«Горилла».|A huge gorilla.|Огромная горилла.|Gorillas in the zoo.|Гориллы в зоопарке.
+gown|«Платье (вечернее), мантия».|An evening gown.|Вечернее платье.|A hospital gown.|Больничная рубашка.
+grandchild|«Внук, внучка».|My first grandchild.|Мой первый внук.|Spoil the grandchildren.|Баловать внуков.
+grasshopper|«Кузнечик».|A green grasshopper.|Зелёный кузнечик.|Grasshoppers in the grass.|Кузнечики в траве.
+gravel|«Гравий».|A gravel road.|Гравийная дорога.|A load of gravel.|Машина гравия.
+gravy|«Подливка».|Meat with gravy.|Мясо с подливкой.|The gravy train.|Халява.
+grill|«Гриль» и «жарить на гриле».|Grill the meat.|Пожарь мясо на гриле.|A charcoal grill.|Угольный гриль.
+groceries|«Продукты».|Buy groceries.|Купить продукты.|Carry the groceries.|Нести продукты.
+gutter|«Водосток, сточная канава».|Clean the gutters.|Почистить водостоки.|In the gutter.|На дне жизни.
+hailstorm|«Град (буря)».|A sudden hailstorm.|Внезапный град.|Damaged by a hailstorm.|Повреждено градом.
+hairbrush|«Щётка для волос».|A soft hairbrush.|Мягкая щётка.|Where's my hairbrush?|Где моя расчёска?
+hairdryer|«Фен».|Use a hairdryer.|Воспользоваться феном.|The hotel has a hairdryer.|В отеле есть фен.
+hamster|«Хомяк».|A pet hamster.|Домашний хомяк.|Hamster wheel.|Беличье колесо.
+handbag|«Сумочка».|A leather handbag.|Кожаная сумочка.|Check your handbag.|Проверь сумочку.
+handkerchief|«Носовой платок». d не читается.|A cotton handkerchief.|Хлопковый платок.|Wave a handkerchief.|Махать платком.
+handrail|«Перила, поручень».|Hold the handrail.|Держись за перила.|A wooden handrail.|Деревянные перила.
+handshake|«Рукопожатие».|A firm handshake.|Крепкое рукопожатие.|Seal it with a handshake.|Скрепить рукопожатием.
+handwriting|«Почерк».|Bad handwriting.|Плохой почерк.|Neat handwriting.|Аккуратный почерк.
+hanger|«Вешалка (плечики)».|A coat hanger.|Плечики.|Hang it on a hanger.|Повесь на плечики.
+harp|«Арфа».|Play the harp.|Играть на арфе.|Harp on about it.|Твердить одно и то же.
+hatchback|«Хэтчбек».|A small hatchback.|Маленький хэтчбек.|A red hatchback.|Красный хэтчбек.
+hawk|«Ястреб».|Eyes like a hawk.|Глаза как у ястреба.|Watch like a hawk.|Следить в оба.
+hay|«Сено».|A stack of hay.|Стог сена.|Make hay while the sun shines.|Куй железо, пока горячо.
+hazelnut|«Лесной орех, фундук».|Chocolate with hazelnuts.|Шоколад с фундуком.|Hazelnut coffee.|Ореховый кофе.
+headlight|«Фара».|Turn on the headlights.|Включи фары.|A broken headlight.|Разбитая фара.
+headphones|«Наушники».|Wireless headphones.|Беспроводные наушники.|Put on headphones.|Надень наушники.
+hedge|«Живая изгородь» и «страховаться».|Trim the hedge.|Подстричь изгородь.|Hedge your bets.|Подстраховаться.
+hedgehog|«Ёж».|A little hedgehog.|Маленький ёжик.|Hedgehog in the fog.|Ёжик в тумане.
+heel|«Пятка, каблук».|High heels.|Высокие каблуки.|Achilles' heel.|Ахиллесова пята.
+hen|«Курица (несушка)».|Hens lay eggs.|Куры несут яйца.|A hen party.|Девичник.
+hiking|«Пеший поход».|Go hiking.|Пойти в поход.|Hiking boots.|Треккинговые ботинки.
+hippo|«Бегемот».|A big hippo.|Большой бегемот.|Hungry as a hippo.|Голодный как волк.
+hive|«Улей».|A bee hive.|Пчелиный улей.|A hive of activity.|Кипучая деятельность.
+hoodie|«Толстовка с капюшоном».|A warm hoodie.|Тёплое худи.|A black hoodie.|Чёрная толстовка.
+hoof|«Копыто».|A horse's hoof.|Конское копыто.|Hooves on the road.|Стук копыт по дороге.
+horn|«Рог, гудок».|Blow the horn.|Посигналить.|Bull's horns.|Бычьи рога.
+hose|«Шланг».|A garden hose.|Садовый шланг.|Water with a hose.|Полить из шланга.
+hot dog|«Хот-дог».|A hot dog with mustard.|Хот-дог с горчицей.|Buy a hot dog.|Купить хот-дог.
+housewife|«Домохозяйка».|A busy housewife.|Занятая домохозяйка.|Desperate housewives.|Отчаянные домохозяйки.
+housework|«Работа по дому».|Do the housework.|Заниматься хозяйством.|Hate housework.|Ненавидеть уборку.
+hurdle|«Препятствие, барьер».|Clear a hurdle.|Преодолеть барьер.|The last hurdle.|Последнее препятствие.
+husky|«Хаски» и «хриплый».|A Siberian husky.|Сибирский хаски.|A husky voice.|Хриплый голос.
+ice cream|«Мороженое».|Chocolate ice cream.|Шоколадное мороженое.|An ice cream cone.|Рожок мороженого.
+icicle|«Сосулька».|Icicles on the roof.|Сосульки на крыше.|A falling icicle.|Падающая сосулька.
+ivy|«Плющ».|Ivy on the wall.|Плющ на стене.|Poison ivy.|Ядовитый плющ.
+jeans|«Джинсы».|Blue jeans.|Синие джинсы.|Skinny jeans.|Узкие джинсы.
+jellyfish|«Медуза».|A jellyfish sting.|Ожог медузы.|Jellyfish in the sea.|Медузы в море.
+jigsaw|«Пазл, лобзик».|A jigsaw puzzle.|Пазл.|Cut with a jigsaw.|Пилить лобзиком.
+jockey|«Жокей».|A famous jockey.|Известный жокей.|A disc jockey.|Диджей.
+jug|«Кувшин».|A jug of milk.|Кувшин молока.|A water jug.|Кувшин для воды.
+juicer|«Соковыжималка».|An electric juicer.|Электросоковыжималка.|Fresh juice from the juicer.|Свежий сок из соковыжималки.
+jungle|«Джунгли».|The Amazon jungle.|Джунгли Амазонки.|It's a jungle out there.|Там настоящие джунгли.
+kangaroo|«Кенгуру».|A baby kangaroo.|Детёныш кенгуру.|Kangaroos in Australia.|Кенгуру в Австралии.
+ketchup|«Кетчуп».|Fries with ketchup.|Картошка с кетчупом.|Pass the ketchup.|Передай кетчуп.
+kite|«Воздушный змей, коршун».|Fly a kite.|Запускать змея.|A kite in the sky.|Змей в небе.
+kiwi|«Киви».|A ripe kiwi.|Спелый киви.|Kiwi juice.|Сок киви.
+koala|«Коала».|A cute koala.|Милая коала.|A koala bear.|Медведь коала.
+lace|«Кружево, шнурок».|Lace curtains.|Кружевные занавески.|Tie your laces.|Завяжи шнурки.
+ladybug|«Божья коровка».|A ladybug on a leaf.|Божья коровка на листке.|Ladybugs are lucky.|Божьи коровки к удаче.
+lamb|«Ягнёнок, баранина».|Roast lamb.|Запечённая баранина.|Gentle as a lamb.|Кроткий как ягнёнок.
+lamppost|«Фонарный столб».|Lean on a lamppost.|Опереться на фонарь.|Lampposts along the road.|Фонари вдоль дороги.
+landlady|«Хозяйка (жилья)».|Pay the landlady.|Заплатить хозяйке.|A strict landlady.|Строгая хозяйка.
+lantern|«Фонарь».|A paper lantern.|Бумажный фонарик.|An oil lantern.|Керосиновая лампа.
+lap|«Колени (сидя), круг».|Sit on my lap.|Сядь мне на колени.|The last lap.|Последний круг.
+lava|«Лава».|Hot lava.|Горячая лава.|Lava flow.|Поток лавы.
+leash|«Поводок».|Keep the dog on a leash.|Держи собаку на поводке.|Off the leash.|Без поводка.
+leek|«Лук-порей».|Leek soup.|Суп с пореем.|Chop the leek.|Нарежь порей.
+leopard|«Леопард».|A snow leopard.|Снежный барс.|A leopard can't change its spots.|Горбатого могила исправит.
