@@ -1149,6 +1149,14 @@ function tabOpts() {
     <div class="flabel">Направление</div>${seg('oDir', [['en', 'EN → RU'], ['ru', 'RU → EN'], ['mix', 'Смешанно']], S.dir)}
     <p>«Смешанно»: слова, которые ты уже наполовину знаешь, иногда падают по-русски, и надо выбрать английский вариант.</p>
   </section>
+  <section class="block" id="brain"><h3>Мозги лиса <span>Gemini</span></h3>
+    <p>Лис может быть твоим голосовым ассистентом вместо Gemini: болтает по-английски, поправляет ошибки, объясняет слова, ставит таймеры и будильники. Без ключа работает офлайн — переводит слова, ставит таймеры, экзаменует.</p>
+    <div class="flabel">Ключ Gemini API (бесплатный)</div>
+    <input class="field-in" id="gKey" type="password" autocomplete="off" placeholder="Вставь ключ AIza…" value="${esc(S.gemKey || '')}">
+    <div class="btnrow"><button class="btn ghost" id="gGet">Получить ключ</button><button class="btn" id="gTalk">Поговорить с лисом</button></div>
+    <div class="btnrow"><button class="btn ghost" id="gAssist">Сделать лиса ассистентом</button></div>
+    <p class="muted">Ассистент: выбери «Словопад» в «Цифровой помощник» — тогда жест ассистента (долгое нажатие питания) зовёт лиса. Ещё лиса можно позвать долгим нажатием на него на экране.</p>
+  </section>
   <section class="block">
     <div class="toggle"><span>Озвучка слов</span><button class="sw ${S.sound ? 'on' : ''}" id="oSound" aria-label="Озвучка"></button></div>
     <div class="toggle"><span>Звуки игры</span><button class="sw ${S.sfx ? 'on' : ''}" id="oSfx" aria-label="Звуки"></button></div>
@@ -1159,6 +1167,10 @@ function tabOpts() {
     <p class="num">В базе ${W.length} ${pl(W.length, 'слово', 'слова', 'слов')}: выучено ${nLearned()}, в работе ${learningList().length}, уже знал ${W.filter(w => st(w.en) === 3).length}.</p>
     <button class="btn danger" id="oReset">Сбросить весь прогресс</button>
   </section>`;
+  $('gKey').onchange = e => { S.gemKey = e.target.value.trim(); S.gemModel = ''; save(); toast(S.gemKey ? 'Ключ сохранён — лис поумнел' : 'Ключ удалён'); };
+  $('gGet').onclick = () => { try { Android.openUrl('https://aistudio.google.com/apikey'); } catch (e) { window.open('https://aistudio.google.com/apikey'); } };
+  $('gTalk').onclick = () => { S.gemKey = $('gKey').value.trim(); save(); if (window.Android && Android.openAssist) Android.openAssist(); else location.href = 'assist.html'; };
+  $('gAssist').onclick = () => { if (window.Android && Android.openAssistSettings) { Android.openAssistSettings(); toast('Выбери «Словопад» в «Цифровой помощник»'); } else toast('Работает только на телефоне'); };
   $('oName').onchange = e => { S.name = e.target.value.trim() || 'Игорь'; save(); renderHud(); };
   const bindSeg = (id, fn) => { $(id).onclick = e => { const b = e.target.closest('button'); if (!b) return; fn(b.dataset.v); save(); [...$(id).children].forEach(x => x.classList.toggle('on', x === b)); }; };
   bindSeg('oSpeed', v => S.speed = +v);

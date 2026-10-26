@@ -155,6 +155,19 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void openAssist() {
+            runOnUiThread(() -> startActivity(new Intent(MainActivity.this, AssistActivity.class)));
+        }
+
+        @JavascriptInterface
+        public void openAssistSettings() {
+            runOnUiThread(() -> {
+                try { startActivity(AssistActivity.assistSettings()); }
+                catch (Exception e) { try { startActivity(new Intent(Settings.ACTION_VOICE_INPUT_SETTINGS)); } catch (Exception ignored) { } }
+            });
+        }
+
+        @JavascriptInterface
         public void foxStop() {
             runOnUiThread(() -> {
                 getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putBoolean("on", false).apply();

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Лис-ассистент</title>
+<style>
+:root{--panel:#161d2c;--panel2:#1f2840;--line:#2a3550;--ink:#e8ecf4;--muted:#8e9ab5;--brick:#ec7a42;--ok:#2bb67c;--bad:#e8574f;--gold:#f0b440;--blue:#4a86ef}
+@media (prefers-color-scheme: light){:root{--panel:#ffffff;--panel2:#f1f4f9;--line:#dbe1ec;--ink:#172033;--muted:#5d6880;--brick:#cf5a26;--blue:#2f6fdc}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:transparent;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);-webkit-tap-highlight-color:transparent;overflow:hidden}
+#dim{position:fixed;inset:0;background:rgba(5,9,18,.45);animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+#card{position:fixed;left:8px;right:8px;bottom:8px;max-height:78vh;background:var(--panel);border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden;animation:up .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+#head{display:flex;align-items:flex-end;gap:10px;padding:10px 14px 6px;border-bottom:1px solid var(--line)}
+#fox{flex:none;background-repeat:no-repeat;margin-bottom:-2px}
+#who{flex:1;min-width:0;padding-bottom:8px}
+#who b{display:block;font-size:18px}
+#who span{color:var(--muted);font-size:12.5px}
+.ib{border:0;background:var(--panel2);color:var(--ink);width:38px;height:38px;border-radius:12px;font-size:17px;margin-bottom:8px;cursor:pointer}
+#log{flex:1;min-height:90px;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:86%;padding:9px 12px;border-radius:16px;font-size:15px;line-height:1.4;white-space:pre-wrap;word-wrap:break-word}
+.m.fox{align-self:flex-start;background:var(--panel2);border-bottom-left-radius:5px}
+.m.me{align-self:flex-end;background:var(--blue);color:#fff;border-bottom-right-radius:5px}
+.m.sys{align-self:center;background:none;color:var(--muted);font-size:12.5px;text-align:center;padding:2px 8px}
+.m.part{opacity:.6}
+#bar{display:flex;gap:8px;align-items:center;padding:10px 12px calc(12px + env(safe-area-inset-bottom))}
+#txt{flex:1;min-width:0;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:14px;padding:11px 12px;font-size:15px;outline:none}
+.mic{flex:none;border:0;border-radius:14px;height:44px;padding:0 12px;font:700 13px system-ui;color:#fff;background:var(--brick);display:flex;align-items:center;gap:5px;cursor:pointer}
+.mic.en{background:var(--blue)}
+.mic.on{animation:pulse 1s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(236,122,66,.35)}}
+.mic svg{width:18px;height:18px}
+#send{display:none}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 6px}
+.chip{border:1px solid var(--line);background:none;color:var(--muted);border-radius:999px;padding:6px 10px;font-size:12.5px;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="dim"></div>
+<div id="card">
+  <div id="head">
+    <div id="fox"></div>
+    <div id="who"><b id="foxName">Лис</b><span id="status">Слушаю…</span></div>
+    <button class="ib" id="snd" aria-label="Звук">🔊</button>
+    <button class="ib" id="x" aria-label="Закрыть">✕</button>
+  </div>
+  <div id="log"></div>
+  <div class="chips" id="chips"></div>
+  <div id="bar">
+    <button class="mic" id="micRu"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-2.1A7 7 0 0 0 19 12z"/></svg>RU</button>
+    <button class="mic en" id="micEn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-2.1A7 7 0 0 0 19 12z"/></svg>EN</button>
+    <input id="txt" placeholder="Или напиши…" autocomplete="off" enterkeyhint="send">
+  </div>
+</div>
+<script src="words.js"></script>
+<script src="dict.js"></script>
+<script src="fox.js"></script>
+<script>
+/* ---------- данные Словопада (тот же localStorage, что у игры) ---------- */
+const KEY = 'slovopad-v1';
+let S = {}; try { S = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+S.w = S.w || {};
+const saveS = () => { try { const cur = JSON.parse(localStorage.getItem(KEY)) || {}; Object.assign(cur, { gemModel: S.gemModel, assistLang: S.assistLang, assistMute: S.assistMute, coins: S.coins }); localStorage.setItem(KEY, JSON.stringify(cur)); } catch (e) {} };
+const W = (window.WORDS_RAW || '').trim().split('\n').map((l, i) => { const k = l.indexOf('|'); return { en: l.slice(0, k).trim(), ru: l.slice(k + 1).trim(), i }; });
+const BY = Object.fromEntries(W.map(w => [w.en.toLowerCase(), w]));
+const DICT = window.DICT || {};
+const st = en => (S.w[en] ? S.w[en].s : 0);
+const nBricks = () => W.reduce((a, w) => a + (st(w.en) >= 2), 0);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const $ = id => document.getElementById(id);
+const F = window.Fox || null;
+const known = W.filter(w => st(w.en) >= 2);
+const learning = W.filter(w => st(w.en) === 1);
+
+/* ---------- лис в шапке ---------- */
+const stage = foxCur();
+const hungryH = S.foxFedTs ? (Date.now() - S.foxFedTs) / 36e5 : 0;
+const mood = stage === 0 ? 'sleepy' : hungryH > 36 ? 'grumpy' : hungryH > 20 ? 'sad' : hungryH > 8 ? 'hungry' : 'ok';
+const view = new FoxView($('fox'), 86);
+const idleAnim = () => view.play(mood === 'grumpy' ? 'grumpy' : mood === 'sad' ? 'sad' : stage === 0 ? 'sleep' : 'sit', { fps: 2.5 });
+view.play(stage === 0 ? 'wake' : 'wave', { once: true, then: idleAnim });
+$('foxName').textContent = S.foxName || 'Лис';
+
+/* ---------- чат ---------- */
+function msg(cls, text) { const d = document.createElement('div'); d.className = 'm ' + cls; d.textContent = text; $('log').appendChild(d); $('log').scrollTop = 1e9; return d; }
+let muted = !!S.assistMute;
+$('snd').textContent = muted ? '🔇' : '🔊';
+$('snd').onclick = () => { muted = !muted; S.assistMute = muted; saveS(); $('snd').textContent = muted ? '🔇' : '🔊'; if (muted && F) F.hush(); };
+function foxSays(text) {
+  msg('fox', text);
+  view.play(stage >= 6 && /haha|joke|шутк/i.test(text) ? 'laugh' : 'talk', { loops: 2, then: idleAnim });
+  if (!muted && F) F.speak(text.replace(/[*_#`]/g, ''));
+}
+$('x').onclick = () => F ? F.close() : null;
+$('dim').onclick = () => F ? F.close() : null;
+
+/* ---------- голос ---------- */
+let lang = S.assistLang || 'ru-RU', listening = false, partEl = null;
+function listen(l) {
+  if (!F) { $('status').textContent = 'Голос работает только на телефоне'; return; }
+  lang = l; S.assistLang = l; saveS();
+  if (!F.canListen()) { $('status').textContent = 'Нет сервиса распознавания речи — пиши текстом'; return; }
+  F.listen(l); listening = true; mark();
+  $('status').textContent = l === 'en-US' ? 'Listening… говори по-английски' : 'Слушаю… говори по-русски';
+}
+function mark() { $('micRu').classList.toggle('on', listening && lang === 'ru-RU'); $('micEn').classList.toggle('on', listening && lang === 'en-US'); }
+$('micRu').onclick = () => listening && lang === 'ru-RU' ? (F.stopListen(), listening = false, mark()) : listen('ru-RU');
+$('micEn').onclick = () => listening && lang === 'en-US' ? (F.stopListen(), listening = false, mark()) : listen('en-US');
+window.onSpeech = (kind, text) => {
+  if (kind === 'partial') { if (!partEl) partEl = msg('me part', text); else partEl.textContent = text; return; }
+  if (kind === 'final') { listening = false; mark(); if (partEl) { partEl.remove(); partEl = null; } if (text) handle(text); else $('status').textContent = 'Не расслышал — нажми микрофон'; return; }
+  if (kind === 'error') { listening = false; mark(); if (partEl) { partEl.remove(); partEl = null; }
+    const e = +text; $('status').textContent = e === 7 || e === 6 ? 'Ничего не услышал. Нажми микрофон и говори' : e === 9 ? 'Нет доступа к микрофону' : e === 2 || e === 1 ? 'Нет интернета для распознавания — скачай офлайн-языки в голосовом вводе Google или пиши текстом' : 'Микрофон занят, попробуй ещё раз'; }
+};
+window.onMicPerm = ok => { if (ok) listen(lang); else $('status').textContent = 'Без микрофона — пиши текстом'; };
+window.onSpeak = k => { if (k === 'done' && autoListen) { autoListen = false; setTimeout(() => listen(lang), 250); } };
+let autoListen = false;
+$('txt').onkeydown = e => { if (e.key === 'Enter' && $('txt').value.trim()) { const t = $('txt').value.trim(); $('txt').value = ''; handle(t, true); } };
+
+/* ---------- мозги: Gemini + офлайн ---------- */
+const MODELS = ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite', 'gemini-flash-latest', 'gemini-2.5-flash'];
+const hist = [];
+let gemId = 0; const pend = {};
+window.onGem = (id, code, text) => { const p = pend[id]; delete pend[id]; p && p(code, text); };
+const gemCall = (model, body) => new Promise(res => { const id = ++gemId; pend[id] = (c, t) => res([c, t]); F.gemini(S.gemKey, model, JSON.stringify(body), id); });
+
+function sysPrompt() {
+  const sample = [...known].sort(() => Math.random() - .5).slice(0, 150).map(w => w.en).join(', ');
+  const now = new Date();
+  return `Ты — Лис (${S.foxName || 'Лис'}), белый пиксельный песец-тамагочи из приложения «Словопад». Ты живёшь на экране телефона своего хозяина и помогаешь ему учить английский.
+Хозяин: ${S.name || 'Игорь'}, риелтор из Абакана, учит английский с нуля, цель — читать книги. Общайтесь на «ты», можно с юмором.
+Он уже знает ${known.length} английских слов. Вот часть из них: ${sample || '(пока почти ничего)'}.
+Твоё состояние: ${({ ok: 'сытый и весёлый', hungry: 'голодный (кормят тебя тем, что хозяин играет в Словопад)', sad: 'грустишь, давно не играли', grumpy: 'обиделся, хозяин долго не заходил', sleepy: 'сонный, только проснулся' })[mood]}. Можешь иногда это показывать.
+Сейчас ${now.toLocaleString('ru-RU', { weekday: 'long', hour: '2-digit', minute: '2-digit' })}.
+ПРАВИЛА ОТВЕТА (ответ озвучивается голосом!):
+- Коротко: 1–3 предложения. Без markdown, списков, эмодзи и звёздочек.
+- Если хозяин пишет по-русски — отвечай по-русски и добавь одну простую английскую фразу по теме с переводом.
+- Если по-английски — отвечай простым английским (уровень A1–A2), старайся использовать слова, которые он знает. Если в его фразе ошибка — сначала мягко поправь: «Лучше сказать: …».
+- Если он просит перевести или объяснить слово — дай перевод, короткое объяснение и один пример с переводом.
+- Таймеры и будильники ты умеешь ставить сам: добавь в КОНЕЦ ответа тег [[TIMER:секунды]] или [[ALARM:ЧЧ:ММ]] (24 часа). Например: «Ставлю таймер на 10 минут [[TIMER:600]]».
+- Хочет поиграть или потренироваться — предложи мини-игру: спроси перевод слова из его списка и проверь ответ.`;
+}
+async function askGemini(text) {
+  hist.push({ role: 'user', parts: [{ text }] });
+  while (hist.length > 16) hist.shift();
+  const body = { systemInstruction: { parts: [{ text: sysPrompt() }] }, contents: hist, generationConfig: { temperature: .8, maxOutputTokens: 400 } };
+  const order = S.gemModel ? [S.gemModel, ...MODELS.filter(m => m !== S.gemModel)] : MODELS;
+  let last = '';
+  for (const m of order) {
+    const [code, raw] = await gemCall(m, body);
+    if (code === 200) {
+      try {
+        const j = JSON.parse(raw), out = (j.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('').trim();
+        if (out) { if (S.gemModel !== m) { S.gemModel = m; saveS(); } hist.push({ role: 'model', parts: [{ text: out }] }); return out; }
+      } catch (e) {}
+      last = 'пустой ответ'; continue;
+    }
+    if (code === 404 || code === 400 && /model/i.test(raw)) { last = 'модель ' + m + ' недоступна'; continue; }
+    if (code === 401 || code === 403 || code === 400 && /API key/i.test(raw)) { hist.pop(); throw new Error('key'); }
+    if (code === 429) { hist.pop(); throw new Error('limit'); }
+    hist.pop(); throw new Error(code < 0 ? 'net' : 'code ' + code);
+  }
+  hist.pop(); throw new Error(last || 'net');
+}
+
+/* выполнить теги таймера/будильника */
+function tools(text) {
+  let out = text;
+  out = out.replace(/\[\[TIMER:(\d+)\]\]/g, (_, s) => { F && F.setTimer(+s, 'Лис: таймер'); return ''; });
+  out = out.replace(/\[\[ALARM:(\d{1,2}):(\d{2})\]\]/g, (_, hh, mm) => { F && F.setAlarm(+hh, +mm, 'Лис: подъём!'); return ''; });
+  return out.trim();
+}
+window.onToolFail = k => msg('sys', k === 'timer' ? 'Не нашёл приложение «Часы» для таймера' : 'Не нашёл приложение «Часы» для будильника');
+
+/* офлайн-навыки */
+const RU_NUM = { 'одну': 1, 'одна': 1, 'один': 1, 'две': 2, 'два': 2, 'три': 3, 'четыре': 4, 'пять': 5, 'десять': 10, 'пятнадцать': 15, 'двадцать': 20, 'тридцать': 30, 'полчаса': 30, 'сорок': 40, 'час': 60 };
+function num(s) { const m = s.match(/\d+/); if (m) return +m[0]; for (const k in RU_NUM) if (s.includes(k)) return RU_NUM[k]; return 0; }
+let quiz = null;
+function findWord(q) {
+  q = q.toLowerCase().replace(/[«»"'?!.,]/g, '').trim();
+  if (BY[q]) return BY[q];
+  const ru = W.find(w => w.ru.toLowerCase().split(/[,;] ?/).some(x => x.trim() === q));
+  return ru || null;
+}
+function explain(w) {
+  const d = DICT[w.en];
+  if (!d) return `${w.en} — это «${w.ru}».`;
+  const ex = d[1] ? ` Пример: ${d[1][0]} — ${d[1][1]}` : '';
+  return `${w.en} — ${w.ru}. ${d[0]}${ex}`;
+}
+function offline(t) {
+  const l = t.toLowerCase();
+  if (quiz) {
+    const w = quiz.w, ok = l.includes(w.en.toLowerCase());
+    quiz.n++; quiz.ok += ok;
+    const res = ok ? `Right! ${w.en} — ${w.ru}.` : `Не совсем. Правильно: ${w.en}.`;
+    if (quiz.n >= 3) { const sc = quiz.ok; quiz = null; return `${res} Итог: ${sc} из 3. ${sc === 3 ? 'Great job!' : 'Good try!'}`; }
+    quiz.w = pickQuiz(); return `${res} Next: как по-английски «${quiz.w.ru}»?`;
+  }
+  let m;
+  if (/таймер|timer/.test(l)) { const n = num(l) || 5, sec = /сек/.test(l) ? n : /час/.test(l) && !/полчас/.test(l) ? n * 3600 : n * 60; F && F.setTimer(sec, 'Лис: таймер'); return `Готово, таймер на ${sec >= 60 ? Math.round(sec / 60) + ' мин' : sec + ' сек'}. Timer is set!`; }
+  if ((m = l.match(/(?:разбуди|будильник|alarm)[^\d]*(\d{1,2})(?:[:. ](\d{2}))?/))) { const hh = +m[1], mm = +(m[2] || 0); F && F.setAlarm(hh, mm, 'Лис: подъём!'); return `Будильник на ${hh}:${String(mm).padStart(2, '0')}. Wake up, sleepyhead!`; }
+  if (/провер|экзамен|quiz|test me|поиграем|давай играть/.test(l)) { if (!known.length && !learning.length) return 'Сначала выучи пару слов в Словопаде — тогда проверю!'; quiz = { n: 0, ok: 0, w: pickQuiz() }; return `Let's play! Как по-английски «${quiz.w.ru}»?`; }
+  if ((m = l.match(/(?:что значит|что означает|переведи|перевод|what does|what is|meaning of)\s+(?:слово\s+)?([a-z][a-z' -]*?)(?:\s+mean)?\??$/))) { const w = findWord(m[1]); return w ? explain(w) : `Слова «${m[1]}» нет в моём словаре.`; }
+  if ((m = l.match(/(?:как (?:будет|сказать|по-английски)|переведи на английский)\s+(?:слово\s+)?(.+?)\??$/))) { const w = findWord(m[1]); return w ? `«${m[1]}» по-английски — ${w.en}. ${explain(w)}` : `Не нашёл «${m[1]}» в словаре. Попробуй другое слово.`; }
+  if (BY[l.replace(/[?!.]/g, '').trim()]) return explain(BY[l.replace(/[?!.]/g, '').trim()]);
+  if (/привет|hello|hi\b|hey/.test(l)) return mood === 'hungry' || mood === 'sad' ? 'Привет! Я голодный… Поиграй со мной в Словопад? I am hungry!' : 'Привет! Hi! Я тут, чем помочь?';
+  if (/как дела|how are you/.test(l)) return ({ ok: "I'm fine, thank you! У меня всё отлично.", hungry: "I'm hungry! Покорми меня словами.", sad: 'I miss you… Я скучал.', grumpy: 'Хмф. Ты меня забыл. Hmph!', sleepy: "I'm sleepy… Я ещё сплю." })[mood];
+  if (/играть|словопад|открой/.test(l)) { setTimeout(() => F && F.openApp(), 900); return "Let's go! Открываю Словопад."; }
+  return null;
+}
+function pickQuiz() { const pool = known.length ? known : learning; return pool[Math.floor(Math.random() * pool.length)]; }
+
+let busy = false;
+async function handle(text, typed) {
+  if (busy) return;
+  msg('me', text);
+  autoListen = !typed;
+  const off = offline(text);
+  if (off && (quiz || !S.gemKey || /таймер|timer|разбуди|будильник|alarm|провер|quiz|играть|открой/.test(text.toLowerCase()))) { foxSays(off); $('status').textContent = 'Нажми микрофон, чтобы ответить'; return; }
+  if (!S.gemKey) { foxSays(off || 'Без интернет-мозгов я умею немного: переводить слова, ставить таймеры и будильники, устраивать мини-экзамен. Чтобы болтать по-настоящему — добавь ключ Gemini в Словопаде: Опции → Мозги лиса.'); return; }
+  busy = true; $('status').textContent = 'Думаю…'; view.play('read', { fps: 3 });
+  try {
+    const out = tools(await askGemini(text));
+    foxSays(out || '…'); $('status').textContent = 'Нажми микрофон, чтобы ответить';
+  } catch (e) {
+    const why = e.message;
+    const t = why === 'key' ? 'Ключ Gemini не подходит. Проверь его в Словопаде: Опции → Мозги лиса.'
+      : why === 'limit' ? 'Я сегодня наболтался — лимит Gemini кончился. Попробуй позже.'
+      : 'Нет связи с моими мозгами. ' + (off || 'Без интернета я умею переводить слова, ставить таймеры и проверять тебя.');
+    foxSays(t); idleAnim();
+  }
+  busy = false;
+}
+
+/* ---------- старт ---------- */
+const CHIPS = ['Как дела?', 'Проверь меня', 'Что значит window?', 'Таймер на 10 минут', 'Let\'s talk in English'];
+$('chips').innerHTML = CHIPS.map(c => `<button class="chip">${esc(c)}</button>`).join('');
+$('chips').onclick = e => { const b = e.target.closest('.chip'); if (b) handle(b.textContent, true); };
+const hi = stage === 0 ? 'Zzz… А? Я проснулся! Что надо?' : ({ ok: 'Hi! Я тут. Спроси что-нибудь или поболтаем по-английски.', hungry: "Hi! I'm hungry… Но помогу. Что нужно?", sad: 'Ты пришёл! I missed you. Что нужно?', grumpy: 'Хмф. Ладно, слушаю. What do you want?', sleepy: 'Zzz… Hi.' })[mood];
+msg('fox', hi);
+if (!S.gemKey) msg('sys', 'Сейчас я без Gemini — умею переводить, ставить таймеры и будильники, экзаменовать. Ключ: Словопад → Опции → Мозги лиса');
+setTimeout(() => { if (F && F.hasMic()) listen(lang); else $('status').textContent = 'Нажми микрофон или напиши'; }, 500);
+</script>
+</body>
+</html>

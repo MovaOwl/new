@@ -221,19 +221,20 @@ public class FoxService extends Service {
         lp.y = screenH - foxH - (int) (150 * dp);
 
         root.setOnTouchListener(new View.OnTouchListener() {
-            float sx, sy; int ox, oy; boolean drag;
+            float sx, sy; int ox, oy; boolean drag; long downAt;
             @Override
             public boolean onTouch(View v, MotionEvent e) {
                 switch (e.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        sx = e.getRawX(); sy = e.getRawY(); ox = lp.x; oy = lp.y; drag = false; return true;
+                        sx = e.getRawX(); sy = e.getRawY(); ox = lp.x; oy = lp.y; drag = false; downAt = System.currentTimeMillis(); return true;
                     case MotionEvent.ACTION_MOVE:
                         float dx = e.getRawX() - sx, dy = e.getRawY() - sy;
                         if (Math.abs(dx) + Math.abs(dy) > 12 * dp) drag = true;
                         if (drag) { lp.x = ox + (int) dx; lp.y = oy + (int) dy; targetX = -1; clampAndUpdate(); }
                         return true;
                     case MotionEvent.ACTION_UP:
-                        if (!drag) onTap();
+                        if (!drag && System.currentTimeMillis() - downAt > 600) openAssist();
+                        else if (!drag) onTap();
                         else if (stage > 0) play(has("surprise") ? "surprise" : "sit", 1);
                         return true;
                 }
@@ -279,6 +280,10 @@ public class FoxService extends Service {
         bub.setVisibility(View.VISIBLE);
         h.removeCallbacks(hideBub); h.postDelayed(hideBub, ms);
         h.postDelayed(this::clampAndUpdate, 50);
+    }
+
+    private void openAssist() {
+        try { startActivity(new Intent(this, AssistActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception ignored) { }
     }
 
     private void openApp() {
