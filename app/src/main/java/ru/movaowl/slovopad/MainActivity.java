@@ -156,15 +156,20 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface
         public void openAssist() {
-            runOnUiThread(() -> startActivity(new Intent(MainActivity.this, AssistActivity.class)));
+            runOnUiThread(() -> startActivity(new Intent(MainActivity.this, ListenActivity.class)));
         }
 
         @JavascriptInterface
         public void openAssistSettings() {
             runOnUiThread(() -> {
-                try { startActivity(AssistActivity.assistSettings()); }
+                try { startActivity(new Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)); }
                 catch (Exception e) { try { startActivity(new Intent(Settings.ACTION_VOICE_INPUT_SETTINGS)); } catch (Exception ignored) { } }
             });
+        }
+
+        @JavascriptInterface
+        public void foxLang(String mode) {
+            getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putString("lang", mode).apply();
         }
 
         @JavascriptInterface

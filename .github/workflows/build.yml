@@ -23,6 +23,22 @@ jobs:
         with:
           gradle-version: '8.14.3'
 
+      - name: GigaChat certificates (НУЦ Минцифры)
+        run: |
+          d=app/src/main/res/raw
+          for n in root sub; do
+            f=$d/russian_trusted_${n}_ca.pem
+            [ -s "$f" ] || curl -fsSL --retry 3 "https://gu-st.ru/content/lending/russian_trusted_${n}_ca_pem.crt" -o "$f" || curl -kfsSL --retry 3 "https://gu-st.ru/content/lending/russian_trusted_${n}_ca_pem.crt" -o "$f"
+            openssl x509 -in "$f" -noout -subject -fingerprint -sha256
+            openssl x509 -in "$f" -noout -subject | grep -q "Russian Trusted" || { echo "bad cert $n"; exit 1; }
+          done
+          ls -la $d
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: certs
+          path: app/src/main/res/raw/*.pem
+
       - name: Build release APK
         run: gradle assembleRelease --no-daemon
 

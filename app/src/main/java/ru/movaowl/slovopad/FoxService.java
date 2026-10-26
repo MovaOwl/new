@@ -47,6 +47,7 @@ public class FoxService extends Service {
     static final String PREF = "fox";
     static final String ACT_STOP = "ru.movaowl.slovopad.FOX_STOP";
     static final String CH = "fox";
+    static final String ACT_HEARD = "ru.movaowl.slovopad.FOX_HEARD";
 
     private WindowManager wm;
     private LinearLayout root;
@@ -78,6 +79,8 @@ public class FoxService extends Service {
     private TextToSpeech tts;
     private boolean ttsReady = false;
     private boolean ticking = false;
+    private FoxBrain brain;
+    private boolean thinking = false;
     /* словопад от лиса: слова, которые ты знаешь */
     private final List<String[]> words = new ArrayList<>();
     private long dropEveryMs = 20 * 60000L, nextDropAt = 0;
@@ -124,6 +127,7 @@ public class FoxService extends Service {
         loadData(p.getString("data", "{}"));
         if (root == null) build();
         if (!ticking) { ticking = true; pickNext(); h.post(tick); }
+        if (intent != null && ACT_HEARD.equals(intent.getAction())) heard(intent.getStringExtra("kind"), intent.getStringExtra("text"));
         return START_STICKY;
     }
 
@@ -194,7 +198,8 @@ public class FoxService extends Service {
         bub = new TextView(this);
         bub.setTextColor(Color.parseColor("#1b2333"));
         bub.setTextSize(14);
-        bub.setMaxWidth((int) (230 * dp));
+        bub.setMaxWidth((int) (260 * dp));
+        bub.setMaxLines(12);
         int pd = (int) (10 * dp);
         bub.setPadding(pd, (int) (7 * dp), pd, (int) (7 * dp));
         GradientDrawable g = new GradientDrawable();
@@ -282,8 +287,44 @@ public class FoxService extends Service {
         h.postDelayed(this::clampAndUpdate, 50);
     }
 
+    /* долгое нажатие: лис слушает (невидимый экран распознавания) */
     private void openAssist() {
-        try { startActivity(new Intent(this, AssistActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception ignored) { }
+        if (thinking) return;
+        if (stage <= 0) { showBub("Zzz… Выучи 10 слов — проснусь и поболтаем", 4000); return; }
+        try { startActivity(new Intent(this, ListenActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception ignored) { }
+    }
+
+    /* что услышал лис и что ответил — только текстом в облачке */
+    private void heard(String kind, String text) {
+        if (root == null || kind == null) return;
+        if (mood == 4) root.setVisibility(View.VISIBLE);
+        targetX = -1; img.setScaleX(1);
+        switch (kind) {
+            case "ready": showBub("🎤 Слушаю…", 9000); play(has("surprise") ? "surprise" : "sit", 999); break;
+            case "partial": showBub("🎤 " + text, 9000); break;
+            case "error": {
+                String m = "mic".equals(text) ? "Мне нужен доступ к микрофону 🙉" : "none".equals(text) ? "На телефоне нет распознавания речи" :
+                        ("1".equals(text) || "2".equals(text)) ? "Без интернета не слышу. Скачай офлайн-языки в «Голосовом вводе Google»" : "Ничего не услышал. Зажми меня и скажи ещё раз";
+                showBub(m, 5000); pickNext(); break;
+            }
+            case "final": {
+                if (text == null || text.trim().isEmpty()) { showBub("Не расслышал. Зажми меня и скажи ещё раз", 5000); pickNext(); break; }
+                thinking = true;
+                showBub("«" + text + "»\n…думаю", 40000);
+                play("read", 999);
+                if (brain == null) brain = new FoxBrain(this);
+                JSONObject ai = data != null ? data.optJSONObject("ai") : null;
+                brain.ask(text, ai, Math.max(0, mood), stage, reply -> {
+                    thinking = false;
+                    curEn = null;
+                    long ms = Math.min(45000, 7000 + reply.length() * 70L);
+                    showBub(reply, ms);
+                    play(has("talk") ? "talk" : "sit", 3);
+                    if (mood == 4) h.postDelayed(() -> { if (mood == 4) root.setVisibility(View.GONE); }, ms);
+                });
+                break;
+            }
+        }
     }
 
     private void openApp() {
@@ -391,9 +432,9 @@ public class FoxService extends Service {
                 }
                 h.postDelayed(this, 1000); return;
             }
-            if (!inDrop && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
+            if (!inDrop && !thinking && bub.getVisibility() != View.VISIBLE && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
                     && targetX < 0 && ("read".equals(anim) || "sit".equals(anim))) { nextDropAt = now + dropEveryMs; startDrop(); }
-            if (!inDrop && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
+            if (!inDrop && !thinking && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
             h.postDelayed(this, (long) (1000 / Math.max(1, fps)));
         }
     };
@@ -517,6 +558,7 @@ public class FoxService extends Service {
             h.postDelayed(this::clampAndUpdate, 50);
             return;
         }
+        if (bub.getVisibility() == View.VISIBLE && curEn == null && !thinking) { bub.setVisibility(View.GONE); return; }
         if (mood >= 1) {
             String[] c = mood == 1 ? CALL_HUNGRY[1] : mood == 2 ? CALL_SAD[1] : mood == 3 ? CALL_GRUMPY[2] : GONE;
             curEn = c[0]; curRu = c[1];
