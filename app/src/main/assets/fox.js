@@ -101,6 +101,9 @@ const FOX_SLANG = [
 
 const foxSt = n => { let i = 0; FOX_ST.forEach((s, k) => { if (n >= s.at) i = k; }); return i; };
 const foxN = () => (typeof nBricks === 'function' ? nBricks() : 0);
+/* стадия = по словам, но можно открыть раньше за монетки */
+const foxCur = () => Math.max(foxSt(foxN()), S.foxBuy || 0);
+const FOX_PRICE = [0, 20, 40, 60, 100, 150, 250, 400];
 const rnd = a => a[Math.floor(Math.random() * a.length)];
 
 /* ---------- спрайт-проигрыватель ---------- */
@@ -131,7 +134,7 @@ FoxView.prototype.stop = function () { clearInterval(this.t); this.t = null; };
 let foxMini = null, foxMiniBusy = false;
 function foxMiniIdle() {
   if (!foxMini) return;
-  const s = foxSt(foxN());
+  const s = foxCur();
   if (S.foxMood === 'grumpy') return foxMini.play('grumpy');
   foxMini.play(s === 0 ? 'sleep' : s < 2 ? 'sit' : rnd(['sit', 'idle', 'wag']), { loops: s === 0 ? Infinity : 3, then: foxMiniIdle });
 }
@@ -142,10 +145,11 @@ function foxMiniMount() {
 }
 /* события из игры */
 function foxEv(ev) {
-  const n = foxN(), s = foxSt(n);
+  const n = foxN(), s = foxCur();
   if (S.foxSt == null) S.foxSt = s;
+  if (ev === 'ok' || ev === 'learn') foxFedNative();
   if (s > S.foxSt) {
-    S.foxSt = s;
+    S.foxSt = s; foxSync();
     setTimeout(() => toast(`Лис: «${FOX_ST[s].n}» — ${FOX_ST[s].d}`, 'ach'), 900);
   }
   if (ev === 'ok' && S.foxMood === 'grumpy') { S.foxMood = ''; }
@@ -157,8 +161,10 @@ function foxEv(ev) {
   foxMini.play(a[0], { loops: a[1], then: () => { foxMiniBusy = false; foxMiniIdle(); } });
 }
 function foxOnBoot() {
-  if (S.lastActive && S.lastActive < dAdd(-2) && foxSt(foxN()) > 0) S.foxMood = 'grumpy';
-  if (S.foxSt == null) S.foxSt = foxSt(foxN());
+  if (S.lastActive && S.lastActive < dAdd(-2) && foxCur() > 0) S.foxMood = 'grumpy';
+  if (S.foxSt == null) S.foxSt = foxCur();
+  if (S.coins == null) { let c = 0; for (let L = 2; L <= lv().L; L++) c += coinsFor(L); S.coins = c; }
+  foxSync();
 }
 
 /* ---------- вкладка «Лис» ---------- */
@@ -175,7 +181,7 @@ function foxIcon(k) {
   i.classList.remove('pop'); void i.offsetWidth; i.classList.add('pop');
 }
 function foxLine() {
-  const n = foxN(), s = foxSt(n);
+  const n = foxN(), s = foxCur();
   const mine = W.filter(w => st(w.en) >= 2);
   if (s >= 7 && Math.random() < .5) { const j = rnd(FOX_SLANG); return [j[0], '', j[1]]; }
   if (s >= 6 && Math.random() < .6) { const j = rnd(FOX_JOKES); return [j[0], '', j[1]]; }
@@ -185,7 +191,7 @@ function foxLine() {
 }
 function foxDoIdle() {
   clearTimeout(foxIdleT); const wrap = document.getElementById('foxBig'); if (!foxBig || !wrap) return;
-  const s = foxSt(foxN());
+  const s = foxCur();
   if (S.foxMood === 'grumpy') { foxBig.play('grumpy'); return; }
   const a = s === 0 ? 'sleep' : rnd(FOX_ST[s].idle);
   if (a === 'walk' || a === 'run') {
@@ -200,7 +206,7 @@ function foxDoIdle() {
 }
 function foxPet() {
   if (!foxBig) return;
-  const s = foxSt(foxN());
+  const s = foxCur();
   if (s === 0) { foxIcon('zzz'); foxSay('Zzz…', `Спит. Выучи ещё ${10 - foxN()} ${pl(10 - foxN(), 'слово', 'слова', 'слов')} — проснётся`); return; }
   if (S.foxMood === 'grumpy') { foxIcon('puff'); foxSay('Hmph!', 'Обиделся: тебя не было пару дней. Дай 1 верный ответ в игре — оттает'); return; }
   foxIcon('heart'); clearTimeout(foxIdleT);
@@ -214,13 +220,13 @@ function foxFeed() {
   const fed = S.foxFed === S.day, c = today().c;
   if (fed) { foxIcon('heart'); foxSay('I\'m full, thanks!', 'Наелся, спасибо! Приходи завтра'); return; }
   if (c < 10) { foxIcon('quest'); foxSay('I\'m hungry…', `Я голодный… Еда — это твои верные ответы: сегодня ${c} из 10`); return; }
-  S.foxFed = S.day; save(); foxIcon('heart'); clearTimeout(foxIdleT);
+  S.foxFed = S.day; foxFedNative(); save(); foxIcon('heart'); clearTimeout(foxIdleT);
   foxBig.play('eat', { loops: 2, then: () => foxBig.play('cheer', { loops: 3, then: foxDoIdle }) });
   foxSay('Yummy! Words are tasty!', 'Ням! Слова вкусные!'); if ($('foxFeedBtn')) { $('foxFeedBtn').textContent = 'Сытый'; $('foxFeedBtn').classList.add('ghost'); }
 }
 /* панель лиса внутри паспорта объекта */
 function foxPanel() {
-  const n = foxN(), s = foxSt(n), cs = FOX_ST[s], fed = S.foxFed === S.day;
+  const n = foxN(), s = foxCur(), cs = FOX_ST[s], fed = S.foxFed === S.day;
   return `<div class="foxline"><div class="fox-name"><b>${esc(S.foxName || 'Лис')}</b><span>${esc(cs.n)}${S.foxMood === 'grumpy' ? ' · обиделся' : ''}</span></div>
     <p>${esc(cs.d)}</p>
     <div class="btnrow"><button class="btn" id="foxPetBtn">Погладить</button>${s >= 3 ? `<button class="btn ${fed ? 'ghost' : ''}" id="foxFeedBtn">${fed ? 'Сытый' : 'Покормить'}</button>` : ''}${s >= 1 ? '<button class="btn ghost" id="foxTalkBtn">Скажи что-нибудь</button>' : ''}</div></div>`;
@@ -237,7 +243,7 @@ function pathBlock() {
 }
 function foxMountScene() {
   const wrap = document.getElementById('foxBig'); if (!wrap) return;
-  const n = foxN(), s = foxSt(n);
+  const n = foxN(), s = foxCur();
   foxBig = new FoxView(wrap, 84); foxWalkX = 0; wrap.style.transform = ''; foxDoIdle();
   wrap.onclick = foxPet; $('foxPetBtn').onclick = foxPet;
   if ($('foxFeedBtn')) $('foxFeedBtn').onclick = foxFeed;
@@ -245,3 +251,59 @@ function foxMountScene() {
   if (s === 0) setTimeout(() => foxSay('Zzz…', `Лис спит у дома. Ещё ${10 - n} ${pl(10 - n, 'слово', 'слова', 'слов')} — и проснётся`), 600);
 }
 function foxLeaveTab() { if (foxBig) foxBig.stop(); foxBig = null; clearTimeout(foxIdleT); }
+
+/* ---------- монетки ---------- */
+const coinsFor = L => 20 + 5 * L;
+function addCoins(n, why) { S.coins = (S.coins || 0) + n; if (why) setTimeout(() => toast(`+${n} 🪙 ${why}`, 'ok'), 600); }
+
+/* ---------- лис поверх всех приложений (Android) ---------- */
+const NATIVE = () => window.Android && Android.foxStart;
+let fedSent = 0;
+function foxFedNative() { const t = Date.now(); if (t - fedSent < 60000) return; fedSent = t; S.foxFedTs = t; try { window.Android && Android.foxFed && Android.foxFed(); } catch (e) {} }
+function foxData() {
+  const s = foxCur(), meta = {};
+  Object.keys(FOX_META).forEach(k => { if (k !== 'icons') meta[k] = Object.assign({ fps: FOX_FPS[k] || 6 }, FOX_META[k]); });
+  const lines = [], add = (a, b, c) => lines.push([a, b || '', c || '']);
+  if (s >= 1) FOX_HI.forEach(x => add(x[0], x[1]));
+  if (s >= 2) { const mine = W.filter(w => st(w.en) >= 2); for (let i = 0; i < 120 && mine.length; i++) { const w = rnd(mine); add(w.en + '!', w.ru); } }
+  if (s >= 4) { const U = pUnlocked(); for (let i = 0; i < 200 && U.length; i++) { const p = rnd(U); add(p.en, p.ru); } }
+  if (s >= 6) FOX_JOKES.forEach(j => add(j[0], '', j[1]));
+  if (s >= 7) FOX_SLANG.forEach(j => add(j[0], '', j[1]));
+  return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, every: S.foxEvery || 3 });
+}
+function foxSync() { try { if (NATIVE() && S.foxOn && Android.foxCanOverlay()) Android.foxStart(foxData()); } catch (e) {} }
+function foxOverlayToggle() {
+  if (!NATIVE()) { toast('Лис на экране работает только в приложении на телефоне'); return; }
+  if (S.foxOn && Android.foxRunning()) { S.foxOn = false; save(); Android.foxStop(); toast('Лис вернулся домой, в приложение'); renderHub(); return; }
+  if (!Android.foxCanOverlay()) { S.foxWant = true; save(); toast('Разреши «Поверх других приложений» и вернись'); Android.foxAskOverlay(); return; }
+  S.foxOn = true; S.foxWant = false; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); renderHub();
+}
+window.androidResume = () => {
+  try {
+    if (S.foxWant && NATIVE() && Android.foxCanOverlay()) { S.foxWant = false; S.foxOn = true; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); }
+    if (!$('hub').hidden && tab === 'home') renderHub();
+  } catch (e) {}
+};
+
+/* ---------- лавка лиса ---------- */
+function foxShop() {
+  const s = foxCur(), c = S.coins || 0, nx = FOX_ST[s + 1], price = nx ? FOX_PRICE[s + 1] : 0;
+  const on = S.foxOn && NATIVE() && Android.foxRunning();
+  return `<section class="block shop"><h3>Лавка лиса <span class="coins num">🪙 ${c}</span></h3>
+    <div class="shop-row"><div><b>Лис на экране телефона</b><small>Живёт поверх всех приложений: гуляет, болтает по-английски. Голодный — грустит и зовёт играть, а если забросить на 3 дня — уходит.</small></div>
+      <button class="btn ${on ? 'ghost' : ''}" id="foxOverlayBtn">${on ? 'Забрать' : 'Выпустить'}</button></div>
+    ${on ? `<div class="shop-row"><div><b>Как часто болтает</b><small>Фраза из твоих слов раз в…</small></div><select id="foxEvery">${[1, 3, 10, 30].map(m => `<option value="${m}" ${(S.foxEvery || 3) === m ? 'selected' : ''}>${m} мин</option>`).join('')}</select></div>` : ''}
+    ${nx ? `<div class="shop-row"><div><b>Открыть раньше: «${esc(nx.n)}»</b><small>${esc(nx.d)} Без монеток — на ${nx.at} словах.</small></div>
+      <button class="btn ${c >= price ? '' : 'ghost'}" id="foxBuyBtn">${price} 🪙</button></div>` : ''}
+    <p class="muted">Монетки: ${coinsFor(lv().L + 1)} 🪙 за следующий уровень, 15 🪙 за выполненный план дня.</p></section>`;
+}
+function foxShopBind() {
+  if ($('foxOverlayBtn')) $('foxOverlayBtn').onclick = foxOverlayToggle;
+  if ($('foxEvery')) $('foxEvery').onchange = e => { S.foxEvery = +e.target.value; save(); foxSync(); toast('Готово'); };
+  if ($('foxBuyBtn')) $('foxBuyBtn').onclick = () => {
+    const s = foxCur(), price = FOX_PRICE[s + 1];
+    if ((S.coins || 0) < price) { toast(`Не хватает ${price - (S.coins || 0)} 🪙 — набирай уровни`); return; }
+    S.coins -= price; S.foxBuy = s + 1; S.foxSt = s + 1; save(); foxSync();
+    toast(`Лис: «${FOX_ST[s + 1].n}» открыто!`, 'ach'); renderHub();
+  };
+}

@@ -143,6 +143,7 @@ select{width:100%;border:0;border-radius:10px;background:var(--panel);box-shadow
 .foxline p{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
 .path-row{display:flex;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line);opacity:.5}
 .path-row.on{opacity:1}.path-row .n{width:42px;text-align:right;color:var(--muted);font-size:13px}.path-row .ic{width:22px;text-align:center}.path-row div{flex:1;display:flex;flex-direction:column}.path-row small{color:var(--muted);font-size:12px;line-height:1.35}
+.shop-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}.shop-row>div{flex:1;display:flex;flex-direction:column;gap:2px}.shop-row small{color:var(--muted);font-size:12px;line-height:1.35}.shop-row .btn{flex:none;min-width:92px}.shop-row select{flex:none;width:96px;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px}.coins{color:var(--gold)!important;font-weight:700}
 .path-row.next{opacity:1;box-shadow:inset 3px 0 0 var(--brick);padding-left:6px}
 .pp-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px}
 .pp-type{font-family:var(--display);font-size:22px;line-height:1.15;text-wrap:balance}
@@ -480,7 +481,7 @@ const stageOf = n => { let i = 0; STAGES.forEach((s, k) => { if (n >= s.at) i = 
 const MQ = []; // modal queue
 function addXP(n) {
   const a = lv().L; S.xp += Math.max(0, Math.round(n)); const b = lv().L;
-  if (b > a) { MQ.push({ t: 'lvl', L: b }); setTimeout(() => foxEv('lvl'), 50); }
+  if (b > a) { MQ.push({ t: 'lvl', L: b }); let c = 0; for (let L = a + 1; L <= b; L++) c += coinsFor(L); addCoins(c, 'за уровень'); setTimeout(() => foxEv('lvl'), 50); }
 }
 
 const QUESTS = [
@@ -494,7 +495,7 @@ function qAdd(id, v, isMax) {
   const Q = QUESTS.find(x => x.id === id), g = Q.g();
   if (g > 0 && !q.done[id] && q[id] >= g) { q.done[id] = 1; addXP(Q.xp); toast(`План: «${Q.n}» — готово · +${Q.xp} XP`, 'ok'); sfx('ach'); }
   const act = QUESTS.filter(x => x.g() > 0);
-  if (!q.all && act.every(x => q.done[x.id])) { q.all = true; S.planN++; addXP(250); MQ.push({ t: 'plan' }); }
+  if (!q.all && act.every(x => q.done[x.id])) { q.all = true; S.planN++; addCoins(15, 'за план дня'); addXP(250); MQ.push({ t: 'plan' }); }
 }
 function markActive() {
   if (S.lastActive === S.day) return;
@@ -770,7 +771,7 @@ function drop(w, rev) {
 
 function tick(now) {
   if (!running) return;
-  const dur = SPEEDS[S.speed].d * 1000 * (cur.listen ? 1.25 : 1);
+  const dur = SPEEDS[S.speed].d * 1000 * (cur.listen ? 1.25 : 1) * (cur.w.ph ? 1.5 : 1);
   const p = Math.min(1, (elapsed + now - t0) / dur);
   const f = $('field'), d = $('drop');
   d.style.transform = `translate(-50%, ${8 + p * (f.clientHeight - d.offsetHeight - 16)}px)`;
@@ -830,7 +831,7 @@ function judge(i) {
     <button class="more-btn" id="moreInfo">Подробнее ${w.ph ? 'о фразе' : 'о слове'}</button>
     ${ok ? '' : '<div class="row"><button class="pill main" id="nextBtn">Дальше</button></div>'}</div>`);
   $('moreInfo').onclick = e => { e.stopPropagation(); clearTimeout(autoT); openInfo(w); };
-  if (ok) { autoT = setTimeout(next, was === 1 && r.s === 2 ? 1900 : 1200); $('ov').onclick = () => { clearTimeout(autoT); next(); }; if (rev) say(w.en); }
+  if (ok) { autoT = setTimeout(next, (was === 1 && r.s === 2 ? 1900 : 1200) + (w.ph ? 1300 : 0)); $('ov').onclick = () => { clearTimeout(autoT); next(); }; if (rev) say(w.en); }
   else { $('nextBtn').onclick = next; say(w.en); }
   function next() { $('ov').onclick = null; if (paused) return; closeOv(); step(); }
 }
@@ -985,6 +986,7 @@ function tabHome() {
       </div>
     </div>
   </article>
+  ${foxShop()}
   ${pathBlock()}
   <section class="block"><h3>Стройка за 14 дней <span>верные ответы</span></h3>
     <div class="act">${days.map(d => `<div class="d ${d.c ? '' : 'zero'}" title="${d.k}: ${d.c}"><i style="height:${Math.max(2, d.c / mx * 66)}px"></i><span>${d.d}</span></div>`).join('')}</div>
@@ -997,7 +999,7 @@ function tabHome() {
     const done = () => { S.name = inp.value.trim() || 'Игорь'; save(); renderHud(); tabHome(); };
     inp.onblur = done; inp.onkeydown = e => { if (e.key === 'Enter') inp.blur(); };
   };
-  foxMountScene();
+  foxMountScene(); foxShopBind();
 }
 
 function tabPlan() {

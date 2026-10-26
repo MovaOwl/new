@@ -11,6 +11,8 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.content.pm.PackageManager;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
@@ -115,6 +117,44 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public boolean foxCanOverlay() { return Settings.canDrawOverlays(MainActivity.this); }
+
+        @JavascriptInterface
+        public void foxAskOverlay() {
+            runOnUiThread(() -> {
+                try { startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()))); }
+                catch (Exception e) { try { startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)); } catch (Exception ignored) { } }
+            });
+        }
+
+        @JavascriptInterface
+        public boolean foxRunning() { return getSharedPreferences(FoxService.PREF, MODE_PRIVATE).getBoolean("on", false); }
+
+        @JavascriptInterface
+        public void foxStart(String json) {
+            runOnUiThread(() -> {
+                if (!Settings.canDrawOverlays(MainActivity.this)) return;
+                if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED)
+                    requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 7);
+                Intent i = new Intent(MainActivity.this, FoxService.class).putExtra("data", json);
+                try { startForegroundService(i); } catch (Exception ignored) { }
+            });
+        }
+
+        @JavascriptInterface
+        public void foxFed() {
+            getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putLong("fed", System.currentTimeMillis()).apply();
+        }
+
+        @JavascriptInterface
+        public void foxStop() {
+            runOnUiThread(() -> {
+                getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putBoolean("on", false).apply();
+                stopService(new Intent(MainActivity.this, FoxService.class));
+            });
+        }
+
+        @JavascriptInterface
         public void vibrate(int ms) {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             if (v == null) return;
@@ -127,6 +167,12 @@ public class MainActivity extends Activity {
         web.evaluateJavascript("window.androidBack ? androidBack() : 'exit'", v -> {
             if ("\"exit\"".equals(v)) finish();
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (web != null) web.evaluateJavascript("window.androidResume && androidResume()", null);
     }
 
     @Override
