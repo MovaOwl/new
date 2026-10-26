@@ -104,7 +104,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 
 /* ---------- hub ---------- */
 #hub{position:absolute;inset:0;z-index:5;background:var(--bg);display:flex;flex-direction:column}
-.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:10px 12px 6px}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:10px 12px 6px}
 .tab{border:0;background:none;border-radius:10px;padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:3px;font:600 11px var(--body);color:var(--muted);cursor:pointer}
 .tab svg{width:21px;height:21px}
 .tab.on{background:var(--panel);color:var(--brick);box-shadow:0 0 0 1px var(--line)}
@@ -135,6 +135,15 @@ select{width:100%;border:0;border-radius:10px;background:var(--panel);box-shadow
 .pp-stamp{border:2px solid currentColor;border-radius:8px;padding:4px 8px;font-family:var(--display);font-size:15px;transform:rotate(-4deg)}
 .pp-pic{line-height:0;border-bottom:1px solid var(--line)}
 .pp-pic svg{width:100%;height:auto;display:block}
+.pp-pic.scene{position:relative;overflow:hidden}
+.scene .fox-wrap{left:auto;right:6%;margin-left:0;bottom:3%}
+.scene .fox-bub{top:8px}
+.foxline{display:flex;flex-direction:column;gap:6px;padding:10px 12px;border-radius:12px;background:var(--panel2)}
+.foxline .fox-name b{font-size:18px}
+.foxline p{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
+.path-row{display:flex;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line);opacity:.5}
+.path-row.on{opacity:1}.path-row .n{width:42px;text-align:right;color:var(--muted);font-size:13px}.path-row .ic{width:22px;text-align:center}.path-row div{flex:1;display:flex;flex-direction:column}.path-row small{color:var(--muted);font-size:12px;line-height:1.35}
+.path-row.next{opacity:1;box-shadow:inset 3px 0 0 var(--brick);padding-left:6px}
 .pp-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px}
 .pp-type{font-family:var(--display);font-size:22px;line-height:1.15;text-wrap:balance}
 .owner{border:0;background:none;padding:0;cursor:pointer;font-size:14px;color:var(--muted);display:inline-flex;gap:6px;align-items:center;text-align:left}
@@ -313,7 +322,6 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 
   <section id="hub">
     <nav class="tabs" id="tabs">
-      <button class="tab" data-t="fox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 3l4 6h8l4-6v9a8 8 0 0 1-16 0z"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/><path d="M11 16.5h2"/></svg>Лис</button>
       <button class="tab on" data-t="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Объект</button>
       <button class="tab" data-t="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M8 12l3 3 5-6"/></svg>План</button>
       <button class="tab" data-t="words"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h4"/></svg>Слова</button>
@@ -501,18 +509,18 @@ function checkBuild() {
   lastBricks = nb;
 }
 const ACH = [
-  { id: 'w1', ic: '1', n: 'Первый кирпич', d: 'Выучить первое слово', t: () => nLearned() >= 1 },
+  { id: 'w1', ic: '1', n: 'Первый кирпич', d: 'Первое слово (выучено или «знал»)', t: () => nBricks() >= 1 },
   { id: 'p1', ic: 'Фр', n: 'Первая фраза', d: 'Выучить первую фразу', t: () => P.some(p => st(p.k) === 2) },
   { id: 'p100', ic: '100ф', n: 'Заговорил', d: 'Выучить 100 фраз', t: () => pLearned().length >= 100 },
   { id: 'p500', ic: '500ф', n: 'Собеседник', d: 'Открыть 500 фраз', t: () => pUnlocked().length >= 500 },
-  { id: 'w10', ic: '10', n: 'Фундамент', d: 'Выучить 10 слов', t: () => nLearned() >= 10 },
-  { id: 'w50', ic: '50', n: 'Стены растут', d: 'Выучить 50 слов', t: () => nLearned() >= 50 },
-  { id: 'w100', ic: '100', n: 'Сотка', d: 'Выучить 100 слов', t: () => nLearned() >= 100 },
-  { id: 'w250', ic: '250', n: 'Под крышей', d: 'Выучить 250 слов', t: () => nLearned() >= 250 },
-  { id: 'w500', ic: '500', n: 'Читаю со словарём', d: 'Выучить 500 слов', t: () => nLearned() >= 500 },
-  { id: 'w1000', ic: '1K', n: 'Тысячник', d: 'Выучить 1000 слов', t: () => nLearned() >= 1000 },
-  { id: 'w2000', ic: '2K', n: 'Смотрю без субтитров', d: 'Выучить 2000 слов', t: () => nLearned() >= 2000 },
-  { id: 'w3000', ic: '3K', n: 'Читаю книги', d: 'Выучить 3000 слов', t: () => nLearned() >= 3000 },
+  { id: 'w10', ic: '10', n: 'Фундамент', d: 'Выучить 10 слов', t: () => nBricks() >= 10 },
+  { id: 'w50', ic: '50', n: 'Стены растут', d: 'Выучить 50 слов', t: () => nBricks() >= 50 },
+  { id: 'w100', ic: '100', n: 'Сотка', d: 'Выучить 100 слов', t: () => nBricks() >= 100 },
+  { id: 'w250', ic: '250', n: 'Под крышей', d: 'Выучить 250 слов', t: () => nBricks() >= 250 },
+  { id: 'w500', ic: '500', n: 'Читаю со словарём', d: 'Выучить 500 слов', t: () => nBricks() >= 500 },
+  { id: 'w1000', ic: '1K', n: 'Тысячник', d: 'Выучить 1000 слов', t: () => nBricks() >= 1000 },
+  { id: 'w2000', ic: '2K', n: 'Смотрю без субтитров', d: 'Выучить 2000 слов', t: () => nBricks() >= 2000 },
+  { id: 'w3000', ic: '3K', n: 'Читаю книги', d: 'Выучить 3000 слов', t: () => nBricks() >= 3000 },
   { id: 'banya', ic: 'Баня', n: 'С лёгким паром', d: 'Построить баню (200 слов)', t: () => nBricks() >= 200 },
   { id: 'wall', ic: 'ВСЁ', n: 'Ходячий словарь', d: 'Пройти весь словарь', t: () => W.every(w => st(w.en) >= 2) },
   { id: 'realty', ic: '₽', n: 'Профессионал', d: 'Выучить весь набор «Недвижимость»', t: () => SETS[1].words.every(w => st(w.en) >= 2) },
@@ -714,7 +722,7 @@ function newCard(w) {
   say(w.en); sfx('new');
   $('sp').onclick = () => say(w.en, true);
   $('moreInfo').onclick = () => openInfo(w);
-  $('knowBtn').onclick = () => { const r = rec(K(w)); r.s = 3; r.t = Date.now(); if (!w.ph) { toast('+1 кирпич в стройку', 'ok'); checkBuild(); checkAch(); } save(); closeOv(); step(); };
+  $('knowBtn').onclick = () => { const r = rec(K(w)); r.s = 3; r.t = Date.now(); if (!w.ph) { toast('+1 кирпич в стройку и лису', 'ok'); checkBuild(); checkAch(); foxEv('learn'); } save(); closeOv(); step(); };
   $('learnBtn').onclick = () => {
     const r = rec(K(w)); r.s = 1; r.m = 0;
     if (!w.ph) { S.todayNew++; today().n++; qAdd('newW', 1); if (S.todayNew === S.goal) toast('Дневная норма новых слов взята', 'ok'); }
@@ -935,8 +943,8 @@ $('tabs').onclick = e => { const b = e.target.closest('.tab'); if (!b) return; t
 
 function renderHub() {
   [...$('tabs').children].forEach(b => b.classList.toggle('on', b.dataset.t === tab));
-  if (tab !== 'fox') foxLeaveTab();
-  ({ fox: tabFox, home: tabHome, plan: tabPlan, words: tabWords, gpt: tabGpt, opts: tabOpts })[tab]();
+  if (tab !== 'home') foxLeaveTab();
+  ({ home: tabHome, plan: tabPlan, words: tabWords, gpt: tabGpt, opts: tabOpts })[tab]();
 }
 
 const grade = v => v >= .9 ? 'S' : v >= .75 ? 'A' : v >= .6 ? 'B' : v >= .4 ? 'C' : v >= .2 ? 'D' : 'E';
@@ -951,10 +959,11 @@ function tabHome() {
   $('hubBody').innerHTML = `
   <article class="pp">
     <header class="pp-h"><div><div class="pp-k">Паспорт объекта</div><div class="pp-no num">№ ${S.objNo}-${String(L).padStart(2, '0')}</div></div><div class="pp-stamp">Ур. ${L}</div></header>
-    <div class="pp-pic">${houseSVG(sg)}</div>
+    <div class="pp-pic scene" id="foxStage">${houseSVG(sg)}<div class="fox-wrap" id="foxBig"><div class="fox-icon" id="foxIcon"></div></div><div class="fox-bub" id="foxBub" hidden></div></div>
     <div class="pp-body">
       <div><div class="pp-type">${esc(STAGES[sg].t)}</div>
         <div id="ownerBox"><button class="owner" id="ownerBtn">Владелец: <b>${esc(S.name)}</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div></div>
+      ${foxPanel()}
       <div><div class="bar"><i style="width:${nx ? (learned - cs.at) / (nx.at - cs.at) * 100 : 100}%"></i></div>
         <div class="xprow num"><span>Стройка: ${fmt(learned)} м²</span><span>${nx ? `до «${esc(nx.t)}»: ${nx.at - learned} ${pl(nx.at - learned, 'слово', 'слова', 'слов')}` : 'максимальная стадия'}</span></div></div>
       <div><div class="bar blue"><i style="width:${x / n * 100}%"></i></div>
@@ -976,6 +985,7 @@ function tabHome() {
       </div>
     </div>
   </article>
+  ${pathBlock()}
   <section class="block"><h3>Стройка за 14 дней <span>верные ответы</span></h3>
     <div class="act">${days.map(d => `<div class="d ${d.c ? '' : 'zero'}" title="${d.k}: ${d.c}"><i style="height:${Math.max(2, d.c / mx * 66)}px"></i><span>${d.d}</span></div>`).join('')}</div>
     <p class="num">Всего ответов: ${fmt(S.answered)} · верных: ${fmt(S.correct)} · ответов на 95+ очков: ${fmt(S.fastN)}</p></section>
@@ -987,6 +997,7 @@ function tabHome() {
     const done = () => { S.name = inp.value.trim() || 'Игорь'; save(); renderHud(); tabHome(); };
     inp.onblur = done; inp.onkeydown = e => { if (e.key === 'Enter') inp.blur(); };
   };
+  foxMountScene();
 }
 
 function tabPlan() {
@@ -1062,7 +1073,7 @@ function drawList() {
     if (a) { const r = rec(a.dataset.en);
       if (a.dataset.act === 'know') { r.s = 3; r.m = 0; r.t = Date.now(); }
       else { r.s = 1; r.m = 0; r.iv = 0; r.n = ''; }
-      checkBuild(); checkAch(); save(); toast('Готово'); if (MQ.length) showModal(() => {}); tabWords(); return; }
+      checkBuild(); checkAch(); foxEv(); save(); toast('Готово'); if (MQ.length) showModal(() => {}); tabWords(); return; }
     const row = e.target.closest('.wrow'); if (row) { say(row.dataset.en.replace(/^§/, ''), true); openWord = openWord === row.dataset.en ? '' : row.dataset.en; drawList(); }
     if (e.target.id === 'more') { wLimit += 300; drawList(); }
   };
@@ -1173,12 +1184,12 @@ document.addEventListener('visibilitychange', () => { if (document.hidden && !pa
 window.androidBack = () => {
   if (!$('modal').hidden) return 'stay';
   if (!$('sheet').hidden) { closeInfo(); return 'stay'; }
-  if (!$('hub').hidden) { if (tab !== 'fox') { tab = 'fox'; renderHub(); return 'stay'; } return 'exit'; }
+  if (!$('hub').hidden) { if (tab !== 'home') { tab = 'home'; renderHub(); return 'stay'; } return 'exit'; }
   openHub(); return 'menu';
 };
 window.androidPause = () => { if (!paused) openHub(); };
 
-rollDay(); foxOnBoot(); lastBricks = nBricks(); save(); renderHud(); foxMiniMount(); openHub('fox');
+rollDay(); foxOnBoot(); lastBricks = nBricks(); save(); renderHud(); foxMiniMount(); openHub('home');
 </script>
 </body>
 </html>

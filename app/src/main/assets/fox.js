@@ -149,7 +149,7 @@ function foxEv(ev) {
     setTimeout(() => toast(`Лис: «${FOX_ST[s].n}» — ${FOX_ST[s].d}`, 'ach'), 900);
   }
   if (ev === 'ok' && S.foxMood === 'grumpy') { S.foxMood = ''; }
-  if (!foxMini || s === 0) return;
+  if (!ev || !foxMini || s === 0) return;
   const map = { ok: ['jump', 1], learn: [s >= 3 ? 'eat' : 'jump', 1], bad: ['sad', 1], lvl: ['cheer', 3], combo: ['laugh', 1] };
   const a = map[ev]; if (!a) return;
   if (foxMiniBusy && ev === 'ok') return;
@@ -184,18 +184,19 @@ function foxLine() {
   return rnd(FOX_HI);
 }
 function foxDoIdle() {
-  clearTimeout(foxIdleT); if (!foxBig || !document.getElementById('foxBig')) return;
-  const s = foxSt(foxN()), stage = document.getElementById('foxBig');
+  clearTimeout(foxIdleT); const wrap = document.getElementById('foxBig'); if (!foxBig || !wrap) return;
+  const s = foxSt(foxN());
   if (S.foxMood === 'grumpy') { foxBig.play('grumpy'); return; }
   const a = s === 0 ? 'sleep' : rnd(FOX_ST[s].idle);
   if (a === 'walk' || a === 'run') {
-    const box = document.getElementById('foxStage'), lim = Math.max(0, (box.clientWidth - 200) / 2);
-    foxWalkX = foxWalkX > 0 ? -lim : lim; stage.style.transition = `transform ${a === 'run' ? 1.6 : 3.2}s linear`;
-    stage.style.transform = `translateX(${foxWalkX}px) scaleX(${foxWalkX > 0 ? 1 : -1})`;
-  } else { stage.style.transform = `translateX(${foxWalkX}px)`; }
-  foxBig.play(a, { loops: s === 0 ? Infinity : a === 'walk' || a === 'run' ? (a === 'run' ? 2 : 3) : 3, then: foxDoIdle });
+    const box = document.getElementById('foxStage'), far = -Math.max(0, box.clientWidth * .55);
+    const to = foxWalkX < far / 2 ? 0 : far, left = to < foxWalkX; foxWalkX = to;
+    wrap.style.transition = `transform ${a === 'run' ? 1.5 : 3}s linear`;
+    wrap.style.transform = `translateX(${to}px) scaleX(${left ? -1 : 1})`;
+  } else { wrap.style.transform = `translateX(${foxWalkX}px)`; }
+  foxBig.play(a, { loops: s === 0 ? Infinity : a === 'walk' ? 3 : a === 'run' ? 2 : 3, then: foxDoIdle });
   if (s === 0) foxIcon('zzz');
-  else if (Math.random() < .35 && a !== 'sleep') { const l = foxLine(); foxSay(...l); }
+  else if (Math.random() < .3) { const l = foxLine(); foxSay(...l); }
 }
 function foxPet() {
   if (!foxBig) return;
@@ -204,6 +205,7 @@ function foxPet() {
   if (S.foxMood === 'grumpy') { foxIcon('puff'); foxSay('Hmph!', 'Обиделся: тебя не было пару дней. Дай 1 верный ответ в игре — оттает'); return; }
   foxIcon('heart'); clearTimeout(foxIdleT);
   foxBig.play(rnd(s >= 2 ? ['wave', 'jump', 'laugh', 'turn', 'wag'] : ['wake', 'sit']), { once: true, then: foxDoIdle });
+  if ($('foxFeedBtn') && S.foxFed === S.day) $('foxFeedBtn').textContent = 'Сытый';
   const l = foxLine(); foxSay(...l);
   buzz(15);
 }
@@ -214,33 +216,32 @@ function foxFeed() {
   if (c < 10) { foxIcon('quest'); foxSay('I\'m hungry…', `Я голодный… Еда — это твои верные ответы: сегодня ${c} из 10`); return; }
   S.foxFed = S.day; save(); foxIcon('heart'); clearTimeout(foxIdleT);
   foxBig.play('eat', { loops: 2, then: () => foxBig.play('cheer', { loops: 3, then: foxDoIdle }) });
-  foxSay('Yummy! Words are tasty!', 'Ням! Слова вкусные!');
+  foxSay('Yummy! Words are tasty!', 'Ням! Слова вкусные!'); if ($('foxFeedBtn')) { $('foxFeedBtn').textContent = 'Сытый'; $('foxFeedBtn').classList.add('ghost'); }
 }
-function tabFox() {
-  const n = foxN(), s = foxSt(n), cs = FOX_ST[s], nx = FOX_ST[s + 1];
-  const pct = nx ? Math.min(100, (n - cs.at) / (nx.at - cs.at) * 100) : 100;
-  const fed = S.foxFed === S.day;
-  $('hubBody').innerHTML = `
-  <article class="foxcard">
-    <div class="fox-stage" id="foxStage"><div class="fox-sky"></div><div class="fox-ground"></div>
-      <div class="fox-wrap" id="foxBig"><div class="fox-icon" id="foxIcon"></div></div>
-      <div class="fox-bub" id="foxBub" hidden></div></div>
-    <div class="fox-info">
-      <div class="fox-name"><b>${esc(S.foxName || 'Лис')}</b><span>${esc(cs.n)}${S.foxMood === 'grumpy' ? ' · обиделся' : ''}</span></div>
-      <p>${esc(cs.d)}</p>
-      <div class="fox-prog"><div class="bar"><i style="width:${pct}%"></i></div><small class="num">${nx ? `${n} из ${nx.at} слов до «${nx.n}»` : `${n} слов — максимум, лис прокачан`}</small></div>
-      <div class="btnrow"><button class="btn" id="foxPetBtn">Погладить</button>${s >= 3 ? `<button class="btn ${fed ? 'ghost' : ''}" id="foxFeedBtn">${fed ? 'Сытый' : 'Покормить'}</button>` : ''}${s >= 1 ? '<button class="btn ghost" id="foxTalkBtn">Скажи что-нибудь</button>' : ''}</div>
-    </div>
-  </article>
-  <section class="block"><h3>Жизнь лиса <span>от твоих слов</span></h3>
-    ${FOX_ST.map((x, i) => `<div class="fox-row ${i <= s ? 'on' : ''}"><span class="num">${x.at}</span><div><b>${esc(x.n)}</b><small>${esc(x.d)}</small></div>${i <= s ? '✓' : '🔒'}</div>`).join('')}
-    <p class="muted">Считаются выученные слова и те, что ты отметил «знал».</p>
-  </section>`;
-  foxBig = new FoxView(document.getElementById('foxBig'), 150);
-  foxWalkX = 0; foxDoIdle();
-  $('foxBig').onclick = foxPet; $('foxPetBtn').onclick = foxPet;
+/* панель лиса внутри паспорта объекта */
+function foxPanel() {
+  const n = foxN(), s = foxSt(n), cs = FOX_ST[s], fed = S.foxFed === S.day;
+  return `<div class="foxline"><div class="fox-name"><b>${esc(S.foxName || 'Лис')}</b><span>${esc(cs.n)}${S.foxMood === 'grumpy' ? ' · обиделся' : ''}</span></div>
+    <p>${esc(cs.d)}</p>
+    <div class="btnrow"><button class="btn" id="foxPetBtn">Погладить</button>${s >= 3 ? `<button class="btn ${fed ? 'ghost' : ''}" id="foxFeedBtn">${fed ? 'Сытый' : 'Покормить'}</button>` : ''}${s >= 1 ? '<button class="btn ghost" id="foxTalkBtn">Скажи что-нибудь</button>' : ''}</div></div>`;
+}
+/* единый путь: этапы дома и лиса по числу слов */
+function pathBlock() {
+  const n = foxN();
+  const items = [...STAGES.map(x => ({ at: x.at, ic: '🏠', t: x.t, d: '' })), ...FOX_ST.map(x => ({ at: x.at, ic: '🦊', t: 'Лис: ' + x.n, d: x.d }))].sort((a, b) => a.at - b.at || (a.ic === '🏠' ? -1 : 1));
+  const nextAt = (items.find(x => x.at > n) || {}).at;
+  const from = Math.max(0, items.findIndex(x => x.at > n) - 3), shown = items.slice(from, from + 9);
+  return `<section class="block"><h3>Путь: дом и лис <span>${n} ${pl(n, 'слово', 'слова', 'слов')}</span></h3>
+    ${shown.map(x => `<div class="path-row ${x.at <= n ? 'on' : ''} ${x.at === nextAt ? 'next' : ''}"><span class="n num">${x.at}</span><span class="ic">${x.ic}</span><div><b>${esc(x.t)}</b>${x.d ? `<small>${esc(x.d)}</small>` : ''}</div>${x.at <= n ? '✓' : ''}</div>`).join('')}
+    <p class="muted">Каждое слово, выученное в игре или отмеченное «знал», — это кирпич в дом и еда для лиса.</p></section>`;
+}
+function foxMountScene() {
+  const wrap = document.getElementById('foxBig'); if (!wrap) return;
+  const n = foxN(), s = foxSt(n);
+  foxBig = new FoxView(wrap, 84); foxWalkX = 0; wrap.style.transform = ''; foxDoIdle();
+  wrap.onclick = foxPet; $('foxPetBtn').onclick = foxPet;
   if ($('foxFeedBtn')) $('foxFeedBtn').onclick = foxFeed;
   if ($('foxTalkBtn')) $('foxTalkBtn').onclick = () => { if (S.foxMood === 'grumpy') return foxPet(); clearTimeout(foxIdleT); foxBig.play(s >= 6 ? 'laugh' : 'talk', { loops: 2, then: foxDoIdle }); const l = foxLine(); foxSay(...l); foxIcon('note'); };
-  if (s === 0) setTimeout(() => foxSay('Zzz…', `Лис спит. Ещё ${10 - n} ${pl(10 - n, 'слово', 'слова', 'слов')} — и проснётся`), 600);
+  if (s === 0) setTimeout(() => foxSay('Zzz…', `Лис спит у дома. Ещё ${10 - n} ${pl(10 - n, 'слово', 'слова', 'слов')} — и проснётся`), 600);
 }
 function foxLeaveTab() { if (foxBig) foxBig.stop(); foxBig = null; clearTimeout(foxIdleT); }
