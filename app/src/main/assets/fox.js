@@ -269,7 +269,7 @@ function foxData() {
   if (s >= 4) { const U = pUnlocked(); for (let i = 0; i < 200 && U.length; i++) { const p = rnd(U); add(p.en, p.ru); } }
   if (s >= 6) FOX_JOKES.forEach(j => add(j[0], '', j[1]));
   if (s >= 7) FOX_SLANG.forEach(j => add(j[0], '', j[1]));
-  return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, every: S.foxEvery || 3 });
+  return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, every: S.foxEvery || 10 });
 }
 function foxSync() { try { if (NATIVE() && S.foxOn && Android.foxCanOverlay()) Android.foxStart(foxData()); } catch (e) {} }
 function foxOverlayToggle() {
@@ -292,7 +292,7 @@ function foxShop() {
   return `<section class="block shop"><h3>Лавка лиса <span class="coins num">🪙 ${c}</span></h3>
     <div class="shop-row"><div><b>Лис на экране телефона</b><small>Живёт поверх всех приложений: гуляет, болтает по-английски. Голодный — грустит и зовёт играть, а если забросить на 3 дня — уходит.</small></div>
       <button class="btn ${on ? 'ghost' : ''}" id="foxOverlayBtn">${on ? 'Забрать' : 'Выпустить'}</button></div>
-    ${on ? `<div class="shop-row"><div><b>Как часто болтает</b><small>Фраза из твоих слов раз в…</small></div><select id="foxEvery">${[1, 3, 10, 30].map(m => `<option value="${m}" ${(S.foxEvery || 3) === m ? 'selected' : ''}>${m} мин</option>`).join('')}</select></div>` : ''}
+    ${on ? `<div class="shop-row"><div><b>Как часто болтает</b><small>Фраза из твоих слов раз в…</small></div><select id="foxEvery">${[3, 10, 20, 60].map(m => `<option value="${m}" ${(S.foxEvery || 10) === m ? 'selected' : ''}>${m} мин</option>`).join('')}</select></div>` : ''}
     ${nx ? `<div class="shop-row"><div><b>Открыть раньше: «${esc(nx.n)}»</b><small>${esc(nx.d)} Без монеток — на ${nx.at} словах.</small></div>
       <button class="btn ${c >= price ? '' : 'ghost'}" id="foxBuyBtn">${price} 🪙</button></div>` : ''}
     <p class="muted">Монетки: ${coinsFor(lv().L + 1)} 🪙 за следующий уровень, 15 🪙 за выполненный план дня.</p></section>`;

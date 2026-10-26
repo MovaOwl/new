@@ -149,7 +149,7 @@ public class FoxService extends Service {
             meta = data.optJSONObject("meta");
             if (meta == null) meta = new JSONObject();
             stage = data.optInt("stage", 0);
-            everyMs = Math.max(30000, data.optLong("every", 3) * 60000L);
+            everyMs = Math.max(60000, data.optLong("every", 10) * 60000L);
             idles.clear();
             JSONArray a = data.optJSONArray("idle");
             if (a != null) for (int i = 0; i < a.length(); i++) idles.add(a.getString(i));
@@ -229,9 +229,7 @@ public class FoxService extends Service {
         });
         try { wm.addView(root, lp); } catch (Exception e) { stopSelf(); }
 
-        tts = new TextToSpeech(this, st -> {
-            if (st == TextToSpeech.SUCCESS) { tts.setLanguage(Locale.US); tts.setSpeechRate(0.9f); ttsReady = true; }
-        });
+        // без голоса: лис только пишет
     }
 
     private boolean has(String name) { return meta.has(name); }
@@ -297,33 +295,54 @@ public class FoxService extends Service {
         if (f == null) { f = framesOf("sit"); name = "sit"; if (f == null) return; }
         anim = name; frames = f; frame = 0; loopsLeft = loops;
         JSONObject m = meta.optJSONObject(name);
-        fps = m != null ? (float) m.optDouble("fps", 6) : 6;
+        fps = calmFps(name, m != null ? (float) m.optDouble("fps", 6) : 6);
         int wpx = (int) (foxH * (float) f[0].getWidth() / f[0].getHeight());
         img.setLayoutParams(new LinearLayout.LayoutParams(wpx, foxH));
         img.setImageBitmap(f[0]);
     }
 
+    /* спокойная скорость кадров для жизни на экране */
+    private float calmFps(String name, float f) {
+        switch (name) {
+            case "sleep": return 1.5f;
+            case "sit": case "idle": case "sad": return 2.5f;
+            case "read": return 2f;
+            case "grumpy": return 2f;
+            case "wag": return 4f;
+            case "walk": return 6f;
+            default: return f;
+        }
+    }
+
+    /* играть анимацию примерно secs секунд */
+    private void playFor(String name, int secMin, int secMax) {
+        play(name, 1);
+        if (frames == null) return;
+        int secs = secMin + rnd.nextInt(Math.max(1, secMax - secMin + 1));
+        loopsLeft = Math.max(1, Math.round(secs * fps / frames.length));
+    }
+
     private void pickNext() {
         img.setScaleX(1);
         targetX = -1;
-        if (stage <= 0) { play("sleep", 6); return; }
-        if (mood == 3 || mood == 4) { play(rnd.nextBoolean() && has("grumpy") ? "grumpy" : has("sad") ? "sad" : "sit", 3); return; }
-        if (mood == 2 && rnd.nextInt(100) < 70) { play(has("sad") ? "sad" : "sit", 2); return; }
+        if (stage <= 0) { playFor("sleep", 120, 300); return; }
+        if (mood == 3 || mood == 4) { playFor(rnd.nextBoolean() && has("grumpy") ? "grumpy" : "sad", 30, 70); return; }
         int r = rnd.nextInt(100);
-        if (mood == 1 && r < 30) { play(has("sad") ? "sad" : "sit", 1); return; }
-        if (r < 35 && has("walk")) {
-            boolean run = has("run") && rnd.nextInt(4) == 0;
+        if (mood == 2 && r < 60) { playFor("sad", 30, 60); return; }
+        if (mood == 1 && r < 25) { playFor("sad", 15, 30); return; }
+        r = rnd.nextInt(100);
+        if (r < 35) { playFor("read", 40, 90); return; }        // сидит с книжкой
+        if (r < 60) { playFor("sit", 25, 60); return; }         // просто сидит, моргает
+        if (r < 88) { playFor("sleep", 60, 180); return; }      // дремлет
+        if (r < 96 && has("walk")) {                              // изредка прогуливается
             int margin = (int) (40 * dp);
             targetX = margin + rnd.nextInt(Math.max(1, screenW - foxH * 2 - margin));
-            speed = (run ? 5.5f : 2.2f) * dp;
-            play(run ? "run" : "walk", 999);
+            speed = 1.6f * dp;
+            play("walk", 999);
             img.setScaleX(targetX < lp.x ? -1 : 1);
             return;
         }
-        if (r < 42) { play("sleep", 3); return; }
-        String a = idles.isEmpty() ? "sit" : idles.get(rnd.nextInt(idles.size()));
-        if ("walk".equals(a) || "run".equals(a)) a = "sit";
-        play(a, 2 + rnd.nextInt(3));
+        playFor("wag", 5, 9);
     }
 
     private final Runnable tick = new Runnable() {
@@ -376,11 +395,11 @@ public class FoxService extends Service {
         else if (lines.isEmpty()) return;
         else l = lines.get(rnd.nextInt(lines.size()));
         curEn = l[0]; curRu = l[1].isEmpty() ? l[2] : l[1]; showRu = false;
-        bub.setText(curEn + (curRu.isEmpty() ? "" : "\n(нажми — перевод)"));
+        bub.setText(curEn + (curRu.isEmpty() ? "" : "\n(тап — перевод)"));
         bub.setVisibility(View.VISIBLE);
         h.removeCallbacks(hideBub);
         h.postDelayed(hideBub, 9000);
-        if (targetX < 0) play(has("talk") ? "talk" : has("wave") ? "wave" : "sit", 2);
+        if (targetX < 0 && "sleep".equals(anim)) playFor("sit", 20, 40); // проснулся сказать фразу
         h.postDelayed(this::clampAndUpdate, 50);
     }
 
@@ -396,7 +415,6 @@ public class FoxService extends Service {
             String[] c = mood == 1 ? CALL_HUNGRY[1] : mood == 2 ? CALL_SAD[1] : mood == 3 ? CALL_GRUMPY[2] : GONE;
             curEn = c[0]; curRu = c[1];
             showBub(curEn + "\n" + curRu, 5000);
-            if (ttsReady) tts.speak(curEn, TextToSpeech.QUEUE_FLUSH, null, "fox");
             play(has("jump") ? "jump" : "sit", 1);
             h.postDelayed(this::openApp, 900);
             return;
@@ -404,7 +422,6 @@ public class FoxService extends Service {
         if (bub.getVisibility() == View.VISIBLE && curEn != null) {
             showRu = !showRu;
             bub.setText(showRu ? curEn + "\n" + curRu : curEn);
-            if (ttsReady) tts.speak(curEn, TextToSpeech.QUEUE_FLUSH, null, "fox");
             h.removeCallbacks(hideBub); h.postDelayed(hideBub, 12000);
             h.postDelayed(this::clampAndUpdate, 50);
             return;
@@ -412,7 +429,6 @@ public class FoxService extends Service {
         targetX = -1; img.setScaleX(1);
         sayLine();
         play(has("wave") ? "wave" : has("jump") ? "jump" : "sit", 1);
-        if (ttsReady && curEn != null) tts.speak(curEn, TextToSpeech.QUEUE_FLUSH, null, "fox");
     }
 
     @Override
