@@ -1,0 +1,250 @@
+assault|«Нападение» и «нападать».|An assault on a guard.|Нападение на охранника.|A verbal assault.|Словесная атака.
+assembly|«Собрание, сборка».|A general assembly.|Общее собрание.|Easy assembly.|Простая сборка.
+assessment|«Оценка».|A property assessment.|Оценка недвижимости.|A fair assessment.|Справедливая оценка.
+asset|«Актив, ценность».|My biggest asset.|Мой главный актив.|Assets and debts.|Активы и долги.
+assignment|«Задание, назначение».|A homework assignment.|Домашнее задание.|A new assignment.|Новое поручение.
+assistance|«Помощь, содействие».|Need assistance?|Нужна помощь?|Financial assistance.|Финансовая помощь.
+association|«Ассоциация, объединение».|A homeowners association.|ТСЖ.|Free association.|Свободная ассоциация.
+assumption|«Предположение».|A wrong assumption.|Неверное предположение.|Based on an assumption.|Основано на предположении.
+assurance|«Заверение, гарантия».|Quality assurance.|Контроль качества.|Give an assurance.|Дать гарантию.
+asylum|«Убежище».|Political asylum.|Политическое убежище.|Ask for asylum.|Просить убежища.
+athlete|«Спортсмен».|A young athlete.|Молодой спортсмен.|A pro athlete.|Профессиональный спортсмен.
+attachment|«Вложение, привязанность».|Open the attachment.|Открой вложение.|Emotional attachment.|Эмоциональная привязанность.
+auction|«Аукцион».|Sold at auction.|Продано на аукционе.|A car auction.|Автоаукцион.
+autonomy|«Автономия, самостоятельность».|Full autonomy.|Полная автономия.|Autonomy at work.|Самостоятельность в работе.
+availability|«Наличие, доступность».|Check availability.|Проверить наличие.|Room availability.|Свободные номера.
+awareness|«Осведомлённость, осознанность».|Raise awareness.|Привлечь внимание.|Self-awareness.|Самосознание.
+bacteria|«Бактерии».|Good bacteria.|Полезные бактерии.|Kill bacteria.|Убивать бактерии.
+badge|«Значок, бейдж».|Wear a badge.|Носить бейдж.|A police badge.|Полицейский жетон.
+baggage|«Багаж».|Check your baggage.|Сдай багаж.|Emotional baggage.|Эмоциональный груз.
+bait|«Наживка» и «заманивать».|Fishing bait.|Наживка для рыбы.|Take the bait.|Попасться на удочку.
+bakery|«Пекарня».|A local bakery.|Местная пекарня.|Bread from the bakery.|Хлеб из пекарни.
+balloon|«Воздушный шар(ик)».|A red balloon.|Красный шарик.|A hot-air balloon.|Воздушный шар.
+ballot|«Бюллетень, голосование».|Cast a ballot.|Проголосовать.|A secret ballot.|Тайное голосование.
+bankruptcy|«Банкротство».|Declare bankruptcy.|Объявить банкротство.|On the edge of bankruptcy.|На грани банкротства.
+banner|«Баннер, транспарант».|A big banner.|Большой баннер.|An ad banner.|Рекламный баннер.
+barrel|«Бочка, ствол».|A barrel of oil.|Баррель нефти.|A beer barrel.|Пивная бочка.
+barrier|«Барьер».|The language barrier.|Языковой барьер.|A safety barrier.|Защитное ограждение.
+basin|«Таз, раковина, бассейн реки».|A wash basin.|Умывальник.|The river basin.|Бассейн реки.
+batch|«Партия, порция».|A new batch.|Новая партия.|A batch of cookies.|Партия печенья.
+beam|«Луч, балка».|A wooden beam.|Деревянная балка.|A beam of light.|Луч света.
+bean|«Боб, фасоль».|Coffee beans.|Кофейные зёрна.|Green beans.|Стручковая фасоль.
+beard|«Борода».|A long beard.|Длинная борода.|Shave your beard.|Сбрей бороду.
+bedtime|«Время сна».|It's bedtime.|Пора спать.|A bedtime story.|Сказка на ночь.
+beggar|«Нищий».|A beggar on the street.|Нищий на улице.|Beggars can't be choosers.|Дарёному коню в зубы не смотрят.
+beginner|«Новичок».|A beginner in English.|Новичок в английском.|Beginner's luck.|Новичкам везёт.
+behalf|on behalf of — «от имени, в интересах».|On behalf of the owner.|От имени владельца.|On my behalf.|От моего имени.
+being|«Существо, бытие».|A human being.|Человек.|For the time being.|Пока что.
+bench|«Скамейка».|Sit on the bench.|Сядь на скамейку.|A park bench.|Скамейка в парке.
+bias|«Предвзятость».|Without bias.|Без предвзятости.|A strong bias.|Сильная предвзятость.
+bid|«Ставка, заявка» и «предлагать цену».|The highest bid.|Самая высокая ставка.|Make a bid.|Сделать ставку.
+biography|«Биография».|Read a biography.|Читать биографию.|A short biography.|Краткая биография.
+blade|«Лезвие, лопасть».|A sharp blade.|Острое лезвие.|A blade of grass.|Травинка.
+blast|«Взрыв» и «кайф» (разг.).|A loud blast.|Громкий взрыв.|We had a blast!|Мы отлично оторвались!
+blessing|«Благословение».|A blessing in disguise.|Не было бы счастья, да несчастье помогло.|Count your blessings.|Цени то, что имеешь.
+blind spot|«Слепая зона».|Check your blind spot.|Проверь слепую зону.|Everyone has a blind spot.|У всех есть слабые места.
+block|«Квартал, блок» и «блокировать».|Two blocks away.|В двух кварталах.|Block the number.|Заблокировать номер.
+blueprint|«Чертёж, план».|The house blueprint.|Чертёж дома.|A blueprint for success.|План успеха.
+boarding|«Посадка».|Boarding pass.|Посадочный талон.|Boarding school.|Школа-интернат.
+bonding|«Сближение, связь».|Team bonding.|Сплочение команды.|Father-son bonding.|Время отца и сына.
+booking|«Бронирование».|Make a booking.|Забронировать.|Cancel the booking.|Отменить бронь.
+boom|«Бум, гул».|A housing boom.|Строительный бум.|Baby boom.|Бэби-бум.
+boost|«Толчок, рост» и «повышать».|A confidence boost.|Прилив уверенности.|Boost sales.|Поднять продажи.
+booth|«Будка, кабинка, стенд».|A phone booth.|Телефонная будка.|A photo booth.|Фотобудка.
+boxing|«Бокс».|Boxing gloves.|Боксёрские перчатки.|He does boxing.|Он занимается боксом.
+bracelet|«Браслет».|A gold bracelet.|Золотой браслет.|A fitness bracelet.|Фитнес-браслет.
+breakthrough|«Прорыв».|A real breakthrough.|Настоящий прорыв.|A medical breakthrough.|Прорыв в медицине.
+breast|«Грудь».|Chicken breast.|Куриная грудка.|Breast milk.|Грудное молоко.
+breeze|«Ветерок» и «пустяк».|A cool breeze.|Прохладный ветерок.|It's a breeze.|Проще простого.
+brightness|«Яркость».|Screen brightness.|Яркость экрана.|Turn down the brightness.|Убавь яркость.
+broadcast|«Трансляция» и «транслировать».|A live broadcast.|Прямая трансляция.|Broadcast the news.|Транслировать новости.
+brochure|«Брошюра».|A travel brochure.|Туристическая брошюра.|Take a brochure.|Возьми брошюру.
+bubble|«Пузырь».|Soap bubbles.|Мыльные пузыри.|A housing bubble.|Пузырь на рынке жилья.
+bug|«Жук, баг».|A bug in the app.|Баг в приложении.|A stomach bug.|Кишечная инфекция.
+bulb|«Лампочка, луковица».|A light bulb.|Лампочка.|Tulip bulbs.|Луковицы тюльпанов.
+bull|«Бык».|A bull market.|Бычий рынок.|Take the bull by the horns.|Взять быка за рога.
+bundle|«Пачка, связка, комплект».|A bundle of keys.|Связка ключей.|A bundle of joy.|Комочек счастья.
+burst|«Лопаться, врываться» и «вспышка».|A pipe burst.|Трубу прорвало.|A burst of energy.|Прилив энергии.
+bust|«Бюст» и «разорившийся» (разг.).|A marble bust.|Мраморный бюст.|Go bust.|Разориться.
+butterfly|«Бабочка».|A beautiful butterfly.|Красивая бабочка.|Butterflies in my stomach.|Бабочки в животе.
+cabin|«Кабина, хижина».|A log cabin.|Бревенчатая хижина.|Cabin crew.|Бортпроводники.
+cable car|«Канатная дорога».|Take the cable car.|Поедем на канатке.|A cable car ride.|Поездка на канатной дороге.
+cafe|«Кафе».|A small cafe.|Маленькое кафе.|Meet at the cafe.|Встретимся в кафе.
+calf|«Телёнок» и «икра (ноги)».|A newborn calf.|Новорождённый телёнок.|Calf muscles.|Икроножные мышцы.
+call center|«Колл-центр».|Call the call center.|Позвони в колл-центр.|A call center job.|Работа в колл-центре.
+calorie|«Калория».|Low calorie.|Низкокалорийный.|Burn calories.|Сжигать калории.
+canal|«Канал (искусственный)».|A canal in Venice.|Канал в Венеции.|Along the canal.|Вдоль канала.
+canvas|«Холст, брезент».|Paint on canvas.|Писать на холсте.|A canvas bag.|Холщовая сумка.
+capability|«Способность, возможность».|Beyond my capability.|Мне не по силам.|New capabilities.|Новые возможности.
+capsule|«Капсула».|A coffee capsule.|Кофейная капсула.|A time capsule.|Капсула времени.
+caravan|«Караван, дом на колёсах».|Travel by caravan.|Путешествовать в доме на колёсах.|A camel caravan.|Караван верблюдов.
+carbon|«Углерод».|Carbon footprint.|Углеродный след.|Carbon monoxide.|Угарный газ.
+cargo|«Груз».|Cargo ship.|Грузовое судно.|Cargo pants.|Штаны карго.
+carpenter|«Плотник».|Call a carpenter.|Позвать плотника.|A good carpenter.|Хороший плотник.
+cartoon|«Мультфильм, карикатура».|Watch cartoons.|Смотреть мультики.|A political cartoon.|Политическая карикатура.
+carving|«Резьба».|Wood carving.|Резьба по дереву.|Pumpkin carving.|Вырезание тыкв.
+casino|«Казино».|Go to the casino.|Пойти в казино.|The casino always wins.|Казино всегда в выигрыше.
+cast|«Актёрский состав, гипс» и «бросать».|The cast of the film.|Актёрский состав фильма.|An arm in a cast.|Рука в гипсе.
+casualty|«Пострадавший, жертва».|No casualties.|Обошлось без жертв.|Heavy casualties.|Большие потери.
+catalogue|«Каталог».|An online catalogue.|Онлайн-каталог.|Order from the catalogue.|Заказать по каталогу.
+catastrophe|«Катастрофа».|A total catastrophe.|Полная катастрофа.|Avoid a catastrophe.|Избежать катастрофы.
+cattle|«Скот (крупный рогатый)».|Cattle farm.|Животноводческая ферма.|Herd of cattle.|Стадо коров.
+ceremony|«Церемония».|A wedding ceremony.|Свадебная церемония.|Without ceremony.|Без церемоний.
+chamber|«Палата, камера».|Chamber of Commerce.|Торговая палата.|Chamber music.|Камерная музыка.
+champagne|«Шампанское».|A glass of champagne.|Бокал шампанского.|Open the champagne.|Открыть шампанское.
+chancellor|«Канцлер».|The German chancellor.|Канцлер Германии.|University chancellor.|Ректор университета.
+channel|«Канал».|Change the channel.|Переключи канал.|A YouTube channel.|Ютуб-канал.
+chaos|«Хаос».|Total chaos.|Полный хаос.|Chaos in the kitchen.|Бардак на кухне.
+characteristic|«Характеристика, черта» и «характерный».|A key characteristic.|Ключевая черта.|Characteristic of him.|Это на него похоже.
+charm|«Обаяние, амулет».|Full of charm.|Полон обаяния.|A lucky charm.|Талисман.
+chat|«Беседа, чат» и «болтать».|Let's have a chat.|Давай поболтаем.|A group chat.|Групповой чат.
+checkout|«Касса, оформление заказа».|Pay at the checkout.|Оплати на кассе.|Checkout time is noon.|Выезд в полдень.
+chemist|«Химик, аптекарь (брит.)».|A good chemist.|Хороший химик.|Go to the chemist's.|Сходи в аптеку.
+chess|«Шахматы».|Play chess.|Играть в шахматы.|A chess club.|Шахматный клуб.
+childcare|«Уход за детьми».|Childcare costs.|Расходы на детей.|Childcare is expensive.|Присмотр за детьми дорогой.
+chip|«Чип, щепка, чипсы».|Potato chips.|Чипсы.|A computer chip.|Компьютерный чип.
+choir|«Хор».|A church choir.|Церковный хор.|Sing in a choir.|Петь в хоре.
+cigarette|«Сигарета».|Light a cigarette.|Закурить.|A pack of cigarettes.|Пачка сигарет.
+cinema|«Кинотеатр, кино».|Go to the cinema.|Сходить в кино.|Russian cinema.|Российское кино.
+circuit|«Цепь, схема, круг».|A short circuit.|Короткое замыкание.|A racing circuit.|Гоночная трасса.
+citizenship|«Гражданство».|Dual citizenship.|Двойное гражданство.|Get citizenship.|Получить гражданство.
+civilization|«Цивилизация».|Ancient civilization.|Древняя цивилизация.|Back to civilization.|Обратно к цивилизации.
+clarity|«Ясность».|For clarity.|Для ясности.|Mental clarity.|Ясность ума.
+clash|«Столкновение» и «конфликтовать».|A clash of opinions.|Столкновение мнений.|The colors clash.|Цвета не сочетаются.
+classroom|«Класс (комната)».|In the classroom.|В классе.|A big classroom.|Большой класс.
+clay|«Глина».|A clay pot.|Глиняный горшок.|Clay soil.|Глинистая почва.
+clearance|«Разрешение, распродажа, зазор».|Clearance sale.|Распродажа.|Security clearance.|Допуск.
+click|«Щелчок» и «кликать».|Click here.|Нажми сюда.|One click away.|В один клик.
+climber|«Альпинист».|A rock climber.|Скалолаз.|An experienced climber.|Опытный альпинист.
+clinic|«Клиника».|A dental clinic.|Стоматология.|Go to the clinic.|Сходить в клинику.
+clip|«Зажим, клип» и «стричь».|A paper clip.|Скрепка.|A video clip.|Видеоклип.
+closet|«Шкаф (встроенный)».|A walk-in closet.|Гардеробная.|Skeletons in the closet.|Скелеты в шкафу.
+cloth|«Ткань, тряпка».|A piece of cloth.|Кусок ткани.|Wipe with a cloth.|Протри тряпкой.
+clue|«Подсказка, ключ».|I have no clue.|Понятия не имею.|Give me a clue.|Дай подсказку.
+cluster|«Скопление, кластер».|A cluster of houses.|Группа домов.|A cluster of stars.|Скопление звёзд.
+coalition|«Коалиция».|Form a coalition.|Создать коалицию.|A ruling coalition.|Правящая коалиция.
+cockpit|«Кабина пилота».|In the cockpit.|В кабине пилота.|Cockpit door.|Дверь кабины.
+coffin|«Гроб».|A wooden coffin.|Деревянный гроб.|A nail in the coffin.|Гвоздь в крышку гроба.
+coincidence|«Совпадение».|What a coincidence!|Какое совпадение!|Pure coincidence.|Чистая случайность.
+colony|«Колония».|An ant colony.|Муравейник.|A former colony.|Бывшая колония.
+comedy|«Комедия».|A romantic comedy.|Романтическая комедия.|Stand-up comedy.|Стендап.
+comfort zone|«Зона комфорта».|Leave your comfort zone.|Выйди из зоны комфорта.|Stay in your comfort zone.|Сидеть в зоне комфорта.
+commander|«Командир».|The commander's order.|Приказ командира.|Commander in chief.|Главнокомандующий.
+commerce|«Торговля, коммерция».|E-commerce.|Электронная торговля.|Chamber of commerce.|Торговая палата.
+commitment|«Обязательство, преданность».|A big commitment.|Серьёзное обязательство.|Fear of commitment.|Боязнь обязательств.
+companion|«Спутник, компаньон».|A travel companion.|Попутчик.|A faithful companion.|Верный спутник.
+compassion|«Сострадание».|Show compassion.|Проявить сострадание.|With compassion.|С состраданием.
+compensation|«Компенсация».|Pay compensation.|Выплатить компенсацию.|Ask for compensation.|Требовать компенсацию.
+competence|«Компетенция».|Professional competence.|Профессионализм.|Outside my competence.|Вне моей компетенции.
+complexity|«Сложность».|The complexity of the task.|Сложность задачи.|Reduce complexity.|Упростить.
+component|«Компонент, деталь».|A key component.|Ключевой компонент.|Car components.|Автозапчасти.
+composition|«Состав, композиция, сочинение».|The composition of the soil.|Состав почвы.|A school composition.|Школьное сочинение.
+compound|«Соединение, комплекс» и «составной».|A chemical compound.|Химическое соединение.|Compound interest.|Сложные проценты.
+concentration|«Концентрация».|Lack of concentration.|Рассеянность.|High concentration.|Высокая концентрация.
+conclusion|«Вывод, заключение».|Jump to conclusions.|Делать поспешные выводы.|In conclusion.|В заключение.
+confession|«Признание, исповедь».|Make a confession.|Сделать признание.|I have a confession.|Мне надо кое в чём признаться.
+configuration|«Конфигурация».|Room configuration.|Планировка.|Default configuration.|Настройки по умолчанию.
+confrontation|«Противостояние, конфронтация».|Avoid confrontation.|Избегать конфликта.|A direct confrontation.|Прямое столкновение.
+congress|«Конгресс, съезд».|The US Congress.|Конгресс США.|A medical congress.|Медицинский съезд.
+conscience|«Совесть».|A clear conscience.|Чистая совесть.|My conscience bothers me.|Меня мучает совесть.
+consciousness|«Сознание».|Lose consciousness.|Потерять сознание.|Regain consciousness.|Прийти в сознание.
+consensus|«Согласие, консенсус».|Reach a consensus.|Прийти к согласию.|General consensus.|Общее мнение.
+conservation|«Охрана, сохранение».|Nature conservation.|Охрана природы.|Energy conservation.|Энергосбережение.
+consistency|«Последовательность, консистенция».|Consistency is key.|Главное — постоянство.|Thick consistency.|Густая консистенция.
+conspiracy|«Заговор».|A conspiracy theory.|Теория заговора.|A conspiracy against me.|Заговор против меня.
+constitution|«Конституция, телосложение».|The Russian Constitution.|Конституция России.|A strong constitution.|Крепкое здоровье.
+constraint|«Ограничение».|Time constraints.|Нехватка времени.|Budget constraints.|Бюджетные ограничения.
+consultant|«Консультант».|A real estate consultant.|Консультант по недвижимости.|Hire a consultant.|Нанять консультанта.
+consultation|«Консультация».|A free consultation.|Бесплатная консультация.|In consultation with a lawyer.|После консультации с юристом.
+consumption|«Потребление».|Fuel consumption.|Расход топлива.|Energy consumption.|Энергопотребление.
+contempt|«Презрение».|With contempt.|С презрением.|Contempt of court.|Неуважение к суду.
+contest|«Конкурс, состязание».|Win a contest.|Выиграть конкурс.|A beauty contest.|Конкурс красоты.
+continent|«Континент».|Every continent.|Каждый континент.|The African continent.|Африканский континент.
+contractor|«Подрядчик».|A building contractor.|Строительный подрядчик.|Hire a contractor.|Нанять подрядчика.
+contradiction|«Противоречие».|A contradiction in terms.|Противоречие в самих словах.|Full of contradictions.|Полно противоречий.
+controversy|«Спор, разногласия».|Cause controversy.|Вызвать споры.|A big controversy.|Громкий скандал.
+convenience|«Удобство».|At your convenience.|Когда вам удобно.|A convenience store.|Магазин у дома.
+convention|«Съезд, условность».|A comic convention.|Комик-кон.|Social conventions.|Общественные условности.
+conviction|«Убеждённость, судимость».|Speak with conviction.|Говорить убеждённо.|Strong convictions.|Твёрдые убеждения.
+cooperation|«Сотрудничество».|Thanks for your cooperation.|Спасибо за содействие.|International cooperation.|Международное сотрудничество.
+coordinator|«Координатор».|A project coordinator.|Координатор проекта.|Talk to the coordinator.|Поговори с координатором.
+copper|«Медь».|Copper wire.|Медный провод.|Copper pipes.|Медные трубы.
+copyright|«Авторское право».|Copyright law.|Закон об авторском праве.|Copyright protected.|Защищено авторским правом.
+core|«Ядро, суть, сердцевина».|The core of the problem.|Суть проблемы.|An apple core.|Огрызок яблока.
+corporation|«Корпорация».|A big corporation.|Крупная корпорация.|Work for a corporation.|Работать в корпорации.
+corridor|«Коридор».|A long corridor.|Длинный коридор.|At the end of the corridor.|В конце коридора.
+corruption|«Коррупция, порча».|Fight corruption.|Бороться с коррупцией.|Data corruption.|Повреждение данных.
+costume|«Костюм (маскарадный, сценический)».|A Halloween costume.|Костюм на Хэллоуин.|National costume.|Национальный костюм.
+cottage cheese|«Творог».|Cottage cheese with honey.|Творог с мёдом.|Buy cottage cheese.|Купи творог.
+counselor|«Советник, консультант».|A school counselor.|Школьный психолог.|A legal counselor.|Юрисконсульт.
+counter|«Прилавок, стойка, счётчик».|The kitchen counter.|Кухонная столешница.|Over the counter.|Без рецепта.
+counterpart|«Коллега, аналог».|My Moscow counterpart.|Мой коллега в Москве.|The digital counterpart.|Цифровой аналог.
+countryside|«Сельская местность».|Live in the countryside.|Жить за городом.|Beautiful countryside.|Красивая природа.
+courtyard|«Внутренний двор».|A quiet courtyard.|Тихий двор.|Parking in the courtyard.|Парковка во дворе.
+coverage|«Охват, покрытие».|Mobile coverage.|Покрытие связи.|Insurance coverage.|Страховое покрытие.
+cradle|«Колыбель».|Rock the cradle.|Качать колыбель.|From the cradle to the grave.|От колыбели до могилы.
+crane|«Кран (строительный), журавль».|A construction crane.|Строительный кран.|A flock of cranes.|Стая журавлей.
+credibility|«Доверие, правдоподобие».|Lose credibility.|Потерять доверие.|Build credibility.|Заработать репутацию.
+creditor|«Кредитор».|Pay the creditors.|Расплатиться с кредиторами.|A major creditor.|Крупный кредитор.
+creature|«Существо».|A strange creature.|Странное существо.|Creature of habit.|Человек привычки.
+cricket|«Сверчок, крикет».|Crickets at night.|Сверчки ночью.|Play cricket.|Играть в крикет.
+criterion|«Критерий». Мн. ч. — criteria.|The main criterion.|Главный критерий.|Search criteria.|Критерии поиска.
+critic|«Критик».|A film critic.|Кинокритик.|My worst critic.|Мой самый строгий критик.
+crossing|«Переход, переправа».|A pedestrian crossing.|Пешеходный переход.|A railway crossing.|Железнодорожный переезд.
+crown|«Корона, коронка».|A royal crown.|Королевская корона.|A dental crown.|Зубная коронка.
+cruise|«Круиз».|A sea cruise.|Морской круиз.|Cruise control.|Круиз-контроль.
+crystal|«Кристалл, хрусталь».|Crystal glasses.|Хрустальные бокалы.|Crystal clear.|Кристально ясно.
+cuisine|«Кухня (национальная)».|Russian cuisine.|Русская кухня.|Italian cuisine.|Итальянская кухня.
+curriculum|«Учебная программа».|The school curriculum.|Школьная программа.|Curriculum vitae.|Резюме.
+cushion|«Подушка (диванная)».|A soft cushion.|Мягкая подушка.|Sofa cushions.|Диванные подушки.
+custody|«Опека, заключение под стражу».|Child custody.|Опека над ребёнком.|In custody.|Под стражей.
+cylinder|«Цилиндр, баллон».|A gas cylinder.|Газовый баллон.|A four-cylinder engine.|Четырёхцилиндровый двигатель.
+dairy|«Молочные продукты» и «молочный».|Dairy products.|Молочные продукты.|A dairy farm.|Молочная ферма.
+dam|«Плотина».|The Sayano-Shushenskaya dam.|Саяно-Шушенская плотина.|Build a dam.|Построить плотину.
+darkness|«Темнота».|In complete darkness.|В полной темноте.|Afraid of the darkness.|Боится темноты.
+dash|«Рывок, тире» и «мчаться».|Make a dash.|Рвануть.|A dash of salt.|Щепотка соли.
+daylight|«Дневной свет».|In broad daylight.|Средь бела дня.|Daylight saving time.|Летнее время.
+dean|«Декан».|The dean of the faculty.|Декан факультета.|Meet the dean.|Встретиться с деканом.
+debut|«Дебют».|A debut album.|Дебютный альбом.|Make a debut.|Дебютировать.
+deck|«Палуба, колода, терраса».|On deck.|На палубе.|A deck of cards.|Колода карт.
+declaration|«Декларация, заявление».|Tax declaration.|Налоговая декларация.|A declaration of love.|Признание в любви.
+defect|«Дефект».|A hidden defect.|Скрытый дефект.|A birth defect.|Врождённый дефект.
+deficit|«Дефицит».|A budget deficit.|Дефицит бюджета.|Calorie deficit.|Дефицит калорий.
+delegate|«Делегат» и «поручать».|A delegate from Abakan.|Делегат из Абакана.|Learn to delegate.|Научись делегировать.
+delegation|«Делегация».|A foreign delegation.|Иностранная делегация.|Delegation of tasks.|Распределение задач.
+democracy|«Демократия».|A young democracy.|Молодая демократия.|Democracy in action.|Демократия в действии.
+demonstration|«Демонстрация, показ».|A product demonstration.|Демонстрация товара.|A peaceful demonstration.|Мирная демонстрация.
+density|«Плотность».|Population density.|Плотность населения.|High density.|Высокая плотность.
+dependence|«Зависимость».|Dependence on oil.|Зависимость от нефти.|Financial dependence.|Финансовая зависимость.
+depression|«Депрессия, впадина».|Fight depression.|Бороться с депрессией.|The Great Depression.|Великая депрессия.
+deputy|«Заместитель, депутат».|Deputy director.|Замдиректора.|A deputy of the Duma.|Депутат Думы.
+descent|«Спуск, происхождение».|A steep descent.|Крутой спуск.|Of Russian descent.|Русского происхождения.
+designer|«Дизайнер».|An interior designer.|Дизайнер интерьеров.|Designer clothes.|Дизайнерская одежда.
+dessert|«Десерт».|What's for dessert?|Что на десерт?|Skip dessert.|Обойтись без десерта.
+destiny|«Судьба».|It's destiny.|Это судьба.|Control your destiny.|Управляй своей судьбой.
+detective|«Сыщик, детектив».|A private detective.|Частный детектив.|A detective story.|Детективная история.
+determination|«Решимость».|Strong determination.|Твёрдая решимость.|With determination.|С решимостью.
+diagnosis|«Диагноз».|A correct diagnosis.|Правильный диагноз.|Make a diagnosis.|Поставить диагноз.
+dialogue|«Диалог».|Open a dialogue.|Начать диалог.|A short dialogue.|Короткий диалог.
+diamond|«Алмаз, бриллиант».|A diamond ring.|Кольцо с бриллиантом.|Rough diamond.|Неогранённый алмаз.
+diary|«Дневник, ежедневник».|Keep a diary.|Вести дневник.|Check my diary.|Проверю ежедневник.
+dignity|«Достоинство».|With dignity.|С достоинством.|Human dignity.|Человеческое достоинство.
+dilemma|«Дилемма».|A real dilemma.|Настоящая дилемма.|Face a dilemma.|Оказаться перед выбором.
+diploma|«Диплом».|A university diploma.|Диплом вуза.|Get a diploma.|Получить диплом.
+diplomat|«Дипломат».|A foreign diplomat.|Иностранный дипломат.|Be a diplomat.|Будь дипломатичным.
+disability|«Инвалидность, ограничение».|A physical disability.|Физическое ограничение.|Disability benefits.|Пособие по инвалидности.
+disadvantage|«Недостаток».|Advantages and disadvantages.|Плюсы и минусы.|At a disadvantage.|В невыгодном положении.
+disappointment|«Разочарование».|A big disappointment.|Большое разочарование.|To my disappointment.|К моему разочарованию.
+disclosure|«Раскрытие (информации)».|Full disclosure.|Полное раскрытие.|Disclosure of defects.|Раскрытие дефектов.
+discomfort|«Дискомфорт».|Mild discomfort.|Лёгкий дискомфорт.|Cause discomfort.|Доставлять неудобство.
+discovery|«Открытие».|A great discovery.|Великое открытие.|A new discovery.|Новое открытие.
+discrimination|«Дискриминация».|Age discrimination.|Дискриминация по возрасту.|Fight discrimination.|Бороться с дискриминацией.
+disgust|«Отвращение».|With disgust.|С отвращением.|Feel disgust.|Испытывать отвращение.
+dismissal|«Увольнение».|Unfair dismissal.|Незаконное увольнение.|Notice of dismissal.|Уведомление об увольнении.
+disorder|«Беспорядок, расстройство».|Public disorder.|Нарушение порядка.|A sleep disorder.|Расстройство сна.
+dispute|«Спор» и «оспаривать».|A legal dispute.|Судебный спор.|Dispute the price.|Оспорить цену.
+distinction|«Различие, отличие».|Make a distinction.|Проводить различие.|With distinction.|С отличием.
+distress|«Бедствие, страдание».|A distress signal.|Сигнал бедствия.|In distress.|В беде.
+diversity|«Разнообразие».|Cultural diversity.|Культурное разнообразие.|Diversity of opinions.|Разнообразие мнений.
+dividend|«Дивиденд».|Pay dividends.|Выплачивать дивиденды.|It pays dividends.|Это окупается.
+division|«Деление, отдел, дивизия».|The sales division.|Отдел продаж.|Long division.|Деление в столбик.

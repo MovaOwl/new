@@ -1,0 +1,250 @@
+dual|«Двойной».|Dual citizenship.|Двойное гражданство.|A dual SIM phone.|Телефон на две симки.
+dusty|«Пыльный».|A dusty shelf.|Пыльная полка.|A dusty road.|Пыльная дорога.
+dynamic|«Динамичный».|A dynamic market.|Динамичный рынок.|A dynamic person.|Энергичный человек.
+elaborate|«Сложный, продуманный» и «уточнять».|An elaborate plan.|Продуманный план.|Can you elaborate?|Можешь пояснить?
+elegant|«Элегантный».|An elegant dress.|Элегантное платье.|An elegant solution.|Изящное решение.
+eligible|«Имеющий право, подходящий».|Eligible for a loan.|Имеет право на кредит.|An eligible bachelor.|Завидный жених.
+embarrassed|«Смущённый».|I'm embarrassed.|Мне неловко.|Don't be embarrassed.|Не смущайся.
+endless|«Бесконечный».|Endless work.|Бесконечная работа.|Endless possibilities.|Бесконечные возможности.
+enormous|«Огромный».|An enormous house.|Огромный дом.|An enormous mistake.|Огромная ошибка.
+envious|«Завистливый».|Envious neighbors.|Завистливые соседи.|I'm envious of you.|Я тебе завидую.
+evident|«Очевидный».|It's evident.|Это очевидно.|Self-evident.|Само собой разумеется.
+exceptional|«Исключительный».|An exceptional case.|Исключительный случай.|Exceptional quality.|Исключительное качество.
+excessive|«Чрезмерный».|Excessive noise.|Чрезмерный шум.|Excessive price.|Завышенная цена.
+exclusive|«Эксклюзивный, исключительный».|An exclusive offer.|Эксклюзивное предложение.|Exclusive rights.|Исключительные права.
+exotic|«Экзотический».|Exotic fruit.|Экзотические фрукты.|An exotic place.|Экзотическое место.
+experienced|«Опытный».|An experienced realtor.|Опытный риелтор.|Very experienced.|Очень опытный.
+explicit|«Явный, откровенный».|Explicit instructions.|Чёткие указания.|Explicit content.|Откровенный контент.
+exposed|«Открытый, незащищённый».|Exposed brick.|Открытый кирпич.|Exposed to wind.|Открыт ветрам.
+external|«Внешний».|External walls.|Наружные стены.|External drive.|Внешний диск.
+faint|«Слабый» и «падать в обморок».|A faint smell.|Слабый запах.|I feel faint.|Мне дурно.
+faithful|«Верный».|A faithful dog.|Верный пёс.|Faithful to the end.|Верен до конца.
+fake|«Поддельный, фальшивый».|Fake news.|Фейковые новости.|A fake smile.|Фальшивая улыбка.
+fancy|«Модный, причудливый» и «хотеть» (разг.).|A fancy restaurant.|Шикарный ресторан.|Fancy a coffee?|Хочешь кофе?
+fatal|«Смертельный, роковой».|A fatal mistake.|Роковая ошибка.|A fatal accident.|Смертельная авария.
+favorable|«Благоприятный».|Favorable terms.|Выгодные условия.|Favorable weather.|Благоприятная погода.
+fierce|«Свирепый, жёсткий».|A fierce dog.|Свирепая собака.|Fierce competition.|Жёсткая конкуренция.
+filthy|«Очень грязный».|A filthy kitchen.|Грязнющая кухня.|Filthy rich.|Неприлично богатый.
+flexible|«Гибкий».|A flexible schedule.|Гибкий график.|Flexible on price.|Готов торговаться.
+fond|«Любящий». be fond of — любить.|I'm fond of you.|Ты мне дорог.|Fond memories.|Тёплые воспоминания.
+fragile|«Хрупкий».|Fragile! Handle with care.|Хрупкое! Обращаться осторожно.|A fragile peace.|Хрупкий мир.
+frank|«Откровенный».|To be frank…|Откровенно говоря…|A frank talk.|Откровенный разговор.
+frequent|«Частый».|A frequent visitor.|Частый гость.|Frequent flights.|Частые рейсы.
+frozen|«Замороженный, замёрзший».|Frozen food.|Замороженные продукты.|The lake is frozen.|Озеро замёрзло.
+generous|«Щедрый».|A generous offer.|Щедрое предложение.|You're very generous.|Ты очень щедр.
+genuine|«Подлинный, искренний».|Genuine leather.|Натуральная кожа.|A genuine smile.|Искренняя улыбка.
+gloomy|«Мрачный».|A gloomy day.|Хмурый день.|Gloomy mood.|Мрачное настроение.
+glorious|«Славный, великолепный».|A glorious day.|Чудесный день.|Glorious victory.|Славная победа.
+gorgeous|«Великолепный, роскошный».|A gorgeous view.|Шикарный вид.|You look gorgeous.|Ты выглядишь потрясающе.
+gradual|«Постепенный».|A gradual change.|Постепенное изменение.|Gradual growth.|Постепенный рост.
+greedy|«Жадный».|Don't be greedy.|Не жадничай.|A greedy landlord.|Жадный хозяин.
+gross|«Валовой» и «мерзкий» (разг.).|Gross income.|Валовой доход.|That's gross!|Фу, мерзость!
+harsh|«Суровый, резкий».|A harsh winter.|Суровая зима.|Harsh words.|Резкие слова.
+hollow|«Пустой, полый».|A hollow tree.|Дуплистое дерево.|Hollow promises.|Пустые обещания.
+horrible|«Ужасный».|A horrible smell.|Ужасный запах.|I feel horrible.|Мне ужасно.
+hostile|«Враждебный».|A hostile look.|Враждебный взгляд.|Hostile neighbors.|Враждебные соседи.
+humble|«Скромный».|A humble house.|Скромный домик.|Stay humble.|Оставайся скромным.
+humid|«Влажный (о воздухе)».|Humid weather.|Влажная погода.|Hot and humid.|Жарко и влажно.
+icy|«Ледяной, обледенелый».|An icy road.|Обледенелая дорога.|Icy wind.|Ледяной ветер.
+identical|«Одинаковый, идентичный».|Identical twins.|Однояйцевые близнецы.|Identical houses.|Одинаковые дома.
+idle|«Бездействующий, ленивый».|Idle hands.|Праздные руки.|The engine is idle.|Двигатель на холостом ходу.
+ignorant|«Невежественный, неосведомлённый».|Ignorant of the facts.|Не знает фактов.|Don't be ignorant.|Не будь невеждой.
+imaginary|«Воображаемый».|An imaginary friend.|Воображаемый друг.|Imaginary problems.|Надуманные проблемы.
+immense|«Огромный».|Immense pleasure.|Огромное удовольствие.|An immense forest.|Огромный лес.
+immune|«Невосприимчивый, иммунный».|Immune system.|Иммунная система.|Immune to criticism.|Невосприимчив к критике.
+impatient|«Нетерпеливый».|Don't be impatient.|Не будь нетерпеливым.|An impatient client.|Нетерпеливый клиент.
+impossible|«Невозможный».|Nothing is impossible.|Нет ничего невозможного.|An impossible task.|Невыполнимая задача.
+impressive|«Впечатляющий».|An impressive house.|Впечатляющий дом.|Impressive results.|Впечатляющие результаты.
+inadequate|«Недостаточный, неадекватный».|Inadequate heating.|Слабое отопление.|Feel inadequate.|Чувствовать себя не на высоте.
+incredible|«Невероятный».|An incredible view.|Невероятный вид.|That's incredible!|Невероятно!
+indifferent|«Равнодушный».|Indifferent to money.|Равнодушен к деньгам.|An indifferent look.|Равнодушный взгляд.
+inevitable|«Неизбежный».|Change is inevitable.|Перемены неизбежны.|The inevitable question.|Неизбежный вопрос.
+infinite|«Бесконечный».|Infinite patience.|Бесконечное терпение.|Infinite space.|Бесконечный космос.
+informal|«Неформальный».|An informal meeting.|Неформальная встреча.|Informal English.|Разговорный английский.
+intelligent|«Умный».|An intelligent dog.|Умная собака.|Intelligent design.|Разумный замысел.
+intense|«Интенсивный, сильный».|Intense heat.|Сильная жара.|An intense workout.|Интенсивная тренировка.
+intimate|«Близкий, интимный».|An intimate friend.|Близкий друг.|An intimate dinner.|Ужин на двоих.
+invisible|«Невидимый».|Invisible ink.|Невидимые чернила.|Feel invisible.|Чувствовать себя невидимкой.
+irrelevant|«Не относящийся к делу».|That's irrelevant.|Это к делу не относится.|Irrelevant details.|Лишние подробности.
+jealous|«Ревнивый, завистливый».|Don't be jealous.|Не ревнуй.|Jealous of his car.|Завидует его машине.
+junior|«Младший».|A junior manager.|Младший менеджер.|Junior school.|Младшая школа.
+keen|«Увлечённый, острый».|Keen on fishing.|Увлекается рыбалкой.|A keen eye.|Зоркий глаз.
+lame|«Хромой, неубедительный».|A lame excuse.|Отмазка.|A lame horse.|Хромая лошадь.
+liberal|«Либеральный, щедрый».|Liberal views.|Либеральные взгляды.|A liberal amount.|Щедрая порция.
+lively|«Живой, оживлённый».|A lively street.|Оживлённая улица.|A lively kid.|Живой ребёнок.
+logical|«Логичный».|A logical choice.|Логичный выбор.|It's logical.|Это логично.
+loyal|«Верный, преданный».|A loyal client.|Постоянный клиент.|A loyal friend.|Верный друг.
+magnificent|«Великолепный».|A magnificent view.|Великолепный вид.|Magnificent house.|Величественный дом.
+marvelous|«Чудесный».|A marvelous idea.|Чудесная идея.|Marvelous weather.|Чудесная погода.
+mature|«Зрелый».|A mature person.|Зрелый человек.|Mature trees.|Взрослые деревья.
+maximum|«Максимальный, максимум».|Maximum speed.|Максимальная скорость.|At the maximum.|Максимум.
+medical|«Медицинский».|Medical help.|Медицинская помощь.|A medical check.|Медосмотр.
+medium|«Средний» и «средство».|Medium size.|Средний размер.|Medium rare.|Средней прожарки.
+mild|«Мягкий, слабый».|A mild winter.|Мягкая зима.|Mild pain.|Лёгкая боль.
+minimum|«Минимальный, минимум».|Minimum price.|Минимальная цена.|At a minimum.|Как минимум.
+miserable|«Несчастный, жалкий».|I feel miserable.|Мне паршиво.|Miserable weather.|Мерзкая погода.
+moderate|«Умеренный».|A moderate price.|Умеренная цена.|Moderate exercise.|Умеренные нагрузки.
+modest|«Скромный».|A modest house.|Скромный дом.|Don't be modest.|Не скромничай.
+moist|«Влажный».|Moist soil.|Влажная почва.|A moist cake.|Сочный кекс.
+monthly|«Ежемесячный, ежемесячно».|A monthly payment.|Ежемесячный платёж.|Paid monthly.|Оплата помесячно.
+naked|«Голый».|The naked eye.|Невооружённый глаз.|The naked truth.|Голая правда.
+nasty|«Противный, неприятный».|A nasty smell.|Противный запах.|A nasty cold.|Неприятная простуда.
+neat|«Аккуратный, клёвый».|A neat room.|Аккуратная комната.|That's neat!|Здорово!
+nearby|«Ближайший, поблизости».|A nearby shop.|Ближайший магазин.|Is there a bank nearby?|Здесь есть банк поблизости?
+neutral|«Нейтральный».|Neutral colors.|Нейтральные цвета.|Stay neutral.|Оставайся нейтральным.
+noble|«Благородный».|A noble cause.|Благородное дело.|A noble man.|Благородный человек.
+notable|«Заметный, примечательный».|A notable change.|Заметное изменение.|Notable people.|Известные люди.
+numerous|«Многочисленный».|Numerous calls.|Многочисленные звонки.|Numerous times.|Много раз.
+obscure|«Неясный, малоизвестный».|An obscure reason.|Непонятная причина.|An obscure town.|Захолустный городок.
+occasional|«Случайный, редкий».|An occasional visit.|Редкий визит.|Occasional rain.|Местами дождь.
+optimistic|«Оптимистичный».|Stay optimistic.|Сохраняй оптимизм.|An optimistic forecast.|Оптимистичный прогноз.
+optional|«Необязательный».|It's optional.|Это по желанию.|Optional extras.|Дополнительные опции.
+organic|«Органический, натуральный».|Organic food.|Органические продукты.|Organic growth.|Естественный рост.
+outstanding|«Выдающийся, неоплаченный».|Outstanding work.|Выдающаяся работа.|Outstanding debt.|Непогашенный долг.
+overnight|«На ночь, за ночь».|Stay overnight.|Остаться на ночь.|Overnight success.|Мгновенный успех.
+painful|«Болезненный».|A painful decision.|Болезненное решение.|Painful knees.|Больные колени.
+peaceful|«Мирный, спокойный».|A peaceful village.|Тихая деревня.|Peaceful sleep.|Спокойный сон.
+peculiar|«Странный, особенный».|A peculiar smell.|Странный запах.|Peculiar to Siberia.|Свойственно Сибири.
+permanent|«Постоянный».|A permanent job.|Постоянная работа.|Permanent residence.|Постоянное место жительства.
+persistent|«Настойчивый, упорный».|A persistent buyer.|Настойчивый покупатель.|Persistent cough.|Затяжной кашель.
+pessimistic|«Пессимистичный».|Don't be pessimistic.|Не будь пессимистом.|A pessimistic view.|Пессимистичный взгляд.
+pointless|«Бессмысленный».|It's pointless.|Это бессмысленно.|A pointless argument.|Бессмысленный спор.
+precious|«Драгоценный».|Precious time.|Драгоценное время.|Precious stones.|Драгоценные камни.
+precise|«Точный».|A precise answer.|Точный ответ.|To be precise…|Если точнее…
+premium|«Премиальный» и «премия, надбавка».|Premium quality.|Премиальное качество.|Insurance premium.|Страховой взнос.
+prime|«Главный, лучший».|Prime location.|Лучшее расположение.|In my prime.|В расцвете сил.
+prior|«Предшествующий». prior to — до.|Prior experience.|Предыдущий опыт.|Prior to signing.|До подписания.
+probable|«Вероятный».|A probable cause.|Вероятная причина.|It's probable.|Это вероятно.
+productive|«Продуктивный».|A productive day.|Продуктивный день.|Productive land.|Плодородная земля.
+profitable|«Прибыльный».|A profitable deal.|Прибыльная сделка.|Profitable business.|Прибыльный бизнес.
+profound|«Глубокий».|A profound change.|Глубокое изменение.|Profound thoughts.|Глубокие мысли.
+prominent|«Выдающийся, заметный».|A prominent lawyer.|Видный юрист.|A prominent place.|Видное место.
+prompt|«Быстрый, своевременный» и «подсказка».|A prompt reply.|Быстрый ответ.|Write a prompt.|Написать промт.
+prosperous|«Процветающий».|A prosperous town.|Процветающий город.|A prosperous year.|Удачный год.
+punctual|«Пунктуальный».|Be punctual.|Будь пунктуальным.|A punctual client.|Пунктуальный клиент.
+radical|«Радикальный, коренной».|A radical change.|Коренное изменение.|Radical ideas.|Радикальные идеи.
+random|«Случайный».|A random choice.|Случайный выбор.|Random words.|Случайные слова.
+rapid|«Быстрый».|Rapid growth.|Стремительный рост.|A rapid test.|Экспресс-тест.
+rational|«Рациональный, разумный».|A rational decision.|Разумное решение.|Be rational.|Будь благоразумен.
+ready-made|«Готовый».|Ready-made meals.|Готовая еда.|A ready-made business.|Готовый бизнес.
+realistic|«Реалистичный».|A realistic price.|Реальная цена.|Be realistic.|Будь реалистом.
+reckless|«Безрассудный».|Reckless driving.|Опасная езда.|A reckless decision.|Опрометчивое решение.
+reliable|«Надёжный».|A reliable car.|Надёжная машина.|A reliable partner.|Надёжный партнёр.
+reluctant|«Неохотный». be reluctant — не хотеть.|Reluctant to sell.|Не хочет продавать.|A reluctant smile.|Вымученная улыбка.
+remarkable|«Замечательный, примечательный».|A remarkable view.|Замечательный вид.|Remarkable progress.|Заметный прогресс.
+residential|«Жилой».|A residential area.|Жилой район.|Residential property.|Жилая недвижимость.
+resistant|«Стойкий, устойчивый».|Water-resistant.|Водостойкий.|Frost-resistant plants.|Морозостойкие растения.
+respectful|«Уважительный».|Be respectful.|Будь уважителен.|A respectful tone.|Уважительный тон.
+restless|«Беспокойный».|A restless night.|Беспокойная ночь.|Restless kids.|Непоседливые дети.
+retired|«На пенсии».|A retired teacher.|Учитель на пенсии.|He's retired.|Он на пенсии.
+rigid|«Жёсткий, негибкий».|Rigid rules.|Жёсткие правила.|A rigid frame.|Жёсткий каркас.
+risky|«Рискованный».|A risky deal.|Рискованная сделка.|Too risky.|Слишком рискованно.
+romantic|«Романтичный».|A romantic dinner.|Романтический ужин.|A romantic place.|Романтичное место.
+rotten|«Гнилой».|Rotten wood.|Гнилое дерево.|Rotten apples.|Гнилые яблоки.
+rural|«Сельский».|Rural life.|Сельская жизнь.|A rural area.|Сельская местность.
+rusty|«Ржавый, подзабытый».|A rusty nail.|Ржавый гвоздь.|My English is rusty.|Мой английский подзабылся.
+sacred|«Священный».|A sacred place.|Священное место.|Nothing is sacred.|Ничего святого.
+satisfied|«Довольный».|A satisfied client.|Довольный клиент.|I'm satisfied.|Я доволен.
+scarce|«Скудный, дефицитный».|Water is scarce.|Воды мало.|Scarce resources.|Скудные ресурсы.
+secondary|«Вторичный, средний (о школе)».|The secondary market.|Вторичный рынок.|Secondary school.|Средняя школа.
+secure|«Надёжный, защищённый» и «обеспечивать».|A secure lock.|Надёжный замок.|Secure the deal.|Закрепить сделку.
+selfish|«Эгоистичный».|Don't be selfish.|Не будь эгоистом.|A selfish act.|Эгоистичный поступок.
+sensible|«Разумный, благоразумный».|A sensible choice.|Разумный выбор.|Be sensible.|Будь благоразумен.
+sensitive|«Чувствительный».|Sensitive skin.|Чувствительная кожа.|A sensitive topic.|Деликатная тема.
+shallow|«Мелкий, поверхностный».|Shallow water.|Мелководье.|A shallow person.|Поверхностный человек.
+shiny|«Блестящий».|Shiny shoes.|Блестящие ботинки.|A shiny new car.|Новенькая блестящая машина.
+skilled|«Умелый, квалифицированный».|A skilled worker.|Квалифицированный рабочий.|Skilled hands.|Умелые руки.
+sleepy|«Сонный».|I'm sleepy.|Я хочу спать.|A sleepy town.|Сонный городок.
+slim|«Стройный, малый».|A slim chance.|Мизерный шанс.|Slim and fit.|Стройный и подтянутый.
+sly|«Хитрый, лукавый».|A sly fox.|Хитрая лиса.|A sly smile.|Лукавая улыбка.
+sole|«Единственный» и «подошва».|The sole owner.|Единственный владелец.|Shoe sole.|Подошва.
+sophisticated|«Сложный, изощрённый, утончённый».|A sophisticated system.|Сложная система.|Sophisticated taste.|Утончённый вкус.
+spicy|«Острый, пряный».|Spicy food.|Острая еда.|Too spicy.|Слишком остро.
+spiritual|«Духовный».|Spiritual growth.|Духовный рост.|A spiritual person.|Духовный человек.
+splendid|«Великолепный».|A splendid idea.|Отличная идея.|Splendid weather.|Великолепная погода.
+spontaneous|«Спонтанный».|A spontaneous trip.|Спонтанная поездка.|Be spontaneous.|Будь спонтанным.
+steady|«Устойчивый, постоянный».|A steady income.|Стабильный доход.|Steady hands.|Твёрдые руки.
+sticky|«Липкий».|Sticky fingers.|Липкие пальцы.|A sticky situation.|Щекотливая ситуация.
+stormy|«Штормовой, бурный».|A stormy night.|Бурная ночь.|Stormy weather.|Штормовая погода.
+straightforward|«Простой, прямолинейный».|A straightforward deal.|Простая сделка.|Straightforward answer.|Прямой ответ.
+stubborn|«Упрямый».|Stubborn as a mule.|Упрямый как осёл.|A stubborn stain.|Стойкое пятно.
+subtle|«Тонкий, едва заметный». b не читается.|A subtle hint.|Тонкий намёк.|Subtle difference.|Едва заметная разница.
+superb|«Превосходный».|Superb quality.|Превосходное качество.|A superb view.|Великолепный вид.
+superior|«Высший, превосходящий».|Superior quality.|Высшее качество.|My superior.|Мой начальник.
+supreme|«Верховный, высший».|The Supreme Court.|Верховный суд.|Supreme pleasure.|Высшее удовольствие.
+suspicious|«Подозрительный».|A suspicious man.|Подозрительный тип.|I'm suspicious.|У меня подозрения.
+swift|«Быстрый».|A swift reply.|Быстрый ответ.|Swift action.|Быстрые меры.
+technical|«Технический».|A technical problem.|Техническая проблема.|Technical support.|Техподдержка.
+temporary|«Временный».|A temporary job.|Временная работа.|Temporary registration.|Временная регистрация.
+tender|«Нежный» и «тендер».|Tender meat.|Нежное мясо.|A tender voice.|Нежный голос.
+tense|«Напряжённый» и «время (в грамматике)».|A tense moment.|Напряжённый момент.|The past tense.|Прошедшее время.
+thorough|«Тщательный».|A thorough check.|Тщательная проверка.|Be thorough.|Будь дотошным.
+thoughtful|«Задумчивый, заботливый».|A thoughtful gift.|Продуманный подарок.|How thoughtful!|Как заботливо!
+tidy|«Опрятный» и «прибирать».|A tidy room.|Прибранная комната.|Tidy up.|Приберись.
+timid|«Робкий».|A timid child.|Робкий ребёнок.|A timid voice.|Робкий голос.
+tremendous|«Огромный, потрясающий».|A tremendous success.|Огромный успех.|Tremendous effort.|Колоссальные усилия.
+trivial|«Пустяковый».|A trivial problem.|Пустяковая проблема.|Trivial details.|Мелочи.
+tropical|«Тропический».|Tropical fruit.|Тропические фрукты.|A tropical island.|Тропический остров.
+uncomfortable|«Неудобный, неловкий».|An uncomfortable chair.|Неудобный стул.|I feel uncomfortable.|Мне неловко.
+unfair|«Несправедливый».|It's unfair.|Это нечестно.|An unfair price.|Несправедливая цена.
+unhappy|«Несчастный, недовольный».|An unhappy client.|Недовольный клиент.|Unhappy ending.|Несчастливый конец.
+universal|«Всеобщий, универсальный».|A universal key.|Универсальный ключ.|Universal truth.|Общеизвестная истина.
+unlikely|«Маловероятный».|It's unlikely.|Вряд ли.|An unlikely friend.|Неожиданный друг.
+unpleasant|«Неприятный».|An unpleasant smell.|Неприятный запах.|Unpleasant news.|Неприятные новости.
+vague|«Расплывчатый».|A vague answer.|Расплывчатый ответ.|Vague memories.|Смутные воспоминания.
+vain|«Тщетный, тщеславный». in vain — напрасно.|In vain.|Напрасно.|A vain man.|Тщеславный человек.
+valid|«Действительный, обоснованный».|A valid passport.|Действительный паспорт.|A valid point.|Резонное замечание.
+vast|«Обширный».|A vast forest.|Огромный лес.|Vast experience.|Огромный опыт.
+verbal|«Устный, словесный».|A verbal agreement.|Устная договорённость.|Verbal skills.|Речевые навыки.
+vertical|«Вертикальный».|A vertical line.|Вертикальная линия.|Vertical blinds.|Вертикальные жалюзи.
+violent|«Жестокий, бурный».|A violent storm.|Сильная буря.|Violent movies.|Жестокие фильмы.
+virtual|«Виртуальный».|A virtual tour.|Виртуальный тур.|Virtual reality.|Виртуальная реальность.
+visual|«Визуальный».|Visual memory.|Зрительная память.|A visual check.|Визуальный осмотр.
+vivid|«Яркий».|Vivid colors.|Яркие цвета.|A vivid dream.|Яркий сон.
+voluntary|«Добровольный».|Voluntary work.|Волонтёрская работа.|It's voluntary.|Это добровольно.
+vulnerable|«Уязвимый».|Feel vulnerable.|Чувствовать себя уязвимым.|Vulnerable people.|Незащищённые люди.
+warm-hearted|«Сердечный, добрый».|A warm-hearted woman.|Сердечная женщина.|Warm-hearted people.|Добрые люди.
+weekly|«Еженедельный, еженедельно».|A weekly report.|Еженедельный отчёт.|Paid weekly.|Оплата каждую неделю.
+wicked|«Злой, порочный» и «крутой» (сленг).|A wicked witch.|Злая ведьма.|Wicked cool!|Офигенно!
+widespread|«Распространённый».|A widespread myth.|Распространённый миф.|Widespread use.|Широкое применение.
+willing|«Готовый, желающий».|Willing to help.|Готов помочь.|Willing to pay more.|Готов заплатить больше.
+wireless|«Беспроводной».|Wireless internet.|Беспроводной интернет.|Wireless headphones.|Беспроводные наушники.
+witty|«Остроумный».|A witty joke.|Остроумная шутка.|A witty guy.|Остроумный парень.
+worthless|«Ничего не стоящий».|Worthless junk.|Никчёмный хлам.|Feel worthless.|Чувствовать себя никчёмным.
+worthy|«Достойный».|A worthy cause.|Достойное дело.|Worthy of respect.|Достоин уважения.
+yearly|«Ежегодный».|A yearly bonus.|Годовая премия.|Paid yearly.|Оплата раз в год.
+zealous|«Рьяный, ревностный».|A zealous worker.|Рьяный работник.|Zealous fans.|Ярые фанаты.
+abuse|«Злоупотребление, оскорбление» и «злоупотреблять».|Drug abuse.|Злоупотребление наркотиками.|Abuse of power.|Превышение полномочий.
+academy|«Академия».|A police academy.|Полицейская академия.|An art academy.|Академия искусств.
+acceptance|«Принятие, приём».|Self-acceptance.|Принятие себя.|Acceptance of the offer.|Принятие предложения.
+accommodation|«Жильё, размещение».|Cheap accommodation.|Недорогое жильё.|Find accommodation.|Найти жильё.
+accuracy|«Точность».|With accuracy.|С точностью.|Check the accuracy.|Проверить точность.
+accusation|«Обвинение».|A false accusation.|Ложное обвинение.|Deny the accusation.|Отрицать обвинение.
+acid|«Кислота» и «кислотный».|Strong acid.|Сильная кислота.|Acid rain.|Кислотный дождь.
+acquisition|«Приобретение».|A new acquisition.|Новое приобретение.|Property acquisition.|Покупка недвижимости.
+adaptation|«Адаптация, экранизация».|A film adaptation.|Экранизация.|Adaptation to the cold.|Привыкание к холоду.
+adjustment|«Настройка, корректировка».|A small adjustment.|Небольшая корректировка.|Price adjustment.|Корректировка цены.
+admission|«Вход, приём, признание».|Free admission.|Вход свободный.|An admission of guilt.|Признание вины.
+adoption|«Усыновление, принятие».|Adoption of a child.|Усыновление ребёнка.|Pet adoption.|Взять питомца из приюта.
+advocate|«Сторонник, защитник» и «отстаивать».|An advocate of change.|Сторонник перемен.|Advocate for kids.|Защищать интересы детей.
+affection|«Привязанность, нежность».|Show affection.|Проявлять нежность.|With affection.|С любовью.
+aftermath|«Последствия».|In the aftermath of the storm.|После бури.|The aftermath of the crisis.|Последствия кризиса.
+agenda|«Повестка дня, план».|What's on the agenda?|Что в планах?|A hidden agenda.|Скрытые мотивы.
+aid|«Помощь» и «помогать».|First aid.|Первая помощь.|A hearing aid.|Слуховой аппарат.
+aircraft|«Самолёт, воздушное судно».|A small aircraft.|Небольшой самолёт.|Aircraft engine.|Авиадвигатель.
+alarm clock|«Будильник».|Set the alarm clock.|Завести будильник.|The alarm clock rang.|Зазвонил будильник.
+allowance|«Пособие, карманные деньги, норма».|A weekly allowance.|Карманные деньги на неделю.|Baggage allowance.|Норма багажа.
+alliance|«Союз, альянс».|A strong alliance.|Крепкий союз.|Form an alliance.|Заключить союз.
+amendment|«Поправка».|An amendment to the contract.|Поправка к договору.|Make an amendment.|Внести поправку.
+analyst|«Аналитик».|A market analyst.|Аналитик рынка.|Ask an analyst.|Спроси аналитика.
+ancestor|«Предок».|My ancestors.|Мои предки.|A common ancestor.|Общий предок.
+anchor|«Якорь, ведущий (новостей)».|Drop anchor.|Бросить якорь.|A news anchor.|Ведущий новостей.
+appetite|«Аппетит».|A good appetite.|Хороший аппетит.|Bon appetit!|Приятного аппетита!
+applause|«Аплодисменты».|A round of applause.|Бурные аплодисменты.|Thanks for the applause.|Спасибо за аплодисменты.
+appliance|«Бытовой прибор».|Kitchen appliances.|Кухонная техника.|Home appliances.|Бытовая техника.
+applicant|«Кандидат, заявитель».|A job applicant.|Соискатель.|Many applicants.|Много кандидатов.
+approval|«Одобрение».|Loan approval.|Одобрение кредита.|Get approval.|Получить одобрение.
+arena|«Арена».|A sports arena.|Спортивная арена.|The political arena.|Политическая арена.
+arrangement|«Договорённость, расположение».|Make an arrangement.|Договориться.|Flower arrangement.|Цветочная композиция.
+arrow|«Стрела, стрелка».|Follow the arrows.|Иди по стрелкам.|A bow and arrow.|Лук и стрелы.
+aspect|«Аспект, сторона».|Every aspect.|Каждый аспект.|A positive aspect.|Положительная сторона.
