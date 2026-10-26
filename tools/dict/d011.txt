@@ -1,0 +1,250 @@
+sculpture|«Скульптура».|A stone sculpture.|Каменная скульптура.|Modern sculpture.|Современная скульптура.
+sector|«Сектор, отрасль».|The private sector.|Частный сектор.|The housing sector.|Жилищная сфера.
+selection|«Выбор, ассортимент».|A wide selection.|Большой выбор.|Natural selection.|Естественный отбор.
+self|«Себя, своё я».|Be your true self.|Будь собой.|Self-confidence.|Уверенность в себе.
+sensation|«Ощущение, сенсация».|A strange sensation.|Странное ощущение.|An overnight sensation.|Сенсация за одну ночь.
+sequence|«Последовательность».|In sequence.|По порядку.|A sequence of events.|Цепочка событий.
+servant|«Слуга».|A loyal servant.|Верный слуга.|Civil servant.|Госслужащий.
+session|«Сессия, занятие».|A training session.|Тренировка.|A long session.|Долгое заседание.
+settlement|«Посёлок, урегулирование».|A small settlement.|Небольшой посёлок.|A peace settlement.|Мирное урегулирование.
+shade|«Тень (прохлада), оттенок».|Sit in the shade.|Посиди в тени.|A shade of blue.|Оттенок синего.
+shadow|«Тень (силуэт)».|My shadow.|Моя тень.|In the shadows.|В тени.
+shelter|«Укрытие, приют».|Find shelter.|Найти укрытие.|An animal shelter.|Приют для животных.
+shock|«Шок, удар» и «шокировать».|In shock.|В шоке.|Electric shock.|Удар током.
+shot|«Выстрел, снимок, попытка».|A good shot.|Хороший кадр.|Give it a shot.|Попробуй.
+sight|«Зрение, вид»; sights — достопримечательности.|Good sight.|Хорошее зрение.|Love at first sight.|Любовь с первого взгляда.
+sin|«Грех».|A big sin.|Большой грех.|Ugly as sin.|Страшен как смертный грех.
+site|«Место, участок, сайт».|A building site.|Стройплощадка.|A web site.|Веб-сайт.
+slave|«Раб».|A slave to work.|Раб работы.|Work like a slave.|Пахать как раб.
+sleeve|«Рукав».|Long sleeves.|Длинные рукава.|Roll up your sleeves.|Засучи рукава.
+slope|«Склон».|A steep slope.|Крутой склон.|Ski slope.|Горнолыжный склон.
+sock|«Носок».|A pair of socks.|Пара носков.|Warm socks.|Тёплые носки.
+sorrow|«Печаль, скорбь».|Deep sorrow.|Глубокая печаль.|Joy and sorrow.|Радость и печаль.
+spirit|«Дух, настроение».|Team spirit.|Командный дух.|In good spirits.|В хорошем настроении.
+spot|«Место, пятно» и «заметить».|A nice spot.|Хорошее место.|I spotted him.|Я его заметил.
+stake|«Ставка, доля, кол».|A lot at stake.|Многое на кону.|A 50% stake.|Доля 50%.
+statement|«Заявление, выписка».|A bank statement.|Выписка из банка.|Make a statement.|Сделать заявление.
+statue|«Статуя».|A bronze statue.|Бронзовая статуя.|Stand like a statue.|Стоять как статуя.
+status|«Статус, положение».|Social status.|Социальный статус.|Order status.|Статус заказа.
+steam|«Пар».|Steam from the kettle.|Пар из чайника.|Let off steam.|Выпустить пар.
+stock|«Запас, акции».|In stock.|В наличии.|Stock market.|Фондовый рынок.
+strain|«Напряжение, нагрузка».|Under strain.|Под нагрузкой.|Eye strain.|Усталость глаз.
+straw|«Солома, соломинка».|A drinking straw.|Трубочка для питья.|The last straw.|Последняя капля.
+stream|«Ручей, поток» и «транслировать».|A mountain stream.|Горный ручей.|Stream a movie.|Смотреть фильм онлайн.
+strike|«Забастовка, удар» и «ударять».|Go on strike.|Объявить забастовку.|Lightning strike.|Удар молнии.
+string|«Верёвка, струна, строка».|A piece of string.|Кусок верёвки.|Guitar strings.|Гитарные струны.
+substance|«Вещество, суть».|A dangerous substance.|Опасное вещество.|Style over substance.|Форма важнее сути.
+sum|«Сумма».|A large sum.|Крупная сумма.|Sum up.|Подвести итог.
+summit|«Вершина, саммит».|Reach the summit.|Достичь вершины.|A peace summit.|Мирный саммит.
+supermarket|«Супермаркет».|Go to the supermarket.|Сходить в супермаркет.|A big supermarket.|Большой супермаркет.
+surgery|«Хирургия, операция».|Have surgery.|Перенести операцию.|Plastic surgery.|Пластическая хирургия.
+symptom|«Симптом».|Flu symptoms.|Симптомы гриппа.|No symptoms.|Без симптомов.
+sympathy|«Сочувствие».|My sympathy.|Мои соболезнования.|Show sympathy.|Проявить сочувствие.
+tail|«Хвост».|A fluffy tail.|Пушистый хвост.|Heads or tails?|Орёл или решка?
+tank|«Бак, танк, цистерна».|A full tank.|Полный бак.|A water tank.|Бак для воды.
+tap|«Кран» и «постукивать, тапнуть».|Turn off the tap.|Закрой кран.|Tap the screen.|Нажми на экран.
+teaspoon|«Чайная ложка».|A teaspoon of sugar.|Чайная ложка сахара.|Stir with a teaspoon.|Помешай ложечкой.
+technique|«Техника, приём».|A new technique.|Новый приём.|Breathing technique.|Техника дыхания.
+teen|«Подросток».|A teen movie.|Подростковый фильм.|In my teens.|В подростковом возрасте.
+temple|«Храм, висок».|An ancient temple.|Древний храм.|Pain in my temple.|Боль в виске.
+tension|«Напряжение».|High tension.|Высокое напряжение.|Ease the tension.|Снять напряжение.
+territory|«Территория».|Private territory.|Частная территория.|Unknown territory.|Неизведанная территория.
+theme|«Тема».|The main theme.|Главная тема.|A theme park.|Тематический парк.
+therapy|«Терапия».|Physical therapy.|Физиотерапия.|Go to therapy.|Ходить к психотерапевту.
+thought|«Мысль» (и прошедшее от think).|A good thought.|Хорошая мысль.|Lost in thought.|Задумался.
+threat|«Угроза».|A real threat.|Реальная угроза.|Under threat.|Под угрозой.
+thread|«Нить, ветка (обсуждения)».|Needle and thread.|Иголка с ниткой.|A long thread.|Длинная ветка обсуждения.
+throne|«Трон».|On the throne.|На троне.|The heir to the throne.|Наследник престола.
+tide|«Прилив, отлив, течение».|High tide.|Прилив.|Go against the tide.|Идти против течения.
+timber|«Лес (строительный), древесина».|Timber frame house.|Каркасный дом.|A pile of timber.|Штабель брёвен.
+tissue|«Салфетка, ткань (в теле)».|A box of tissues.|Пачка салфеток.|Body tissue.|Ткани тела.
+tomb|«Гробница». b не читается.|An ancient tomb.|Древняя гробница.|Silent as a tomb.|Тихо как в могиле.
+torch|«Фонарик (брит.), факел».|Use a torch.|Посвети фонариком.|Pass the torch.|Передать эстафету.
+tournament|«Турнир».|A chess tournament.|Шахматный турнир.|Win the tournament.|Выиграть турнир.
+towel|«Полотенце».|A bath towel.|Банное полотенце.|Throw in the towel.|Сдаться.
+trace|«След» и «отслеживать».|No trace.|Ни следа.|Trace the call.|Отследить звонок.
+trail|«Тропа, след».|A hiking trail.|Пешеходная тропа.|Follow the trail.|Иди по следу.
+transfer|«Перевод, трансфер» и «переводить».|A bank transfer.|Банковский перевод.|Transfer money.|Перевести деньги.
+transport|«Транспорт» и «перевозить».|Public transport.|Общественный транспорт.|Transport goods.|Перевозить грузы.
+trap|«Ловушка» и «ловить в ловушку».|Fall into a trap.|Попасть в ловушку.|A mouse trap.|Мышеловка.
+treasure|«Сокровище».|Buried treasure.|Зарытый клад.|A real treasure.|Настоящее сокровище.
+trend|«Тенденция, тренд».|A new trend.|Новый тренд.|Market trends.|Тенденции рынка.
+tribe|«Племя».|An ancient tribe.|Древнее племя.|Find your tribe.|Найди своих людей.
+troop|«Отряд»; troops — войска.|A troop of scouts.|Отряд скаутов.|Send troops.|Направить войска.
+trousers|«Брюки» (брит.).|A pair of trousers.|Брюки.|Black trousers.|Чёрные брюки.
+tune|«Мелодия» и «настраивать».|A catchy tune.|Привязчивая мелодия.|Stay tuned.|Оставайтесь с нами.
+tunnel|«Туннель».|A long tunnel.|Длинный туннель.|Light at the end of the tunnel.|Свет в конце туннеля.
+twin|«Близнец».|Twin brothers.|Братья-близнецы.|A twin bed.|Односпальная кровать (из пары).
+umbrella|«Зонт».|Take an umbrella.|Возьми зонт.|Under one umbrella.|Под одной крышей.
+uniform|«Форма (одежда)» и «единообразный».|A school uniform.|Школьная форма.|In uniform.|В форме.
+universe|«Вселенная».|The whole universe.|Вся вселенная.|Center of the universe.|Пуп земли.
+vacuum|«Пылесос, вакуум» и «пылесосить».|Vacuum the floor.|Пропылесось пол.|A vacuum cleaner.|Пылесос.
+van|«Фургон».|A delivery van.|Фургон доставки.|Rent a van.|Арендовать фургон.
+variety|«Разнообразие».|A variety of choices.|Разнообразный выбор.|Variety is the spice of life.|Разнообразие — соль жизни.
+vehicle|«Транспортное средство».|A heavy vehicle.|Тяжёлая техника.|Park your vehicle.|Припаркуйте машину.
+venue|«Место проведения».|The wedding venue.|Место свадьбы.|Change the venue.|Сменить место.
+vessel|«Судно, сосуд».|A fishing vessel.|Рыболовное судно.|Blood vessels.|Кровеносные сосуды.
+virtue|«Добродетель, достоинство».|Patience is a virtue.|Терпение — добродетель.|By virtue of.|В силу.
+vision|«Зрение, видение».|Good vision.|Хорошее зрение.|A clear vision.|Ясное видение.
+vitamin|«Витамин».|Vitamin C.|Витамин С.|Take vitamins.|Пить витамины.
+wallet|«Кошелёк, бумажник».|I lost my wallet.|Я потерял кошелёк.|An empty wallet.|Пустой кошелёк.
+warehouse|«Склад».|A big warehouse.|Большой склад.|Warehouse worker.|Кладовщик.
+warning|«Предупреждение».|A final warning.|Последнее предупреждение.|Warning sign.|Предупреждающий знак.
+web|«Паутина, сеть».|A spider web.|Паутина.|The web.|Интернет.
+welfare|«Благосостояние, соцобеспечение».|Animal welfare.|Защита животных.|Social welfare.|Соцобеспечение.
+wheat|«Пшеница».|A field of wheat.|Пшеничное поле.|Wheat flour.|Пшеничная мука.
+whistle|«Свисток, свист» и «свистеть».|Blow the whistle.|Свистнуть в свисток.|Whistle a tune.|Насвистывать мелодию.
+width|«Ширина».|The width of the road.|Ширина дороги.|Measure the width.|Измерь ширину.
+will|«Воля, завещание» и вспомогательный глагол будущего.|Free will.|Свобода воли.|Write a will.|Написать завещание.
+worm|«Червь».|Early bird catches the worm.|Кто рано встаёт, тому бог подаёт.|Worms for fishing.|Черви для рыбалки.
+worship|«Поклонение» и «поклоняться».|A place of worship.|Место поклонения.|Worship money.|Поклоняться деньгам.
+wound|«Рана» и «ранить».|A deep wound.|Глубокая рана.|Time heals all wounds.|Время лечит.
+yield|«Урожай, доходность» и «уступать».|A high yield.|Высокая доходность.|Yield to traffic.|Уступи дорогу.
+zero|«Ноль».|Below zero.|Ниже нуля.|Zero chance.|Никаких шансов.
+abandon|«Бросать, покидать».|Abandon the car.|Бросить машину.|An abandoned house.|Заброшенный дом.
+absorb|«Впитывать, поглощать».|Absorb water.|Впитывать воду.|Absorb information.|Усваивать информацию.
+accompany|«Сопровождать».|Accompany the client.|Сопровождать клиента.|Can I accompany you?|Можно составить вам компанию?
+accomplish|«Выполнить, достичь».|Mission accomplished.|Миссия выполнена.|Accomplish a goal.|Достичь цели.
+accuse|«Обвинять».|Don't accuse me.|Не обвиняй меня.|Accused of theft.|Обвинён в краже.
+acknowledge|«Признавать, подтверждать».|Acknowledge the mistake.|Признать ошибку.|Acknowledge receipt.|Подтвердить получение.
+acquire|«Приобретать».|Acquire property.|Приобрести недвижимость.|Acquire skills.|Приобрести навыки.
+adapt|«Приспосабливаться, адаптировать».|Adapt to change.|Приспособиться к переменам.|Adapt the plan.|Подстроить план.
+adjust|«Настраивать, регулировать, привыкать».|Adjust the seat.|Отрегулируй сиденье.|Adjust to the cold.|Привыкнуть к холоду.
+admire|«Восхищаться».|I admire you.|Я восхищаюсь тобой.|Admire the view.|Любоваться видом.
+adopt|«Принять, усыновить».|Adopt a child.|Усыновить ребёнка.|Adopt a new rule.|Принять новое правило.
+advertise|«Рекламировать».|Advertise the house.|Рекламировать дом.|Advertise online.|Давать рекламу в интернете.
+advise|«Советовать». Существительное — advice.|I advise you to wait.|Советую подождать.|Advise the client.|Проконсультировать клиента.
+alter|«Изменять, переделывать».|Alter the plan.|Изменить план.|Alter a dress.|Перешить платье.
+amaze|«Изумлять».|You amaze me.|Ты меня поражаешь.|Amazed by the view.|Поражён видом.
+amuse|«Забавлять, развлекать».|Amuse the kids.|Развлекать детей.|I'm not amused.|Мне не смешно.
+analyze|«Анализировать».|Analyze the market.|Проанализировать рынок.|Analyze the data.|Проанализировать данные.
+anticipate|«Предвидеть, ожидать».|Anticipate problems.|Предвидеть проблемы.|As anticipated.|Как и ожидалось.
+apologize|«Извиняться».|I apologize.|Прошу прощения.|Apologize to her.|Извинись перед ней.
+appeal|«Обращение, привлекательность» и «обращаться».|Curb appeal.|Привлекательность снаружи.|Appeal to the court.|Обжаловать в суде.
+appoint|«Назначать».|Appoint a manager.|Назначить менеджера.|At the appointed time.|В назначенное время.
+approve|«Одобрять».|The bank approved the loan.|Банк одобрил кредит.|I don't approve.|Я не одобряю.
+arise|«Возникать». Прошедшее — arose.|Problems arise.|Возникают проблемы.|If questions arise.|Если появятся вопросы.
+arrest|«Арестовывать» и «арест».|Under arrest.|Под арестом.|Arrest the thief.|Арестовать вора.
+assemble|«Собирать (мебель), собираться».|Assemble the furniture.|Собрать мебель.|Assemble at nine.|Собраться в девять.
+assess|«Оценивать».|Assess the damage.|Оценить ущерб.|Assess the risk.|Оценить риск.
+assign|«Поручать, назначать».|Assign a task.|Поручить задачу.|Assigned seat.|Назначенное место.
+assist|«Помогать, ассистировать».|Can I assist you?|Могу я вам помочь?|Assist the doctor.|Ассистировать врачу.
+assume|«Предполагать, брать на себя».|I assume so.|Полагаю, да.|Assume responsibility.|Взять ответственность.
+assure|«Заверять».|I assure you.|Уверяю вас.|Rest assured.|Будьте уверены.
+attach|«Прикреплять».|Attach the file.|Прикрепи файл.|Attached to the wall.|Прикреплён к стене.
+await|«Ожидать» — официально.|We await your answer.|Ждём вашего ответа.|Awaiting approval.|Ожидает одобрения.
+awake|«Бодрствующий» и «просыпаться».|Are you awake?|Ты не спишь?|Stay awake.|Не засыпай.
+ban|«Запрет» и «запрещать».|Smoking ban.|Запрет на курение.|Banned from the club.|Запрещён вход в клуб.
+bark|«Лаять» и «кора».|The dog barks.|Собака лает.|Tree bark.|Кора дерева.
+bathe|«Купать(ся)».|Bathe the baby.|Купать малыша.|Bathe in the lake.|Купаться в озере.
+beg|«Умолять, просить милостыню».|I beg you.|Умоляю тебя.|Beg for money.|Просить денег.
+bend|«Сгибать(ся)» и «изгиб».|Bend your knees.|Согни колени.|A bend in the road.|Изгиб дороги.
+bet|«Ставка, пари» и «спорить». I bet — держу пари.|I bet you're tired.|Спорим, ты устал.|Place a bet.|Сделать ставку.
+bind|«Связывать».|Bind the books.|Переплести книги.|Legally binding.|Юридически обязывающий.
+bless|«Благословлять». Bless you! — Будь здоров! (при чихе)|Bless you!|Будь здоров!|God bless.|Храни Господь.
+boast|«Хвастаться».|Stop boasting.|Хватит хвастаться.|The house boasts a big garden.|У дома может похвастаться большим садом.
+boil|«Кипятить, кипеть, варить».|Boil water.|Вскипяти воду.|Boil eggs.|Свари яйца.
+bounce|«Отскакивать, подпрыгивать».|The ball bounces.|Мяч отскакивает.|Bounce back.|Быстро восстановиться.
+bow|«Кланяться» (бау) и «лук, бант» (боу).|Take a bow.|Поклонись.|A red bow.|Красный бант.
+breed|«Разводить» и «порода».|Breed dogs.|Разводить собак.|What breed is it?|Какая это порода?
+bury|«Хоронить, зарывать».|Bury the treasure.|Зарыть клад.|Bury the past.|Похоронить прошлое.
+cancel|«Отменять».|Cancel the meeting.|Отменить встречу.|The flight was canceled.|Рейс отменили.
+capture|«Захватывать, запечатлеть».|Capture the moment.|Запечатлеть момент.|Capture the city.|Захватить город.
+cease|«Прекращать».|Cease fire.|Прекратить огонь.|It never ceases to amaze me.|Это не перестаёт меня удивлять.
+chew|«Жевать».|Chew your food.|Пережёвывай еду.|Chewing gum.|Жвачка.
+clap|«Хлопать».|Clap your hands.|Похлопай в ладоши.|Everyone clapped.|Все захлопали.
+classify|«Классифицировать».|Classify the documents.|Рассортировать документы.|Classified information.|Секретная информация.
+cling|«Цепляться».|Cling to hope.|Цепляться за надежду.|The kid clings to his mom.|Ребёнок жмётся к маме.
+collapse|«Рушиться» и «обрушение».|The roof collapsed.|Крыша рухнула.|Market collapse.|Обвал рынка.
+compensate|«Компенсировать».|Compensate for the damage.|Возместить ущерб.|We will compensate you.|Мы вам компенсируем.
+complicate|«Усложнять».|Don't complicate things.|Не усложняй.|It's complicated.|Всё сложно.
+compose|«Сочинять, составлять».|Compose music.|Сочинять музыку.|Compose yourself.|Возьми себя в руки.
+conceal|«Скрывать».|Conceal the truth.|Скрывать правду.|A concealed defect.|Скрытый дефект.
+concede|«Уступать, признавать».|Concede defeat.|Признать поражение.|Concede a point.|Уступить в одном пункте.
+conclude|«Заключать, делать вывод».|Conclude a deal.|Заключить сделку.|To conclude…|В заключение…
+conduct|«Проводить, вести» и «поведение».|Conduct a meeting.|Провести встречу.|Good conduct.|Хорошее поведение.
+confess|«Признаваться».|I confess.|Признаюсь.|Confess your love.|Признаться в любви.
+confront|«Противостоять, столкнуться».|Confront the problem.|Встретить проблему лицом к лицу.|Confront him.|Поговорить с ним начистоту.
+congratulate|«Поздравлять».|Congratulate the winner.|Поздравить победителя.|Congratulations!|Поздравляю!
+consent|«Согласие» и «соглашаться».|Written consent.|Письменное согласие.|Without consent.|Без согласия.
+conserve|«Сохранять, беречь».|Conserve energy.|Экономить энергию.|Conserve water.|Беречь воду.
+consist|«Состоять» (consist of).|It consists of two rooms.|Состоит из двух комнат.|The team consists of five.|В команде пятеро.
+consult|«Консультироваться».|Consult a lawyer.|Посоветоваться с юристом.|Consult the map.|Свериться с картой.
+consume|«Потреблять».|Consume less.|Потреблять меньше.|Time-consuming.|Отнимает много времени.
+contribute|«Вносить вклад».|Contribute to the team.|Вносить вклад в команду.|Contribute money.|Внести деньги.
+convert|«Превращать, переводить».|Convert the attic.|Переделать чердак.|Convert dollars to rubles.|Перевести доллары в рубли.
+convey|«Передавать (мысль)».|Convey a message.|Передать мысль.|Hard to convey.|Трудно передать.
+cope|«Справляться».|I can cope.|Я справлюсь.|Cope with stress.|Справляться со стрессом.
+crash|«Авария» и «разбиться, падать».|A car crash.|Автоавария.|The app crashed.|Приложение вылетело.
+crawl|«Ползти».|The baby crawls.|Малыш ползает.|Traffic is crawling.|Машины ползут.
+creep|«Красться, ползти» и «мерзкий тип».|Creep up on someone.|Подкрасться.|He's a creep.|Он мерзкий тип.
+crush|«Давить, раздавить» и «влюблённость».|Crush the garlic.|Раздави чеснок.|I have a crush on her.|Я на неё запал.
+cultivate|«Выращивать, развивать».|Cultivate the land.|Возделывать землю.|Cultivate good habits.|Развивать хорошие привычки.
+dare|«Сметь». How dare you! — Как ты смеешь!|How dare you!|Как ты смеешь!|I dare you.|Слабо?
+decay|«Гнить, разрушаться» и «распад».|Tooth decay.|Кариес.|The old house decays.|Старый дом разрушается.
+deceive|«Обманывать».|Don't deceive me.|Не обманывай меня.|Looks can deceive.|Внешность обманчива.
+declare|«Объявлять, декларировать».|Declare war.|Объявить войну.|Nothing to declare.|Нечего декларировать.
+decorate|«Украшать, отделывать».|Decorate the room.|Украсить комнату.|Decorate the tree.|Нарядить ёлку.
+dedicate|«Посвящать».|Dedicate your time.|Посвятить своё время.|A dedicated worker.|Преданный работник.
+defend|«Защищать».|Defend your family.|Защищать семью.|Defend your opinion.|Отстаивать своё мнение.
+delete|«Удалять».|Delete the file.|Удали файл.|Delete the message.|Удали сообщение.
+demonstrate|«Демонстрировать, показывать».|Demonstrate the house.|Показать дом.|Demonstrate skills.|Продемонстрировать навыки.
+depart|«Отправляться, уезжать».|The train departs at six.|Поезд отправляется в шесть.|Depart from the plan.|Отступить от плана.
+derive|«Получать, происходить».|Derive pleasure.|Получать удовольствие.|Derived from Latin.|Происходит из латыни.
+descend|«Спускаться».|Descend the stairs.|Спуститься по лестнице.|The plane descends.|Самолёт снижается.
+detect|«Обнаруживать».|Detect a leak.|Обнаружить утечку.|Detect smoke.|Обнаружить дым.
+devote|«Посвящать».|Devote time to family.|Посвящать время семье.|A devoted fan.|Преданный фанат.
+dig|«Копать». Прошедшее — dug.|Dig a hole.|Выкопай яму.|Dig the garden.|Вскопать огород.
+dine|«Обедать, ужинать».|Dine out.|Поужинать в ресторане.|Wine and dine.|Угощать.
+disagree|«Не соглашаться».|I disagree.|Я не согласен.|We often disagree.|Мы часто спорим.
+disappoint|«Разочаровывать».|Don't disappoint me.|Не разочаруй меня.|I'm disappointed.|Я разочарован.
+dismiss|«Увольнять, отпускать, отклонять».|Dismiss the idea.|Отбросить идею.|Class dismissed.|Урок окончен.
+distinguish|«Различать».|Distinguish colors.|Различать цвета.|Hard to distinguish.|Трудно различить.
+distract|«Отвлекать».|Don't distract me.|Не отвлекай меня.|Easily distracted.|Легко отвлекается.
+distribute|«Распределять, раздавать».|Distribute flyers.|Раздавать листовки.|Distribute the work.|Распределить работу.
+disturb|«Беспокоить, мешать».|Do not disturb.|Не беспокоить.|Sorry to disturb you.|Простите за беспокойство.
+dive|«Нырять».|Dive into the lake.|Нырнуть в озеро.|Dive into work.|С головой уйти в работу.
+donate|«Жертвовать».|Donate blood.|Сдать кровь.|Donate to charity.|Пожертвовать на благотворительность.
+drag|«Тащить».|Drag the bag.|Тащи сумку.|What a drag!|Какая тоска!
+drain|«Сливать, истощать» и «сток».|Drain the water.|Слить воду.|The drain is blocked.|Слив засорился.
+dread|«Страх» и «бояться».|I dread the dentist.|Боюсь зубного.|A sense of dread.|Чувство страха.
+drift|«Дрейфовать, плыть по течению».|Drift apart.|Отдалиться друг от друга.|Snow drifts.|Сугробы.
+drown|«Тонуть, топить».|Don't drown.|Не утони.|Drown in work.|Утонуть в работе.
+dump|«Сбрасывать, бросать» и «свалка».|Dump the trash.|Выбросить мусор.|She dumped him.|Она его бросила.
+edit|«Редактировать».|Edit the text.|Отредактируй текст.|Edit the photo.|Обработай фото.
+educate|«Обучать, воспитывать».|Educate the kids.|Учить детей.|Well educated.|Хорошо образован.
+elect|«Избирать».|Elect a president.|Избрать президента.|Newly elected.|Новоизбранный.
+eliminate|«Устранять».|Eliminate the risk.|Устранить риск.|Eliminate errors.|Исключить ошибки.
+embrace|«Обнимать, принимать».|Embrace change.|Принимать перемены.|A warm embrace.|Тёплые объятия.
+emphasize|«Подчёркивать».|Emphasize the benefits.|Подчеркнуть преимущества.|I must emphasize…|Должен подчеркнуть…
+employ|«Нанимать, использовать».|Employ ten people.|Нанимать десять человек.|Employ a method.|Использовать метод.
+enable|«Позволять, включать».|Enable notifications.|Включи уведомления.|It enables us to save.|Это позволяет нам экономить.
+endure|«Терпеть, выдерживать».|Endure the pain.|Терпеть боль.|Endure the winter.|Пережить зиму.
+enforce|«Обеспечивать соблюдение».|Enforce the law.|Следить за соблюдением закона.|Enforce the rules.|Заставлять соблюдать правила.
+engage|«Вовлекать, заниматься».|Engage the audience.|Вовлечь аудиторию.|Engaged couple.|Помолвленная пара.
+enhance|«Усиливать, улучшать».|Enhance the value.|Повысить стоимость.|Enhance the photo.|Улучшить фото.
+ensure|«Гарантировать, обеспечивать».|Ensure safety.|Обеспечить безопасность.|Ensure you call.|Обязательно позвони.
+entertain|«Развлекать, принимать гостей».|Entertain guests.|Развлекать гостей.|Entertain an idea.|Допускать мысль.
+equip|«Оборудовать, снаряжать».|Equip the kitchen.|Оборудовать кухню.|Well equipped.|Хорошо оснащён.
+erase|«Стирать».|Erase the board.|Сотри с доски.|Erase memories.|Стереть воспоминания.
+evaluate|«Оценивать».|Evaluate the property.|Оценить объект.|Evaluate results.|Оценить результаты.
+evolve|«Развиваться, эволюционировать».|Things evolve.|Всё развивается.|Evolve over time.|Развиваться со временем.
+exaggerate|«Преувеличивать».|Don't exaggerate.|Не преувеличивай.|Slightly exaggerated.|Слегка преувеличено.
+exceed|«Превышать».|Exceed the limit.|Превысить лимит.|Exceed expectations.|Превзойти ожидания.
+exclude|«Исключать».|Exclude taxes.|Без учёта налогов.|Don't exclude him.|Не исключай его.
+excuse|«Извинять» и «оправдание». Excuse me — простите.|Excuse me.|Простите.|No excuses.|Без оправданий.
+execute|«Исполнять, казнить».|Execute the plan.|Выполнить план.|Execute an order.|Исполнить приказ.
+exhaust|«Истощать, утомлять» и «выхлоп».|I'm exhausted.|Я выжат как лимон.|Exhaust fumes.|Выхлопные газы.
+exhibit|«Выставлять» и «экспонат».|Exhibit paintings.|Выставлять картины.|Exhibit A.|Вещественное доказательство А.
+expose|«Разоблачать, подвергать».|Expose the truth.|Раскрыть правду.|Exposed to the sun.|На солнце.
+extract|«Извлекать» и «экстракт».|Extract a tooth.|Удалить зуб.|Extract data.|Извлечь данные.
+fade|«Выцветать, угасать».|The color faded.|Цвет выцвел.|Fade away.|Угаснуть.
+fasten|«Застёгивать, пристёгивать».|Fasten your seat belt.|Пристегните ремни.|Fasten the door.|Закрепи дверь.
+feed|«Кормить» и «лента новостей». Прошедшее — fed.|Feed the dog.|Покорми собаку.|My news feed.|Моя лента.
+fetch|«Сходить и принести».|Fetch some water.|Сходи за водой.|Fetch the ball!|Принеси мяч!
+float|«Плавать (на поверхности)».|Wood floats.|Дерево плавает.|Float on your back.|Лежать на воде.
+flow|«Течь» и «поток».|The river flows.|Река течёт.|Go with the flow.|Плыть по течению.
+forbid|«Запрещать». Прошедшее — forbade.|Smoking is forbidden.|Курение запрещено.|God forbid!|Не дай бог!
+forecast|«Прогноз» и «прогнозировать».|Weather forecast.|Прогноз погоды.|Forecast prices.|Прогнозировать цены.
+frighten|«Пугать».|Don't frighten the kids.|Не пугай детей.|Frightened of dogs.|Боится собак.
+frown|«Хмуриться».|Don't frown.|Не хмурься.|He frowned at me.|Он нахмурился на меня.

@@ -1,0 +1,250 @@
+courage|«Смелость, мужество».|It takes courage.|Для этого нужна смелость.|Find the courage.|Набраться смелости.
+kindness|«Доброта».|Thank you for your kindness.|Спасибо за доброту.|An act of kindness.|Добрый поступок.
+honesty|«Честность».|Honesty is the best policy.|Честность — лучшая политика.|I value honesty.|Я ценю честность.
+loyalty|«Верность, лояльность».|Client loyalty.|Лояльность клиентов.|Loyalty of a dog.|Собачья верность.
+wisdom|«Мудрость».|Words of wisdom.|Мудрые слова.|Age brings wisdom.|С возрастом приходит мудрость.
+humor|«Юмор».|A sense of humor.|Чувство юмора.|Dark humor.|Чёрный юмор.
+temper|«Нрав, вспыльчивость». lose your temper — выйти из себя.|He has a bad temper.|У него вспыльчивый характер.|Don't lose your temper.|Не выходи из себя.
+passion|«Страсть, увлечение».|My passion is music.|Моя страсть — музыка.|With passion.|Со страстью.
+desire|«Желание» и «желать».|A strong desire.|Сильное желание.|Desire to win.|Желание победить.
+discipline|«Дисциплина».|Self-discipline.|Самодисциплина.|Discipline is freedom.|Дисциплина — это свобода.
+motivation|«Мотивация».|I have no motivation.|У меня нет мотивации.|Motivation comes and goes.|Мотивация то есть, то нет.
+willpower|«Сила воли».|It takes willpower.|Нужна сила воли.|Strong willpower.|Сильная воля.
+progress|«Прогресс, продвижение».|Good progress!|Хороший прогресс!|Make progress.|Продвигаться.
+achievement|«Достижение».|A big achievement.|Большое достижение.|Unlock an achievement.|Открыть достижение.
+victory|«Победа».|A sweet victory.|Сладкая победа.|Victory is ours!|Победа за нами!
+defeat|«Поражение» и «побеждать».|Accept defeat.|Принять поражение.|Defeat the enemy.|Победить врага.
+routine|«Распорядок, рутина».|Daily routine.|Распорядок дня.|Break the routine.|Выйти из рутины.
+appointment|«Встреча, запись (к врачу)».|A doctor's appointment.|Запись к врачу.|Make an appointment.|Записаться.
+reminder|«Напоминание».|Set a reminder.|Поставь напоминание.|A friendly reminder.|Дружеское напоминание.
+calendar|«Календарь».|Check your calendar.|Посмотри в календарь.|Add it to the calendar.|Добавь в календарь.
+weekday|«Будний день».|On weekdays.|По будням.|A busy weekday.|Загруженный будний день.
+midnight|«Полночь».|At midnight.|В полночь.|After midnight.|После полуночи.
+noon|«Полдень».|At noon.|В полдень.|Before noon.|До полудня.
+dawn|«Рассвет».|At dawn.|На рассвете.|From dawn till dusk.|От рассвета до заката.
+sunset|«Закат».|A beautiful sunset.|Красивый закат.|Watch the sunset.|Смотреть закат.
+past|«Прошлое», «прошлый», «мимо».|In the past.|В прошлом.|Walk past the shop.|Пройти мимо магазина.
+instant|«Мгновенный» и «мгновение».|Instant coffee.|Растворимый кофе.|In an instant.|В мгновение ока.
+nowadays|«В наши дни».|Nowadays everyone has a phone.|Сейчас у всех есть телефон.|Prices nowadays.|Нынешние цены.
+someday|«Когда-нибудь».|Someday I'll go there.|Когда-нибудь я туда поеду.|Someday soon.|Скоро, однажды.
+weather forecast|«Прогноз погоды».|Check the weather forecast.|Посмотри прогноз.|The forecast says rain.|Обещают дождь.
+sunny|«Солнечный».|A sunny day.|Солнечный день.|A sunny room.|Солнечная комната.
+cloudy|«Облачный, пасмурный».|A cloudy day.|Пасмурный день.|It's cloudy.|Облачно.
+rainy|«Дождливый».|A rainy day.|Дождливый день.|Save for a rainy day.|Копить на чёрный день.
+windy|«Ветреный».|It's windy today.|Сегодня ветрено.|A windy night.|Ветреная ночь.
+frost|«Мороз, иней».|Hard frost.|Сильный мороз.|Frost on the window.|Иней на окне.
+fog|«Туман».|Thick fog.|Густой туман.|Drive in the fog.|Ехать в тумане.
+thunder|«Гром».|Thunder and lightning.|Гром и молния.|I heard thunder.|Я слышал гром.
+lightning|«Молния».|A flash of lightning.|Вспышка молнии.|Fast as lightning.|Быстрый как молния.
+rainbow|«Радуга».|Look, a rainbow!|Смотри, радуга!|All the colors of the rainbow.|Все цвета радуги.
+mud|«Грязь (жидкая)».|Mud on the road.|Грязь на дороге.|Covered in mud.|Весь в грязи.
+dust|«Пыль».|Dust on the shelf.|Пыль на полке.|Wipe the dust.|Вытри пыль.
+meadow|«Луг».|A green meadow.|Зелёный луг.|Flowers in the meadow.|Цветы на лугу.
+shore|«Берег».|On the shore.|На берегу.|Walk along the shore.|Гулять по берегу.
+desert|«Пустыня» и «покидать».|A hot desert.|Жаркая пустыня.|Desert island.|Необитаемый остров.
+cave|«Пещера».|A dark cave.|Тёмная пещера.|Explore a cave.|Исследовать пещеру.
+leaf|«Лист (дерева)». Множественное — leaves.|A green leaf.|Зелёный лист.|Autumn leaves.|Осенние листья.
+root|«Корень».|Tree roots.|Корни дерева.|The root of the problem.|Корень проблемы.
+seed|«Семя, семечко».|Plant seeds.|Посеять семена.|Sunflower seeds.|Семечки.
+bush|«Куст».|A rose bush.|Розовый куст.|Hide behind the bush.|Спрятаться за кустом.
+pine|«Сосна».|A pine forest.|Сосновый бор.|Pine nuts.|Кедровые орехи.
+birch|«Берёза».|A white birch.|Белая берёза.|Birch firewood.|Берёзовые дрова.
+oak|«Дуб».|An old oak.|Старый дуб.|An oak table.|Дубовый стол.
+fox|«Лиса, лис».|A white fox.|Белый лис.|Clever as a fox.|Хитрый как лиса.
+rabbit|«Кролик».|A white rabbit.|Белый кролик.|Pull a rabbit out of a hat.|Достать кролика из шляпы.
+deer|«Олень». Одинаково в обоих числах.|A deer in the forest.|Олень в лесу.|Like a deer in headlights.|Как олень в свете фар.
+cow|«Корова».|Milk the cow.|Подоить корову.|Holy cow!|Ничего себе!
+pig|«Свинья».|A fat pig.|Толстая свинья.|Eat like a pig.|Есть как свинья.
+goat|«Коза». В сленге GOAT — «величайший всех времён».|Goat milk.|Козье молоко.|He's the GOAT.|Он лучший всех времён.
+duck|«Утка» и «пригнуться».|Feed the ducks.|Покормить уток.|Duck!|Пригнись!
+goose|«Гусь». Множественное — geese.|A wild goose.|Дикий гусь.|Goose bumps.|Мурашки.
+bee|«Пчела».|Busy as a bee.|Трудится как пчёлка.|A bee sting.|Укус пчелы.
+mosquito|«Комар».|Mosquito bites.|Укусы комаров.|Too many mosquitoes.|Слишком много комаров.
+spider|«Паук».|I'm afraid of spiders.|Я боюсь пауков.|A spider web.|Паутина.
+snake|«Змея».|A snake in the grass.|Змея в траве; предатель.|Afraid of snakes.|Боится змей.
+frog|«Лягушка».|A green frog.|Зелёная лягушка.|A frog in my throat.|Ком в горле.
+rat|«Крыса».|A rat in the basement.|Крыса в подвале.|The rat race.|Крысиные бега.
+puppy|«Щенок».|A cute puppy.|Милый щенок.|Puppy eyes.|Щенячьи глазки.
+kitten|«Котёнок».|A little kitten.|Маленький котёнок.|Playful kittens.|Игривые котята.
+cage|«Клетка».|A bird cage.|Птичья клетка.|Out of the cage.|Из клетки.
+hunting|«Охота».|Go hunting.|Пойти на охоту.|Hunting season.|Сезон охоты.
+fishing|«Рыбалка».|Go fishing.|Поехать на рыбалку.|A fishing rod.|Удочка.
+hammer|«Молоток».|Hand me the hammer.|Подай молоток.|Hit with a hammer.|Ударить молотком.
+screw|«Шуруп, винт».|Tighten the screw.|Закрути шуруп.|A loose screw.|Не все дома (о человеке).
+saw|«Пила» и «пилить» (и прошедшее от see).|Cut with a saw.|Распилить пилой.|I saw him.|Я его видел.
+drill|«Дрель» и «сверлить», «учения».|A power drill.|Электродрель.|A fire drill.|Пожарные учения.
+axe|«Топор».|Chop wood with an axe.|Колоть дрова топором.|A sharp axe.|Острый топор.
+shovel|«Лопата».|Clear snow with a shovel.|Чистить снег лопатой.|A snow shovel.|Снеговая лопата.
+ladder|«Стремянка, лестница (приставная)».|Climb the ladder.|Залезь на стремянку.|The career ladder.|Карьерная лестница.
+brush|«Щётка, кисть» и «чистить».|Brush your teeth.|Почисти зубы.|A paint brush.|Кисть для краски.
+glue|«Клей» и «клеить».|Super glue.|Суперклей.|Glue it back.|Приклей обратно.
+tape|«Скотч, лента».|Duct tape.|Армированный скотч.|Measuring tape.|Рулетка.
+bucket|«Ведро».|A bucket of water.|Ведро воды.|Bucket list.|Список дел до конца жизни.
+brick|«Кирпич».|A brick house.|Кирпичный дом.|Brick by brick.|Кирпичик за кирпичиком.
+concrete|«Бетон» и «конкретный».|A concrete wall.|Бетонная стена.|A concrete plan.|Конкретный план.
+cement|«Цемент».|A bag of cement.|Мешок цемента.|Mix cement.|Замешать цемент.
+steel|«Сталь».|A steel door.|Стальная дверь.|Nerves of steel.|Стальные нервы.
+metal|«Металл».|A metal roof.|Металлическая крыша.|Heavy metal.|Хэви-метал.
+plastic|«Пластик».|Plastic windows.|Пластиковые окна.|A plastic bag.|Пластиковый пакет.
+cotton|«Хлопок».|A cotton shirt.|Хлопковая рубашка.|Cotton wool.|Вата.
+wool|«Шерсть».|A wool sweater.|Шерстяной свитер.|Wool socks.|Шерстяные носки.
+leather|«Кожа (материал)».|A leather jacket.|Кожаная куртка.|Leather shoes.|Кожаные туфли.
+firewood|«Дрова».|Chop firewood.|Колоть дрова.|A pile of firewood.|Поленница.
+chimney|«Дымоход, труба».|Clean the chimney.|Почистить дымоход.|Smoke from the chimney.|Дым из трубы.
+smoke detector|«Датчик дыма».|Test the smoke detector.|Проверь датчик дыма.|The smoke detector beeps.|Датчик дыма пищит.
+battery|«Батарейка, аккумулятор».|The battery is low.|Батарея садится.|Change the batteries.|Поменяй батарейки.
+charger|«Зарядка (устройство)».|Where is my charger?|Где моя зарядка?|A phone charger.|Зарядка для телефона.
+cable|«Кабель, провод».|A USB cable.|USB-кабель.|Cable TV.|Кабельное ТВ.
+plug|«Вилка (электрическая), пробка» и «включать в розетку».|Plug it in.|Включи в розетку.|Pull the plug.|Выдерни вилку.
+socket|«Розетка».|A wall socket.|Розетка в стене.|No socket here.|Здесь нет розетки.
+light bulb|«Лампочка».|Change the light bulb.|Поменяй лампочку.|A light bulb moment.|Момент озарения.
+laptop|«Ноутбук».|Work on a laptop.|Работать на ноутбуке.|My laptop is slow.|Мой ноутбук тормозит.
+keyboard|«Клавиатура».|Type on the keyboard.|Печатать на клавиатуре.|A wireless keyboard.|Беспроводная клавиатура.
+printer|«Принтер».|The printer is out of paper.|В принтере кончилась бумага.|Print on the printer.|Распечатать на принтере.
+file|«Файл, папка (дело)».|Open the file.|Открой файл.|Send me the file.|Скинь мне файл.
+folder|«Папка».|A new folder.|Новая папка.|Put it in the folder.|Положи в папку.
+password|«Пароль».|Enter the password.|Введи пароль.|I forgot my password.|Я забыл пароль.
+email|«Электронная почта, письмо» и «отправлять письмо».|Send me an email.|Пришли мне письмо.|Check your email.|Проверь почту.
+website|«Сайт».|Visit our website.|Заходи на наш сайт.|A new website.|Новый сайт.
+app|«Приложение».|Download the app.|Скачай приложение.|My favorite app.|Моё любимое приложение.
+update|«Обновление» и «обновлять».|Update the app.|Обнови приложение.|Any updates?|Есть новости?
+download|«Скачивать».|Download the file.|Скачай файл.|Free download.|Бесплатная загрузка.
+upload|«Загружать (в сеть)».|Upload the photos.|Загрузи фотографии.|Upload a video.|Выложить видео.
+search engine|«Поисковик».|Use a search engine.|Воспользуйся поисковиком.|The best search engine.|Лучший поисковик.
+internet|«Интернет».|No internet.|Нет интернета.|Search the internet.|Поищи в интернете.
+signal|«Сигнал» и «подавать знак».|No signal here.|Здесь нет сигнала.|Signal before turning.|Включай поворотник.
+server|«Сервер», «официант».|The server is down.|Сервер лежит.|My own server.|Мой собственный сервер.
+database|«База данных».|Update the database.|Обнови базу данных.|A client database.|База клиентов.
+software|«Программное обеспечение».|Install the software.|Установи программу.|Software update.|Обновление ПО.
+hardware|«Железо, оборудование».|Computer hardware.|Компьютерное железо.|A hardware store.|Хозяйственный магазин.
+mining|«Добыча, майнинг».|Crypto mining.|Майнинг криптовалют.|Coal mining.|Добыча угля.
+miner|«Шахтёр, майнер (устройство)».|A coal miner.|Шахтёр.|The miner is overheating.|Майнер перегревается.
+power supply|«Блок питания, электроснабжение».|A broken power supply.|Сгоревший блок питания.|Power supply problems.|Перебои с электричеством.
+cooling|«Охлаждение».|A cooling system.|Система охлаждения.|Water cooling.|Водяное охлаждение.
+shift|«Смена» и «сдвигать».|A night shift.|Ночная смена.|My shift starts at eight.|Моя смена начинается в восемь.
+night shift|«Ночная смена».|I'm on night shift.|Я на ночной смене.|After the night shift.|После ночной смены.
+colleague|«Коллега».|My colleague helped me.|Коллега мне помог.|A new colleague.|Новый коллега.
+employer|«Работодатель».|A good employer.|Хороший работодатель.|Ask your employer.|Спроси работодателя.
+resume|«Резюме» (сущ.) и «возобновлять» (гл.).|Send your resume.|Отправь резюме.|Resume work.|Возобновить работу.
+vacancy|«Вакансия, свободный номер».|A job vacancy.|Вакансия.|No vacancy.|Мест нет.
+overtime|«Сверхурочные».|Work overtime.|Работать сверхурочно.|Overtime pay.|Оплата сверхурочных.
+day off|«Выходной день».|Tomorrow is my day off.|Завтра у меня выходной.|Take a day off.|Взять отгул.
+retirement|«Пенсия, выход на пенсию».|Save for retirement.|Копить на пенсию.|Early retirement.|Ранний выход на пенсию.
+pension|«Пенсия (выплата)».|A small pension.|Маленькая пенсия.|Live on a pension.|Жить на пенсию.
+tax return|«Налоговая декларация».|File a tax return.|Подать декларацию.|Fill in the tax return.|Заполнить декларацию.
+rights|«Права».|Human rights.|Права человека.|Know your rights.|Знай свои права.
+police officer|«Полицейский».|Ask a police officer.|Спроси полицейского.|A police officer stopped me.|Меня остановил полицейский.
+witness|«Свидетель» и «быть свидетелем».|A witness to the accident.|Свидетель аварии.|I witnessed it.|Я это видел.
+thief|«Вор».|Stop, thief!|Держи вора!|A car thief.|Угонщик.
+stranger|«Незнакомец».|Don't talk to strangers.|Не разговаривай с незнакомцами.|A total stranger.|Совершенно чужой человек.
+host|«Хозяин (гостей), ведущий».|A good host.|Гостеприимный хозяин.|The host of the show.|Ведущий шоу.
+celebrity|«Знаменитость».|A famous celebrity.|Известная знаменитость.|Celebrity news.|Новости звёзд.
+enemy|«Враг».|Your worst enemy.|Твой злейший враг.|Make enemies.|Наживать врагов.
+ally|«Союзник».|A strong ally.|Сильный союзник.|My ally at work.|Мой союзник на работе.
+friendship|«Дружба».|A long friendship.|Долгая дружба.|True friendship.|Настоящая дружба.
+marriage|«Брак».|A happy marriage.|Счастливый брак.|Marriage is work.|Брак — это работа.
+divorce|«Развод» и «разводиться».|They got a divorce.|Они развелись.|After the divorce.|После развода.
+wedding ring|«Обручальное кольцо».|A gold wedding ring.|Золотое обручальное кольцо.|Wear a wedding ring.|Носить обручальное кольцо.
+bride|«Невеста».|A beautiful bride.|Красивая невеста.|The bride and groom.|Жених и невеста.
+groom|«Жених» и «ухаживать (за животным)».|The groom is nervous.|Жених нервничает.|Groom the dog.|Ухаживать за шерстью собаки.
+pregnancy|«Беременность».|During pregnancy.|Во время беременности.|A healthy pregnancy.|Здоровая беременность.
+childhood|«Детство».|A happy childhood.|Счастливое детство.|My childhood home.|Дом моего детства.
+teenager|«Подросток».|A typical teenager.|Типичный подросток.|Teenagers love phones.|Подростки любят телефоны.
+grandmother|«Бабушка».|My grandmother lives in a village.|Моя бабушка живёт в деревне.|Grandmother's pies.|Бабушкины пирожки.
+grandfather|«Дедушка».|My grandfather was a soldier.|Мой дед был солдатом.|Grandfather clock.|Напольные часы.
+grandson|«Внук».|Her grandson.|Её внук.|My first grandson.|Мой первый внук.
+granddaughter|«Внучка».|A little granddaughter.|Маленькая внучка.|His granddaughter.|Его внучка.
+aunt|«Тётя».|My aunt lives in Abakan.|Моя тётя живёт в Абакане.|Visit your aunt.|Навести тётю.
+nephew|«Племянник».|My nephew is five.|Моему племяннику пять.|A gift for my nephew.|Подарок племяннику.
+niece|«Племянница».|My niece.|Моя племянница.|A cute niece.|Милая племянница.
+relative|«Родственник» и «относительный».|A close relative.|Близкий родственник.|Relative prices.|Относительные цены.
+in-laws|«Родня супруга».|Visit the in-laws.|Навестить родню жены.|My in-laws are nice.|У меня хорошая родня жены.
+mother-in-law|«Тёща, свекровь».|My mother-in-law.|Моя тёща.|Mother-in-law jokes.|Анекдоты про тёщу.
+father-in-law|«Тесть, свёкор».|My father-in-law.|Мой тесть.|Fishing with my father-in-law.|На рыбалке с тестем.
+toddler|«Малыш (1–3 года)».|A busy toddler.|Неугомонный малыш.|Toddler toys.|Игрушки для малышей.
+nursery|«Детская, ясли, питомник».|A nursery room.|Детская комната.|A plant nursery.|Питомник растений.
+kindergarten|«Детский сад».|Go to kindergarten.|Ходить в садик.|Pick up from kindergarten.|Забрать из садика.
+homework|«Домашнее задание».|Do your homework.|Сделай домашку.|Too much homework.|Слишком много домашки.
+math|«Математика» (амер.).|I'm bad at math.|Я плох в математике.|Do the math.|Посчитай.
+geography|«География».|A geography lesson.|Урок географии.|I love geography.|Люблю географию.
+biology|«Биология».|Study biology.|Изучать биологию.|A biology teacher.|Учитель биологии.
+chemistry|«Химия», «взаимная симпатия».|Chemistry class.|Урок химии.|We have chemistry.|Между нами химия.
+literature|«Литература».|Russian literature.|Русская литература.|Read literature.|Читать литературу.
+dictionary|«Словарь».|Look it up in the dictionary.|Посмотри в словаре.|An English dictionary.|Английский словарь.
+vocabulary|«Словарный запас».|Build your vocabulary.|Пополняй словарный запас.|A rich vocabulary.|Богатый словарный запас.
+grammar|«Грамматика».|English grammar.|Английская грамматика.|A grammar mistake.|Грамматическая ошибка.
+sentence|«Предложение» и «приговор».|A short sentence.|Короткое предложение.|A prison sentence.|Тюремный срок.
+phrase|«Фраза, выражение».|A useful phrase.|Полезная фраза.|Learn phrases.|Учи фразы.
+meaning|«Значение, смысл».|What's the meaning?|Какое значение?|The meaning of life.|Смысл жизни.
+translation|«Перевод».|A good translation.|Хороший перевод.|Lost in translation.|Потеряно при переводе.
+pronunciation|«Произношение».|Good pronunciation.|Хорошее произношение.|Practice pronunciation.|Тренируй произношение.
+accent|«Акцент».|A strong accent.|Сильный акцент.|A Russian accent.|Русский акцент.
+fluent|«Беглый, свободно владеющий».|Fluent English.|Свободный английский.|Become fluent.|Заговорить свободно.
+native speaker|«Носитель языка».|Talk to a native speaker.|Поговорить с носителем.|Like a native speaker.|Как носитель языка.
+ability|«Способность».|The ability to learn.|Способность учиться.|To the best of my ability.|Насколько я способен.
+absence|«Отсутствие».|In my absence.|В моё отсутствие.|Absence of evidence.|Отсутствие доказательств.
+access|«Доступ» и «получать доступ».|Internet access.|Доступ в интернет.|Access denied.|Доступ запрещён.
+addition|«Дополнение, сложение». in addition — к тому же.|In addition.|Вдобавок.|A new addition to the family.|Пополнение в семье.
+administration|«Администрация, управление».|The city administration.|Администрация города.|Hospital administration.|Администрация больницы.
+advance|«Аванс, продвижение» и «продвигаться». in advance — заранее.|Pay in advance.|Платить заранее.|An advance payment.|Предоплата.
+adventure|«Приключение».|A big adventure.|Большое приключение.|Ready for adventure.|Готов к приключениям.
+advertising|«Реклама (сфера)».|Advertising costs.|Расходы на рекламу.|Online advertising.|Интернет-реклама.
+alarm|«Тревога, сигнализация, будильник».|Set the alarm.|Поставь будильник.|A fire alarm.|Пожарная сигнализация.
+alcohol|«Алкоголь».|No alcohol.|Без алкоголя.|Alcohol is bad for you.|Алкоголь вреден.
+alternative|«Альтернатива» и «альтернативный».|There is no alternative.|Альтернативы нет.|An alternative plan.|Запасной план.
+ambition|«Амбиция, стремление».|Big ambitions.|Большие амбиции.|My ambition is to travel.|Моя мечта — путешествовать.
+angle|«Угол, ракурс».|A right angle.|Прямой угол.|From a different angle.|С другой стороны.
+anniversary|«Годовщина».|Our wedding anniversary.|Годовщина свадьбы.|Happy anniversary!|С годовщиной!
+apology|«Извинение».|Accept my apology.|Прими мои извинения.|I owe you an apology.|Я должен извиниться.
+appearance|«Внешность, появление».|Neat appearance.|Опрятная внешность.|His sudden appearance.|Его внезапное появление.
+application|«Заявление, заявка, приложение».|A job application.|Заявление на работу.|A mobile application.|Мобильное приложение.
+architecture|«Архитектура».|Modern architecture.|Современная архитектура.|Study architecture.|Изучать архитектуру.
+assistant|«Помощник, ассистент».|My assistant.|Мой помощник.|A shop assistant.|Продавец-консультант.
+atmosphere|«Атмосфера».|A friendly atmosphere.|Дружелюбная атмосфера.|A cozy atmosphere.|Уютная атмосфера.
+attempt|«Попытка» и «пытаться».|First attempt.|Первая попытка.|Attempt to sell.|Попытка продать.
+balance|«Баланс, равновесие, остаток на счёте».|Work-life balance.|Баланс работы и жизни.|Check your balance.|Проверь баланс.
+basket|«Корзина».|A basket of apples.|Корзина яблок.|A shopping basket.|Корзинка для покупок.
+bell|«Колокол, звонок».|Ring the bell.|Позвони в звонок.|Church bells.|Церковные колокола.
+belt|«Ремень, пояс».|A leather belt.|Кожаный ремень.|Fasten your belt.|Пристегнись.
+blanket|«Одеяло, плед».|A warm blanket.|Тёплое одеяло.|Under the blanket.|Под одеялом.
+boot|«Сапог, ботинок; багажник» (брит.).|Winter boots.|Зимние сапоги.|Put it in the boot.|Положи в багажник.
+boundary|«Граница, рубеж».|Property boundary.|Граница участка.|Set boundaries.|Устанавливать границы.
+breath|«Дыхание, вдох».|Take a deep breath.|Сделай глубокий вдох.|Out of breath.|Запыхался.
+bullet|«Пуля», «пункт списка».|A silver bullet.|Волшебная таблетка.|Bullet points.|Пункты списка.
+burden|«Бремя, груз».|A heavy burden.|Тяжёлое бремя.|I don't want to be a burden.|Не хочу быть обузой.
+cabinet|«Шкаф (с полками), кабинет министров».|A kitchen cabinet.|Кухонный шкаф.|A filing cabinet.|Картотечный шкаф.
+calculation|«Расчёт, подсчёт».|A quick calculation.|Быстрый расчёт.|By my calculations.|По моим расчётам.
+campaign|«Кампания».|An ad campaign.|Рекламная кампания.|An election campaign.|Предвыборная кампания.
+candle|«Свеча».|Light a candle.|Зажги свечу.|Birthday candles.|Свечи на торте.
+capacity|«Вместимость, мощность».|Full capacity.|Полная загрузка.|The capacity of the tank.|Объём бака.
+cap|«Кепка, крышка».|A baseball cap.|Бейсболка.|Put the cap back.|Закрой крышку.
+captain|«Капитан».|The captain of the team.|Капитан команды.|Ship captain.|Капитан корабля.
+carriage|«Вагон, экипаж, коляска».|A train carriage.|Вагон поезда.|A horse carriage.|Конная повозка.
+castle|«Замок (крепость)».|An old castle.|Старый замок.|Castles in the air.|Воздушные замки.
+celebration|«Праздник, празднование».|A big celebration.|Большой праздник.|Time for celebration.|Время праздновать.
+certificate|«Сертификат, свидетельство».|A birth certificate.|Свидетельство о рождении.|A gift certificate.|Подарочный сертификат.
+chapter|«Глава».|The first chapter.|Первая глава.|A new chapter in life.|Новая глава в жизни.
+chart|«График, таблица, чарт».|A price chart.|График цен.|Top of the charts.|Вершина чартов.
+chest of drawers|«Комод».|An old chest of drawers.|Старый комод.|Put it in the chest of drawers.|Положи в комод.
+circumstance|«Обстоятельство».|Under no circumstances.|Ни при каких обстоятельствах.|Difficult circumstances.|Трудные обстоятельства.
+clerk|«Клерк, служащий».|A bank clerk.|Банковский служащий.|Ask the clerk.|Спроси у служащего.
+cliff|«Утёс, обрыв».|On the edge of a cliff.|На краю обрыва.|A cliffhanger.|Интрига, обрыв на самом интересном.
+coin|«Монета».|Flip a coin.|Подбросить монетку.|Collect coins.|Собирать монеты.
+collar|«Воротник, ошейник».|A shirt collar.|Воротник рубашки.|A dog collar.|Ошейник.
+column|«Колонка, столбец, колонна».|The first column.|Первый столбец.|Stone columns.|Каменные колонны.
+combination|«Сочетание, комбинация».|A good combination.|Хорошее сочетание.|The lock combination.|Код замка.
+comfort|«Комфорт, утешение» и «утешать».|Home comfort.|Домашний уют.|Comfort a child.|Утешить ребёнка.
+command|«Команда, приказ» и «командовать».|Follow the command.|Выполни команду.|In command.|Командует.
+complaint|«Жалоба».|File a complaint.|Подать жалобу.|No complaints.|Жалоб нет.
+confusion|«Путаница, замешательство».|Total confusion.|Полная неразбериха.|Sorry for the confusion.|Извините за путаницу.
+consideration|«Рассмотрение, внимание».|Under consideration.|На рассмотрении.|Take into consideration.|Принять во внимание.
+consumer|«Потребитель».|Consumer rights.|Права потребителей.|A happy consumer.|Довольный покупатель.
+contact|«Контакт» и «связываться».|Contact me.|Свяжись со мной.|Stay in contact.|Оставайся на связи.
+container|«Контейнер, ёмкость».|A plastic container.|Пластиковый контейнер.|A shipping container.|Морской контейнер.
+contrast|«Контраст» и «сравнивать».|In contrast.|Напротив.|A sharp contrast.|Резкий контраст.
+contribution|«Вклад, взнос».|A big contribution.|Большой вклад.|Thanks for your contribution.|Спасибо за вклад.
+cop|«Коп, полицейский» (разг.).|Call the cops.|Вызови копов.|A cop car.|Полицейская машина.
+crack|«Трещина» и «трескаться, взламывать».|A crack in the wall.|Трещина в стене.|Crack the code.|Взломать код.
+craft|«Ремесло» и «мастерить».|Arts and crafts.|Рукоделие.|Craft beer.|Крафтовое пиво.
+credit|«Кредит, доверие, заслуга».|Buy on credit.|Купить в кредит.|Give him credit.|Отдай ему должное.
+crew|«Экипаж, бригада».|A building crew.|Строительная бригада.|The crew of the ship.|Экипаж корабля.
