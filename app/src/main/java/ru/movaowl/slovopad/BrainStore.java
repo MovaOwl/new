@@ -22,14 +22,7 @@ final class BrainStore {
     static final String INDEX = "https://github.com/MovaOwl/new/releases/download/brain-v3/brain.json";
     private static volatile String verifying = null;
     /* встроенный список — если до GitHub не достучаться; у каждого мозга несколько зеркал */
-    static final String DEFAULT = "{\"version\":2,\"models\":["
-        + "{\"id\":\"light\",\"title\":\"Лёгкий\",\"desc\":\"Qwen2.5 1.5B — быстрый, отвечает за 1–3 с\",\"file\":\"fox-brain-light.gguf\",\"size\":1117320736,"
-        + "\"sha256\":\"6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v2/fox-brain-light.gguf\"},"
-        + "{\"id\":\"smart\",\"title\":\"Умный\",\"desc\":\"Qwen2.5 3B — соображает лучше, отвечает медленнее\",\"file\":\"fox-brain-smart.gguf\",\"size\":2104932768,"
-        + "\"sha256\":\"626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v2/fox-brain-smart.gguf\"}]}";
-    static final String[][] HF = {
-        {"light", "Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf"},
-        {"smart", "Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf"}};
+    static final String DEFAULT = "{\"version\":3,\"models\":[{\"id\":\"light\",\"title\":\"Лёгкий\",\"desc\":\"Qwen3.5 2B — быстрый и уже толковый\",\"file\":\"fox-brain-light-v3.gguf\",\"size\":1280835840,\"sha256\":\"aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v3/fox-brain-light-v3.gguf\",\"hf\":\"unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-Q4_K_M.gguf\"},{\"id\":\"smart\",\"title\":\"Умный\",\"desc\":\"Qwen3.5 4B — соображает заметно лучше, отвечает медленнее\",\"file\":\"fox-brain-smart-v3.gguf\",\"size\":2105791648,\"sha256\":\"7e2dd96b6141226b62fa88c775db06e0e9ff0aa84130805d7091a768868a3353\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v3/fox-brain-smart-v3.gguf\",\"hf\":\"unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q3_K_S.gguf\"}]}";
 
     /** Все адреса мозга: GitHub, Hugging Face и его зеркало. */
     static JSONArray urls(JSONObject m) {
