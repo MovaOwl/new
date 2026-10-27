@@ -42,7 +42,7 @@ final class FoxHands {
     /** Попробовать выполнить как команду. true — команда понята. */
     boolean handle(String raw) {
         String t = raw.toLowerCase(Locale.ROOT).replace('ё', 'е')
-                .replaceAll("[.,!?«»\"]", " ").replaceAll("(?U)\\b(please|пожалуйста|fox|foxy|лис|лисенок|лисёнок|hey|эй)\\b", " ")
+                .replaceAll("[.,!?«»\"]", " ").replaceAll("\\b(please|пожалуйста|fox|foxy|лис|лисенок|лисёнок|hey|эй)\\b", " ")
                 .replaceAll("\\s+", " ").trim();
         Matcher m;
         if ((m = Pattern.compile("^(?:open|launch|start|run|find|show me|show|go to|открой|запусти|включи|найди|покажи|зайди в)\\s+(?:the\\s+|app\\s+|приложение\\s+)?(.+)$").matcher(t)).find()) {

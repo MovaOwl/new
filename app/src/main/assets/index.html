@@ -286,6 +286,7 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 .linkbtn{border:0;background:none;color:var(--brick);font:600 13px var(--body);padding:0;text-decoration:underline;cursor:pointer}
 .brainbox{display:flex;flex-direction:column;gap:8px;padding:10px 12px;border-radius:12px;background:var(--panel2)}.brainbox p{margin:0}.bopt{display:flex;gap:10px;align-items:center}.bopt div{flex:1;display:flex;flex-direction:column}.bopt small{color:var(--muted);font-size:12px}.bopt .btn{flex:none;min-width:96px}.btest{font-size:14px;line-height:1.4;background:var(--panel);border-radius:10px;padding:8px 10px}
 .crash{white-space:pre-wrap;word-break:break-word;font:11.5px/1.4 ui-monospace,monospace;background:var(--panel2);border-radius:10px;padding:10px;max-height:320px;overflow:auto;margin:0}
+.crash{white-space:pre-wrap;word-break:break-word;font:11.5px/1.4 ui-monospace,monospace;background:var(--panel2);border-radius:10px;padding:10px;max-height:320px;overflow:auto;margin:0}
 .dsc{font-size:15px;line-height:1.45;margin:0 0 4px}
 .mini{flex:none;border:0;width:34px;height:34px;border-radius:10px;background:var(--panel2);box-shadow:0 0 0 1px var(--line);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
 .mini svg{width:16px;height:16px}
@@ -1192,6 +1193,11 @@ function tabOpts() {
     <div class="btnrow"><button class="btn" id="crashCopy">Скопировать</button><button class="btn ghost" id="crashClear">Очистить</button></div>
     <p class="muted">Скопируй и пришли в чат — по этому тексту видно, что упало.</p>
   </section>
+  <section class="block" id="crashBox" hidden><h3>Журнал сбоев <span>для разработчика</span></h3>
+    <pre class="crash" id="crashText"></pre>
+    <div class="btnrow"><button class="btn" id="crashCopy">Скопировать</button><button class="btn ghost" id="crashClear">Очистить</button></div>
+    <p class="muted">Скопируй и пришли в чат — по этому тексту видно, что упало.</p>
+  </section>
   <section class="block">
     <div class="toggle"><span>Озвучка слов</span><button class="sw ${S.sound ? 'on' : ''}" id="oSound" aria-label="Озвучка"></button></div>
     <div class="toggle"><span>Звуки игры</span><button class="sw ${S.sfx ? 'on' : ''}" id="oSfx" aria-label="Звуки"></button></div>
@@ -1206,6 +1212,9 @@ function tabOpts() {
   $('gKey').onchange = e => { S.aiKey = e.target.value.replace(/\s+/g, ''); save(); foxSync(); toast(S.aiKey ? 'Ключ сохранён — лис поумнел' : 'Ключ удалён'); };
   $('aiLang').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.aiLang = b.dataset.v; save(); try { Android.foxLang(S.aiLang); } catch (x) {} tabOpts(); };
   if ($('micAsk')) $('micAsk').onclick = () => Android.micAsk();
+  try { const cl = window.Android && Android.crashLog ? Android.crashLog() : ''; if (cl) { $('crashBox').hidden = false; $('crashText').textContent = cl; } } catch (e) {}
+  if ($('crashCopy')) $('crashCopy').onclick = () => { try { Android.copy($('crashText').textContent); toast('Скопировано — вставь в чат'); } catch (e) {} };
+  if ($('crashClear')) $('crashClear').onclick = () => { try { Android.crashClear(); } catch (e) {} $('crashBox').hidden = true; };
   try { const cl = window.Android && Android.crashLog ? Android.crashLog() : ''; if (cl) { $('crashBox').hidden = false; $('crashText').textContent = cl; } } catch (e) {}
   if ($('crashCopy')) $('crashCopy').onclick = () => { try { Android.copy($('crashText').textContent); toast('Скопировано — вставь в чат'); } catch (e) {} };
   if ($('crashClear')) $('crashClear').onclick = () => { try { Android.crashClear(); } catch (e) {} $('crashBox').hidden = true; };

@@ -235,7 +235,10 @@ public class FoxService extends Service {
         loadData(p.getString("data", "{}"));
         if (root == null) build();
         if (!ticking) { ticking = true; pickNext(); h.post(tick); }
-        if (intent != null && ACT_HEARD.equals(intent.getAction())) heard(intent.getStringExtra("kind"), intent.getStringExtra("text"));
+        if (intent != null && ACT_HEARD.equals(intent.getAction())) {
+            try { heard(intent.getStringExtra("kind"), intent.getStringExtra("text")); }
+            catch (Throwable t) { CrashLog.note(this, "лис: " + t); thinking = false; showBub("Ой, я споткнулся 🙈 Попробуй ещё раз", 4000); }
+        }
         return START_STICKY;
     }
 
@@ -488,7 +491,9 @@ public class FoxService extends Service {
             case "final": {
                 if (text == null || text.trim().isEmpty()) { showBub("Не расслышал. Зажми меня и скажи ещё раз", 5000); pickNext(); break; }
                 if (hands == null) hands = new FoxHands(this);
-                if (hands.handle(text)) break;
+                boolean cmd = false;
+                try { cmd = hands.handle(text); } catch (Throwable t) { CrashLog.note(this, "команда «" + text + "»: " + t); }
+                if (cmd) break;
                 thinking = true;
                 showBub("«" + text + "»\n…думаю", 40000);
                 play("read", 999);
