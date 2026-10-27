@@ -143,7 +143,7 @@ public class FoxService extends Service {
         Intent open = new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent piOpen = PendingIntent.getActivity(this, 2, open, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
         Notification n = new Notification.Builder(this, CH)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.ic_stat_fox)
                 .setContentTitle(mood == 4 ? "Лис ушёл…" : mood == 3 ? "Лис обиделся" : mood == 2 ? "Лис грустит и скучает" : mood == 1 ? "Лис проголодался" : "Лис гуляет по экрану")
                 .setContentText(mood >= 1 ? "Поиграй в Словопад — покорми его словами" : "Нажми, чтобы открыть Словопад")
                 .setContentIntent(piOpen)

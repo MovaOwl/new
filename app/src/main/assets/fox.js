@@ -300,7 +300,7 @@ function foxOverlayToggle() {
 function foxCatches() { try { const n = window.Android && Android.foxTakeCatches ? Android.foxTakeCatches() : 0; if (n > 0) { addCoins(n, `за ${n} ${pl(n, 'пойманное слово', 'пойманных слова', 'пойманных слов')} от лиса`); save(); } } catch (e) {} }
 window.androidResume = () => {
   try {
-    foxCatches();
+    foxCatches(); quizApply();
     if (S.foxWant && NATIVE() && Android.foxCanOverlay()) { S.foxWant = false; S.foxOn = true; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); }
     if (!$('hub').hidden && tab === 'home') renderHub();
     foxMiniIdle();

@@ -281,6 +281,9 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 .fox-row small{color:var(--muted);font-size:12px;line-height:1.35}
 .muted{color:var(--muted);font-size:12px}
 
+.cover{display:flex;align-items:center;gap:10px}.cover .bar{flex:1;height:10px}.cover b{font-size:20px}
+.srow{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}.srow input{width:20px;height:20px;flex:none;accent-color:var(--brick)}.srow span{flex:1}.srow small{color:var(--muted)}
+.linkbtn{border:0;background:none;color:var(--brick);font:600 13px var(--body);padding:0;text-decoration:underline;cursor:pointer}
 .dsc{font-size:15px;line-height:1.45;margin:0 0 4px}
 .mini{flex:none;border:0;width:34px;height:34px;border-radius:10px;background:var(--panel2);box-shadow:0 0 0 1px var(--line);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
 .mini svg{width:16px;height:16px}
@@ -348,6 +351,7 @@ textarea{width:100%;min-height:170px;border:0;border-radius:12px;background:var(
 <script src="phrases.js"></script>
 <script src="dict.js"></script>
 <script src="fox.js"></script>
+<script src="extras.js"></script>
 <script>
 /* ================= data ================= */
 const RAW = window.WORDS_RAW || 'be|быть\nhave|иметь\ndo|делать\nsay|сказать\ngo|идти';
@@ -472,7 +476,7 @@ const learnedList = () => W.filter(w => st(w.en) === 2);
 const dueList = () => W.filter(w => { const r = S.w[w.en]; return r && r.s === 2 && r.n && r.n <= S.day; });
 const hardList = () => W.filter(w => { const r = S.w[w.en]; return r && (r.s === 1 || r.s === 2) && r.e >= 2; }).sort((a, b) => S.w[b.en].e - S.w[a.en].e);
 const curSet = () => SETS.find(s => s.id === S.set) || SETS[0];
-const nextNew = () => curSet().words.find(w => st(w.en) === 0);
+const nextNew = () => { const q = (S.queue || []).map(en => BY[en]).find(w => w && st(w.en) === 0); return S.mode === 'normal' && q ? q : curSet().words.find(w => st(w.en) === 0); };
 
 function rollDay() {
   const k = dk();
@@ -1161,6 +1165,8 @@ function tabOpts() {
     <div class="flabel">Скорость падения</div>${seg('oSpeed', SPEEDS.map((s, i) => [i, s.n]), S.speed)}
     <div class="flabel">Круг слов — сколько гонять одновременно</div>${seg('oRing', [[10, '10'], [15, '15'], [20, '20'], [30, '30'], [40, '40'], [50, '50']], RING())}
     <p>Учишь слова — выученные остаются в круге и гоняются вместе с новыми. Когда выученных больше, чем круг, самые старые уходят на повторы по интервалам, круг сдвигается. Одновременно в учёбе до ${learnCap()} новых.</p>
+    <div class="flabel">Экзамен в шторке — лис спрашивает слово</div>${seg('oQuiz', [[0, 'Выкл'], [60, '1 ч'], [120, '2 ч'], [240, '4 ч']], QUIZ_EVERY())}
+    <p>С 9:00 до 22:00 приходит уведомление «Как по-английски «окно»?» — отвечаешь прямо в шторке. Верно — +1 🪙 и прогресс слова, мимо — слово вернётся в повтор. <button class="linkbtn" id="oQuizNow">Спросить сейчас</button></p>
     <div class="flabel">Новых слов в день</div>${seg('oGoal', [[5, '5'], [10, '10'], [15, '15'], [20, '20'], [30, '30']], S.goal)}
     <div class="flabel">Направление</div>${seg('oDir', [['en', 'EN → RU'], ['ru', 'RU → EN'], ['mix', 'Смешанно']], S.dir)}
     <p>«Смешанно»: слова, которые ты уже наполовину знаешь, иногда падают по-русски, и надо выбрать английский вариант.</p>
@@ -1198,7 +1204,9 @@ function tabOpts() {
   const bindSeg = (id, fn) => { $(id).onclick = e => { const b = e.target.closest('button'); if (!b) return; fn(b.dataset.v); save(); [...$(id).children].forEach(x => x.classList.toggle('on', x === b)); }; };
   bindSeg('oSpeed', v => S.speed = +v);
   bindSeg('oGoal', v => { S.goal = +v; });
-  bindSeg('oRing', v => { S.ring = +v; tabOpts(); });
+  bindSeg('oRing', v => { S.ring = +v; tabOpts(); quizSync(); });
+  bindSeg('oQuiz', v => { S.quizEvery = +v; save(); quizSync(); toast(+v ? 'Лис будет спрашивать в шторке' : 'Экзамен в шторке выключен'); });
+  $('oQuizNow').onclick = () => { if (!(window.Android && Android.quizNow)) return toast('Работает только на телефоне'); quizSync(); Android.quizNow(); toast('Опусти шторку 🦊'); };
   bindSeg('oDir', v => { S.dir = v; dropCur(); });
   $('oSound').onclick = e => { S.sound = !S.sound; e.target.classList.toggle('on', S.sound); save(); };
   $('oSfx').onclick = e => { S.sfx = !S.sfx; e.target.classList.toggle('on', S.sfx); save(); };
@@ -1225,9 +1233,9 @@ window.androidBack = () => {
   if (!$('hub').hidden) { if (tab !== 'home') { tab = 'home'; renderHub(); return 'stay'; } return 'exit'; }
   openHub(); return 'menu';
 };
-window.androidPause = () => { if (!paused) openHub(); };
+window.androidPause = () => { quizSync(); if (!paused) openHub(); };
 
-rollDay(); foxOnBoot(); lastBricks = nBricks(); save(); renderHud(); foxMiniMount(); openHub('home');
+rollDay(); foxOnBoot(); lastBricks = nBricks(); save(); renderHud(); foxMiniMount(); openHub('home'); quizApply(); quizSync();
 </script>
 </body>
 </html>

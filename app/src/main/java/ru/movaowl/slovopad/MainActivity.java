@@ -29,6 +29,8 @@ public class MainActivity extends Activity {
     private WebView web;
     private TextToSpeech tts;
     private boolean ttsReady = false;
+    private String pendingShare = null;
+    private boolean pageReady = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +63,41 @@ public class MainActivity extends Activity {
                 if ("http".equals(sc) || "https".equals(sc)) { openExternal(u.toString()); return true; }
                 return false;
             }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                pageReady = true;
+                deliverShare();
+            }
         });
         web.addJavascriptInterface(new Bridge(), "Android");
         web.setBackgroundColor(isDark() ? Color.parseColor("#0d1322") : Color.parseColor("#e9edf4"));
         setContentView(web);
+        takeShare(getIntent());
         web.loadUrl("file:///android_asset/index.html");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        takeShare(intent);
+        deliverShare();
+    }
+
+    /* «Поделиться» → Словопад: текст из любого приложения */
+    private void takeShare(Intent i) {
+        if (i == null || !Intent.ACTION_SEND.equals(i.getAction())) return;
+        CharSequence t = i.getCharSequenceExtra(Intent.EXTRA_TEXT);
+        if (t == null) t = i.getStringExtra(Intent.EXTRA_SUBJECT);
+        if (t != null && t.length() > 0) pendingShare = t.toString();
+    }
+
+    private void deliverShare() {
+        if (!pageReady || pendingShare == null || web == null) return;
+        String js = "window.onShared && onShared(" + org.json.JSONObject.quote(pendingShare) + ")";
+        pendingShare = null;
+        web.evaluateJavascript(js, null);
     }
 
     private boolean isDark() {
@@ -173,6 +205,31 @@ public class MainActivity extends Activity {
         public void foxLang(String mode) {
             getSharedPreferences(FoxService.PREF, MODE_PRIVATE).edit().putString("lang", mode).apply();
         }
+
+        @JavascriptInterface
+        public void quizSetup(String json) {
+            try {
+                org.json.JSONObject j = new org.json.JSONObject(json);
+                android.content.SharedPreferences.Editor e = getSharedPreferences(QuizReceiver.PREF, MODE_PRIVATE).edit();
+                e.putInt("every", j.optInt("every", 0)).putInt("from", j.optInt("from", 9)).putInt("to", j.optInt("to", 22));
+                if (j.has("pool")) e.putString("pool", j.getJSONArray("pool").toString());
+                e.apply();
+                if (j.optInt("every", 0) > 0 && Build.VERSION.SDK_INT >= 33 && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED)
+                    runOnUiThread(() -> requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 8));
+                QuizReceiver.schedule(MainActivity.this);
+            } catch (Exception ignored) { }
+        }
+
+        @JavascriptInterface
+        public String quizTakeLog() {
+            android.content.SharedPreferences p = getSharedPreferences(QuizReceiver.PREF, MODE_PRIVATE);
+            String l = p.getString("log", "[]");
+            p.edit().putString("log", "[]").apply();
+            return l;
+        }
+
+        @JavascriptInterface
+        public void quizNow() { QuizReceiver.ask(MainActivity.this, true); }
 
         @JavascriptInterface
         public void foxStop() {
