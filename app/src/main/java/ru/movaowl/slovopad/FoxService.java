@@ -120,7 +120,7 @@ public class FoxService extends Service {
     public IBinder onBind(Intent intent) { return null; }
 
     @Override
-    public void onCreate() { super.onCreate(); I = this; }
+    public void onCreate() { super.onCreate(); CrashLog.install(this, "лис на экране"); I = this; }
 
     FoxBrain brain() { if (brain == null) brain = new FoxBrain(this); return brain; }
     void say(String t, long ms) { if (root != null) { curEn = null; showBub(t, ms); } }

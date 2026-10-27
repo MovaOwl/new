@@ -21,6 +21,23 @@ import java.security.MessageDigest;
 final class BrainStore {
     static final String INDEX = "https://github.com/MovaOwl/new/releases/download/brain-v2/brain.json";
     private static volatile String verifying = null;
+    /* встроенный список — если до GitHub не достучаться; у каждого мозга несколько зеркал */
+    static final String DEFAULT = "{\"version\":2,\"models\":["
+        + "{\"id\":\"light\",\"title\":\"Лёгкий\",\"desc\":\"Qwen2.5 1.5B — быстрый, отвечает за 1–3 с\",\"file\":\"fox-brain-light.gguf\",\"size\":1117320736,"
+        + "\"sha256\":\"6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v2/fox-brain-light.gguf\"},"
+        + "{\"id\":\"smart\",\"title\":\"Умный\",\"desc\":\"Qwen2.5 3B — соображает лучше, отвечает медленнее\",\"file\":\"fox-brain-smart.gguf\",\"size\":2104932768,"
+        + "\"sha256\":\"626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d\",\"url\":\"https://github.com/MovaOwl/new/releases/download/brain-v2/fox-brain-smart.gguf\"}]}";
+    static final String[][] HF = {
+        {"light", "Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf"},
+        {"smart", "Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf"}};
+
+    /** Все адреса мозга: GitHub, Hugging Face и его зеркало. */
+    static JSONArray urls(JSONObject m) {
+        JSONArray a = new JSONArray();
+        a.put(m.optString("url"));
+        for (String[] x : HF) if (x[0].equals(m.optString("id"))) { a.put("https://huggingface.co/" + x[1]); a.put("https://hf-mirror.com/" + x[1]); }
+        return a;
+    }
     private static volatile String lastError = "";
 
     private static SharedPreferences p(Context c) { return c.getSharedPreferences(FoxService.PREF, Context.MODE_PRIVATE); }
@@ -41,7 +58,8 @@ final class BrainStore {
             }
             lastError = "Сервер ответил " + code;
         } catch (Exception e) { lastError = "Нет связи с GitHub: " + e.getClass().getSimpleName(); }
-        return p(c).getString("brainIndex", "");
+        String cached = p(c).getString("brainIndex", "");
+        return cached.isEmpty() ? DEFAULT : cached;
     }
 
     static String start(Context c, String id, boolean wifiOnly) {
@@ -54,10 +72,21 @@ final class BrainStore {
             if (m == null) return "Нет такого мозга";
             File dir = LocalBrain.dir(c);
             if (dir.getUsableSpace() < m.getLong("size") + 200_000_000L) return "Мало места: нужно " + (m.getLong("size") / 1_000_000) + " МБ + запас";
+            m.put("urls", urls(m));
+            m.put("mirror", 0);
+            m.put("wifi", wifiOnly);
+            return enqueue(c, m);
+        } catch (Exception e) { return "Ошибка: " + e.getMessage(); }
+    }
+
+    private static String enqueue(Context c, JSONObject m) {
+        try {
             String file = m.getString("file");
-            File f = new File(dir, file); if (f.exists()) f.delete();
+            File f = new File(LocalBrain.dir(c), file); if (f.exists()) f.delete();
+            boolean wifiOnly = m.optBoolean("wifi", true);
+            String url = m.getJSONArray("urls").getString(m.optInt("mirror", 0));
             DownloadManager dm = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
-            DownloadManager.Request r = new DownloadManager.Request(Uri.parse(m.getString("url")))
+            DownloadManager.Request r = new DownloadManager.Request(Uri.parse(url))
                     .setTitle("Мозг лиса · " + m.optString("title"))
                     .setDescription("Словопад: своя нейросеть для лиса")
                     .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
@@ -94,10 +123,20 @@ final class BrainStore {
                 if (st == DownloadManager.STATUS_SUCCESSFUL) { verify(c); o.put("state", "verify"); }
                 else if (st == DownloadManager.STATUS_FAILED) {
                     int reason = cur.getInt(cur.getColumnIndexOrThrow(DownloadManager.COLUMN_REASON));
+                    JSONObject m = new JSONObject(sp.getString("brainPending", "{}"));
+                    JSONArray us = m.optJSONArray("urls");
+                    int mi = m.optInt("mirror", 0);
+                    if (us != null && mi + 1 < us.length()) {
+                        dm.remove(dl);
+                        m.put("mirror", mi + 1);
+                        String e = enqueue(c, m);
+                        if (e.isEmpty()) { o.put("state", "downloading"); o.put("mirror", mi + 1); return o.toString(); }
+                    }
                     sp.edit().remove("brainDl").putString("brainError", "Загрузка сорвалась (код " + reason + "). Попробуй ещё раз.").apply();
                     o.put("state", "error"); o.put("error", "Загрузка сорвалась (код " + reason + ")");
                 } else if (st == DownloadManager.STATUS_PAUSED) o.put("state", "paused");
                 else o.put("state", "downloading");
+                try { o.put("mirror", new JSONObject(sp.getString("brainPending", "{}")).optInt("mirror", 0)); } catch (Exception ignored) { }
             }
         } catch (Exception e) { try { o.put("state", "error"); o.put("error", e.getMessage()); } catch (Exception ignored) { } }
         return o.toString();

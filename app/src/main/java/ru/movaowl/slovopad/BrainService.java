@@ -26,6 +26,7 @@ public class BrainService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        CrashLog.install(this, "мозг");
         HandlerThread ht = new HandlerThread("brain-ipc");
         ht.start();
         messenger = new Messenger(new Handler(ht.getLooper()) {
@@ -47,7 +48,9 @@ public class BrainService extends Service {
                         if (!LocalBrain.lib()) err = "Движок нейросети не загрузился на этом телефоне";
                         else if (!new File(path).exists()) err = "Файл мозга не найден";
                         else {
+                            CrashLog.step(BrainService.this, "загружаю/думаю: " + new File(path).getName() + " (" + new File(path).length() / 1000000 + " МБ), свободно ОЗУ ~" + (Runtime.getRuntime().maxMemory() / 1000000) + " МБ кучи");
                             out = LocalBrain.chatFile(path, msgs, b.getInt("max", 120));
+                            if (out != null) CrashLog.step(BrainService.this, "ответил, " + out.length() + " симв.");
                             if (out == null) err = "Мозг не смог загрузиться (мало памяти?)";
                         }
                     } catch (Throwable t) { err = "Ошибка мозга: " + t.getClass().getSimpleName(); }

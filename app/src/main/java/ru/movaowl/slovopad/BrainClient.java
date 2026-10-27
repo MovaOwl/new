@@ -60,7 +60,7 @@ final class BrainClient {
             Message m = Message.obtain(null, BrainService.MSG_CHAT, w.id, 0);
             Bundle b = new Bundle(); b.putString("msgs", a.toString()); b.putString("path", f.getAbsolutePath()); b.putInt("max", max);
             m.setData(b); m.replyTo = replies;
-            final IBinder.DeathRecipient dr = () -> { w.err = "Мозг упал — попробуй «Лёгкий» в Опциях"; w.l.countDown(); };
+            final IBinder.DeathRecipient dr = () -> { w.err = "Мозг упал — попробуй «Лёгкий» в Опциях"; CrashLog.note(c, "мозг: процесс упал во время ответа"); w.l.countDown(); };
             remote.getBinder().linkToDeath(dr, 0);
             remote.send(m);
             boolean ok = w.l.await(120, TimeUnit.SECONDS);

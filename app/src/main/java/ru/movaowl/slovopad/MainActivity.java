@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CrashLog.install(this, "приложение");
         styleBars();
 
         tts = new TextToSpeech(this, status -> {
@@ -276,6 +277,12 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface
         public void micAsk() { runOnUiThread(() -> requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, 9)); }
+
+        @JavascriptInterface
+        public String crashLog() { return CrashLog.read(MainActivity.this); }
+
+        @JavascriptInterface
+        public void crashClear() { CrashLog.clear(MainActivity.this); }
 
         @JavascriptInterface
         public void foxStop() {

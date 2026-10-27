@@ -132,7 +132,7 @@ function brainRender() {
   if (st.lib === false) { box.innerHTML = '<p class="muted">В этой сборке нет движка нейросети — обнови приложение.</p>'; return; }
   if (st.state === 'downloading' || st.state === 'paused') {
     const pct = st.total > 0 ? Math.floor(st.done / st.total * 100) : 0;
-    box.innerHTML = `<p>${st.state === 'paused' ? '⏸ Пауза — ждём сеть (Wi-Fi?)' : '⬇️ Качаю мозг…'} <b class="num">${pct}%</b> <span class="muted">${st.total > 0 ? GB(st.done) + ' из ' + GB(st.total) : ''}</span></p>
+    box.innerHTML = `<p>${st.state === 'paused' ? '⏸ Пауза — ждём сеть (Wi-Fi?)' : '⬇️ Качаю мозг' + (st.mirror ? ` (зеркало ${st.mirror + 1})` : '') + '…'} <b class="num">${pct}%</b> <span class="muted">${st.total > 0 ? GB(st.done) + ' из ' + GB(st.total) : ''}</span></p>
       <div class="bar"><i style="width:${pct}%"></i></div><div class="btnrow"><button class="btn ghost" id="bCancel">Отменить</button></div>`;
     $('bCancel').onclick = () => { Android.brainCancel(); brainRender(); };
     brainPoll = setTimeout(brainRender, 1000); return;
@@ -148,7 +148,7 @@ function brainRender() {
     return;
   }
   if (!brainIdx) { box.innerHTML = '<p class="muted">Смотрю, какие мозги есть…</p>'; Android.brainIndex(); return; }
-  if (brainIdx.err || !brainIdx.models) { box.innerHTML = '<p class="muted">Не смог получить список мозгов с GitHub. Проверь интернет.</p><div class="btnrow"><button class="btn ghost" id="bRetry">Ещё раз</button></div>'; $('bRetry').onclick = () => { brainIdx = null; brainRender(); }; return; }
+  if (brainIdx.err || !brainIdx.models || !brainIdx.models.length) { box.innerHTML = '<p class="muted">Не смог получить список мозгов с GitHub. Проверь интернет.</p><div class="btnrow"><button class="btn ghost" id="bRetry">Ещё раз</button></div>'; $('bRetry').onclick = () => { brainIdx = null; brainRender(); }; return; }
   box.innerHTML = `${st.error ? `<p class="muted">⚠️ ${esc(st.error)}</p>` : ''}
     ${brainIdx.models.map(m => `<div class="bopt"><div><b>${esc(m.title)} · ${GB(m.size)}</b><small>${esc(m.desc)}</small></div><button class="btn" data-brain="${esc(m.id)}">Скачать</button></div>`).join('')}
     <label class="srow" style="border:0;padding:4px 0"><input type="checkbox" id="bWifi" ${S.brainWifi === false ? '' : 'checked'}><span>Только по Wi-Fi</span></label>
