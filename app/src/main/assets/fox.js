@@ -287,7 +287,7 @@ function foxData() {
   const known = W.filter(w => st(w.en) >= 2), words = [];
   for (let i = 0; i < 300 && known.length; i++) { const w = rnd(known); words.push([w.en, w.ru]); }
   const sample = [...known].sort(() => Math.random() - .5).slice(0, 120).map(w => w.en).join(', ');
-  const ai = { provider: 'gemini', key: (S.aiKey || S.gemKey || '').replace(/\s+/g, ''), owner: S.name || 'Игорь', fox: S.foxName || 'Лис', known: known.length, sample };
+  const ai = { provider: 'gemini', mode: S.aiMode || 'auto', key: (S.aiKey || S.gemKey || '').replace(/\s+/g, ''), owner: S.name || 'Игорь', fox: S.foxName || 'Лис', known: known.length, sample };
   return JSON.stringify({ stage: s, idle: FOX_ST[s].idle, meta, lines, words, ai, every: S.foxEvery || 10, dropEvery: S.foxDrop == null ? 20 : S.foxDrop });
 }
 function foxSync() { try { if (NATIVE() && S.foxOn && Android.foxCanOverlay()) { Android.foxStart(foxData()); Android.foxLang && Android.foxLang(S.aiLang || 'auto'); } } catch (e) {} }

@@ -80,6 +80,14 @@ public class FoxService extends Service {
     private boolean ttsReady = false;
     private boolean ticking = false;
     private FoxBrain brain;
+    static volatile FoxService I;
+    private FoxHands hands;
+    /* сценарии: путешествие к точке, спрятаться, сесть на значок */
+    private int travX = -1, travY = -1, baseY = 0;
+    private Runnable onArrive;
+    private boolean busy = false;
+    private String appKind = "";      // home / read / video / chat / camera / ""
+    private long homeActAt = 0;
     private boolean thinking = false;
     /* словопад от лиса: слова, которые ты знаешь */
     private final List<String[]> words = new ArrayList<>();
@@ -110,6 +118,106 @@ public class FoxService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) { return null; }
+
+    @Override
+    public void onCreate() { super.onCreate(); I = this; }
+
+    FoxBrain brain() { if (brain == null) brain = new FoxBrain(this); return brain; }
+    void say(String t, long ms) { if (root != null) { curEn = null; showBub(t, ms); } }
+    void anim(String n, int loops) { if (root != null) play(n, loops); }
+
+    /* ---------- глаза: какое приложение открыто ---------- */
+    void onEyes(boolean on) { h.post(() -> { if (root != null && on && stage > 0) showBub("👀 Теперь я вижу твой экран! I can see now.", 5000); }); }
+
+    void onApp(String pkg, boolean home) {
+        h.post(() -> {
+            if (root == null) return;
+            String p = pkg.toLowerCase(java.util.Locale.ROOT);
+            String k = home ? "home"
+                    : p.matches(".*(camera|scanner).*") ? "camera"
+                    : p.matches(".*(litres|readera|moonreader|fbreader|kindle|books|librera|pocketbook|aldiko|bookmate|reader|ebook).*") ? "read"
+                    : p.matches(".*(youtube|rutube|vkvideo|netflix|kinopoisk|ivi|okko|tiktok|video|player|wink|kion|premier).*") ? "video"
+                    : p.matches(".*(telegram|whatsapp|viber|vkontakte|\\.vk\\.|messag|mms|max\\.|tamtam|discord).*") ? "chat" : "";
+            if (k.equals(appKind)) return;
+            appKind = k;
+            if (busy) return;
+            if ("camera".equals(k)) { root.setVisibility(View.GONE); return; }
+            if (mood != 4) root.setVisibility(View.VISIBLE);
+            if (stage <= 0 || dayPhase() == 2) return;
+            if ("read".equals(k)) { playFor("read", 120, 300); if (rnd.nextInt(3) == 0) showBub("📖 Let's read together! — Почитаем вместе", 5000); }
+            else if ("video".equals(k)) { goTo((int) (8 * dp), baseY, false, () -> playFor("sit", 60, 180)); }
+            else if ("chat".equals(k)) { goTo(screenW - foxH - (int) (8 * dp), baseY, false, () -> playFor("sleep", 60, 180)); }
+            else if ("home".equals(k)) { homeActAt = System.currentTimeMillis() + 4000; }
+        });
+    }
+
+    /* ---------- руки: движение к точке ---------- */
+    void goTo(int x, int y, boolean run, Runnable then) {
+        targetX = -1;
+        travX = Math.max(0, Math.min(x, screenW - foxH)); travY = Math.max((int) (24 * dp), y); onArrive = then;
+        speed = (run ? 6f : 2.4f) * dp;
+        play(run && has("run") ? "run" : "walk", 999);
+        img.setScaleX(travX < lp.x ? -1 : 1);
+    }
+
+    private int imgW() { return img.getLayoutParams() != null && img.getLayoutParams().width > 0 ? img.getLayoutParams().width : foxH; }
+
+    void runToIcon(android.graphics.Rect r, Runnable then) {
+        busy = true; img.setClipBounds(null); bub.setVisibility(View.GONE);
+        goTo(r.centerX() - foxH / 2, r.top - foxH + (int) (6 * dp), true, then);
+    }
+
+    void cmdDone() { h.postDelayed(() -> { busy = false; img.setClipBounds(null); goTo(lp.x, baseY, false, () -> playFor("sit", 20, 40)); }, 1500); }
+
+    /** Спрятаться за значком: видна только голова над иконкой. */
+    void peekBehind(android.graphics.Rect r) {
+        busy = true; bub.setVisibility(View.GONE); h.removeCallbacks(hideBub);
+        goTo(r.centerX() - foxH / 2, r.top - foxH + (int) (foxH * 0.45f), false, () -> {
+            int visible = Math.max(1, r.top - lp.y);
+            img.setClipBounds(new android.graphics.Rect(0, 0, imgW(), Math.min(foxH, visible)));
+            play(has("surprise") ? "surprise" : "sit", 999);
+            h.postDelayed(() -> { if (busy) { busy = false; img.setClipBounds(null); goTo(lp.x, baseY, false, () -> playFor("sit", 20, 40)); } }, 12000 + rnd.nextInt(10000));
+        });
+    }
+
+    /** Сесть на значок. */
+    void sitOnIcon(android.graphics.Rect r) {
+        busy = true; img.setClipBounds(null); bub.setVisibility(View.GONE);
+        goTo(r.centerX() - foxH / 2, r.top - foxH + (int) (10 * dp), false, () -> {
+            play(rnd.nextBoolean() ? "sit" : "read", 999);
+            h.postDelayed(() -> { if (busy) { busy = false; goTo(lp.x, baseY, false, () -> playFor("sit", 20, 40)); } }, 20000 + rnd.nextInt(20000));
+        });
+    }
+
+    void cmdCome() { busy = false; img.setClipBounds(null); showBub("Here I am! — Я тут!", 3000); goTo(screenW / 2 - foxH / 2, screenH / 2 - foxH / 2, true, () -> play(has("wave") ? "wave" : "jump", 2)); }
+    void cmdSleep() { busy = false; img.setClipBounds(null); showBub("Good night… — Сплю…", 3000); playFor("sleep", 300, 600); }
+    void cmdWake() { showBub("I'm awake! — Проснулся!", 3000); play(has("wake") ? "wake" : "jump", 1); }
+    void cmdDance() { showBub("Woo-hoo!", 2500); play(has("laugh") ? "laugh" : "jump", 3); }
+    void cmdHide() {
+        FoxEyes e = FoxEyes.I;
+        if (e != null && e.onHome()) {
+            java.util.List<FoxEyes.Icon> ic = e.icons();
+            if (!ic.isEmpty()) { showBub("You can't see me! — Меня не видно!", 2500); final android.graphics.Rect r = ic.get(rnd.nextInt(ic.size())).r; h.postDelayed(() -> peekBehind(r), 1200); return; }
+        }
+        showBub("Hide and seek! — Прячусь!", 2500);
+        busy = true;
+        goTo(screenW - (int) (12 * dp), baseY, true, () -> {
+            img.setClipBounds(new android.graphics.Rect(0, 0, (int) (imgW() * 0.35f), foxH));
+            h.postDelayed(() -> { busy = false; img.setClipBounds(null); goTo(screenW - foxH * 2, baseY, false, () -> playFor("sit", 20, 40)); }, 15000);
+        });
+    }
+
+    /** На рабочем столе лис иногда играет со значками. */
+    private boolean homePlay() {
+        FoxEyes e = FoxEyes.I;
+        if (e == null || !e.onHome() || System.currentTimeMillis() < homeActAt || rnd.nextInt(100) >= 35) return false;
+        java.util.List<FoxEyes.Icon> ic = e.icons();
+        if (ic.isEmpty()) return false;
+        android.graphics.Rect r = ic.get(rnd.nextInt(ic.size())).r;
+        homeActAt = System.currentTimeMillis() + 60000;
+        if (rnd.nextBoolean()) peekBehind(r); else sitOnIcon(r);
+        return true;
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -224,6 +332,7 @@ public class FoxService extends Service {
         lp.gravity = Gravity.TOP | Gravity.START;
         lp.x = screenW / 2;
         lp.y = screenH - foxH - (int) (150 * dp);
+        baseY = lp.y;
 
         root.setOnTouchListener(new View.OnTouchListener() {
             float sx, sy; int ox, oy; boolean drag; long downAt;
@@ -240,7 +349,7 @@ public class FoxService extends Service {
                     case MotionEvent.ACTION_UP:
                         if (!drag && System.currentTimeMillis() - downAt > 600) openAssist();
                         else if (!drag) onTap();
-                        else if (stage > 0) play(has("surprise") ? "surprise" : "sit", 1);
+                        else { busy = false; img.setClipBounds(null); travX = -1; baseY = lp.y; if (stage > 0) play(has("surprise") ? "surprise" : "sit", 1); }
                         return true;
                 }
                 return false;
@@ -309,12 +418,13 @@ public class FoxService extends Service {
             }
             case "final": {
                 if (text == null || text.trim().isEmpty()) { showBub("Не расслышал. Зажми меня и скажи ещё раз", 5000); pickNext(); break; }
+                if (hands == null) hands = new FoxHands(this);
+                if (hands.handle(text)) break;
                 thinking = true;
                 showBub("«" + text + "»\n…думаю", 40000);
                 play("read", 999);
-                if (brain == null) brain = new FoxBrain(this);
                 JSONObject ai = data != null ? data.optJSONObject("ai") : null;
-                brain.ask(text, ai, Math.max(0, mood), stage, reply -> {
+                brain().ask(text, ai, Math.max(0, mood), stage, reply -> {
                     thinking = false;
                     curEn = null;
                     long ms = Math.min(45000, 7000 + reply.length() * 70L);
@@ -389,7 +499,9 @@ public class FoxService extends Service {
     private boolean wasNight = false;
 
     private void pickNext() {
+        if (busy) { loopsLeft = 999; return; }
         img.setScaleX(1);
+        img.setClipBounds(null);
         targetX = -1;
         if (stage <= 0) { playFor("sleep", 120, 300); return; }
         int ph = dayPhase();
@@ -403,6 +515,8 @@ public class FoxService extends Service {
             if (has("wake")) { play("wake", 1); return; }
         }
         if (ph == 1 && rnd.nextInt(100) < 50) { playFor("sleep", 90, 240); return; } // вечером клюёт носом
+        if (mood <= 1 && homePlay()) return;
+        if ("read".equals(appKind)) { playFor(rnd.nextInt(4) == 0 ? "sleep" : "read", 60, 180); return; }
         if (mood == 3 || mood == 4) { playFor(rnd.nextBoolean() && has("grumpy") ? "grumpy" : "sad", 30, 70); return; }
         int r = rnd.nextInt(100);
         if (mood == 2 && r < 60) { playFor("sad", 30, 60); return; }
@@ -432,13 +546,23 @@ public class FoxService extends Service {
                 frame++;
                 if (frame >= frames.length) { frame = 0; loopsLeft--; }
                 img.setImageBitmap(frames[frame]);
-                if (targetX >= 0) {
+                if (travX >= 0) {
+                    int step = (int) Math.max(2, speed * (60f / fps) / 3f);
+                    int dx = travX - lp.x, dy = travY - lp.y;
+                    double dist = Math.sqrt((double) dx * dx + (double) dy * dy);
+                    if (dist <= step) { lp.x = travX; lp.y = travY; travX = -1; img.setScaleX(1); Runnable r = onArrive; onArrive = null; if (r != null) r.run(); else pickNext(); }
+                    else { lp.x += (int) Math.round(dx / dist * step); lp.y += (int) Math.round(dy / dist * step); }
+                    clampAndUpdate();
+                } else if (targetX >= 0) {
                     int step = (int) Math.max(1, speed * (60f / fps) / 3f);
                     if (Math.abs(lp.x - targetX) <= step) { lp.x = targetX; targetX = -1; pickNext(); }
                     else lp.x += lp.x < targetX ? step : -step;
                     clampAndUpdate();
-                } else if (loopsLeft <= 0) { if (inDrop) loopsLeft = 999; else pickNext(); }
+                } else if (loopsLeft <= 0) { if (inDrop || busy) loopsLeft = 999; else pickNext(); }
             }
+            boolean land = getResources().getConfiguration().orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+            if (land && root.getVisibility() == View.VISIBLE) root.setVisibility(View.GONE);
+            else if (!land && root.getVisibility() == View.GONE && mood != 4 && !"camera".equals(appKind)) root.setVisibility(View.VISIBLE);
             long now = System.currentTimeMillis();
             if (now >= moodCheckAt) { moodCheckAt = now + 30000; checkMood(); }
             if (mood == 4) {
@@ -450,10 +574,10 @@ public class FoxService extends Service {
                 }
                 h.postDelayed(this, 1000); return;
             }
-            if (dayPhase() == 0 && !inDrop && !thinking && bub.getVisibility() != View.VISIBLE && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
+            if (dayPhase() == 0 && !busy && !inDrop && !thinking && bub.getVisibility() != View.VISIBLE && stage > 0 && mood == 0 && dropEveryMs > 0 && !words.isEmpty() && now >= nextDropAt
                     && targetX < 0 && ("read".equals(anim) || "sit".equals(anim))) { nextDropAt = now + dropEveryMs; startDrop(); }
             if (dayPhase() == 2 && now >= nextPhraseAt) nextPhraseAt = now + everyMs; // ночью молчит
-            if (!inDrop && !thinking && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
+            if (!inDrop && !busy && !thinking && !"chat".equals(appKind) && stage > 0 && now >= nextPhraseAt) { sayLine(); nextPhraseAt = now + (mood >= 1 ? Math.min(everyMs, 120000) : everyMs); }
             h.postDelayed(this, (long) (1000 / Math.max(1, fps)));
         }
     };
@@ -600,6 +724,7 @@ public class FoxService extends Service {
 
     @Override
     public void onDestroy() {
+        I = null;
         ticking = false;
         h.removeCallbacksAndMessages(null);
         if (wordV != null) { try { wm.removeView(wordV); } catch (Exception ignored) { } wordV = null; }

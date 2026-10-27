@@ -115,3 +115,45 @@ function renderShare(total, cover, nLearning, nKnown) {
     if (MQ.length) showModal(() => {});
   };
 }
+
+/* ---------- свой мозг: скачивание и проверка ---------- */
+let brainIdx = null, brainPoll = 0;
+const GB = b => (b / 1e9).toFixed(b > 1e9 ? 1 : 2).replace('.', ',') + ' ГБ';
+window.onBrain = (kind, val) => {
+  if (kind === 'index') { try { brainIdx = JSON.parse(val); } catch (e) { brainIdx = { err: true }; } brainRender(); }
+  else if (kind === 'start') { if (val) toast(val); brainRender(); }
+  else if (kind === 'test') { const t = $('bTestOut'); if (t) t.textContent = val || 'Мозг не ответил — попробуй удалить и скачать заново.'; }
+};
+function brainRender() {
+  const box = $('brainBox'); if (!box) return;
+  if (!(window.Android && Android.brainStatus)) { box.innerHTML = '<p class="muted">Свой мозг работает только в приложении на телефоне.</p>'; return; }
+  let st = {}; try { st = JSON.parse(Android.brainStatus()); } catch (e) {}
+  clearTimeout(brainPoll);
+  if (st.lib === false) { box.innerHTML = '<p class="muted">В этой сборке нет движка нейросети — обнови приложение.</p>'; return; }
+  if (st.state === 'downloading' || st.state === 'paused') {
+    const pct = st.total > 0 ? Math.floor(st.done / st.total * 100) : 0;
+    box.innerHTML = `<p>${st.state === 'paused' ? '⏸ Пауза — ждём сеть (Wi-Fi?)' : '⬇️ Качаю мозг…'} <b class="num">${pct}%</b> <span class="muted">${st.total > 0 ? GB(st.done) + ' из ' + GB(st.total) : ''}</span></p>
+      <div class="bar"><i style="width:${pct}%"></i></div><div class="btnrow"><button class="btn ghost" id="bCancel">Отменить</button></div>`;
+    $('bCancel').onclick = () => { Android.brainCancel(); brainRender(); };
+    brainPoll = setTimeout(brainRender, 1000); return;
+  }
+  if (st.state === 'verify') { box.innerHTML = '<p>🔍 Проверяю файл, это пара секунд…</p>'; brainPoll = setTimeout(brainRender, 800); return; }
+  if (st.ready) {
+    box.innerHTML = `<p>🧠 Установлен: <b>${esc(st.title || 'мозг')}</b> <span class="muted">${GB(st.size)}</span></p>
+      <p class="muted">Лис думает сам, без интернета и VPN. Первый ответ после паузы — пара секунд на «проснуться».</p>
+      <div class="btnrow"><button class="btn" id="bTest">Проверить</button><button class="btn ghost" id="bDel">Удалить</button></div>
+      <div class="btest" id="bTestOut" hidden></div>`;
+    $('bTest').onclick = () => { const o = $('bTestOut'); o.hidden = false; o.textContent = '🦊 думаю…'; Android.brainTest('Привет! Как дела?'); };
+    $('bDel').onclick = () => { if (!confirmDel()) return; Android.brainDelete(); toast('Мозг удалён, место свободно'); brainRender(); };
+    return;
+  }
+  if (!brainIdx) { box.innerHTML = '<p class="muted">Смотрю, какие мозги есть…</p>'; Android.brainIndex(); return; }
+  if (brainIdx.err || !brainIdx.models) { box.innerHTML = '<p class="muted">Не смог получить список мозгов с GitHub. Проверь интернет.</p><div class="btnrow"><button class="btn ghost" id="bRetry">Ещё раз</button></div>'; $('bRetry').onclick = () => { brainIdx = null; brainRender(); }; return; }
+  box.innerHTML = `${st.error ? `<p class="muted">⚠️ ${esc(st.error)}</p>` : ''}
+    ${brainIdx.models.map(m => `<div class="bopt"><div><b>${esc(m.title)} · ${GB(m.size)}</b><small>${esc(m.desc)}</small></div><button class="btn" data-brain="${esc(m.id)}">Скачать</button></div>`).join('')}
+    <label class="srow" style="border:0;padding:4px 0"><input type="checkbox" id="bWifi" ${S.brainWifi === false ? '' : 'checked'}><span>Только по Wi-Fi</span></label>
+    <p class="muted">Качается один раз, потом лис думает без интернета. Нужно свободное место с запасом.</p>`;
+  box.onclick = ev => { const b = ev.target.closest('[data-brain]'); if (!b) return; S.brainWifi = $('bWifi').checked; save(); b.disabled = true; b.textContent = '…'; Android.brainStart(b.dataset.brain, S.brainWifi); setTimeout(brainRender, 1500); };
+}
+let delArm = 0;
+function confirmDel() { if (Date.now() - delArm < 4000) return true; delArm = Date.now(); toast('Нажми «Удалить» ещё раз, чтобы подтвердить'); return false; }

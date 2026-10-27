@@ -100,6 +100,11 @@ public class MainActivity extends Activity {
         web.evaluateJavascript(js, null);
     }
 
+    private void cb(String kind, String val) {
+        String js = "window.onBrain && onBrain(" + org.json.JSONObject.quote(kind) + "," + org.json.JSONObject.quote(val == null ? "" : val) + ")";
+        runOnUiThread(() -> { if (web != null) web.evaluateJavascript(js, null); });
+    }
+
     private boolean isDark() {
         int mode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         return mode == Configuration.UI_MODE_NIGHT_YES;
@@ -230,6 +235,36 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface
         public void quizNow() { QuizReceiver.ask(MainActivity.this, true); }
+
+        @JavascriptInterface
+        public void brainIndex() { new Thread(() -> cb("index", BrainStore.index(MainActivity.this))).start(); }
+
+        @JavascriptInterface
+        public void brainStart(String id, boolean wifiOnly) {
+            new Thread(() -> cb("start", BrainStore.start(MainActivity.this, id, wifiOnly))).start();
+        }
+
+        @JavascriptInterface
+        public String brainStatus() { return BrainStore.status(MainActivity.this); }
+
+        @JavascriptInterface
+        public void brainCancel() { BrainStore.cancel(MainActivity.this); }
+
+        @JavascriptInterface
+        public void brainDelete() { BrainStore.delete(MainActivity.this); }
+
+        /** Проверить свой мозг прямо из настроек (асинхронно, ответ в onBrain('test', …)). */
+        @JavascriptInterface
+        public void brainTest(String text) {
+            new Thread(() -> {
+                java.util.List<String[]> m = new java.util.ArrayList<>();
+                m.add(new String[]{"system", "You are Fox, a cute white arctic fox. Answer very short, one sentence. If the user writes in Russian, answer in Russian and add one simple English phrase."});
+                m.add(new String[]{"user", text});
+                long t0 = System.currentTimeMillis();
+                String r = LocalBrain.chat(MainActivity.this, m, 60);
+                cb("test", r == null ? "" : r + "  (" + (System.currentTimeMillis() - t0) / 100 / 10.0 + " с)");
+            }).start();
+        }
 
         @JavascriptInterface
         public void foxStop() {

@@ -100,9 +100,14 @@ class FoxBrain {
                 + ai.optString("owner", "Igor") + ". He is a beginner learning English (knows about " + ai.optInt("known", 0) + " words, for example: "
                 + cut(ai.optString("sample", ""), 300) + "). You are " + (stage <= 0 ? "sleepy" : moods[Math.max(0, Math.min(4, mood))]) + ".\n"
                 + "Rules: answer VERY short, 1-2 sentences. If he writes in Russian, answer in Russian and add one simple English phrase with translation in brackets. "
-                + "If he writes in English, answer in simple English; if he made a mistake, first write the correct sentence. No emoji, no lists.";
+                + "If he writes in English, answer in simple English; if he made a mistake, first write: Better: <correct sentence>. No emoji, no lists.";
         List<String[]> m = new ArrayList<>();
         m.add(new String[]{"system", sys});
+        // примеры для маленькой модели — как отвечать
+        m.add(new String[]{"user", "I likes cats"});
+        m.add(new String[]{"assistant", "Better: I like cats. Cats are cute! Do you have a cat?"});
+        m.add(new String[]{"user", "Как будет дом?"});
+        m.add(new String[]{"assistant", "Дом — house (хаус). Например: My house is warm. (Мой дом тёплый.)"});
         for (String[] x : hist) m.add(new String[]{x[0], x[1]});
         String r = LocalBrain.chat(ctx, m, 120);
         return r == null ? null : r.replaceAll("[*_#`]", "").trim();
@@ -274,8 +279,14 @@ class FoxBrain {
         return null;
     }
 
+    /** Перевод английского слова на русский из встроенного словаря (для поиска приложений). */
+    synchronized String enRu(String en) {
+        loadDict();
+        return enToRu.get(en.toLowerCase(Locale.ROOT).trim());
+    }
+
     /* ---------- офлайн-словарь ---------- */
-    private void loadDict() {
+    private synchronized void loadDict() {
         if (dict != null) return;
         try {
             String d = asset("dict.js");
