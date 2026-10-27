@@ -1179,6 +1179,8 @@ function tabOpts() {
     <div class="flabel">Кто думает первым</div>${seg('aiMode', [['auto', 'Свой мозг'], ['gemini', 'Gemini (VPN)']], S.aiMode || 'auto')}
     <div class="flabel">Ключ Gemini API</div>
     <input class="field-in" id="gKey" type="password" autocomplete="off" placeholder="Вставь ключ AIza…" value="${esc(S.aiKey || '')}">
+    <div class="flabel">Микрофон</div>
+    <p id="micLine">${window.Android && Android.micOk ? (Android.micOk() ? '✅ Разрешён — зажми лиса на экране и говори' : '⚠️ Не разрешён <button class="linkbtn" id="micAsk">Разрешить</button>') : 'Только на телефоне'}</p>
     <div class="flabel">Лис слушает</div>${seg('aiLang', [['auto', 'RU + EN'], ['ru', 'Русский'], ['en', 'English']], S.aiLang || 'auto')}
     <div class="btnrow"><button class="btn ghost" id="gGet">Получить ключ</button><button class="btn" id="gTalk">Позвать лиса</button></div>
     <div class="btnrow"><button class="btn ghost" id="gAssist">Вместо Gemini-ассистента</button></div>
@@ -1197,6 +1199,7 @@ function tabOpts() {
   if (S.gemKey && !S.aiKey) S.aiKey = S.gemKey;
   $('gKey').onchange = e => { S.aiKey = e.target.value.replace(/\s+/g, ''); save(); foxSync(); toast(S.aiKey ? 'Ключ сохранён — лис поумнел' : 'Ключ удалён'); };
   $('aiLang').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.aiLang = b.dataset.v; save(); try { Android.foxLang(S.aiLang); } catch (x) {} tabOpts(); };
+  if ($('micAsk')) $('micAsk').onclick = () => Android.micAsk();
   $('aiMode').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.aiMode = b.dataset.v; save(); foxSync(); [...$('aiMode').children].forEach(x => x.classList.toggle('on', x === b)); };
   brainRender();
   $('gGet').onclick = () => { const u = 'https://aistudio.google.com/apikey'; try { Android.openUrl(u); } catch (e) { window.open(u); } };

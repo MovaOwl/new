@@ -295,7 +295,7 @@ function foxOverlayToggle() {
   if (!NATIVE()) { toast('Лис на экране работает только в приложении на телефоне'); return; }
   if (S.foxOn && Android.foxRunning()) { S.foxOn = false; save(); Android.foxStop(); toast('Лис вернулся домой, в приложение'); setTimeout(() => { renderHub(); foxMiniIdle(); }, 300); return; }
   if (!Android.foxCanOverlay()) { S.foxWant = true; save(); toast('Разреши «Поверх других приложений» и вернись'); Android.foxAskOverlay(); return; }
-  S.foxOn = true; S.foxWant = false; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); renderHub();
+  S.foxOn = true; S.foxWant = false; save(); Android.foxFed(); Android.foxStart(foxData()); toast('Лис выпущен на экран 🦊', 'ach'); renderHub(); try { if (Android.micOk && !Android.micOk()) setTimeout(() => Android.micAsk(), 800); } catch (e) {}
 }
 function foxCatches() { try { const n = window.Android && Android.foxTakeCatches ? Android.foxTakeCatches() : 0; if (n > 0) { addCoins(n, `за ${n} ${pl(n, 'пойманное слово', 'пойманных слова', 'пойманных слов')} от лиса`); save(); } } catch (e) {} }
 window.androidResume = () => {

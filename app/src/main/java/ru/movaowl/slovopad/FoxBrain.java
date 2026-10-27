@@ -37,6 +37,7 @@ class FoxBrain {
     private JSONObject dict;
     private Map<String, String> ruToEn;
     private Map<String, String> enToRu;
+    private volatile String lastLocalErr = "";
 
     FoxBrain(Context c) { ctx = c.getApplicationContext(); }
 
@@ -65,7 +66,7 @@ class FoxBrain {
         if (local && !"gemini".equals(mode)) {
             String r = localChat(ai, mood, stage);
             if (r != null && !r.isEmpty()) { hist.add(new String[]{"assistant", r}); return toolsFromTags(r); }
-            err = "Свой мозг не ответил.";
+            err = "Свой мозг не ответил: " + lastLocalErr + ".";
         }
         // 2) Gemini (нужен ключ и VPN)
         if (!key.isEmpty()) {
@@ -109,8 +110,9 @@ class FoxBrain {
         m.add(new String[]{"user", "Как будет дом?"});
         m.add(new String[]{"assistant", "Дом — house (хаус). Например: My house is warm. (Мой дом тёплый.)"});
         for (String[] x : hist) m.add(new String[]{x[0], x[1]});
-        String r = LocalBrain.chat(ctx, m, 120);
-        return r == null ? null : r.replaceAll("[*_#`]", "").trim();
+        String r = BrainClient.chat(ctx, m, 120);
+        if (r == null) { lastLocalErr = BrainClient.lastError(); return null; }
+        return r.replaceAll("[*_#`]", "").trim();
     }
 
     private static String cut(String s, int n) { return s.length() > n ? s.substring(0, n) : s; }

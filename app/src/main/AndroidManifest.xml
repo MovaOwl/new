@@ -52,7 +52,6 @@
             android:theme="@style/AssistTheme"
             android:taskAffinity="ru.movaowl.slovopad.listen"
             android:excludeFromRecents="true"
-            android:noHistory="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.ASSIST" />
@@ -73,6 +72,7 @@
             </intent-filter>
             <meta-data android:name="android.accessibilityservice" android:resource="@xml/fox_eyes" />
         </service>
+        <service android:name=".BrainService" android:exported="false" android:process=":brain" />
         <receiver android:name=".QuizReceiver" android:exported="false" />
         <receiver android:name=".BootReceiver" android:exported="true">
             <intent-filter><action android:name="android.intent.action.BOOT_COMPLETED" /></intent-filter>

@@ -26,9 +26,14 @@ public class ListenActivity extends Activity {
         }
         // лис должен быть на экране, чтобы показать ответ
         try { startForegroundService(new Intent(this, FoxService.class)); } catch (Exception ignored) { }
-        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED)
-            requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 5);
-        else start();
+        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            // разрешение спрашиваем в самом приложении — из прозрачного окна Xiaomi его прячет
+            send(FoxService.ACT_HEARD, "error", "mic");
+            startActivity(new Intent(this, MainActivity.class).putExtra("askMic", true).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            finish();
+            return;
+        }
+        start();
     }
 
     @Override

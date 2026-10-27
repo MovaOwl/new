@@ -87,6 +87,11 @@ public class MainActivity extends Activity {
 
     /* «Поделиться» → Словопад: текст из любого приложения */
     private void takeShare(Intent i) {
+        if (i != null && i.getBooleanExtra("askMic", false)) {
+            i.removeExtra("askMic");
+            if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED)
+                requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, 9);
+        }
         if (i == null || !Intent.ACTION_SEND.equals(i.getAction())) return;
         CharSequence t = i.getCharSequenceExtra(Intent.EXTRA_TEXT);
         if (t == null) t = i.getStringExtra(Intent.EXTRA_SUBJECT);
@@ -261,10 +266,16 @@ public class MainActivity extends Activity {
                 m.add(new String[]{"system", "You are Fox, a cute white arctic fox. Answer very short, one sentence. If the user writes in Russian, answer in Russian and add one simple English phrase."});
                 m.add(new String[]{"user", text});
                 long t0 = System.currentTimeMillis();
-                String r = LocalBrain.chat(MainActivity.this, m, 60);
-                cb("test", r == null ? "" : r + "  (" + (System.currentTimeMillis() - t0) / 100 / 10.0 + " с)");
+                String r = BrainClient.chat(MainActivity.this, m, 60);
+                cb("test", r == null ? "⚠️ " + BrainClient.lastError() : r + "  (" + (System.currentTimeMillis() - t0) / 100 / 10.0 + " с)");
             }).start();
         }
+
+        @JavascriptInterface
+        public boolean micOk() { return checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED; }
+
+        @JavascriptInterface
+        public void micAsk() { runOnUiThread(() -> requestPermissions(new String[]{android.Manifest.permission.RECORD_AUDIO}, 9)); }
 
         @JavascriptInterface
         public void foxStop() {
@@ -287,6 +298,12 @@ public class MainActivity extends Activity {
         web.evaluateJavascript("window.androidBack ? androidBack() : 'exit'", v -> {
             if ("\"exit\"".equals(v)) finish();
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int code, String[] p, int[] r) {
+        super.onRequestPermissionsResult(code, p, r);
+        if (web != null) web.evaluateJavascript("window.androidResume && androidResume()", null);
     }
 
     @Override

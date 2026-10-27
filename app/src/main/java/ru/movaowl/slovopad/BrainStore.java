@@ -76,7 +76,7 @@ final class BrainStore {
         try {
             SharedPreferences sp = p(c);
             File ready = LocalBrain.model(c);
-            o.put("lib", LocalBrain.lib());
+            o.put("lib", LocalBrain.libPresent(c));
             o.put("ready", ready != null);
             o.put("title", sp.getString("brainTitle", ""));
             o.put("size", ready != null ? ready.length() : 0);
@@ -119,7 +119,6 @@ final class BrainStore {
                     String old = sp.getString("brainFile", "");
                     if (!old.isEmpty() && !old.equals(f.getName())) new File(LocalBrain.dir(c), old).delete();
                     sp.edit().putString("brainFile", f.getName()).putString("brainTitle", m.optString("title")).remove("brainDl").remove("brainPending").putString("brainError", "").apply();
-                    LocalBrain.unload();
                 } else {
                     f.delete();
                     sp.edit().remove("brainDl").remove("brainPending").putString("brainError", "Файл повредился при загрузке — скачай ещё раз").apply();
@@ -139,7 +138,6 @@ final class BrainStore {
 
     static void delete(Context c) {
         cancel(c);
-        LocalBrain.unload();
         File[] fs = LocalBrain.dir(c).listFiles();
         if (fs != null) for (File f : fs) f.delete();
         p(c).edit().remove("brainFile").remove("brainTitle").apply();

@@ -397,10 +397,76 @@ public class FoxService extends Service {
     }
 
     /* долгое нажатие: лис слушает (невидимый экран распознавания) */
+    private boolean listenOk = false;
+
     private void openAssist() {
         if (thinking) return;
         if (stage <= 0) { showBub("Zzz… Выучи 10 слов — проснусь и поболтаем", 4000); return; }
-        try { startActivity(new Intent(this, ListenActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception ignored) { }
+        closeTyping();
+        listenOk = false;
+        targetX = -1; travX = -1; busy = false; img.setClipBounds(null);
+        showBub("🎤 Включаю уши…", 4000);
+        play(has("surprise") ? "surprise" : "sit", 999);
+        boolean started = true;
+        try { startActivity(new Intent(this, ListenActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception e) { started = false; }
+        // Xiaomi может не пустить окно из фона — тогда пишем текстом
+        h.postDelayed(() -> { if (!listenOk && !thinking && typingV == null) openTyping("Микрофон не включился — напиши мне 👇"); }, started ? 3000 : 100);
+    }
+
+    /* ---------- поле «напиши лису» (если голос не завёлся) ---------- */
+    private LinearLayout typingV;
+
+    void openTyping(String hint) {
+        if (typingV != null || root == null) return;
+        LinearLayout box = new LinearLayout(this);
+        box.setOrientation(LinearLayout.HORIZONTAL);
+        box.setGravity(Gravity.CENTER_VERTICAL);
+        int pd = (int) (8 * dp);
+        box.setPadding(pd, pd, pd, pd);
+        GradientDrawable g = new GradientDrawable(); g.setColor(Color.WHITE); g.setCornerRadius(16 * dp); g.setStroke((int) (1.5f * dp), Color.parseColor("#2a3550"));
+        box.setBackground(g);
+        final android.widget.EditText et = new android.widget.EditText(this);
+        et.setHint(hint);
+        et.setTextColor(Color.parseColor("#1b2333"));
+        et.setHintTextColor(Color.parseColor("#7a8399"));
+        et.setTextSize(15);
+        et.setSingleLine(true);
+        et.setImeOptions(android.view.inputmethod.EditorInfo.IME_ACTION_SEND);
+        et.setBackground(null);
+        box.addView(et, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+        TextView send = new TextView(this); send.setText("➤"); send.setTextSize(22); send.setTextColor(Color.parseColor("#e8743b")); send.setPadding(pd, 0, pd, 0);
+        TextView x = new TextView(this); x.setText("✕"); x.setTextSize(18); x.setTextColor(Color.parseColor("#7a8399")); x.setPadding(pd, 0, pd / 2, 0);
+        box.addView(send); box.addView(x);
+        Runnable go = () -> {
+            String t = et.getText().toString().trim();
+            closeTyping();
+            if (!t.isEmpty()) heard("final", t);
+        };
+        send.setOnClickListener(v -> go.run());
+        x.setOnClickListener(v -> { closeTyping(); pickNext(); });
+        et.setOnEditorActionListener((v, a, e) -> { go.run(); return true; });
+        WindowManager.LayoutParams tl = new WindowManager.LayoutParams(
+                screenW - (int) (24 * dp), WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                PixelFormat.TRANSLUCENT);
+        tl.gravity = Gravity.TOP | Gravity.START;
+        tl.x = (int) (12 * dp);
+        tl.y = Math.max((int) (60 * dp), lp.y - (int) (70 * dp));
+        tl.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN;
+        try { wm.addView(box, tl); typingV = box; } catch (Exception e) { return; }
+        et.requestFocus();
+        h.postDelayed(() -> {
+            android.view.inputmethod.InputMethodManager im = (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            if (im != null) im.showSoftInput(et, 0);
+        }, 200);
+        h.postDelayed(() -> { if (typingV == box && et.getText().length() == 0) closeTyping(); }, 60000);
+    }
+
+    void closeTyping() {
+        if (typingV == null) return;
+        try { wm.removeView(typingV); } catch (Exception ignored) { }
+        typingV = null;
     }
 
     /* что услышал лис и что ответил — только текстом в облачке */
@@ -409,11 +475,14 @@ public class FoxService extends Service {
         if (mood == 4) root.setVisibility(View.VISIBLE);
         targetX = -1; img.setScaleX(1);
         switch (kind) {
-            case "ready": showBub("🎤 Слушаю…", 9000); play(has("surprise") ? "surprise" : "sit", 999); break;
+            case "ready": listenOk = true; showBub("🎤 Слушаю… говори", 9000); play(has("surprise") ? "surprise" : "sit", 999); break;
             case "partial": showBub("🎤 " + text, 9000); break;
             case "error": {
+                listenOk = true;
+                if ("mic".equals(text)) { showBub("Разреши микрофон в окне Словопада — или напиши мне", 6000); openTyping("Напиши лису…"); break; }
+                if (!"6".equals(text) && !"7".equals(text)) openTyping("Напиши лису…");
                 String m = "mic".equals(text) ? "Мне нужен доступ к микрофону 🙉" : "none".equals(text) ? "На телефоне нет распознавания речи" :
-                        ("1".equals(text) || "2".equals(text)) ? "Без интернета не слышу. Скачай офлайн-языки в «Голосовом вводе Google»" : "Ничего не услышал. Зажми меня и скажи ещё раз";
+                        ("1".equals(text) || "2".equals(text)) ? "Без интернета не слышу. Скачай офлайн-языки в «Голосовом вводе Google»" : ("6".equals(text) || "7".equals(text)) ? "Ничего не услышал. Зажми меня и скажи ещё раз" : "Уши не включились (код " + text + ") — напиши мне";
                 showBub(m, 5000); pickNext(); break;
             }
             case "final": {
@@ -727,6 +796,7 @@ public class FoxService extends Service {
         I = null;
         ticking = false;
         h.removeCallbacksAndMessages(null);
+        closeTyping();
         if (wordV != null) { try { wm.removeView(wordV); } catch (Exception ignored) { } wordV = null; }
         if (root != null) { try { wm.removeView(root); } catch (Exception ignored) { } root = null; }
         if (tts != null) tts.shutdown();

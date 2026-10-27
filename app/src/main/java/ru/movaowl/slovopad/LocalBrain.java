@@ -45,12 +45,22 @@ final class LocalBrain {
         return f.exists() && f.length() > 50_000_000L ? f : null;
     }
 
-    static boolean ready(Context c) { return lib() && model(c) != null; }
+    /** Есть ли движок в APK (без загрузки — в основном процессе .so не трогаем). */
+    static boolean libPresent(Context c) {
+        try {
+            if (new File(c.getApplicationInfo().nativeLibraryDir, "libfoxbrain.so").exists()) return true;
+            try (java.util.zip.ZipFile z = new java.util.zip.ZipFile(c.getApplicationInfo().sourceDir)) {
+                return z.getEntry("lib/arm64-v8a/libfoxbrain.so") != null;
+            }
+        } catch (Exception e) { return false; }
+    }
 
-    /** Синхронно (вызывать из фонового потока). null — если не вышло. */
-    static String chat(Context c, List<String[]> msgs, int maxTokens) {
-        File f = model(c);
-        if (f == null || !lib()) return null;
+    static boolean ready(Context c) { return libPresent(c) && model(c) != null; }
+
+    /** Только в процессе :brain (BrainService). */
+    static String chatFile(String path, List<String[]> msgs, int maxTokens) {
+        File f = new File(path);
+        if (!f.exists() || !lib()) return null;
         synchronized (LOCK) {
             H.removeCallbacks(UNLOAD);
             if (handle == 0 || !f.getAbsolutePath().equals(loadedPath)) {
