@@ -55,27 +55,60 @@ class FoxBrain {
         String tool = toolsOffline(l);
         if (tool != null) return tool;
         String key = ai.optString("key", "").trim().replaceAll("\\s+", "");
+        String mode = ai.optString("mode", "auto"); // auto: свой мозг, если скачан; gemini: сначала Gemini
+        boolean local = LocalBrain.ready(ctx);
         String off = offline(l);
-        if (key.isEmpty()) {
-            return off != null ? off : "Без нейросети я умею немного: «что значит window», «как сказать окно», таймер, будильник. Ключ Gemini: Словопад → Опции → Мозги лиса.";
-        }
         hist.add(new String[]{"user", text});
-        while (hist.size() > 12) hist.remove(0);
-        String res;
-        try {
-            res = gemini(key, prompt(ai, mood, stage));
-        } catch (Exception e) {
-            hist.remove(hist.size() - 1);
-            String why = e.getMessage() == null ? "" : e.getMessage();
-            if (why.startsWith("key")) return "Ключ не подходит: " + why.substring(3).trim() + " Проверь его в Опциях → Мозги лиса.";
-            if (why.startsWith("limit")) return "Лимит Gemini на сейчас кончился, подожди минутку." + (off != null ? " " + off : "");
-            if (why.startsWith("region")) return "Gemini видит, что ты в России. Включи VPN для всего телефона (или для Словопада) и зажми меня ещё раз.";
-            if (why.startsWith("io")) return "Не достучался до Gemini (" + why.substring(2).trim() + "). Проверь интернет и VPN." + (off != null ? " " + off : "");
-            return "Gemini ответил ошибкой: " + why + (off != null ? " " + off : "");
+        while (hist.size() > 10) hist.remove(0);
+        String err = null;
+        // 1) свой мозг (без интернета)
+        if (local && !"gemini".equals(mode)) {
+            String r = localChat(ai, mood, stage);
+            if (r != null && !r.isEmpty()) { hist.add(new String[]{"assistant", r}); return toolsFromTags(r); }
+            err = "Свой мозг не ответил.";
         }
-        hist.add(new String[]{"assistant", res});
-        return toolsFromTags(res);
+        // 2) Gemini (нужен ключ и VPN)
+        if (!key.isEmpty()) {
+            try {
+                String r = gemini(key, prompt(ai, mood, stage));
+                hist.add(new String[]{"assistant", r});
+                return toolsFromTags(r);
+            } catch (Exception e) {
+                String why = e.getMessage() == null ? "" : e.getMessage();
+                if (why.startsWith("key")) err = "Ключ Gemini не подходит: " + why.substring(3).trim();
+                else if (why.startsWith("limit")) err = "Лимит Gemini на сейчас кончился.";
+                else if (why.startsWith("region")) err = "Gemini видит Россию — нужен VPN.";
+                else if (why.startsWith("io")) err = "Нет связи с Gemini (" + why.substring(2).trim() + ").";
+                else err = "Gemini: " + why;
+            }
+        }
+        // 3) свой мозг как запасной, если Gemini подвёл
+        if (local && "gemini".equals(mode)) {
+            String r = localChat(ai, mood, stage);
+            if (r != null && !r.isEmpty()) { hist.add(new String[]{"assistant", r}); return toolsFromTags(r); }
+        }
+        hist.remove(hist.size() - 1);
+        if (off != null) return (err != null ? err + " " : "") + off;
+        if (err != null) return err;
+        return "Без мозга я умею немного: «что значит window», «как сказать окно», таймер, будильник, «открой камеру». Скачай мой мозг: Словопад → Опции → Мозги лиса.";
     }
+
+    /* свой мозг: короткий промт для маленькой модели */
+    private String localChat(JSONObject ai, int mood, int stage) {
+        String[] moods = {"happy", "hungry", "sad", "offended", "sad"};
+        String sys = "You are " + ai.optString("fox", "Fox") + ", a cute white pixel arctic fox living on the phone screen of "
+                + ai.optString("owner", "Igor") + ". He is a beginner learning English (knows about " + ai.optInt("known", 0) + " words, for example: "
+                + cut(ai.optString("sample", ""), 300) + "). You are " + (stage <= 0 ? "sleepy" : moods[Math.max(0, Math.min(4, mood))]) + ".\n"
+                + "Rules: answer VERY short, 1-2 sentences. If he writes in Russian, answer in Russian and add one simple English phrase with translation in brackets. "
+                + "If he writes in English, answer in simple English; if he made a mistake, first write the correct sentence. No emoji, no lists.";
+        List<String[]> m = new ArrayList<>();
+        m.add(new String[]{"system", sys});
+        for (String[] x : hist) m.add(new String[]{x[0], x[1]});
+        String r = LocalBrain.chat(ctx, m, 120);
+        return r == null ? null : r.replaceAll("[*_#`]", "").trim();
+    }
+
+    private static String cut(String s, int n) { return s.length() > n ? s.substring(0, n) : s; }
 
     /* ---------- промт ---------- */
     private String prompt(JSONObject ai, int mood, int stage) {

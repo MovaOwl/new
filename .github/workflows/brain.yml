@@ -1,0 +1,89 @@
+name: Brain model release
+
+# Вручную: скачивает открытые модели (Qwen2.5 Instruct, Apache-2.0) и выкладывает в релиз brain-v1,
+# заодно проверяет, что мозг отвечает (сборка libfoxbrain под Linux + тестовый вопрос).
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/brain.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  brain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download models
+        run: |
+          mkdir -p m
+          curl -fL --retry 3 -o m/fox-brain-light.gguf "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf"
+          curl -fL --retry 3 -o m/fox-brain-smart.gguf "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf"
+          ls -la m
+
+      - name: Test brain (Linux build of the same JNI code)
+        run: |
+          git clone -q --depth 1 --branch b11918 https://github.com/ggml-org/llama.cpp "$RUNNER_TEMP/llama.cpp"
+          JH=$(dirname $(dirname $(readlink -f $(which javac))))
+          cmake -S brain -B "$RUNNER_TEMP/hb" -DCMAKE_BUILD_TYPE=Release -DLLAMA_DIR="$RUNNER_TEMP/llama.cpp" -DCMAKE_CXX_FLAGS="-I$JH/include -I$JH/include/linux"
+          cmake --build "$RUNNER_TEMP/hb" -j"$(nproc)"
+          mkdir -p t/ru/movaowl/slovopad
+          cat > t/ru/movaowl/slovopad/LocalBrain.java <<'J'
+          package ru.movaowl.slovopad;
+          public class LocalBrain {
+            static native long nLoad(String p, int c, int t);
+            static native byte[] nChat(long h, String[] r, String[] c, int n, float temp);
+            static native void nFree(long h);
+            public static void main(String[] a) throws Exception {
+              System.load(a[0]);
+              for (int k = 1; k < a.length; k++) {
+                long h = nLoad(a[k], 2048, 4);
+                if (h == 0) { System.out.println("LOAD FAILED " + a[k]); System.exit(1); }
+                String sys = "You are Fox, a cute white arctic fox on the phone of Igor, a beginner learning English. Answer very short, 1-2 sentences. If he writes in Russian, answer in Russian and add one simple English phrase with translation.";
+                long t0 = System.currentTimeMillis();
+                String r1 = new String(nChat(h, new String[]{"system","user"}, new String[]{sys,"Привет! Как дела?"}, 80, 0.7f), "UTF-8");
+                String r2 = new String(nChat(h, new String[]{"system","user"}, new String[]{sys,"I has a big house"}, 80, 0.7f), "UTF-8");
+                System.out.println("### " + a[k].replaceAll(".*/", "") + " (" + (System.currentTimeMillis()-t0) + " ms)");
+                System.out.println("> Привет! Как дела?\n" + r1.trim());
+                System.out.println("> I has a big house\n" + r2.trim());
+                nFree(h);
+              }
+            }
+          }
+          J
+          sed -i 's/^          //' t/ru/movaowl/slovopad/LocalBrain.java
+          javac -d t t/ru/movaowl/slovopad/LocalBrain.java
+          java -cp t ru.movaowl.slovopad.LocalBrain "$RUNNER_TEMP/hb/libfoxbrain.so" m/fox-brain-light.gguf m/fox-brain-smart.gguf | tee test.md
+
+      - name: brain.json
+        run: |
+          python3 - <<'P'
+          import json, hashlib, os
+          def sha(p):
+              h = hashlib.sha256()
+              with open(p, 'rb') as f:
+                  for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
+              return h.hexdigest()
+          base = 'https://github.com/MovaOwl/new/releases/download/brain-v1/'
+          out = {'version': 1, 'models': [
+            {'id': 'light', 'title': 'Лёгкий', 'desc': 'Qwen2.5 0.5B — быстрый, попроще', 'file': 'fox-brain-light.gguf'},
+            {'id': 'smart', 'title': 'Умный', 'desc': 'Qwen2.5 1.5B — соображает лучше, отвечает чуть медленнее', 'file': 'fox-brain-smart.gguf'}]}
+          for m in out['models']:
+              p = 'm/' + m['file']; m['size'] = os.path.getsize(p); m['sha256'] = sha(p); m['url'] = base + m['file']
+          json.dump(out, open('m/brain.json', 'w'), ensure_ascii=False, indent=1)
+          print(open('m/brain.json').read())
+          P
+
+      - name: Publish brain-v1
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: brain-v1
+          name: Мозг лиса v1
+          body_path: test.md
+          files: |
+            m/fox-brain-light.gguf
+            m/fox-brain-smart.gguf
+            m/brain.json
+          make_latest: false
