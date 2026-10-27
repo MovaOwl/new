@@ -19,13 +19,19 @@ jobs:
       - name: Download models
         run: |
           mkdir -p m
-          curl -fL --retry 3 -o m/fox-brain-light.gguf "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf"
-          curl -fL --retry 3 -o m/fox-brain-smart.gguf "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf"
-          # лимит файла в релизе GitHub — 2 ГиБ; если умный не влез, берём сжатие посильнее
-          if [ $(stat -c %s m/fox-brain-smart.gguf) -ge 2147000000 ]; then
-            curl -fL --retry 3 -o m/fox-brain-smart.gguf "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q3_k_m.gguf"
-          fi
-          ls -la m
+          pick() { # $1 файл в релизе, $2 репо, остальное — варианты сжатия по порядку; берём первый < 2 ГиБ (лимит GitHub)
+            out=$1; repo=$2; shift 2
+            for q in "$@"; do
+              f="$(basename $repo | sed 's/-GGUF//')-$q.gguf"
+              if curl -fL --retry 3 -o "m/$out" "https://huggingface.co/$repo/resolve/main/$f" && [ $(stat -c %s "m/$out") -lt 2147000000 ]; then
+                echo "$repo/resolve/main/$f" > "m/$out.hf"; echo "OK $out <- $f"; return 0
+              fi
+            done
+            return 1
+          }
+          pick fox-brain-light-v3.gguf unsloth/Qwen3.5-2B-GGUF Q4_K_M Q4_K_S
+          pick fox-brain-smart-v3.gguf unsloth/Qwen3.5-4B-GGUF Q4_K_M IQ4_XS Q3_K_M Q3_K_S UD-IQ3_XXS
+          ls -la m; cat m/*.hf
 
       - name: Test brain (Linux build of the same JNI code)
         run: |
@@ -38,22 +44,26 @@ jobs:
           package ru.movaowl.slovopad;
           public class LocalBrain {
             static native long nLoad(String p, int c, int t);
-            static native byte[] nChat(long h, String[] r, String[] c, int n, float temp);
+            static native byte[] nChat(long h, String[] r, String[] c, int np, int n, float temp, Object cb);
             static native void nFree(long h);
+            static class P { int n = 0; long first = 0, t0; void piece(byte[] b) { if (n++ == 0) first = System.currentTimeMillis() - t0; } }
             public static void main(String[] a) throws Exception {
               System.load(a[0]);
               for (int k = 1; k < a.length; k++) {
+                long tl = System.currentTimeMillis();
                 long h = nLoad(a[k], 2048, 4);
                 if (h == 0) { System.out.println("LOAD FAILED " + a[k]); System.exit(1); }
-                String sys = "You are Fox, a cute white pixel arctic fox living on the phone screen of Igor. He is a beginner learning English. You are happy. Rules: answer VERY short, 1-2 sentences. If he writes in Russian, answer in Russian and add one simple English phrase with translation in brackets. If he writes in English, answer in simple English; if he made a mistake, first write: Better: <correct sentence>. No emoji, no lists.";
-                String[] R = {"system","user","assistant","user","assistant","user"};
-                String[] qs = {"Привет! Как дела?", "I has a big house", "Как сказать по-английски окно?", "What you do today?"};
-                System.out.println("### " + a[k].replaceAll(".*/", ""));
+                String sys = "Ты — Лис, белый пиксельный песец, живёшь на экране телефона у Игоря. Он риелтор из Абакана и учит английский почти с нуля (знает около 300 слов). Ты сытый и весёлый.\nПравила:\n- Отвечай ОЧЕНЬ коротко: 1–2 предложения, ответ влезает в маленькое облачко.\n- Пишут по-русски — отвечай по-русски, по делу и с юмором, и добавь одну простую английскую фразу с переводом в скобках.\n- Пишут по-английски — отвечай простым английским; если есть ошибка, начни с «Better: <исправленная фраза>».\n- Спрашивают слово — дай перевод и короткий пример.\n- Без списков, без markdown, без эмодзи. Не выдумывай факты: не знаешь — так и скажи.";
+                String[] R = {"system","user","assistant","user","assistant","user","assistant","user","assistant","user"};
+                String[] F = {sys, "Привет! Как дела?", "Привет! Отлично, грызу новые слова. А у тебя как? (How are you?)", "I likes cats", "Better: I like cats. Cats are cute! Do you have a cat?", "Как будет «дом»?", "Дом — house (хаус). Например: My house is warm. (Мой дом тёплый.)", "Сколько будет семь на восемь?", "56! Seven times eight is fifty-six. (Семь на восемь — пятьдесят шесть.)"};
+                String[] qs = {"Как дела, чем занимаешься?", "I has a big house", "Как сказать по-английски окно?", "What you do today?", "Почему небо голубое?", "Расскажи анекдот про риелтора"};
+                nChat(h, java.util.Arrays.copyOf(R, 9), F, 9, 0, 0.7f, null);
+                System.out.println("### " + a[k].replaceAll(".*/", "") + "  (загрузка + прогрев " + (System.currentTimeMillis()-tl) + " ms)");
                 for (String q : qs) {
-                  long t0 = System.currentTimeMillis();
-                  String[] C = {sys, "I likes cats", "Better: I like cats. Cats are cute! Do you have a cat?", "Как будет дом?", "Дом — house (хаус). Например: My house is warm. (Мой дом тёплый.)", q};
-                  String r = new String(nChat(h, R, C, 90, 0.6f), "UTF-8");
-                  System.out.println("> " + q + "  (" + (System.currentTimeMillis()-t0) + " ms)");
+                  String[] C = java.util.Arrays.copyOf(F, 10); C[9] = q;
+                  P p = new P(); p.t0 = System.currentTimeMillis();
+                  String r = new String(nChat(h, R, C, 9, 100, 0.7f, p), "UTF-8");
+                  System.out.println("> " + q + "  (первые слова через " + p.first + " ms, всё — " + (System.currentTimeMillis()-p.t0) + " ms)");
                   System.out.println(r.trim());
                   System.out.println();
                 }
@@ -64,7 +74,7 @@ jobs:
           J
           sed -i 's/^          //' t/ru/movaowl/slovopad/LocalBrain.java
           javac -d t t/ru/movaowl/slovopad/LocalBrain.java
-          java -cp t ru.movaowl.slovopad.LocalBrain "$RUNNER_TEMP/hb/libfoxbrain.so" m/fox-brain-light.gguf m/fox-brain-smart.gguf | tee test.md
+          java -cp t ru.movaowl.slovopad.LocalBrain "$RUNNER_TEMP/hb/libfoxbrain.so" m/fox-brain-light-v3.gguf m/fox-brain-smart-v3.gguf | tee test.md
 
       - name: brain.json
         run: |
@@ -75,12 +85,12 @@ jobs:
               with open(p, 'rb') as f:
                   for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
               return h.hexdigest()
-          base = 'https://github.com/MovaOwl/new/releases/download/brain-v2/'
-          out = {'version': 2, 'models': [
-            {'id': 'light', 'title': 'Лёгкий', 'desc': 'Qwen2.5 1.5B — быстрый, отвечает за 1–3 с', 'file': 'fox-brain-light.gguf'},
-            {'id': 'smart', 'title': 'Умный', 'desc': 'Qwen2.5 3B — соображает лучше, отвечает медленнее', 'file': 'fox-brain-smart.gguf'}]}
+          base = 'https://github.com/MovaOwl/new/releases/download/brain-v3/'
+          out = {'version': 3, 'models': [
+            {'id': 'light', 'title': 'Лёгкий', 'desc': 'Qwen3.5 2B — быстрый и уже толковый', 'file': 'fox-brain-light-v3.gguf'},
+            {'id': 'smart', 'title': 'Умный', 'desc': 'Qwen3.5 4B — соображает заметно лучше, отвечает медленнее', 'file': 'fox-brain-smart-v3.gguf'}]}
           for m in out['models']:
-              p = 'm/' + m['file']; m['size'] = os.path.getsize(p); m['sha256'] = sha(p); m['url'] = base + m['file']
+              p = 'm/' + m['file']; m['size'] = os.path.getsize(p); m['sha256'] = sha(p); m['url'] = base + m['file']; m['hf'] = open(p + '.hf').read().strip()
           json.dump(out, open('m/brain.json', 'w'), ensure_ascii=False, indent=1)
           print(open('m/brain.json').read())
           P
@@ -88,11 +98,11 @@ jobs:
       - name: Publish brain-v1
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: brain-v2
-          name: Мозг лиса v2
+          tag_name: brain-v3
+          name: Мозг лиса v3 (Qwen3.5)
           body_path: test.md
           files: |
-            m/fox-brain-light.gguf
-            m/fox-brain-smart.gguf
+            m/fox-brain-light-v3.gguf
+            m/fox-brain-smart-v3.gguf
             m/brain.json
           make_latest: false

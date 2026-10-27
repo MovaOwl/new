@@ -40,8 +40,29 @@ final class BrainClient {
         }
     }
 
-    /** null — не вышло, причина в lastError(). */
-    static String chat(Context c, List<String[]> msgs, int max) {
+    interface Part { void part(String text); }
+
+    /** Заранее загрузить мозг и «прочитать» системный промт — пока хозяин говорит. */
+    static void warm(Context c, List<String[]> prefix) {
+        java.io.File f = LocalBrain.model(c);
+        if (f == null) return;
+        new Thread(() -> {
+            try {
+                if (!connect(c)) return;
+                JSONArray a = new JSONArray();
+                for (String[] x : prefix) a.put(new JSONArray().put(x[0]).put(x[1]));
+                Message m = Message.obtain(null, BrainService.MSG_WARM, 0, 0);
+                Bundle b = new Bundle(); b.putString("msgs", a.toString()); b.putString("path", f.getAbsolutePath()); b.putInt("prefix", prefix.size());
+                m.setData(b);
+                remote.send(m);
+            } catch (Exception ignored) { }
+        }).start();
+    }
+
+    static String chat(Context c, List<String[]> msgs, int max) { return chat(c, msgs, 0, max, null); }
+
+    /** null — не вышло, причина в lastError(). nPrefix — сколько первых сообщений неизменны (их мозг запоминает). */
+    static String chat(Context c, List<String[]> msgs, int nPrefix, int max, Part onPart) {
         lastErr = "";
         java.io.File f = LocalBrain.model(c);
         if (f == null) { lastErr = "Мозг не скачан"; return null; }
@@ -50,15 +71,18 @@ final class BrainClient {
             if (replies == null) {
                 HandlerThread ht = new HandlerThread("brain-reply"); ht.start();
                 replies = new Messenger(new Handler(ht.getLooper()) {
-                    @Override public void handleMessage(Message m) { Waiter w = Waiter.cur; if (w != null && w.id == m.arg1) { w.out = m.getData().getString("out"); w.err = m.getData().getString("err", ""); w.l.countDown(); } }
+                    @Override public void handleMessage(Message m) { Waiter w = Waiter.cur;
+                        if (m.what == BrainService.MSG_PART) { if (w != null && w.id == m.arg1 && w.onPart != null) w.onPart.part(m.getData().getString("part", "")); return; }
+                        if (w != null && w.id == m.arg1) { w.out = m.getData().getString("out"); w.err = m.getData().getString("err", ""); w.l.countDown(); } }
                 });
             }
             JSONArray a = new JSONArray();
             for (String[] x : msgs) a.put(new JSONArray().put(x[0]).put(x[1]));
             Waiter w = new Waiter();
+            w.onPart = onPart;
             Waiter.cur = w;
             Message m = Message.obtain(null, BrainService.MSG_CHAT, w.id, 0);
-            Bundle b = new Bundle(); b.putString("msgs", a.toString()); b.putString("path", f.getAbsolutePath()); b.putInt("max", max);
+            Bundle b = new Bundle(); b.putString("msgs", a.toString()); b.putString("path", f.getAbsolutePath()); b.putInt("max", max); b.putInt("prefix", nPrefix);
             m.setData(b); m.replyTo = replies;
             final IBinder.DeathRecipient dr = () -> { w.err = "Мозг упал — попробуй «Лёгкий» в Опциях"; CrashLog.note(c, "мозг: процесс упал во время ответа"); w.l.countDown(); };
             remote.getBinder().linkToDeath(dr, 0);
@@ -81,5 +105,6 @@ final class BrainClient {
         final int id = ++seq;
         final CountDownLatch l = new CountDownLatch(1);
         volatile String out, err;
+        volatile Part onPart;
     }
 }

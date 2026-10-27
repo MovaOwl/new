@@ -138,21 +138,31 @@ function brainRender() {
     brainPoll = setTimeout(brainRender, 1000); return;
   }
   if (st.state === 'verify') { box.innerHTML = '<p>🔍 Проверяю файл, это пара секунд…</p>'; brainPoll = setTimeout(brainRender, 800); return; }
+  const old = st.ready && !/-v3\./.test(st.file || '');
+  if (old && !brainIdx) { box.innerHTML = '<p class="muted">Смотрю, есть ли мозг поновее…</p>'; Android.brainIndex(); return; }
   if (st.ready) {
     box.innerHTML = `<p>🧠 Установлен: <b>${esc(st.title || 'мозг')}</b> <span class="muted">${GB(st.size)}</span></p>
+      ${old && brainIdx && brainIdx.models && brainIdx.models.length ? `<p>🆕 <b>Вышел новый мозг — Qwen3.5.</b> Заметно умнее и отвечает быстрее. Старый удалится сам после загрузки.</p>${brainOpts()}` : ''}
       <p class="muted">Лис думает сам, без интернета и VPN. Первый ответ после паузы — пара секунд на «проснуться».</p>
       <div class="btnrow"><button class="btn" id="bTest">Проверить</button><button class="btn ghost" id="bDel">Удалить</button></div>
       <div class="btest" id="bTestOut" hidden></div>`;
     $('bTest').onclick = () => { const o = $('bTestOut'); o.hidden = false; o.textContent = '🦊 думаю…'; Android.brainTest('Привет! Как дела?'); };
     $('bDel').onclick = () => { if (!confirmDel()) return; Android.brainDelete(); toast('Мозг удалён, место свободно'); brainRender(); };
+    if (old) brainOptsBind(box);
     return;
   }
   if (!brainIdx) { box.innerHTML = '<p class="muted">Смотрю, какие мозги есть…</p>'; Android.brainIndex(); return; }
   if (brainIdx.err || !brainIdx.models || !brainIdx.models.length) { box.innerHTML = '<p class="muted">Не смог получить список мозгов с GitHub. Проверь интернет.</p><div class="btnrow"><button class="btn ghost" id="bRetry">Ещё раз</button></div>'; $('bRetry').onclick = () => { brainIdx = null; brainRender(); }; return; }
   box.innerHTML = `${st.error ? `<p class="muted">⚠️ ${esc(st.error)}</p>` : ''}
-    ${brainIdx.models.map(m => `<div class="bopt"><div><b>${esc(m.title)} · ${GB(m.size)}</b><small>${esc(m.desc)}</small></div><button class="btn" data-brain="${esc(m.id)}">Скачать</button></div>`).join('')}
-    <label class="srow" style="border:0;padding:4px 0"><input type="checkbox" id="bWifi" ${S.brainWifi === false ? '' : 'checked'}><span>Только по Wi-Fi</span></label>
+    ${brainOpts()}
     <p class="muted">Качается один раз, потом лис думает без интернета. Нужно свободное место с запасом.</p>`;
+  brainOptsBind(box);
+}
+function brainOpts() {
+  return `${brainIdx.models.map(m => `<div class="bopt"><div><b>${esc(m.title)} · ${GB(m.size)}</b><small>${esc(m.desc)}</small></div><button class="btn" data-brain="${esc(m.id)}">Скачать</button></div>`).join('')}
+    <label class="srow" style="border:0;padding:4px 0"><input type="checkbox" id="bWifi" ${S.brainWifi === false ? '' : 'checked'}><span>Только по Wi-Fi</span></label>`;
+}
+function brainOptsBind(box) {
   box.onclick = ev => { const b = ev.target.closest('[data-brain]'); if (!b) return; S.brainWifi = $('bWifi').checked; save(); b.disabled = true; b.textContent = '…'; Android.brainStart(b.dataset.brain, S.brainWifi); setTimeout(brainRender, 1500); };
 }
 let delArm = 0;

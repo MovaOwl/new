@@ -263,11 +263,10 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void brainTest(String text) {
             new Thread(() -> {
-                java.util.List<String[]> m = new java.util.ArrayList<>();
-                m.add(new String[]{"system", "You are Fox, a cute white arctic fox. Answer very short, one sentence. If the user writes in Russian, answer in Russian and add one simple English phrase."});
-                m.add(new String[]{"user", text});
+                org.json.JSONObject ai = null;
+                try { ai = new org.json.JSONObject(getSharedPreferences(FoxService.PREF, MODE_PRIVATE).getString("data", "{}")).optJSONObject("ai"); } catch (Exception ignored) { }
                 long t0 = System.currentTimeMillis();
-                String r = BrainClient.chat(MainActivity.this, m, 60);
+                String r = new FoxBrain(MainActivity.this).testLocal(text, ai);
                 cb("test", r == null ? "⚠️ " + BrainClient.lastError() : r + "  (" + (System.currentTimeMillis() - t0) / 100 / 10.0 + " с)");
             }).start();
         }

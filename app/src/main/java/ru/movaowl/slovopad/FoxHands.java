@@ -34,7 +34,7 @@ final class FoxHands {
             {"files", "проводник", "файлы"}, {"mail", "почта", "gmail"}, {"email", "почта", "gmail"}, {"maps", "карты", "maps"},
             {"store", "play маркет", "google play"}, {"market", "play маркет"}, {"recorder", "диктофон"}, {"compass", "компас"},
             {"flashlight", "фонарик"}, {"video", "видео"}, {"books", "книги", "литрес"}, {"bank", "сбербанк", "сбер"},
-            {"слово", "словопад"}, {"словопад", "словопад"}, {"телега", "telegram"}, {"ютуб", "youtube"}, {"вк", "vk"}, {"вконтакте", "vk"},
+            {"vk", "вконтакте", "vk"}, {"вэка", "vk", "вконтакте"}, {"викей", "vk", "вконтакте"}, {"вкашка", "vk"}, {"слово", "словопад"}, {"словопад", "словопад"}, {"телега", "telegram"}, {"ютуб", "youtube"}, {"вк", "vk"}, {"вконтакте", "vk"},
             {"сбер", "сбербанк"}, {"авито", "avito"}, {"ватсап", "whatsapp"}, {"вотсап", "whatsapp"}, {"гугл", "google"}, {"яндекс", "яндекс"}};
         for (String[] x : a) { String[] v = new String[x.length - 1]; System.arraycopy(x, 1, v, 0, v.length); ALIAS.put(x[0], v); }
     }
@@ -45,7 +45,7 @@ final class FoxHands {
                 .replaceAll("[.,!?«»\"]", " ").replaceAll("\\b(please|пожалуйста|fox|foxy|лис|лисенок|лисёнок|hey|эй)\\b", " ")
                 .replaceAll("\\s+", " ").trim();
         Matcher m;
-        if ((m = Pattern.compile("^(?:open|launch|start|run|find|show me|show|go to|открой|запусти|включи|найди|покажи|зайди в)\\s+(?:the\\s+|app\\s+|приложение\\s+)?(.+)$").matcher(t)).find()) {
+        if ((m = Pattern.compile("^(?:open up|open|launch|start|run|find|show me|show|go to|опен|оупен|оупэн|апен|открой|откройте|запусти|включи|найди|покажи|зайди в)\\s+(?:the\\s+|app\\s+|приложение\\s+)?(.+)$").matcher(t)).find()) {
             open(m.group(1).trim()); return true;
         }
         if (t.matches(".*(come here|come to me|иди сюда|ко мне|подойди|сюда).*")) { s.cmdCome(); return true; }
@@ -141,38 +141,67 @@ final class FoxHands {
         return bs >= 62 ? best : null;
     }
 
+    private int job = 0;
+
     void open(String q) {
         String[] app = find(q);
         if (app == null) { s.say("Не нашёл приложение «" + q + "». I can't find it.", 6000); s.anim("sad", 1); return; }
         String label = app[0];
         FoxEyes e = FoxEyes.I;
-        if (e == null) { s.say("Open " + label + "! — Открываю.", 3000); s.anim("jump", 1); launch(app[1], 700); return; }
-        s.say("Let me find " + label + "… — Ищу «" + label + "»", 8000);
-        Runnable search = () -> searchPages(app, 0);
-        if (!e.onHome()) { e.global(AccessibilityService.GLOBAL_ACTION_HOME); h.postDelayed(search, 900); }
-        else search.run();
+        if (e == null) {
+            s.say("Open " + label + "! Открываю. Включи мне «Глаза лиса» в Спец. возможностях — буду сам искать значок и жать лапой.", 7000);
+            s.anim("jump", 1); launch(app[1], 900); return;
+        }
+        final int my = ++job;
+        s.startJob();
+        s.say("Let me find " + label + "… — Ищу «" + label + "»", 2500);
+        // страховка: что бы ни случилось — через 45 с отпускаем лиса
+        h.postDelayed(() -> { if (job == my) { job++; s.cmdDone(); } }, 45000);
+        // «Домой» два раза: первый — на рабочий стол, второй — на главную страницу
+        e.global(AccessibilityService.GLOBAL_ACTION_HOME);
+        h.postDelayed(() -> {
+            if (job != my) return;
+            if (FoxEyes.I != null) FoxEyes.I.global(AccessibilityService.GLOBAL_ACTION_HOME);
+            h.postDelayed(() -> scan(app, my, true, 0, null, true), 900);
+        }, 800);
     }
 
-    private void searchPages(String[] app, int page) {
+    /** Ищем значок на текущей странице; нет — лис листает. Сначала вперёд до упора, потом назад. */
+    private void scan(String[] app, int my, boolean forward, int steps, String prevSig, boolean first) {
+        if (job != my) return;
         FoxEyes e = FoxEyes.I;
-        if (e == null) { launch(app[1], 300); return; }
+        if (e == null) { job++; s.cmdDone(); launch(app[1], 300); return; }
         FoxEyes.Icon ic = iconFor(app[0]);
         if (ic != null) {
-            s.say("Found it! — Нашёл «" + app[0] + "»", 4000);
-            s.runToIcon(ic.r, () -> {
-                s.anim("jump", 1);
-                h.postDelayed(() -> { if (!e.click(ic)) launch(app[1], 0); s.cmdDone(); }, 450);
-            });
+            s.say("Found it! — Вот «" + app[0] + "»", 2500);
+            h.postDelayed(() -> {
+                if (job != my) return;
+                s.tapIcon(ic.r, () -> {
+                    if (job != my) return;
+                    job++;
+                    boolean ok = false;
+                    try { ok = e.click(ic); } catch (Exception ignored) { }
+                    if (!ok) launch(app[1], 0);
+                    s.cmdDone();
+                });
+            }, 400);
             return;
         }
-        if (page < 5) {
-            s.anim("run", 999);
-            e.swipe(true, () -> h.postDelayed(() -> searchPages(app, page + 1), 650));
+        String sig = e.signature();
+        boolean edge = prevSig != null && sig.equals(prevSig);   // страница не сменилась — край
+        if (edge || steps >= 8) {
+            if (forward) {                                       // справа нет — проверим страницы левее
+                s.say("Тут нет… а если слева? ←", 2000);
+                h.postDelayed(() -> s.pushPage(false, false, () -> scan(app, my, false, 1, sig, false)), 600);
+                return;
+            }
+            job++;
+            s.say("На столах не нашёл, открываю из списка. Here it is!", 4000);
+            s.cmdDone();
+            launch(app[1], 300);
             return;
         }
-        s.say("На столах не нашёл, открываю из списка. Here it is!", 4000);
-        s.cmdDone();
-        launch(app[1], 300);
+        s.pushPage(forward, first, () -> scan(app, my, forward, steps + 1, sig, false));
     }
 
     private void sitOn(String q) {

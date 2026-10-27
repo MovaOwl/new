@@ -41,7 +41,13 @@ class FoxBrain {
 
     FoxBrain(Context c) { ctx = c.getApplicationContext(); }
 
-    void ask(String text, JSONObject ai, int mood, int stage, Reply cb) {
+    private volatile Reply partCb;
+
+    void ask(String text, JSONObject ai, int mood, int stage, Reply cb) { ask(text, ai, mood, stage, cb, null); }
+
+    /** part — текст ответа по мере того, как свой мозг его печатает. */
+    void ask(String text, JSONObject ai, int mood, int stage, Reply cb, Reply part) {
+        partCb = part;
         new Thread(() -> {
             String out;
             try { out = think(text, ai == null ? new JSONObject() : ai, mood, stage); }
@@ -94,25 +100,55 @@ class FoxBrain {
         return "Без мозга я умею немного: «что значит window», «как сказать окно», таймер, будильник, «открой камеру». Скачай мой мозг: Словопад → Опции → Мозги лиса.";
     }
 
-    /* свой мозг: короткий промт для маленькой модели */
-    private String localChat(JSONObject ai, int mood, int stage) {
-        String[] moods = {"happy", "hungry", "sad", "offended", "sad"};
-        String sys = "You are " + ai.optString("fox", "Fox") + ", a cute white pixel arctic fox living on the phone screen of "
-                + ai.optString("owner", "Igor") + ". He is a beginner learning English (knows about " + ai.optInt("known", 0) + " words, for example: "
-                + cut(ai.optString("sample", ""), 300) + "). You are " + (stage <= 0 ? "sleepy" : moods[Math.max(0, Math.min(4, mood))]) + ".\n"
-                + "Rules: answer VERY short, 1-2 sentences. If he writes in Russian, answer in Russian and add one simple English phrase with translation in brackets. "
-                + "If he writes in English, answer in simple English; if he made a mistake, first write: Better: <correct sentence>. No emoji, no lists.";
+    /* свой мозг: неизменное начало (система + примеры) — мозг его запоминает и не перечитывает */
+    List<String[]> localPrefix(JSONObject ai, int mood, int stage) {
+        String[] moods = {"сытый и весёлый", "голодный", "грустный", "обиженный", "грустный"};
+        String sys = "Ты — " + ai.optString("fox", "Лис") + ", белый пиксельный песец, живёшь на экране телефона у " + ai.optString("owner", "Игоря")
+                + ". Он риелтор из Абакана и учит английский почти с нуля (знает около " + ai.optInt("known", 0) + " слов). Ты " + (stage <= 0 ? "сонный" : moods[Math.max(0, Math.min(4, mood))]) + ".\n"
+                + "Правила:\n- Отвечай ОЧЕНЬ коротко: 1–2 предложения, ответ влезает в маленькое облачко.\n"
+                + "- Пишут по-русски — отвечай по-русски, по делу и с юмором, и добавь одну простую английскую фразу с переводом в скобках.\n"
+                + "- Пишут по-английски — отвечай простым английским; если есть ошибка, начни с «Better: <исправленная фраза>».\n"
+                + "- Спрашивают слово — дай перевод и короткий пример.\n- Без списков, без markdown, без эмодзи. Не выдумывай факты: не знаешь — так и скажи.";
         List<String[]> m = new ArrayList<>();
         m.add(new String[]{"system", sys});
-        // примеры для маленькой модели — как отвечать
+        m.add(new String[]{"user", "Привет! Как дела?"});
+        m.add(new String[]{"assistant", "Привет! Отлично, грызу новые слова. А у тебя как? (How are you?)"});
         m.add(new String[]{"user", "I likes cats"});
         m.add(new String[]{"assistant", "Better: I like cats. Cats are cute! Do you have a cat?"});
-        m.add(new String[]{"user", "Как будет дом?"});
+        m.add(new String[]{"user", "Как будет «дом»?"});
         m.add(new String[]{"assistant", "Дом — house (хаус). Например: My house is warm. (Мой дом тёплый.)"});
+        m.add(new String[]{"user", "Сколько будет семь на восемь?"});
+        m.add(new String[]{"assistant", "56! Seven times eight is fifty-six. (Семь на восемь — пятьдесят шесть.)"});
+        return m;
+    }
+
+    /** Прогреть свой мозг, пока хозяин говорит. */
+    void warm(JSONObject ai, int mood, int stage) {
+        if (ai == null || "gemini".equals(ai.optString("mode", "auto")) || !LocalBrain.ready(ctx)) return;
+        BrainClient.warm(ctx, localPrefix(ai, mood, stage));
+    }
+
+    static String clean(String r) {
+        return r.replaceAll("(?s)<think>.*?(</think>|$)", "").replace("</think>", "").replaceAll("[*_#`]", "").trim();
+    }
+
+    private String localChat(JSONObject ai, int mood, int stage) {
+        List<String[]> m = localPrefix(ai, mood, stage);
+        int n = m.size();
         for (String[] x : hist) m.add(new String[]{x[0], x[1]});
-        String r = BrainClient.chat(ctx, m, 120);
+        final Reply pc = partCb;
+        String r = BrainClient.chat(ctx, m, n, 100, pc == null ? null : t -> { String c = clean(t); if (!c.isEmpty()) main.post(() -> pc.done(c)); });
         if (r == null) { lastLocalErr = BrainClient.lastError(); return null; }
-        return r.replaceAll("[*_#`]", "").trim();
+        return clean(r);
+    }
+
+    /** Проверка из настроек: только свой мозг, с настоящим промтом. */
+    String testLocal(String text, JSONObject ai) {
+        List<String[]> m = localPrefix(ai == null ? new JSONObject() : ai, 0, 1);
+        int n = m.size();
+        m.add(new String[]{"user", text});
+        String r = BrainClient.chat(ctx, m, n, 100, null);
+        return r == null ? null : clean(r);
     }
 
     private static String cut(String s, int n) { return s.length() > n ? s.substring(0, n) : s; }

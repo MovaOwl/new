@@ -153,21 +153,103 @@ public class FoxService extends Service {
 
     /* ---------- руки: движение к точке ---------- */
     void goTo(int x, int y, boolean run, Runnable then) {
-        targetX = -1;
-        travX = Math.max(0, Math.min(x, screenW - foxH)); travY = Math.max((int) (24 * dp), y); onArrive = then;
-        speed = (run ? 6f : 2.4f) * dp;
+        goToPx(x, y, (run ? 330f : 110f) * dp, then);
         play(run && has("run") ? "run" : "walk", 999);
         img.setScaleX(travX < lp.x ? -1 : 1);
+    }
+
+    /* плавное движение 60 кадров/с, отдельно от смены картинок */
+    private float fx, fy, speedPx;
+    private long moveLast;
+
+    void goToPx(int x, int y, float pxPerSec, Runnable then) {
+        targetX = -1;
+        travX = Math.max(0, Math.min(x, screenW - foxH)); travY = Math.max((int) (24 * dp), y); onArrive = then;
+        speedPx = Math.max(40f, pxPerSec);
+        fx = lp.x; fy = lp.y;
+        moveLast = android.os.SystemClock.uptimeMillis();
+        h.removeCallbacks(mover);
+        h.post(mover);
+    }
+
+    private final Runnable mover = new Runnable() {
+        @Override public void run() {
+            if (root == null || travX < 0) return;
+            long now = android.os.SystemClock.uptimeMillis();
+            float dt = Math.min(60, now - moveLast) / 1000f; moveLast = now;
+            int ty = travY - (bub.getVisibility() == View.VISIBLE ? img.getTop() : 0);   // цель — для самой лисы, а не облачка
+            float dx = travX - fx, dy = ty - fy;
+            double dist = Math.sqrt(dx * dx + dy * dy);
+            float step = speedPx * dt;
+            if (dist <= step || dist < 1) {
+                lp.x = travX; lp.y = ty; travX = -1; clampAndUpdate();
+                Runnable r = onArrive; onArrive = null;
+                if (r != null) r.run(); else pickNext();
+                return;
+            }
+            fx += dx / dist * step; fy += dy / dist * step;
+            lp.x = Math.round(fx); lp.y = Math.round(fy);
+            clampAndUpdate();
+            h.postDelayed(this, 16);
+        }
+    };
+
+    /** Пока лис работает руками, касания проходят сквозь него — чтобы не мешал своим же свайпам и тапам. */
+    void touchThrough(boolean on) {
+        if (lp == null || root == null) return;
+        int f = WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+        int nf = on ? lp.flags | f : lp.flags & ~f;
+        if (nf == lp.flags) return;
+        lp.flags = nf;
+        try { wm.updateViewLayout(root, lp); } catch (Exception ignored) { }
+    }
+
+    void startJob() { busy = true; touchThrough(true); img.setClipBounds(null); }
+
+    /** Лис хватает рабочий стол лапой и тащит его вместе со свайпом. next — к следующей странице (влево). */
+    void pushPage(boolean next, boolean firstTime, Runnable done) {
+        FoxEyes e = FoxEyes.I;
+        if (e == null || root == null) { if (done != null) done.run(); return; }
+        startJob(); bub.setVisibility(View.GONE);
+        float y = screenH * 0.42f;
+        float x0 = next ? screenW * 0.86f : screenW * 0.14f, x1 = next ? screenW * 0.14f : screenW * 0.86f;
+        int fy0 = (int) (y - foxH * 0.55f);
+        int sx = next ? (int) (x0 - foxH * 0.35f) : (int) (x0 - foxH * 0.9f);
+        int ex = next ? (int) (x1 - foxH * 0.35f) : (int) (x1 - foxH * 0.9f);
+        goTo(sx, fy0, true, () -> {
+            img.setScaleX(next ? -1 : 1);
+            play(has("wave") ? "wave" : "jump", 1);                    // замах лапой
+            h.postDelayed(() -> {
+                long dur = 560;
+                play(has("run") ? "run" : "walk", 999);
+                goToPx(ex, fy0, Math.abs(ex - lp.x) * 1000f / dur + 1, () -> play("sit", 999));
+                img.setScaleX(next ? -1 : 1);
+                e.swipe(x0, x1, y, dur, () -> h.postDelayed(() -> { if (done != null) done.run(); }, 650));
+            }, firstTime ? 650 : 280);
+        });
+    }
+
+    /** Подбежать к значку и стукнуть по нему лапой. */
+    void tapIcon(android.graphics.Rect r, Runnable click) {
+        startJob(); bub.setVisibility(View.GONE);
+        goTo(r.centerX() - foxH / 2, r.top - foxH + (int) (16 * dp), true, () -> {
+            play(has("wave") ? "wave" : "jump", 1);
+            long d = frames != null ? (long) (frames.length * 1000 / Math.max(1f, fps) * 0.55f) : 500;
+            h.postDelayed(() -> {
+                play(has("cheer") ? "cheer" : "jump", 2);
+                if (click != null) click.run();
+            }, Math.max(350, Math.min(900, d)));
+        });
     }
 
     private int imgW() { return img.getLayoutParams() != null && img.getLayoutParams().width > 0 ? img.getLayoutParams().width : foxH; }
 
     void runToIcon(android.graphics.Rect r, Runnable then) {
-        busy = true; img.setClipBounds(null); bub.setVisibility(View.GONE);
+        startJob(); bub.setVisibility(View.GONE);
         goTo(r.centerX() - foxH / 2, r.top - foxH + (int) (6 * dp), true, then);
     }
 
-    void cmdDone() { h.postDelayed(() -> { busy = false; img.setClipBounds(null); goTo(lp.x, baseY, false, () -> playFor("sit", 20, 40)); }, 1500); }
+    void cmdDone() { h.postDelayed(() -> { busy = false; touchThrough(false); img.setClipBounds(null); goTo(lp.x, baseY, false, () -> playFor("sit", 20, 40)); }, 1500); }
 
     /** Спрятаться за значком: видна только голова над иконкой. */
     void peekBehind(android.graphics.Rect r) {
@@ -409,6 +491,7 @@ public class FoxService extends Service {
         listenOk = false;
         targetX = -1; travX = -1; busy = false; img.setClipBounds(null);
         showBub("🎤 Включаю уши…", 4000);
+        try { brain().warm(data != null ? data.optJSONObject("ai") : null, Math.max(0, mood), stage); } catch (Throwable ignored) { }
         play(has("surprise") ? "surprise" : "sit", 999);
         boolean started = true;
         try { startActivity(new Intent(this, ListenActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); } catch (Exception e) { started = false; }
@@ -505,7 +588,7 @@ public class FoxService extends Service {
                     showBub(reply, ms);
                     play(has("talk") ? "talk" : "sit", 3);
                     if (mood == 4) h.postDelayed(() -> { if (mood == 4) root.setVisibility(View.GONE); }, ms);
-                });
+                }, part -> { if (thinking) { showBub(part + " …", 40000); if (!"talk".equals(anim)) play(has("talk") ? "talk" : "sit", 999); } });
                 break;
             }
         }
@@ -621,12 +704,7 @@ public class FoxService extends Service {
                 if (frame >= frames.length) { frame = 0; loopsLeft--; }
                 img.setImageBitmap(frames[frame]);
                 if (travX >= 0) {
-                    int step = (int) Math.max(2, speed * (60f / fps) / 3f);
-                    int dx = travX - lp.x, dy = travY - lp.y;
-                    double dist = Math.sqrt((double) dx * dx + (double) dy * dy);
-                    if (dist <= step) { lp.x = travX; lp.y = travY; travX = -1; img.setScaleX(1); Runnable r = onArrive; onArrive = null; if (r != null) r.run(); else pickNext(); }
-                    else { lp.x += (int) Math.round(dx / dist * step); lp.y += (int) Math.round(dy / dist * step); }
-                    clampAndUpdate();
+                    // движение — в mover (плавно, 60 к/с)
                 } else if (targetX >= 0) {
                     int step = (int) Math.max(1, speed * (60f / fps) / 3f);
                     if (Math.abs(lp.x - targetX) <= step) { lp.x = targetX; targetX = -1; pickNext(); }

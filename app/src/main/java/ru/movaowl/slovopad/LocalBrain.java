@@ -18,7 +18,10 @@ final class LocalBrain {
     private static final Runnable UNLOAD = LocalBrain::unload;
 
     private static native long nLoad(String path, int nCtx, int threads);
-    private static native byte[] nChat(long h, String[] roles, String[] contents, int maxTokens, float temp);
+    private static native byte[] nChat(long h, String[] roles, String[] contents, int nPrefix, int maxTokens, float temp, Object cb);
+
+    /** Куски ответа по мере печати (JNI зовёт piece(byte[])). */
+    interface Piece { void piece(byte[] utf8); }
     private static native void nStop();
     private static native void nFree(long h);
 
@@ -58,22 +61,23 @@ final class LocalBrain {
     static boolean ready(Context c) { return libPresent(c) && model(c) != null; }
 
     /** Только в процессе :brain (BrainService). */
-    static String chatFile(String path, List<String[]> msgs, int maxTokens) {
+    static String chatFile(String path, List<String[]> msgs, int nPrefix, int maxTokens, Piece cb) {
         File f = new File(path);
         if (!f.exists() || !lib()) return null;
         synchronized (LOCK) {
             H.removeCallbacks(UNLOAD);
             if (handle == 0 || !f.getAbsolutePath().equals(loadedPath)) {
                 if (handle != 0) { nFree(handle); handle = 0; }
-                int threads = Math.max(2, Math.min(6, Runtime.getRuntime().availableProcessors() - 2));
+                // только большие ядра: медленные «малыши» тормозят всех (у Dimensity 8300 больших 4)
+                int threads = Math.max(2, Math.min(4, Runtime.getRuntime().availableProcessors() / 2));
                 handle = nLoad(f.getAbsolutePath(), 2048, threads);
                 loadedPath = handle != 0 ? f.getAbsolutePath() : null;
                 if (handle == 0) return null;
             }
             String[] roles = new String[msgs.size()], cont = new String[msgs.size()];
             for (int i = 0; i < msgs.size(); i++) { roles[i] = msgs.get(i)[0]; cont[i] = msgs.get(i)[1]; }
-            byte[] out = nChat(handle, roles, cont, maxTokens, 0.7f);
-            H.postDelayed(UNLOAD, 3 * 60_000L); // через 3 минуты тишины освобождаем память
+            byte[] out = nChat(handle, roles, cont, nPrefix, maxTokens, 0.7f, cb);
+            H.postDelayed(UNLOAD, 10 * 60_000L); // через 10 минут тишины освобождаем память
             return out == null ? null : new String(out, StandardCharsets.UTF_8).trim();
         }
     }

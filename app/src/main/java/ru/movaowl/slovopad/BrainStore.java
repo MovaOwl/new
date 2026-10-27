@@ -19,7 +19,7 @@ import java.security.MessageDigest;
 
 /** Скачивание «мозга» лиса (GGUF-модель) из релиза brain-v1 на GitHub. */
 final class BrainStore {
-    static final String INDEX = "https://github.com/MovaOwl/new/releases/download/brain-v2/brain.json";
+    static final String INDEX = "https://github.com/MovaOwl/new/releases/download/brain-v3/brain.json";
     private static volatile String verifying = null;
     /* встроенный список — если до GitHub не достучаться; у каждого мозга несколько зеркал */
     static final String DEFAULT = "{\"version\":2,\"models\":["
@@ -35,7 +35,8 @@ final class BrainStore {
     static JSONArray urls(JSONObject m) {
         JSONArray a = new JSONArray();
         a.put(m.optString("url"));
-        for (String[] x : HF) if (x[0].equals(m.optString("id"))) { a.put("https://huggingface.co/" + x[1]); a.put("https://hf-mirror.com/" + x[1]); }
+        String hf = m.optString("hf", "");
+        if (!hf.isEmpty()) { a.put("https://huggingface.co/" + hf); a.put("https://hf-mirror.com/" + hf); }
         return a;
     }
     private static volatile String lastError = "";
@@ -108,6 +109,7 @@ final class BrainStore {
             o.put("lib", LocalBrain.libPresent(c));
             o.put("ready", ready != null);
             o.put("title", sp.getString("brainTitle", ""));
+            o.put("file", sp.getString("brainFile", ""));
             o.put("size", ready != null ? ready.length() : 0);
             o.put("error", sp.getString("brainError", ""));
             long dl = sp.getLong("brainDl", -1);

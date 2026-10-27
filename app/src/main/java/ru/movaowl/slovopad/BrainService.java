@@ -19,7 +19,7 @@ import java.util.List;
 
 /** Мозг лиса в отдельном процессе (:brain): если нейросеть упадёт, лис на экране останется жив. */
 public class BrainService extends Service {
-    static final int MSG_CHAT = 1, MSG_UNLOAD = 2;
+    static final int MSG_CHAT = 1, MSG_UNLOAD = 2, MSG_PART = 3, MSG_WARM = 4;
     private Messenger messenger;
     private Thread worker;
 
@@ -33,7 +33,8 @@ public class BrainService extends Service {
             @Override
             public void handleMessage(Message m) {
                 if (m.what == MSG_UNLOAD) { LocalBrain.unload(); return; }
-                if (m.what != MSG_CHAT) return;
+                if (m.what != MSG_CHAT && m.what != MSG_WARM) return;
+                final boolean warm = m.what == MSG_WARM;
                 Bundle b = m.getData();
                 Messenger reply = m.replyTo;
                 int id = m.arg1;
@@ -49,7 +50,17 @@ public class BrainService extends Service {
                         else if (!new File(path).exists()) err = "Файл мозга не найден";
                         else {
                             CrashLog.step(BrainService.this, "загружаю/думаю: " + new File(path).getName() + " (" + new File(path).length() / 1000000 + " МБ), свободно ОЗУ ~" + (Runtime.getRuntime().maxMemory() / 1000000) + " МБ кучи");
-                            out = LocalBrain.chatFile(path, msgs, b.getInt("max", 120));
+                            final long[] lastPart = {0};
+                            LocalBrain.Piece pc = warm || reply == null ? null : bytes -> {
+                                long now = System.currentTimeMillis();
+                                if (now - lastPart[0] < 120) return;
+                                lastPart[0] = now;
+                                Message pm = Message.obtain(null, MSG_PART, id, 0);
+                                Bundle pb = new Bundle(); pb.putString("part", new String(bytes, java.nio.charset.StandardCharsets.UTF_8)); pm.setData(pb);
+                                try { reply.send(pm); } catch (RemoteException ignored) { }
+                            };
+                            out = LocalBrain.chatFile(path, msgs, b.getInt("prefix", 0), warm ? 0 : b.getInt("max", 100), pc);
+                            if (warm) { CrashLog.step(BrainService.this, out != null ? "прогрет" : "прогрев не удался"); return; }
                             if (out != null) CrashLog.step(BrainService.this, "ответил, " + out.length() + " симв.");
                             if (out == null) err = "Мозг не смог загрузиться (мало памяти?)";
                         }
